@@ -26,16 +26,15 @@ All classwork and assignments will be available via MSTeams.
 ## 1.5 Downloading a simple program to the Edison
 The Edison is programmed via an editor which is found at [https://www.edpyapp.com/v3/](https://www.edpyapp.com/v3/) (use Chrome to open). 
 
-To download a program onto the Edison: 
-
-1. Connect Edison to the computer using the USB cable  
-2. Press the ‘Program’ button in the upper right corner of the EdPy app
-3. In the pop-up window select ‘Edison V3 – Paired’ and click ‘Connect’
-
 ### 1.5.1 Connect Edison to the computer using the USB cable
+Connect Edison to the computer using the USB cable:
+
 ![Edison Plugged In](../assets/edison-plugged-50.jpg)
 
-![Program Button](../assets/programbutton.png)
+### 1.5.2 Upload the Python code to the Edison
+Press the ‘Program’ button in the upper right corner of the EdPy app, In the pop-up window select ‘Edison V3 – Paired’ and click ‘Connect’:
+
+![Program Button](../assets/edpy-upload-cmp.gif)
 
 ## 1.6 Structure of an EdPy program
 Programming the Edison consists of two main parts.  The Setup part and the Instructional code.  Let's look at the code below which you'll use in Task 1. 
