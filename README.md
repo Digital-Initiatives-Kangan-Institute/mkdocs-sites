@@ -8,6 +8,9 @@ This repository contains the mkdocs source for the Certificate III in Informatio
 4. Run `./serve` to start the dev server
 5. Run `./build` to generate a build for GitHub pages
 
+## Authoring
+To help you author pages, read the [AUTHORING.md](./AUTHORING.md) guide.
+
 ## Dependencies
 - python / pip
 - mkdocs
