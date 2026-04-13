@@ -114,4 +114,4 @@ We've changed the names of the three "length" variables to left_spin, right_spin
 Line 16 spins the Edison to the left but uses the right_spin variable.  The reverse is true of line 18.  Why does this work?  What will actually happen?
 
 ## Task Attempt
-Attempt [Task 2 - Variables](../tasks/task-2-variables.md)
+[Attempt Task 2 - Variables](../tasks/task-2-variables.md){ .md-button }
