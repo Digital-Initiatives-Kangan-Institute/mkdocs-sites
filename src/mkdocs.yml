@@ -10,6 +10,7 @@ nav:
       - Task 2 - Variables: python/tasks/task-2-variables.md
       - Task 3 - Functions: python/tasks/task-3-functions.md
       - Task 4 - Functions, Parameters, Return: python/tasks/task-4-functions-params-returns.md
+      - Task 5 - Event Loop: python/tasks/task-5-event-loop.md
 
   - Design:
     - Test: index.md
