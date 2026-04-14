@@ -11,6 +11,7 @@ nav:
       - Task 3 - Functions: python/tasks/task-3-functions.md
       - Task 4 - Functions, Parameters, Return: python/tasks/task-4-functions-params-returns.md
       - Task 5 - Event Loop: python/tasks/task-5-event-loop.md
+      - Task 6 - Selection: python/tasks/task-6-selection.md
 
   - Design:
     - Test: index.md
