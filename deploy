@@ -43,6 +43,9 @@ echo ""
 echo "Deploying '$selected'..."
 echo ""
 
+# Ensure output directory exists
+mkdir -p "$OUTPUT_DIR"
+
 # Build
 cd "$site_path" || exit 1
 mkdocs build

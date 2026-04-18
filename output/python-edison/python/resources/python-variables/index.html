@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://digital-initiatives-kangan-institute.github.io/docs-prg-design/python/resources/python-variables/" rel="canonical"/>
+<link href="../python-edison-intro/" rel="prev"/>
+<link href="../../tasks/task-1-intro-to-edison/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
+<title>Variables - Programming &amp; Design</title>
+<link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="deep-orange" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#python-variables">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Programming &amp; Design" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Programming &amp; Design">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Programming &amp; Design
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Variables
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Programming &amp; Design" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Programming &amp; Design">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Programming &amp; Design
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_1_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-edison-intro/">
+<span class="md-ellipsis">
+    
+  
+    Intro to Python &amp; Edison
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-program">
+<span class="md-ellipsis">
+      
+        What is a Program?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+<span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+</a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#settings-values-to-variables">
+<span class="md-ellipsis">
+      
+        Settings values to variables
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-attempt">
+<span class="md-ellipsis">
+      
+        Task Attempt
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_1_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-1-intro-to-edison/">
+<span class="md-ellipsis">
+    
+  
+    Task 1 - Intro to Edison
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-2-variables/">
+<span class="md-ellipsis">
+    
+  
+    Task 2 - Variables
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-3-functions/">
+<span class="md-ellipsis">
+    
+  
+    Task 3 - Functions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-4-functions-params-returns/">
+<span class="md-ellipsis">
+    
+  
+    Task 4 - Functions, Parameters, Return
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-5-event-loop/">
+<span class="md-ellipsis">
+    
+  
+    Task 5 - Event Loop
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-6-selection/">
+<span class="md-ellipsis">
+    
+  
+    Task 6 - Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-7-loops-with-conditions/">
+<span class="md-ellipsis">
+    
+  
+    Task 7 - Loops with Conditions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-8-for-loops/">
+<span class="md-ellipsis">
+    
+  
+    Task 8 - For Loops
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-9-lists/">
+<span class="md-ellipsis">
+    
+  
+    Task 9 - Lists
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../python-edison-intro/">
+<span class="md-ellipsis">
+    Python
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../python-edison-intro/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="python-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Python Variables</h1>
+<h2 id="what-is-a-program"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> What is a Program?</h2>
+<p>A program is a set of instructions that a computer can execute to perform a specific task. In Python, a program is typically written in a text file with a .py extension. When you run the program, the Python interpreter reads the code and executes it line by line. Generally, a program requires input, processing, and output. The input is the data that the program will work with, the processing is the logic and calculations performed on that data, and the output is the result of the program's execution.</p>
+<p><img alt="What computers do flow" src="../../assets/what-compuers-do.png"/></p>
+<h2 id="variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Variables</h2>
+<p>In Python, variables are used to store data values. A variable is essentially a name that references a specific piece of data (like a number, string, or list). You can assign a value to a variable using the assignment operator =, and then use that variable later in your code. </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="n">length</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>In the above code: </p>
+<ul>
+<li>Line 7 - Sets the distance type to cm </li>
+<li>Line 12 - Sets a variable named distance to the value of <code>10</code></li>
+<li>Line 13 - Moves the Edison forwards at <code>speed 5</code>, <code>10cm</code></li>
+</ul>
+<p>Notice in <code>line 13</code> that the Edison moves a distance of <code>10cm</code> because the length variable was created a set to 10 previously.</p>
+<h3 id="settings-values-to-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.1</span> Settings values to variables</h3>
+<p>Setting values to variables is a fundamental part of programming in Python. You use the assignment operator = to give a variable a value.  Recalling the value only requires you to use the name of the variable. </p>
+<p>You can set multiple variables and use them to set up other variables.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="n">length_1</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">length_2</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">length_3</span> <span class="o">=</span> <span class="n">length_1</span> <span class="o">+</span> <span class="n">length_2</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>In the above we now have three variables. <code>length_1</code> and <code>length_2</code> are set to <code>10</code> and <code>5</code> respectively.  <code>length_3</code> is the sum of <code>length_1</code> and <code>length_2</code>. </p>
+<p>Based off <code>line 14</code>, how far will the Edison travel?</p>
+<p>Variables can be called multiple times:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="n">length_1</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">length_2</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">length_3</span> <span class="o">=</span> <span class="n">length_1</span> <span class="o">+</span> <span class="n">length_2</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_1</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_2</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>This time the Edison moves three separate times.  Notice that we make the Edison wait in between each move.</p>
+<p>How long is the Edison waiting after each move? </p>
+<p>We can make the Edison do a little dance:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="n">left_spin</span> <span class="o">=</span> <span class="mi">180</span>
+<span class="n">right_spin</span> <span class="o">=</span> <span class="mi">360</span>
+<span class="n">wait_time</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_spin</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_spin</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_spin</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_spin</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>There are 2 things to note: </p>
+<p>We've changed the names of the three "length" variables to left_spin, right_spin and wait_time.  It's important and useful to name variables with names that are descriptive. </p>
+<p>Line 16 spins the Edison to the left but uses the right_spin variable.  The reverse is true of line 18.  Why does this work?  What will actually happen?</p>
+<h2 id="task-attempt"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> Task Attempt</h2>
+<p><a class="md-button" href="../../tasks/task-2-variables/">Attempt Task 2 - Variables</a></p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Intro to Python &amp; Edison" class="md-footer__link md-footer__link--prev" href="../python-edison-intro/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Intro to Python &amp; Edison
+              </div>
+</div>
+</a>
+<a aria-label="Next: Task 1 - Intro to Edison" class="md-footer__link md-footer__link--next" href="../../tasks/task-1-intro-to-edison/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Task 1 - Intro to Edison
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+</body>
+</html>

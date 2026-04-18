@@ -1,0 +1,34 @@
+.md-nav__title {
+    display: none;
+}
+
+.md-main {
+    background-color: rgb(255, 255, 255);
+}
+
+.md-content {
+    border-left: 1px solid rgb(228, 228, 228);
+    margin-left: 1rem;
+}
+
+.md-nav__item--section > .md-nav__link {
+    font-size: 1rem;
+}
+
+.md-nav__item--section .md-nav__item--nested > .md-nav__link {
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    padding: 0.5rem;
+}
+
+.md-nav__link--active {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+    .md-content {
+        border-left: unset;
+        margin-left: unset;
+    }
+}
