@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://python-edison.netlify.app/python/resources/selection-if-else-elif/" rel="canonical"/>
-<link href="../iteration-event-loop/" rel="prev"/>
-<link href="../selection-event-loop/" rel="next"/>
+<link href="https://python-edison.netlify.app/python/resources/selection-event-loop/" rel="canonical"/>
+<link href="../selection-if-else-elif/" rel="prev"/>
+<link href="../../tasks/task-1-intro-to-edison/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Selection if / else / elif - Python Edison</title>
+<title>Selection in the Event Loop - Python Edison</title>
 <link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#selection-if-else-elif">
+<a class="md-skip" href="#selection-in-the-event-loop">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Selection if / else / elif
+              Selection in the Event Loop
             
           </span>
 </div>
@@ -164,13 +164,25 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-if-else-elif/">
+<span class="md-ellipsis">
+    
+  
+    Selection if / else / elif
+  
+
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     
   
-    Selection if / else / elif
+    Selection in the Event Loop
   
 
     
@@ -181,7 +193,7 @@
 <span class="md-ellipsis">
     
   
-    Selection if / else / elif
+    Selection in the Event Loop
   
 
     
@@ -194,37 +206,65 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-is-selection">
+<a class="md-nav__link" href="#selection-with-the-keypad">
 <span class="md-ellipsis">
       
-        What is Selection?
+        Selection with the Keypad
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#selection-if">
+<a class="md-nav__link" href="#selection-with-indentation">
 <span class="md-ellipsis">
       
-        Selection - If
+        Selection with Indentation
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#selection-else">
+<a class="md-nav__link" href="#more-interactions">
 <span class="md-ellipsis">
       
-        Selection - Else
+        More Interactions
+      
+    </span>
+</a>
+<nav aria-label="More Interactions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#obstacle-detection">
+<span class="md-ellipsis">
+      
+        Obstacle Detection
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#selection-else-if-elif">
+<a class="md-nav__link" href="#clap-sensing">
 <span class="md-ellipsis">
       
-        Selection - Else If (elif)
+        Clap Sensing
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#light-levels">
+<span class="md-ellipsis">
+      
+        Light Levels
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#random-numbers">
+<span class="md-ellipsis">
+      
+        Random Numbers
       
     </span>
 </a>
@@ -232,17 +272,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../selection-event-loop/">
-<span class="md-ellipsis">
-    
-  
-    Selection in the Event Loop
-  
-
-    
-  </span>
-</a>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -409,180 +440,10 @@
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<h1 id="selection-if-else-elif"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Selection - if / else / elif</h1>
-<h2 id="what-is-selection"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> What is Selection?</h2>
-<p><strong>Selection</strong> is a programming concept where the program chooses different paths of execution based on whether a condition is <code>true</code> or <code>false</code>.</p>
-<p><img alt="Path of Execution" src="../../assets/condition-path.png" width="256"/></p>
-<p>All choices are made via a decision based on a <strong>condition</strong>. A <strong>condition</strong> is a statement that can be either <strong>True</strong> or <strong>False</strong>. It’s used in programming to decide whether a certain block of code should run.</p>
-<p>In the above flowchart, the condition is <strong>if Age is greater or equal to 18</strong>. This evaluates as either true or false and the program will execute accordingly. Notice that <strong>Age</strong> is a variable that can be any value.</p>
-<p>There are other comparisons that can be made:</p>
-<table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Meaning</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>==</td>
-<td>Equal to</td>
-<td>x == 5</td>
-</tr>
-<tr>
-<td>!=</td>
-<td>Not equal to</td>
-<td>x != 5</td>
-</tr>
-<tr>
-<td>&gt;</td>
-<td>Greater than</td>
-<td>x &gt; 5</td>
-</tr>
-<tr>
-<td>&lt;</td>
-<td>Less than</td>
-<td>x &lt; 5</td>
-</tr>
-<tr>
-<td>&gt;=</td>
-<td>Greater or equal</td>
-<td>x &gt;= 5</td>
-</tr>
-<tr>
-<td>&lt;=</td>
-<td>Less or equal</td>
-<td>x &lt;= 5</td>
-</tr>
-</tbody>
-</table>
-<h2 id="selection-if"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> Selection - If</h2>
-<p>In most programming languages, this decision is represented by the keyword <strong><strong>if</strong></strong>.</p>
-<p>Let's look at how this works with the Edison:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
-<span class="c1">#--------Your code below-----------</span>
-
-<span class="n">beep_twice</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">beep_thrice</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="k">if</span> <span class="n">beep_twice</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-
-
-<span class="k">if</span> <span class="n">beep_thrice</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>We can see here that two condition are being processed (<code>lines 14</code> and <code>21</code>). The Edison will only beep twice because we have set the <code>beep_twice</code> variable to <code>True</code> (<code>line 11</code>). This makes the selection statement on <code>line 14</code> evaluate to <code>true</code> and therefore the indented code under it (<code>lines 15-18</code>) execute.</p>
-<p>On the other hand, the variable <code>beep_thrice</code> is set to <code>False</code>, this makes the selection statement at <code>line 21</code> evaluate to <code>False</code>. therefore, the code from <code>lines 22</code> to <code>27</code> do not execute.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Notice that the syntax is similar to the event loop. There is a colon ( <code>:</code> ) at the end of the line. Code to be executed if the statement is <code>true</code> is indented, just like the event loop.</p>
-<ul>
-<li>What happens if you change <code>beep_twice</code> to <code>False</code>?</li>
-<li>What happens if make both <code>beep_twice</code> and <code>beep_thrice</code> to <code>True</code>?</li>
-</ul>
-</div>
-<h2 id="selection-else"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Selection - Else</h2>
-<p><img alt="Path of Execution" src="../../assets/condition-path.png" width="256"/></p>
-<p>What if we want to do something on the <code>False</code> side of the decision?</p>
-<p>For this we have the keyword else:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
-<span class="c1">#--------Your code below-----------</span>
-
-<span class="n">beep_twice</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="k">if</span> <span class="n">beep_twice</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>This will make the Edison beep three times.</p>
-<p>On <code>line 18</code> we have an <code>else</code> statement which runs code to make the Edison beep three times. This happens because at <code>line 13</code> the <code>if</code> statement evaluates to <code>false</code>. The program then goes to the <code>else</code> statement at <code>line 18</code> and executes the code there. </p>
-<p>If we change <code>beep_twice</code> to <code>True</code> we'll have the opposite happen. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Notice that only one set of code can be executed just like in the flowchart, where it's either doing things based on the <code>true</code> or <code>false</code> side of the decision.</p>
-</div>
+<h1 id="selection-in-the-event-loop"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Selection in the Event Loop</h1>
+<p>We can do more interesting things if we combine what we know with the <strong>event loop</strong> and <strong>selection</strong>. </p>
+<h2 id="selection-with-the-keypad"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1</span> Selection with the Keypad</h2>
+<p>We can run selection statements inside the event loops to get the Edison to respond to events. In the below example the Edison will keep checking for the triangle button to be pressed. When the circle (round) button is pressed it will play a beep. Remember to start the actual program by pressing triangle first:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -608,48 +469,134 @@
 <span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
 <span class="c1">#--------Your code below-----------</span>
 
-<span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadKeypad</span><span class="p">()</span> <span class="o">==</span> <span class="n">Ed</span><span class="o">.</span><span class="n">KEYPAD_ROUND</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Here the Edison is constantly checking the Keypad, when it detects a press on the circle button it will execute the indented code underneath.</p>
+<p>Notice the indentation: <code>line 12</code> is indented to indicate that it belongs to the while loop on <code>line 11</code>. <code>Lines 13-16</code> is indented again to indicate that it belongs to the selection statement on <code>line 12</code>.</p>
+<p>This indentation is very important in Python as it dictates the structure of the code/program.</p>
+</div>
+<h2 id="selection-with-indentation"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2</span> Selection with Indentation</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
 
-<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadKeypad</span><span class="p">()</span> <span class="o">==</span> <span class="n">Ed</span><span class="o">.</span><span class="n">KEYPAD_ROUND</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
     <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>     
 </code></pre></div></td></tr></table></div>
-<p>Here the Edison will beep and not drive.  </p>
-<p>Based on the code above can the Edison ever beep and drive at the same time?</p>
-<h2 id="selection-else-if-elif"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> Selection - Else If (elif)</h2>
-<p><img alt="Path of Execution Else If" src="../../assets/condition-path-elif.png" width="500"/></p>
-<p>The above is a common situation that we need to represent. We can do this in two ways. The first is by nesting if statements.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Excellent"</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-  <span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Good"</span><span class="p">)</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Needs improvement"</span><span class="p">)</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With a slight change to the program at <code>line 15</code>, we see completely different behaviour from the Edison.</p>
+<p>In this case the Edison will beep all the time because <code>lines 15</code> and <code>16</code> belong to the while statement at <code>line 11</code>. This means that on every loop / iteration <code>lines 15</code> and <code>16</code> will run.</p>
+</div>
+<h2 id="more-interactions"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3</span> More Interactions</h2>
+<h3 id="obstacle-detection"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.1</span> Obstacle Detection</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">ObstacleDetectionBeam</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">ON</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadObstacleDetection</span><span class="p">()</span> <span class="o">==</span> <span class="n">Ed</span><span class="o">.</span><span class="n">OBSTACLE_AHEAD</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
-<p>This is simply an <code>if-else</code> structure inside of an <code>if</code> structure and works fine. However, it can become difficult to read if we keep nesting. Also, we may run into difficulties keeping indentation correct.</p>
-<p>We'll concentrate on using the <code>elif</code> (else if) statement to make things cleaner. The above can be written as:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">if</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">90</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Excellent"</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">score</span> <span class="o">&gt;</span> <span class="mi">70</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Good"</span>
-<span class="k">else</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">"Needs improvement"</span><span class="p">)</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's important for the <strong>obstacle detection beam</strong> to be turned <strong>on</strong> before we use it (<code>line 11</code>). Inside the loop we are checking the value of the beam every single iteration (<code>line 14</code>).</p>
+<p>Before you upload this program to the Edison, have a guess at what the Edison does when running this program.</p>
+</div>
+<h3 id="clap-sensing"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.2</span> Clap Sensing</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+<span class="c1">#--------Your code below-----------</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">ReadClapSensor</span><span class="p">()</span> 
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadClapSensor</span><span class="p">()</span> <span class="o">==</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CLAP_DETECTED</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
+
+    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Same logic, much easier to read (and thus maintain).</p>
-<p>Let's apply <code>elif</code> to our Edison:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>Line 10</code> is used to clear the Edison of previous clap detections.</p>
+</div>
+<h3 id="light-levels"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.3</span> Light Levels</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -667,27 +614,76 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
 
 <span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-
 <span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
 <span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+
+<span class="c1">#--------Your code below-----------</span>
+<span class="n">light_level</span> <span class="o">=</span> <span class="mi">960</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadRightLightLevel</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">light_level</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayMyBeep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">Ed</span><span class="o">.</span><span class="n">ReadLeftLightLevel</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">light_level</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">PlayMyBeep</span><span class="p">(</span><span class="mi">8000</span><span class="p">)</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
+
+    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="random-numbers"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.4</span> Random Numbers</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+
 <span class="c1">#--------Your code below-----------</span>
 
-<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">16</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">BACKWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+
+    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="mi">1500</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_MILLISECONDS</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Which action will the Edison perform?</p>
-<p>We need to be careful with the order in which our conditions are placed. Swap the conditions on <code>line 13</code> and <code>15</code>. What happens?</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -695,7 +691,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Iteration - Event Loop" class="md-footer__link md-footer__link--prev" href="../iteration-event-loop/">
+<a aria-label="Previous: Selection if / else / elif" class="md-footer__link md-footer__link--prev" href="../selection-if-else-elif/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -704,17 +700,17 @@
                 Previous
               </span>
 <div class="md-ellipsis">
-                Iteration - Event Loop
+                Selection if / else / elif
               </div>
 </div>
 </a>
-<a aria-label="Next: Selection in the Event Loop" class="md-footer__link md-footer__link--next" href="../selection-event-loop/">
+<a aria-label="Next: Task 1 - Intro to Edison" class="md-footer__link md-footer__link--next" href="../../tasks/task-1-intro-to-edison/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Selection in the Event Loop
+                Task 1 - Intro to Edison
               </div>
 </div>
 <div class="md-footer__button md-icon">
