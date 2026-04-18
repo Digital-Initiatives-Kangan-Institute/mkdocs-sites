@@ -1,0 +1,25 @@
+.img-rounded {
+    border-radius: 10px;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.33) 5px 5px 10px;
+}
+
+.scale-up {
+    transition: transform 0.25s;
+}
+.scale-up:hover {
+    transform: scale(105%);
+}
+
+.cards li {
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    border: 0 !important;
+}
+.cards li:hover {
+    box-shadow: unset !important;
+}
