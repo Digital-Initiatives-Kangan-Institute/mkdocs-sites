@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SITES_DIR="./sites"
-OUTPUT_DIR="./docs"
+OUTPUT_BASE="./output"
 
 # Check sites directory exists
 if [ ! -d "$SITES_DIR" ]; then
@@ -37,6 +37,7 @@ fi
 
 selected="${sites[$((choice - 1))]}"
 site_path="$SITES_DIR/$selected"
+OUTPUT_DIR="$OUTPUT_BASE/$selected"
 
 echo ""
 echo "Deploying '$selected'..."
@@ -53,7 +54,7 @@ mv "$site_path/site" "$OUTPUT_DIR"
 
 # Commit and push
 git add "$OUTPUT_DIR"
-git commit -am "Update Pages build: $selected"
+git commit -am "Build: $selected"
 git push
 
 echo ""
