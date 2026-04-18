@@ -1,25 +1,44 @@
-.img-rounded {
+.md-main {
+    background-color: rgb(245, 245, 245);
+}
+
+.grid-layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+    border: 1px solid rgb(198, 198, 198);
     border-radius: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
 }
 
-.box-shadow {
-    box-shadow: rgba(0, 0, 0, 0.33) 5px 5px 10px;
+.grid-item img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    max-height: 200px;
+    width: 100%;
+
+    object-fit: cover;
 }
 
-.scale-up {
-    transition: transform 0.25s;
-}
-.scale-up:hover {
-    transform: scale(105%);
+.grid-item .details {
+    background-color: white;
+    padding: 1rem;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.cards li {
-    display: flex !important;
-    flex-direction: column !important;
-
-    align-items: center !important;
-    border: 0 !important;
+.grid-item .details h2 {
+    margin: 0;
 }
-.cards li:hover {
-    box-shadow: unset !important;
+
+@media screen and (max-width: 800px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
 }
