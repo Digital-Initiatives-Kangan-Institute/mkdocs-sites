@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://python-edison.netlify.app/python/resources/python-variables/" rel="canonical"/>
-<link href="../python-edison-intro/" rel="prev"/>
-<link href="../iteration-event-loop/" rel="next"/>
+<link href="https://python-edison.netlify.app/python/resources/iteration-event-loop/" rel="canonical"/>
+<link href="../python-variables/" rel="prev"/>
+<link href="../../tasks/task-1-intro-to-edison/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Variables - Python Edison</title>
+<title>Iteration - Event Loop - Python Edison</title>
 <link href="../../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -24,7 +24,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#python-variables">
+<a class="md-skip" href="#iteration-event-loop">
           Skip to content
         </a>
 </div>
@@ -48,7 +48,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Variables
+              Iteration - Event Loop
             
           </span>
 </div>
@@ -140,13 +140,25 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../python-variables/">
+<span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
     
   
-    Variables
+    Iteration - Event Loop
   
 
     
@@ -157,7 +169,7 @@
 <span class="md-ellipsis">
     
   
-    Variables
+    Iteration - Event Loop
   
 
     
@@ -170,59 +182,25 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#what-is-a-program">
+<a class="md-nav__link" href="#while-loop">
 <span class="md-ellipsis">
       
-        What is a Program?
+        While Loop
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#variables">
+<a class="md-nav__link" href="#python-syntax">
 <span class="md-ellipsis">
       
-        Variables
-      
-    </span>
-</a>
-<nav aria-label="Variables" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#settings-values-to-variables">
-<span class="md-ellipsis">
-      
-        Settings values to variables
+        Python Syntax
       
     </span>
 </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#task-attempt">
-<span class="md-ellipsis">
-      
-        Task Attempt
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../iteration-event-loop/">
-<span class="md-ellipsis">
-    
-  
-    Iteration - Event Loop
-  
-
-    
-  </span>
-</a>
 </li>
 </ul>
 </nav>
@@ -389,12 +367,81 @@
 </ol>
 </nav>
 <article class="md-content__inner md-typeset">
-<h1 id="python-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Python Variables</h1>
-<h2 id="what-is-a-program"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> What is a Program?</h2>
-<p>A program is a set of instructions that a computer can execute to perform a specific task. In Python, a program is typically written in a text file with a .py extension. When you run the program, the Python interpreter reads the code and executes it line by line. Generally, a program requires input, processing, and output. The input is the data that the program will work with, the processing is the logic and calculations performed on that data, and the output is the result of the program's execution.</p>
-<p><img alt="What computers do flow" src="../../assets/what-compuers-do.png"/></p>
-<h2 id="variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Variables</h2>
-<p>In Python, variables are used to store data values. A variable is essentially a name that references a specific piece of data (like a number, string, or list). You can assign a value to a variable using the assignment operator =, and then use that variable later in your code. </p>
+<h1 id="iteration-event-loop"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> Iteration - Event Loop</h1>
+<h2 id="while-loop"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> While Loop</h2>
+<p>You may have noticed that many of the example programs have contained a line with:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> 
+</code></pre></div></td></tr></table></div></p>
+<p>This is a loop.  A loop will run whatever is inside it until it meets a <strong>false</strong> condition. <code>while True:</code> is the same as saying <code>run forever</code> and will run until you stop the Edison.</p>
+<p>Let's look at the syntax (structure) of a while loop – lines 11 and 12:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+
+<span class="c1"># --- Event loop -----</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+  <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div></p>
+<p>If this code gets loaded onto the Edison it will play a beep sound, and keep playing it.   </p>
+<ol>
+<li>The code enters at <code>line 11</code> and see that the <code>while</code> loop is <code>true</code></li>
+<li>It will then run <code>line 12</code> and play the beep</li>
+<li>It will then come back up to <code>line 11</code> and once again see that the loop is <code>true</code></li>
+<li>It will then run <code>line 12</code> and play the beep</li>
+<li>etc...</li>
+</ol>
+<div class="admonition abstract">
+<p class="admonition-title">Try it and see</p>
+<p>Copy the code to EdPy and download it to your Edison. You will hear a droning sound instead of distinct beeps. Why?</p>
+</div>
+<p>We can also make the Edison continually drive:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
+
+<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
+
+<span class="c1">#--------Your code below-----------</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">ReadIRData</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_3</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="python-syntax"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> Python Syntax</h2>
+<p>Notice that the code underneath the event loop (<code>while True:</code>) is <strong>indented</strong>. This is how Python understands that the code below needs to be repeated. <strong>Indentation</strong> is used in Python to allow us to attach code to structures such as while loops. </p>
+<p>Indentation can either be created using the tab key or spaces, so long as they are consistent.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -417,88 +464,16 @@
 <span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
 
 <span class="c1">#--------Your code below-----------</span>
-
-<span class="n">length</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">BACKWARDS</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_3</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>In the above code: </p>
-<ul>
-<li>Line 7 - Sets the distance type to cm </li>
-<li>Line 12 - Sets a variable named distance to the value of <code>10</code></li>
-<li>Line 13 - Moves the Edison forwards at <code>speed 5</code>, <code>10cm</code></li>
-</ul>
-<p>Notice in <code>line 13</code> that the Edison moves a distance of <code>10cm</code> because the length variable was created a set to 10 previously.</p>
-<h3 id="settings-values-to-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.1</span> Settings values to variables</h3>
-<p>Setting values to variables is a fundamental part of programming in Python. You use the assignment operator = to give a variable a value.  Recalling the value only requires you to use the name of the variable. </p>
-<p>You can set multiple variables and use them to set up other variables.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
-<span class="c1">#--------Your code below-----------</span>
-
-<span class="n">length_1</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">length_2</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">length_3</span> <span class="o">=</span> <span class="n">length_1</span> <span class="o">+</span> <span class="n">length_2</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>In the above we now have three variables. <code>length_1</code> and <code>length_2</code> are set to <code>10</code> and <code>5</code> respectively.  <code>length_3</code> is the sum of <code>length_1</code> and <code>length_2</code>. </p>
-<p>Based off <code>line 14</code>, how far will the Edison travel?</p>
-<p>Variables can be called multiple times:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">DistanceUnits</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">CM</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
-<span class="c1">#--------Your code below-----------</span>
-
-<span class="n">length_1</span> <span class="o">=</span> <span class="mi">12</span>
-<span class="n">length_2</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">length_3</span> <span class="o">=</span> <span class="n">length_1</span> <span class="o">+</span> <span class="n">length_2</span>
-
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_1</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_2</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">length_2</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">FORWARD</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">length_3</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-<p>This time the Edison moves three separate times.  Notice that we make the Edison wait in between each move.</p>
-<p>How long is the Edison waiting after each move? </p>
-<p>We can make the Edison do a little dance:</p>
+<p>In the above example we could expect the Edison to <strong>move forward</strong> by <code>10cm</code> and then <strong>go backwards</strong> <code>10cm</code>. What actually happens is that the Edison will <strong>move forwards forever</strong> and <strong>never go backwards</strong>. Why?</p>
+<div class="admonition abstract">
+<p class="admonition-title">Fix the indentation</p>
+<p>Copy the above code into EdPy and fix it so that the Edison repeats cycles of move forward 10cm and goes backwards 10cm.</p>
+</div>
+<p>Of course, the event loop can be combined with what we've learnt previously (functions and variables):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -516,7 +491,11 @@
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#-------------Setup----------------</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">Ed</span>
 
 <span class="n">Ed</span><span class="o">.</span><span class="n">EdisonVersion</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">V3</span>
 
@@ -524,22 +503,20 @@
 <span class="n">Ed</span><span class="o">.</span><span class="n">Tempo</span> <span class="o">=</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TEMPO_MEDIUM</span>
 <span class="c1">#--------Your code below-----------</span>
 
-<span class="n">left_spin</span> <span class="o">=</span> <span class="mi">180</span>
-<span class="n">right_spin</span> <span class="o">=</span> <span class="mi">360</span>
-<span class="n">wait_time</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_spin</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_spin</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_LEFT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">right_spin</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">wait_time</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
-<span class="n">Ed</span><span class="o">.</span><span class="n">Drive</span><span class="p">(</span><span class="n">Ed</span><span class="o">.</span><span class="n">SPIN_RIGHT</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">SPEED_5</span><span class="p">,</span> <span class="n">left_spin</span><span class="p">)</span>
+<span class="c1"># this function returns a number from one to six</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_number</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">Ed</span><span class="o">.</span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># beeping(num) will beep 'num' times</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">beeping</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="n">Ed</span><span class="o">.</span><span class="n">PlayBeep</span><span class="p">()</span>
+    <span class="n">Ed</span><span class="o">.</span><span class="n">TimeWait</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">Ed</span><span class="o">.</span><span class="n">TIME_SECONDS</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">get_number</span><span class="p">()</span>
+    <span class="n">beeping</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>There are 2 things to note: </p>
-<p>We've changed the names of the three "length" variables to left_spin, right_spin and wait_time.  It's important and useful to name variables with names that are descriptive. </p>
-<p>Line 16 spins the Edison to the left but uses the right_spin variable.  The reverse is true of line 18.  Why does this work?  What will actually happen?</p>
-<h2 id="task-attempt"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> Task Attempt</h2>
-<p><a class="md-button" href="../../tasks/task-2-variables/">Attempt Task 2 - Variables</a></p>
+<p>In the above example the Edison will beep and pause for a random number of seconds between one and three. You can see from above that functions are being called from within the while loop.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
@@ -547,7 +524,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Intro to Python &amp; Edison" class="md-footer__link md-footer__link--prev" href="../python-edison-intro/">
+<a aria-label="Previous: Variables" class="md-footer__link md-footer__link--prev" href="../python-variables/">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
 </div>
@@ -556,17 +533,17 @@
                 Previous
               </span>
 <div class="md-ellipsis">
-                Intro to Python &amp; Edison
+                Variables
               </div>
 </div>
 </a>
-<a aria-label="Next: Iteration - Event Loop" class="md-footer__link md-footer__link--next" href="../iteration-event-loop/">
+<a aria-label="Next: Task 1 - Intro to Edison" class="md-footer__link md-footer__link--next" href="../../tasks/task-1-intro-to-edison/">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Iteration - Event Loop
+                Task 1 - Intro to Edison
               </div>
 </div>
 <div class="md-footer__button md-icon">
