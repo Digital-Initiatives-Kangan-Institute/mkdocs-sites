@@ -1,6 +1,6 @@
 # Lists
 
-## wat
+## List Indexing
 !!! abstract "Instructions"
     Fix the code below so it functions correctly.
 
