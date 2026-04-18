@@ -1,0 +1,53 @@
+site_name: Programming & Design
+site_url: https://digital-initiatives-kangan-institute.github.io/docs-prg-design
+nav:
+  - Python:
+    - Resources:
+      - Intro to Python & Edison: python/resources/python-edison-intro.md
+      - Variables: python/resources/python-variables.md
+    - Tasks:
+      - Task 1 - Intro to Edison: python/tasks/task-1-intro-to-edison.md
+      - Task 2 - Variables: python/tasks/task-2-variables.md
+      - Task 3 - Functions: python/tasks/task-3-functions.md
+      - Task 4 - Functions, Parameters, Return: python/tasks/task-4-functions-params-returns.md
+      - Task 5 - Event Loop: python/tasks/task-5-event-loop.md
+      - Task 6 - Selection: python/tasks/task-6-selection.md
+      - Task 7 - Loops with Conditions: python/tasks/task-7-loops-with-conditions.md
+      - Task 8 - For Loops: python/tasks/task-8-for-loops.md
+      - Task 9 - Lists: python/tasks/task-9-lists.md
+
+theme:
+  name: material
+  palette:
+    primary: deep orange
+  features:
+    - toc.integrate 
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+      restart_increment_after: 
+        - python/tasks/task-1-intro-to-edison.md
+
+extra:
+  generator: false
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - extra/style.css

@@ -1,3 +1,44 @@
 #!/bin/bash
-cd ./src
+
+SITES_DIR="./sites"
+
+# Check sites directory exists
+if [ ! -d "$SITES_DIR" ]; then
+  echo "Error: '$SITES_DIR' directory not found."
+  exit 1
+fi
+
+# Get list of directories in sites/
+sites=()
+while IFS= read -r -d '' dir; do
+  sites+=("$(basename "$dir")")
+done < <(find "$SITES_DIR" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
+
+if [ ${#sites[@]} -eq 0 ]; then
+  echo "Error: No sites found in '$SITES_DIR'."
+  exit 1
+fi
+
+# Prompt user to pick a site
+echo "Which site do you want to serve?"
+echo ""
+for i in "${!sites[@]}"; do
+  echo "  $((i + 1))) ${sites[$i]}"
+done
+echo ""
+read -rp "Enter number [1-${#sites[@]}]: " choice
+
+# Validate input
+if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -lt 1 ] || [ "$choice" -gt ${#sites[@]} ]; then
+  echo "Error: Invalid selection."
+  exit 1
+fi
+
+selected="${sites[$((choice - 1))]}"
+
+echo ""
+echo "Serving '$selected'..."
+echo ""
+
+cd "$SITES_DIR/$selected" || exit 1
 mkdocs serve
