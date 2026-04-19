@@ -1,0 +1,57 @@
+.md-nav__title {
+    display: none;
+}
+
+.md-main {
+    background-color: rgb(255, 255, 255);
+}
+
+.md-content {
+    border-left: 1px solid rgb(228, 228, 228);
+    margin-left: 1rem;
+}
+
+/* Selects the return to portal button only */
+.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.85rem;
+    border-radius: 5px;
+
+    color: white;
+    background-color: #7e56c2;
+    font-weight: 700;
+
+    padding: 0.5rem;
+
+    margin: 0;
+
+    transition: background-color 0.25s;
+}
+.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link:hover {
+    background-color: #9d77df;
+}
+
+.md-nav__item--section > .md-nav__link {
+    font-size: 1rem;
+}
+
+.md-nav__item--section .md-nav__item--nested > .md-nav__link {
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+    padding: 0.5rem;
+}
+
+.md-nav__link--active {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+    .md-content {
+        border-left: unset;
+        margin-left: unset;
+    }
+}
