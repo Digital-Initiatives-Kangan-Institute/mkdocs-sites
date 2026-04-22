@@ -31,7 +31,7 @@
 
     box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
 
-    transition: transform 0.25s;
+    transition: transform 0.25s !important;
 }
 .grid-item:hover {
     transform: scale(102%);
