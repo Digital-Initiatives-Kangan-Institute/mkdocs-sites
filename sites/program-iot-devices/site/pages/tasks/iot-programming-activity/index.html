@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../resources/program-structure/" rel="prev"/>
+<link href="../class-activities/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>IoT Programming Activity - Program IoT Devices</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#iot-programming-introduction-activity">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Program IoT Devices" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Program IoT Devices
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              IoT Programming Activity
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Program IoT Devices" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Program IoT Devices
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/introduction-to-iot/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to IoT
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/iot-programming-introduction/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/comments/">
+<span class="md-ellipsis">
+    
+  
+    Comments
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/program-structure/">
+<span class="md-ellipsis">
+    
+  
+    Program Structure
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Activity
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Activity
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-1-build-the-base-program">
+<span class="md-ellipsis">
+      
+        Task 1 — Build the Base Program
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-2-custom-device-start-up-sequence">
+<span class="md-ellipsis">
+      
+        Task 2 — Custom Device Start-Up Sequence
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-3-blink-patterns-extension">
+<span class="md-ellipsis">
+      
+        Task 3 — Blink Patterns (Extension)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-4-annotated-code-extension">
+<span class="md-ellipsis">
+      
+        Task 4 — Annotated Code (Extension)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-5-find-and-fix-the-bugs-extension">
+<span class="md-ellipsis">
+      
+        Task 5 — Find and Fix the Bugs (Extension)
+      
+    </span>
+</a>
+<nav aria-label="Task 5 — Find and Fix the Bugs (Extension)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bug-set-a">
+<span class="md-ellipsis">
+      
+        Bug Set A
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bug-set-b">
+<span class="md-ellipsis">
+      
+        Bug Set B
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bug-set-c">
+<span class="md-ellipsis">
+      
+        Bug Set C
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#questions">
+<span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#self-check-before-submitting">
+<span class="md-ellipsis">
+      
+        Self-Check Before Submitting
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../class-activities/">
+<span class="md-ellipsis">
+    
+  
+    Independent Practice
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 2
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../week-2/resources/arduino-digital-output/">
+<span class="md-ellipsis">
+    
+  
+    Arduino Digital Output
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Activities
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Activities
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../week-2/activities/activity-02/">
+<span class="md-ellipsis">
+    
+  
+    Activity 02
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../week-2/tasks/week-2-task/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output &amp; Functions
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../../resources/introduction-to-iot/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Tasks
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="iot-programming-introduction-activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> IoT Programming Introduction Activity</h1>
+<hr/>
+<h2 id="task-1-build-the-base-program"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Task 1 — Build the Base Program</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Recreate the base start-up + blink program yourself, without copy-pasting from the lesson notes.</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/470567521110438913">https://wokwi.com/projects/470567521110438913</a></p>
+<ol>
+<li>Declare two variables:<ul>
+<li><code>ledPin</code> (type <code>int</code>) — use <code>pin 13</code> if your board simulates one, otherwise set it to whichever GPIO you wired the LED to in the diagram</li>
+<li><code>deviceName</code> (type <code>String</code>), set to any name you choose</li>
+</ul>
+</li>
+<li>In <code>setup()</code>:<ul>
+<li>Start Serial communication at <code>115200</code></li>
+<li>Set <code>ledPin</code> as an <code>OUTPUT</code></li>
+<li>Print a start-up message that includes <code>deviceName</code></li>
+</ul>
+</li>
+<li>In <code>loop()</code>:<ul>
+<li>Turn the LED on, print <code>"LED: ON"</code>, wait 1000 ms</li>
+<li>Turn the LED off, print <code>"LED: OFF"</code>, wait 1000 ms</li>
+</ul>
+</li>
+<li>Upload the code and confirm the LED blinks in time with the Serial Monitor output.</li>
+</ol>
+<p><strong>Check yourself:</strong>
+- Program compiles with no errors
+- Serial Monitor shows the start-up message once
+- LED blinks in sync with <code>"LED: ON"</code> / <code>"LED: OFF"</code> messages</p>
+</div>
+<details class="hint">
+<summary>Hint — Click to expand</summary>
+<p>Remember to use <code>Serial.begin(115200)</code> in <code>setup()</code> to start serial communication. The pin mode must be set before you can use <code>digitalWrite()</code> on that pin.</p>
+</details>
+<hr/>
+<h2 id="task-2-custom-device-start-up-sequence"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Task 2 — Custom Device Start-Up Sequence</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/470564412054187009">https://wokwi.com/projects/470564412054187009</a></p>
+<p>Modify your Task 1 program to include:</p>
+<ol>
+<li>At least <strong>three variables</strong> — one <code>int</code>, one <code>float</code>, one <code>String</code>.</li>
+<li>
+<p>Print all three values in <code>setup()</code> as part of a formatted start-up message, for example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>=== Smart Sensor Node ===
+Device: TempSensor_01
+Pin: 13
+Threshold: 28.5
+Status: READY
+=========================
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>In <code>loop()</code>, blink the LED <strong>three times quickly</strong> (200 ms on / 200 ms off), then pause for <strong>2 seconds</strong>, then repeat.</p>
+</li>
+</ol>
+</div>
+<details class="hint">
+<summary>Hint — Click to expand</summary>
+<p>Think about how to use a nested loop or a series of <code>digitalWrite</code> / <code>delay</code> calls to blink three times before the longer pause. Consider what data types are appropriate for each variable — pin numbers are whole numbers, thresholds may need decimals.</p>
+</details>
+<hr/>
+<h2 id="task-3-blink-patterns-extension"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Task 3 — Blink Patterns (Extension)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/470569149081367553">https://wokwi.com/projects/470569149081367553</a></p>
+<p>Write a program that creates a <strong>"heartbeat" pattern</strong>: two quick blinks followed by a long pause.</p>
+<p>Requirements:
+- Use clearly named variables for every delay value, e.g.:
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">shortBlink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">longPause</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1500</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+- Do not hardcode delay numbers directly inside <code>loop()</code> — always reference your variables.</p>
+</div>
+<details class="hint">
+<summary>Hint — Click to expand</summary>
+<p>A heartbeat pattern is: blink — pause — blink — long pause. Think about the sequence of <code>digitalWrite</code> and <code>delay</code> calls needed. Remember that <code>delay()</code> is in milliseconds.</p>
+</details>
+<hr/>
+<h2 id="task-4-annotated-code-extension"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Task 4 — Annotated Code (Extension)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Take your Task 1 or Task 2 program and add a comment above <strong>every line</strong> explaining what it does, in your own words.</p>
+<ul>
+<li>Focus on explaining <strong>why</strong> a line exists, not just restating what it says.</li>
+<li>Use the comment best practices from the lesson (explain why, comment formulas, label pins, don't over-comment obvious lines).</li>
+</ul>
+</div>
+<details class="hint">
+<summary>Hint — Click to expand</summary>
+<p>Good comments explain the <em>purpose</em> of a line, not just repeat the code. For example, instead of <code>delay(1000); // wait 1000 ms</code>, write something like <code>delay(1000); // give the user time to see the LED state</code>.</p>
+</details>
+<hr/>
+<h2 id="task-5-find-and-fix-the-bugs-extension"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Task 5 — Find and Fix the Bugs (Extension)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Each bug set below is a broken sketch containing <strong>three separate mistakes</strong> covered in the lesson. For each set: copy it into the IDE, use the <strong>commenting-out technique</strong> to isolate and fix each bug one at a time (don't fix everything at once), and write a one-line comment above each fixed line explaining what was wrong.</p>
+</div>
+<h3 id="bug-set-a"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.1</span> Bug Set A</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">LED_PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">Setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">LED_PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Ready"</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Check yourself:</strong>
+- Program compiles with no errors
+- LED blinks as expected
+- Each fix has a comment explaining the original mistake</p>
+<h3 id="bug-set-b"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.2</span> Bug Set B</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="mf">2l</span><span class="n">edPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LED_BUILTIN</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">temperature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"23.5"</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">device</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Node1"</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mf">2l</span><span class="n">edPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mf">2l</span><span class="n">edPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mf">2l</span><span class="n">edPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Check yourself:</strong>
+- Program compiles with no errors
+- All variable names follow the naming rules
+- Each fix has a comment explaining the original mistake</p>
+<h3 id="bug-set-c"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5.3</span> Bug Set C</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LED_BUILTIN</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Starting..."</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">  </span><span class="c1">// Turn LED off</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Check yourself:</strong>
+- Program compiles with no errors
+- Serial Monitor shows "Starting..." on upload
+- Every comment accurately describes the line below it</p>
+<details class="hint">
+<summary>Hint — Click to expand</summary>
+<p>Look carefully at function names (are they spelled correctly?), variable naming rules (can a variable start with a number?), data types (is the right type assigned?), and syntax (are semicolons in the right places?).</p>
+</details>
+<hr/>
+<h2 id="questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Questions</h2>
+<p>Answer these in your own words before moving on:</p>
+<ol>
+<li>What data type would you use to store a decimal temperature reading? Why?</li>
+<li>What is the difference between <code>Serial.print()</code> and <code>Serial.println()</code>?</li>
+<li>What happens if you remove <code>Serial.begin(115200)</code> from <code>setup()</code>?</li>
+<li>What does <code>void</code> mean at the start of <code>setup()</code> and <code>loop()</code>?</li>
+<li>Why is it useful to use a variable (or constant) for a pin number instead of typing <code>13</code> directly in the code?</li>
+<li>What is the difference between a <code>variable</code> and a <code>constant</code>? Give one example of when you'd use each.</li>
+</ol>
+<hr/>
+<h2 id="self-check-before-submitting"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> Self-Check Before Submitting</h2>
+<ul>
+<li>Program compiles and uploads without errors</li>
+<li>Serial Monitor shows the correct start-up message</li>
+<li>LED blinks in sync with Serial Monitor output</li>
+<li>Variables are declared with appropriate, descriptive data types and names</li>
+<li>Constants (if used) are in <code>UPPER_CASE</code></li>
+<li>Comments explain <em>why</em>, not just <em>what</em></li>
+<li>I can explain the purpose of <code>setup()</code> and <code>loop()</code> out loud</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Program Structure" class="md-footer__link md-footer__link--prev" href="../../resources/program-structure/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Program Structure
+              </div>
+</div>
+</a>
+<a aria-label="Next: Independent Practice" class="md-footer__link md-footer__link--next" href="../class-activities/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Independent Practice
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

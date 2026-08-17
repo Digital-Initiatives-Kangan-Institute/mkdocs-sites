@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../comments/" rel="prev"/>
+<link href="../../tasks/iot-programming-activity/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Program Structure - Program IoT Devices</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#program-structure-and-execution">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Program IoT Devices" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Program IoT Devices
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Program Structure
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Program IoT Devices" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Program IoT Devices
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../introduction-to-iot/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to IoT
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../iot-programming-introduction/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../comments/">
+<span class="md-ellipsis">
+    
+  
+    Comments
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Program Structure
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Program Structure
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#program-structure">
+<span class="md-ellipsis">
+      
+        Program Structure
+      
+    </span>
+</a>
+<nav aria-label="Program Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setup">
+<span class="md-ellipsis">
+      
+        setup()
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loop-in-detail">
+<span class="md-ellipsis">
+      
+        loop() in detail
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#where-variables-and-includes-fit">
+<span class="md-ellipsis">
+      
+        Where variables and includes fit
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-mistakes">
+<span class="md-ellipsis">
+      
+        Common mistakes
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-serial-monitor">
+<span class="md-ellipsis">
+      
+        The Serial Monitor
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-device-start-up-message-and-led-blink">
+<span class="md-ellipsis">
+      
+        Example: Device Start-Up Message and LED Blink
+      
+    </span>
+</a>
+<nav aria-label="Example: Device Start-Up Message and LED Blink" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-walkthrough">
+<span class="md-ellipsis">
+      
+        Code Walkthrough
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guided-build-step-by-step">
+<span class="md-ellipsis">
+      
+        Guided Build: Step by Step
+      
+    </span>
+</a>
+<nav aria-label="Guided Build: Step by Step" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-declare-your-variables">
+<span class="md-ellipsis">
+      
+        Step 1 — Declare your variables
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-write-the-setup-function">
+<span class="md-ellipsis">
+      
+        Step 2 — Write the setup() function
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-write-the-loop-function">
+<span class="md-ellipsis">
+      
+        Step 3 — Write the loop() function
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-upload-and-open-the-serial-monitor">
+<span class="md-ellipsis">
+      
+        Step 4 — Upload and open the Serial Monitor
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vocabulary">
+<span class="md-ellipsis">
+      
+        Vocabulary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/iot-programming-activity/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Activity
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/class-activities/">
+<span class="md-ellipsis">
+    
+  
+    Independent Practice
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 2
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../week-2/resources/arduino-digital-output/">
+<span class="md-ellipsis">
+    
+  
+    Arduino Digital Output
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Activities
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Activities
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../week-2/activities/activity-02/">
+<span class="md-ellipsis">
+    
+  
+    Activity 02
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_2_3_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../week-2/tasks/week-2-task/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output &amp; Functions
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../introduction-to-iot/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../introduction-to-iot/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="program-structure-and-execution"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Program Structure and Execution</h1>
+<hr/>
+<h2 id="program-structure"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> Program Structure</h2>
+<p>Every program written with the Arduino framework — regardless of which board it runs on — has exactly two required functions:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Runs ONCE when the board powers on or resets</span>
+<span class="w">  </span><span class="c1">// Used to configure pins, start Serial, initialise components</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Runs REPEATEDLY after setup() finishes</span>
+<span class="w">  </span><span class="c1">// Contains the main program logic</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>A sketch (Arduino's term for a program file) is built from four parts, always in this order:</p>
+<ol>
+<li><strong>Library includes</strong> (<code>#include</code>) — optional</li>
+<li><strong>Global variable declarations</strong> — optional but common</li>
+<li><strong><code>setup()</code></strong> — required, runs once</li>
+<li><strong><code>loop()</code></strong> — required, runs forever</li>
+</ol>
+<hr/>
+<h3 id="setup"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1.1</span> <code>setup()</code></h3>
+<ul>
+<li>Called exactly <strong>once</strong>, right after the board powers on or is reset (e.g. pressing the reset button, opening the Serial Monitor, or re-uploading code).</li>
+<li>This is where you do <strong>one-time configuration</strong>:<ul>
+<li><code>pinMode()</code> — declare each pin as <code>INPUT</code> or <code>OUTPUT</code></li>
+<li><code>Serial.begin()</code> — open the serial connection</li>
+<li>Initialising sensor/library objects (e.g. <code>dht.begin()</code>, <code>servo.attach()</code>)</li>
+<li>Setting starting values for variables</li>
+</ul>
+</li>
+<li>Takes no parameters — <code>()</code> is empty because the framework calls it with nothing.</li>
+</ul>
+<hr/>
+<h3 id="loop-in-detail"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1.2</span> <code>loop()</code> in detail</h3>
+<ul>
+<li>Called <strong>repeatedly</strong>, forever, immediately after <code>setup()</code> finishes.</li>
+<li>Each pass through <code>loop()</code> is one "cycle" of your program — this is effectively the <code>PROCESS</code> and <code>OUTPUT</code> stages from the Input → Process → Output pattern.</li>
+<li>There's no way to "exit" <code>loop()</code> and go back to <code>setup()</code> — the only way <code>setup()</code> runs again is a physical reset or re-upload.</li>
+<li>Because it runs continuously, anything with <code>delay()</code> inside blocks the <em>entire</em> board — no other code runs during that pause.</li>
+</ul>
+<hr/>
+<h3 id="where-variables-and-includes-fit"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1.3</span> Where variables and includes fit</h3>
+<ul>
+<li><code>#include</code> statements must come <strong>before</strong> they're used, so by convention they go at the very top of the file.</li>
+<li>Global variables (declared outside <code>setup()</code>/<code>loop()</code>) are visible in <strong>both</strong> functions — that's why a pin number declared at the top can be used in <code>setup()</code> for <code>pinMode()</code> and reused anywhere in <code>loop()</code>. Variables declared <em>inside</em> <code>setup()</code> or <code>loop()</code> are local and disappear once that function call ends (though <code>setup()</code>'s locals only matter once, and <code>loop()</code>'s locals are recreated every cycle).</li>
+</ul>
+<hr/>
+<h3 id="common-mistakes"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1.4</span> Common mistakes</h3>
+<ul>
+<li>Forgetting <code>void</code> or misspelling <code>setup</code>/<code>loop</code> (e.g. <code>Setup()</code>) — the compiler won't find the required functions and errors out.</li>
+<li>Putting <code>pinMode()</code> in <code>loop()</code> instead of <code>setup()</code> — it still works, but wastefully reconfigures the pin thousands of times per second.</li>
+<li>Doing one-time work (like printing a start-up banner) inside <code>loop()</code> — it'll print repeatedly instead of once.</li>
+</ul>
+<hr/>
+<h2 id="the-serial-monitor"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> The Serial Monitor</h2>
+<p>The Serial Monitor is a tool in the Arduino IDE that lets you send and receive text between your board and your computer. It is useful for testing and debugging.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w">       </span><span class="c1">// Start serial communication (in setup) — pick a baud rate and use it consistently</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Hello!"</span><span class="p">);</span><span class="w">   </span><span class="c1">// Print a line of text</span>
+<span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span><span class="w">  </span><span class="c1">// Print a value without a new line</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p><strong>Note:</strong> The baud rate is up to you, as long as the Serial Monitor is set to the same value. <code>9600</code> is a common default on Uno/Nano-family boards; <code>115200</code> is common on ESP32/ESP8266 and other faster boards.</p>
+</blockquote>
+<hr/>
+<h2 id="example-device-start-up-message-and-led-blink"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Example: Device Start-Up Message and LED Blink</h2>
+<p>This program prints a start-up message to the Serial Monitor and blinks the built-in LED to confirm the device is running.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LED_BUILTIN</span><span class="p">;</span><span class="w">   </span><span class="c1">// LED_BUILTIN automatically maps to the correct pin for your specific board</span>
+<span class="n">String</span><span class="w"> </span><span class="n">deviceName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"IoT-Device-01"</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w">                    </span><span class="c1">// Start serial communication (match this to your Serial Monitor's baud rate)</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w">                 </span><span class="c1">// Set LED pin as output</span>
+
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"=== Device Starting ==="</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Device name: "</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">deviceName</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Status: ONLINE"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"======================="</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">              </span><span class="c1">// LED on</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"LED: ON"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">              </span><span class="c1">// LED off</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"LED: OFF"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="code-walkthrough"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3.1</span> Code Walkthrough</h3>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int ledPin = LED_BUILTIN;</code></td>
+<td>Declares a variable holding the board's built-in LED pin number</td>
+</tr>
+<tr>
+<td><code>String deviceName = "IoT-Device-01";</code></td>
+<td>Declares a String variable for the device name</td>
+</tr>
+<tr>
+<td><code>Serial.begin(115200)</code></td>
+<td>Opens a serial connection at 115200 bits per second — must match the Serial Monitor's baud rate</td>
+</tr>
+<tr>
+<td><code>pinMode(ledPin, OUTPUT)</code></td>
+<td>Configures the built-in LED pin as an output</td>
+</tr>
+<tr>
+<td><code>Serial.print()</code></td>
+<td>Prints text without a new line at the end</td>
+</tr>
+<tr>
+<td><code>Serial.println()</code></td>
+<td>Prints text and moves to a new line</td>
+</tr>
+<tr>
+<td><code>void loop()</code></td>
+<td>Everything inside runs continuously</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="guided-build-step-by-step"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> Guided Build: Step by Step</h2>
+<p>Open this Wokwi simulation: <a href="https://wokwi.com/projects/470517127243328513">https://wokwi.com/projects/470517127243328513</a></p>
+<p>Build the same program step by step.</p>
+<h3 id="step-1-declare-your-variables"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.1</span> Step 1 — Declare your variables</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">deviceName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"MyIoTDevice"</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-2-write-the-setup-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.2</span> Step 2 — Write the <code>setup()</code> function</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Device is starting..."</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Name: "</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">deviceName</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-3-write-the-loop-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.3</span> Step 3 — Write the <code>loop()</code> function</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"ON"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"OFF"</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="step-4-upload-and-open-the-serial-monitor"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.4</span> Step 4 — Upload and open the Serial Monitor</h3>
+<hr/>
+<h2 id="vocabulary"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.5</span> Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input → Process → Output</td>
+<td>The three-stage pattern every IoT program follows — read data, make a decision, act on the result</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>A named storage location that holds a value in memory</td>
+</tr>
+<tr>
+<td>Data type</td>
+<td>Specifies what kind of value a variable can hold (e.g., int, float, bool)</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>Integer — stores whole numbers</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>Stores whole numbers larger than <code>int</code>'s range allows</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>Floating point — stores decimal numbers</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>Stores decimal numbers; same precision as <code>float</code> on most Arduino boards, more precise on ARM/Xtensa boards</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>Stores a single character, held internally as an ASCII code</td>
+</tr>
+<tr>
+<td><code>String</code></td>
+<td>Stores a sequence of characters (text)</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td>Boolean — stores true or false</td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>Stores small positive whole numbers, 0 to 255</td>
+</tr>
+<tr>
+<td>Reserved word</td>
+<td>A word the Arduino language already uses (e.g. <code>int</code>, <code>void</code>, <code>if</code>) that can't be used as a variable name</td>
+</tr>
+<tr>
+<td>camelCase</td>
+<td>Naming style for variables — first word lowercase, each following word capitalised (e.g. <code>ledPin</code>)</td>
+</tr>
+<tr>
+<td>UPPER_CASE</td>
+<td>Naming convention for constants, words separated by underscores (e.g. <code>MAX_SPEED</code>)</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Determines where in the code a variable can be accessed — global or local</td>
+</tr>
+<tr>
+<td>Global variable</td>
+<td>Declared outside all functions; accessible everywhere and keeps its value for the program's entire runtime</td>
+</tr>
+<tr>
+<td>Local variable</td>
+<td>Declared inside a function or block; only accessible there and destroyed once it ends</td>
+</tr>
+<tr>
+<td>Constant</td>
+<td>A variable whose value is locked at declaration and can never be changed</td>
+</tr>
+<tr>
+<td><code>const</code></td>
+<td>Keyword used to declare a constant (e.g. <code>const int LED_PIN = 13;</code>)</td>
+</tr>
+<tr>
+<td><code>#define</code></td>
+<td>Alternative way to define a constant by text substitution before compiling; not type-checked like <code>const</code></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Text in code that is ignored by the compiler, used to explain the code</td>
+</tr>
+<tr>
+<td>Commenting out</td>
+<td>Temporarily disabling a line of code by turning it into a comment, without deleting it</td>
+</tr>
+<tr>
+<td><code>#include</code></td>
+<td>Imports a library into the program</td>
+</tr>
+<tr>
+<td>Sketch</td>
+<td>Arduino's term for a program file</td>
+</tr>
+<tr>
+<td><code>setup()</code></td>
+<td>Arduino function that runs once at start-up</td>
+</tr>
+<tr>
+<td><code>loop()</code></td>
+<td>Arduino function that runs continuously</td>
+</tr>
+<tr>
+<td><code>pinMode()</code></td>
+<td>Configures a pin as <code>INPUT</code> or <code>OUTPUT</code>, usually called in <code>setup()</code></td>
+</tr>
+<tr>
+<td><code>digitalWrite()</code></td>
+<td>Sets a digital pin <code>HIGH</code> or <code>LOW</code>, e.g. to turn an LED on or off</td>
+</tr>
+<tr>
+<td><code>LED_BUILTIN</code></td>
+<td>Built-in constant that automatically points to the correct onboard LED pin for your specific board</td>
+</tr>
+<tr>
+<td>Serial Monitor</td>
+<td>Tool in the Arduino IDE for sending/receiving text over USB</td>
+</tr>
+<tr>
+<td>Baud rate</td>
+<td>The speed of serial communication, set with <code>Serial.begin()</code> and must match the Serial Monitor's setting</td>
+</tr>
+<tr>
+<td>Compile</td>
+<td>The process of converting code into instructions the microcontroller can execute</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Comments" class="md-footer__link md-footer__link--prev" href="../comments/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Comments
+              </div>
+</div>
+</a>
+<a aria-label="Next: IoT Programming Activity" class="md-footer__link md-footer__link--next" href="../../tasks/iot-programming-activity/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                IoT Programming Activity
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>
