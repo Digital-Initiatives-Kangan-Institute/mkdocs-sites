@@ -14,16 +14,16 @@ nav:
       - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
       - Comments: pages/resources/comments.md
       - Program Structure: pages/resources/program-structure.md
+      - Digital Output and Functions: pages/resources/digital-output-and-functions.md
+      - Reading Inputs: pages/resources/reading-inputs.md
+      - Selection and Conditional Logic: pages/resources/selection-conditional-logic.md
     - Tasks:
       - IoT Programming Activity: pages/tasks/iot-programming-activity.md
       - Independent Practice: pages/tasks/class-activities.md
-    - Week 2:
-      - Resources:
-        - Arduino Digital Output: pages/week-2/resources/arduino-digital-output.md
-      - Activities:
-        - Activity 02: pages/week-2/activities/activity-02.md
-      - Tasks:
-        - Digital Output & Functions: pages/week-2/tasks/week-2-task.md
+      - Digital Output and Functions Task: pages/tasks/digital-output-functions-task.md
+      - Digital Output and Functions Activity: pages/tasks/digital-output-functions-activity.md
+      - Reading Inputs and Selection Task: pages/tasks/reading-inputs-selection-task.md
+      - Reading Inputs and Selection Activity: pages/tasks/reading-inputs-selection-activity.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -51,11 +51,14 @@ extra:
 markdown_extensions:
   - pymdownx.highlight:
       linenums: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.blocks.caption
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - md_in_html
 
