@@ -1,0 +1,101 @@
+Class_ID,Teacher_ID,Teacher_Name,Subject_Code,Subject_Name,Room,Day,Start_Time,End_Time
+CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+CLS007,T005,Grace Nguyen,SCI201,Environmental Science,A105,Monday,10:15,11:45
+CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+CLS023,T004,Noah Williams,ART201,Digital Media,C305,Tuesday,08:30,10:00
+CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+CLS028,T002,Liam Chen,ROB101,Robotics Fundamentals,A210,Tuesday,10:15,11:45
+CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+CLS037,T002,Liam Chen,ICT201,Programming Fundamentals,E205,Tuesday,14:15,15:45
+CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+CLS041,T001,Amelia Hart,HIS101,Modern History,C301,Wednesday,08:30,10:00
+CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+CLS045,T007,Isabella Rossi,ICT301,Database Fundamentals,A105,Wednesday,08:30,10:00
+CLS046,T010,Oliver Wilson,AI101,Artificial Intelligence Foundations,A105,Wednesday,10:15,11:45
+CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+CLS052,T004,Noah Williams,SCI101,General Science,A105,Wednesday,12:30,14:00
+CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+CLS075,T004,Noah Williams,MAT201,Applied Mathematics,E205,Thursday,12:30,14:00
+CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+CLS090,T006,Ethan Brown,ICT201,Programming Fundamentals,A105,Friday,10:15,11:45
+CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+CLS092,T005,Grace Nguyen,ENG201,Academic Writing,C301,Friday,12:30,14:00
+CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+CLS099,T006,Ethan Brown,ART101,Visual Arts,E110,Friday,14:15,15:45
+CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
