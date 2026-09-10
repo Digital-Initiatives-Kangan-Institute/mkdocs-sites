@@ -38,6 +38,7 @@ nav:
       - Aggregates and Joins: pages/tasks/aggregates-join.md
       - Consolidation Task - Countries: pages/tasks/countries.md
       - Practice Assessment 1: pages/tasks/practice_assessment_1.md
+      - Practice Assessment 2: pages/tasks/practice_assessment_2.md
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material

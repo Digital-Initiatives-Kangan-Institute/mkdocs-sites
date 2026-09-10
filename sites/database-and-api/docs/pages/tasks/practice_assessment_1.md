@@ -2,7 +2,7 @@
 
 ## Scenario
 
-You have recently joined the Digital Systems Team at **Kangan Learning Institute**. The institute currently stores its class timetable in a CSV file, but management wants to move the data into a relational cloud database using **Supabase**.
+You have recently joined the Digital Systems Team at **KangaLife Learning Institute**. The institute currently stores its class timetable in a CSV file, but management wants to move the data into a relational cloud database using **Supabase**.
 
 The supplied CSV contains information about:
 
@@ -278,16 +278,84 @@ You can successfully:
 
 Before submitting, confirm that you have included:
 
-- [ ] Entity and field analysis
-- [ ] Table design
-- [ ] Primary and foreign keys
-- [ ] ERD
-- [ ] Supabase tables
-- [ ] Imported data
-- [ ] SQL used to create the tables
-- [ ] Evidence that Row Level Security is disabled
-- [ ] SQL queries for all Part 2 questions
-- [ ] Screenshots of query results
-- [ ] Query explanations
-- [ ] Database normalization explanation
-- [ ] Management summary
+- Entity and field analysis
+- Table design
+- Primary and foreign keys
+- ERD
+- Supabase tables
+- Imported data
+- SQL used to create the tables
+- Evidence that Row Level Security is disabled
+- SQL queries for all Part 2 questions
+- Screenshots of query results
+- Query explanations
+- Database normalization explanation
+- Management summary
+
+## Extension
+
+**KangaLife Learning Institute** has now also provided a list on students and the classes that they are attending.  [`student_class_enrolments.csv`](../../assets/student_class_enrolments.csv).
+
+Incorporate the student enrolment data into your database.
+
+- Update your ERD to include the student class data.
+- create the required CSV files.
+- create the required tables in Supabase.
+- upload the data into your Supabase database.
+
+## Perform the following queries:
+
+- Display every teacher together with the students attending their classes.
+- Show all students enrolled in Robotics Fundamentals together with the teacher running the class.
+- Display all students enrolled in classes taught by Amelia Hart.
+- Show the subjects being studied by each student.
+- List all teachers delivering classes to each student.
+- Display students, subjects and rooms for every scheduled class.
+- Show all students attending classes on Friday, including subject and teacher details.
+- Display all students scheduled in room A105.
+
+# Aggregates
+
+- How many students are recorded in the database?
+- How many attendance records exist?
+- How many classes are scheduled throughout the week?
+- How many unique subjects are offered?
+- How many unique teachers are delivering classes?
+
+# GROUP BY and Analysis
+
+- How many classes are attended by each student?
+- How many students attend each subject?
+- How many students are enrolled in each class?
+- How many classes occur on each day?
+- How many classes are conducted in each room?
+
+# HAVING and Business Intelligence
+
+- Which classes have more than 10 students enrolled?
+- Which students attend more than 6 classes?
+- Which subjects have more than 40 student enrolments?
+- Which rooms host more than 5 classes?
+- Which days have more than 15 scheduled classes?
+
+# Extension Challenges
+
+- Which teachers deliver the greatest variety of subjects?
+- Which rooms are used for the most teaching hours?
+- How many different teachers does each student have throughout the week?
+- Which subjects are delivered by multiple teachers?
+- Which teachers deliver classes in more than one room?
+- Which students are enrolled in classes from more than three different subjects?
+- Which subjects have classes scheduled on multiple days?
+- Which teachers deliver classes on every weekday?
+- Which rooms are used on all five weekdays?
+
+---
+
+- Create a report showing:
+    - Subject name
+    - Number of classes
+    - Number of students enrolled
+    - Number of teachers delivering the subject
+
+Sort the report so the most popular subject appears first.
