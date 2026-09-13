@@ -33,7 +33,7 @@ Using appropriate data types helps PostgreSQL store and validate data correctly.
 
 ---
 
-# Integer Data Types
+## Integer Data Types
 
 Integer data types store whole numbers.
 
@@ -64,7 +64,7 @@ Use INTEGER when you need whole numbers without decimal places. 【1-25eca6】
 
 ---
 
-# Decimal Data Types
+## Decimal Data Types
 
 Sometimes numbers require decimal places.
 
@@ -94,7 +94,7 @@ NUMERIC is commonly used for financial data because it stores values accurately.
 
 ---
 
-# Text Data Types
+## Text Data Types
 
 Text data types store letters, words, and symbols.
 
@@ -125,7 +125,7 @@ TEXT is flexible because it can store strings of varying length. 【1-25eca6】�
 
 ---
 
-# Boolean Data Type
+## Boolean Data Type
 
 A Boolean stores one of two values:
 
@@ -155,7 +155,7 @@ Common uses include:
 
 ---
 
-# Date Data Type
+## Date Data Type
 
 The DATE type stores calendar dates.
 
@@ -180,7 +180,7 @@ Common uses include:
 
 ---
 
-# Time Data Type
+## Time Data Type
 
 TIME stores only a time of day.
 
@@ -205,7 +205,7 @@ Common uses include:
 
 ---
 
-# Timestamp Data Type
+## Timestamp Data Type
 
 A timestamp stores both a date and a time.
 
@@ -229,7 +229,7 @@ This is useful when recording:
 
 ---
 
-# Timestamp with Time Zone
+## Timestamp with Time Zone
 
 PostgreSQL also supports timestamps that include time zone information.
 
@@ -249,7 +249,7 @@ This is commonly used in modern web applications because users may be located in
 
 ---
 
-# UUID
+## UUID
 
 A UUID is a globally unique identifier.
 
@@ -269,7 +269,7 @@ UUIDs are commonly used as primary keys in modern applications because they are 
 
 ---
 
-# Example Student Table
+## Example Student Table
 
 ```sql
 CREATE TABLE students (
@@ -297,7 +297,7 @@ Data types used:
 
 ---
 
-# Choosing the Correct Data Type
+## Choosing the Correct Data Type
 
 When designing a database:
 
@@ -314,7 +314,7 @@ Choosing the correct data type improves data quality and helps prevent invalid d
 
 ---
 
-# Activity
+## Activity
 
 Consider the following fields.
 
@@ -332,7 +332,7 @@ Assign the most appropriate PostgreSQL data type.
 
 ---
 
-# Knowledge Check
+## Knowledge Check
 
 1. What is a data type?
 2. Which data type would you use for a student's name?
@@ -344,7 +344,7 @@ Assign the most appropriate PostgreSQL data type.
 
 ---
 
-# Further Reading
+## Further Reading
 
 Supabase uses PostgreSQL as its database engine, so PostgreSQL data types are fully supported.
 
@@ -353,7 +353,7 @@ Supabase uses PostgreSQL as its database engine, so PostgreSQL data types are fu
 
 ---
 
-# Summary
+## Summary
 
 PostgreSQL provides many data types, but the most commonly used are:
 
