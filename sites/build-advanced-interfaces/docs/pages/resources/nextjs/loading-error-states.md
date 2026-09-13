@@ -2,6 +2,8 @@
 
 A good user interface communicates what is happening. When fetching data, you should handle three states: loading, success, and error.
 
+Fetching with hooks requires a **client component** — add `"use client"` at the top of the file.
+
 ---
 
 ## The Three States
@@ -32,6 +34,8 @@ const [error, setError] = useState<string | null>(null);
 ## A Complete Fetch Component
 
 ```tsx
+"use client";
+
 import { useState, useEffect } from "react";
 
 export default function ProductList() {

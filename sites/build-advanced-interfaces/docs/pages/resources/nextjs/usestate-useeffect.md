@@ -2,13 +2,17 @@
 
 Two of the most important React hooks are `useState` and `useEffect`. Understanding when and how to use each one is essential for building data-driven interfaces.
 
+Both hooks only work in **client components**, so add `"use client"` at the top of any file that uses them (see [Client and Server Components](client-server-components.md)).
+
 ---
 
 ## useState — Managing Component State
 
-`useState` lets you add state to functional components:
+A value you create inside a component is thrown away and rebuilt on every render, and React has no way to notice that it changed — so the screen stays frozen. `useState` fixes both problems: it keeps a value alive between renders, and it tells React to redraw the screen when that value changes. That is what makes counters, forms, search boxes, and fetched lists work.
 
 ```tsx
+"use client";
+
 import { useState } from "react";
 
 export default function Counter() {
@@ -51,9 +55,11 @@ setItems([...items, "new item"]);       // add to array
 
 ## useEffect — Running Code After Render
 
-`useEffect` runs code after the component renders. It is used for side effects like fetching data or setting up timers.
+A component's job is to return UI, but plenty of work — fetching data, setting timers, reading the browser — does not belong inside the render. Those are *side effects*, and `useEffect` is where they go: it runs code after the screen has been drawn, and its dependency array decides when that code runs again.
 
 ```tsx
+"use client";
+
 import { useState, useEffect } from "react";
 
 export default function Products() {
@@ -141,6 +147,25 @@ When to use each:
 
 - **Page-load fetch** — data the user always needs (product list, user profile)
 - **Button fetch** — data the user requests on demand (search results, new page of results)
+
+---
+
+## useParams — Reading the URL
+
+`useParams` is another common hook. It reads dynamic values from the URL, and it also requires a client component:
+
+```tsx
+"use client";
+
+import { useParams } from "next/navigation";
+
+export default function ProductPage() {
+    const params = useParams();
+    return <h1>Product {params.id}</h1>;
+}
+```
+
+`useParams` is covered in more detail on the [Routing](routing.md) page.
 
 ---
 
