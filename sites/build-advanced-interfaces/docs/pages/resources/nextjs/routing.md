@@ -6,6 +6,8 @@ Routing in Next.js is based on the file system. The folders and files inside `ap
 
 ## How File-Based Routing Works
 
+Many frameworks make you declare routes in a separate config file. Next.js skips that: it derives routes straight from the folders and files, so creating a page is as simple as creating a file, and there is no route table to keep in sync.
+
 Every folder inside `app/` that contains a `page.tsx` file becomes a route:
 
 ```
@@ -71,6 +73,34 @@ export default function ProductPage({ params }: Props) {
 
 ---
 
+## The useParams Hook
+
+The `params` prop works in server components. If your page is a **client component** (it uses hooks or event handlers), read the route value with the `useParams` hook instead:
+
+```tsx
+"use client";
+
+import { useParams } from "next/navigation";
+
+export default function ProductPage() {
+    const params = useParams();
+
+    return (
+        <main>
+            <h1>Product {params.id}</h1>
+        </main>
+    );
+}
+```
+
+- Import `useParams` from `next/navigation`
+- Add `"use client"` at the top of the file
+- `params.id` works the same way as the prop version
+
+Use the `params` prop for simple server components, and `useParams` when the component is a client component.
+
+---
+
 ## Creating a Multi-Page Site
 
 Here is what a site with two static routes and one dynamic route looks like:
@@ -114,6 +144,6 @@ export default function Nav() {
 ## Summary
 
 - Static routes: create a folder with a `page.tsx` file
-- Dynamic routes: use `[param]` folder names, access via `params`
+- Dynamic routes: use `[param]` folder names, read them with the `params` prop (server) or `useParams` (client)
 - Use `<Link>` for navigating between pages
 - The file system determines the URL structure

@@ -85,6 +85,8 @@ The same component renders different content based on the props passed to it.
 
 ## JSX — JavaScript XML
 
+Describing a UI as HTML-like markup is much easier to read than the equivalent nested JavaScript function calls, which is the point of JSX: you write what the interface should look like, and the compiler turns it into regular JavaScript.
+
 JSX looks like HTML but has a few key differences:
 
 ```tsx

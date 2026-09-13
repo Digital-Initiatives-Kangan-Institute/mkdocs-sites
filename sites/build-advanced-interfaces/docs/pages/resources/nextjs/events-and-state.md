@@ -2,13 +2,19 @@
 
 Interactive web applications respond to user actions. In Next.js/React, you use **events** to detect actions and **state** to track changes.
 
+Both events and state require a **client component**. Add `"use client"` as the first line of any file that uses them (see [Client and Server Components](client-server-components.md)).
+
 ---
 
 ## Event Handling in React
 
+Events are how the browser tells your code what the user did. A `<button>` on its own renders but does nothing when clicked — attaching an `onClick` handler is what connects a user action to your code.
+
 React uses camelCase event names passed as props:
 
 ```tsx
+"use client";
+
 export default function Button() {
     function handleClick() {
         console.log("Button clicked!");
@@ -31,9 +37,11 @@ Common events:
 
 ## What is State?
 
-State is data that can change over time. When state changes, React automatically re-renders the component to reflect the new value.
+State is data that can change over time. It exists because a plain JavaScript variable is reset on every render and would never update the screen — React does not watch ordinary variables. Change state through its setter, though, and React re-renders the component to reflect the new value.
 
 ```tsx
+"use client";
+
 import { useState } from "react";
 
 export default function Counter() {
@@ -109,6 +117,8 @@ function toggleFavourite(id: string) {
 Events trigger state changes, and state changes update the UI:
 
 ```tsx
+"use client";
+
 export default function ToggleMessage() {
     const [visible, setVisible] = useState(false);
 
