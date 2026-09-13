@@ -83,6 +83,7 @@ nav:
         - Fetching Data with State: pages/tasks/fetching-data-with-state.md
         - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
         - User Directory App: pages/tasks/user-directory.md
+        - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
       - Libraries and Integrations:
         - Tailwind CSS: pages/tasks/tailwind.md
         - Mantine Component Library: pages/tasks/mantine-components.md
