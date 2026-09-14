@@ -1,0 +1,496 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../iot-programming-introduction/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Introduction to IoT - Program IoT Devices</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction-to-iot">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Program IoT Devices" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Program IoT Devices
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Introduction to IoT
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Program IoT Devices" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Program IoT Devices
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Introduction to IoT
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Introduction to IoT
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-iot">
+<span class="md-ellipsis">
+      
+        What is IoT?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-components-of-iot">
+<span class="md-ellipsis">
+      
+        Key Components of IoT
+      
+    </span>
+</a>
+<nav aria-label="Key Components of IoT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-smart-thermostat-walkthrough">
+<span class="md-ellipsis">
+      
+        Example: Smart Thermostat Walkthrough
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-an-embedded-system">
+<span class="md-ellipsis">
+      
+        What is an Embedded System?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-microcontroller">
+<span class="md-ellipsis">
+      
+        What is a Microcontroller?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#applications-of-iot">
+<span class="md-ellipsis">
+      
+        Applications of IoT
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenges-of-iot">
+<span class="md-ellipsis">
+      
+        Challenges of IoT
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#glossary">
+<span class="md-ellipsis">
+      
+        Glossary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../iot-programming-introduction/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../comments/">
+<span class="md-ellipsis">
+    
+  
+    Comments
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../program-structure/">
+<span class="md-ellipsis">
+    
+  
+    Program Structure
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../digital-output-and-functions/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/iot-programming-activity/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Activity
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/class-activities/">
+<span class="md-ellipsis">
+    
+  
+    Independent Practice
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/digital-output-functions-task/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions Task
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/digital-output-functions-activity/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions Activity
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="introduction-to-iot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Introduction to IoT</h1>
+<hr/>
+<h2 id="what-is-iot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> What is IoT?</h2>
+<p>The Internet of Things (IoT) refers to the network of physical objects or "things" that are embedded with sensors, software, and other technologies to connect and exchange data with other devices and systems over the internet. These "things" can include a wide range of devices such as smart home appliances, wearable fitness trackers, industrial machinery, and even vehicles.</p>
+<hr/>
+<h2 id="key-components-of-iot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Key Components of IoT</h2>
+<p>An IoT system is built from a small set of layers that work together to turn a physical measurement into a useful action or insight:</p>
+<ol>
+<li><strong>Devices/Sensors</strong>: These are the physical objects that collect data from the environment. They can be anything from temperature sensors, motion detectors, to smart thermostats.</li>
+<li><strong>Microcontroller/Processor</strong>: This is the brain of the IoT device, responsible for processing the data collected by the sensors. It can be a simple microcontroller or a more powerful processor depending on the complexity of the device.</li>
+<li><strong>Connectivity</strong>: This refers to the communication protocols and networks that allow devices to connect and exchange data. Common <em>network-level</em> options include Wi-Fi, Bluetooth/BLE, Zigbee, LoRa, and cellular (4G/5G, NB-IoT). Sitting on top of these, <em>application-level</em> protocols such as MQTT, CoAP, and HTTP define how the actual data messages are formatted and exchanged — MQTT in particular is widely used in IoT because it's lightweight and suited to low-power devices.</li>
+<li><strong>Data Processing</strong>: Once the data is collected, it needs to be processed and analyzed. This can be done locally on the device (edge computing) or in the cloud.</li>
+<li><strong>User Interface</strong>: This is how users interact with the IoT system, which can be through mobile apps, web interfaces, or voice commands.</li>
+</ol>
+<h3 id="example-smart-thermostat-walkthrough"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Example: Smart Thermostat Walkthrough</h3>
+<ul>
+<li><strong>Sensor</strong> reads the current room temperature.</li>
+<li><strong>Microcontroller</strong> compares it against the target temperature set by the user.</li>
+<li><strong>Connectivity</strong> (e.g. Wi-Fi + MQTT) sends the reading to the cloud and receives any new settings.</li>
+<li><strong>Data Processing</strong> in the cloud logs the history and can trigger alerts (e.g. "furnace not responding").</li>
+<li><strong>User Interface</strong> (mobile app) displays the current temperature and lets the user adjust the target.</li>
+</ul>
+<p><img alt="Diagram showing the IoT data flow from sensor to microcontroller to connectivity to cloud data processing to user interface" src="../../../assets/image-example-1.png"/></p>
+<hr/>
+<h2 id="what-is-an-embedded-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> What is an Embedded System?</h2>
+<p>An embedded system is a specialised computing system that is designed to perform dedicated functions or tasks within a larger system. Key characteristics include:</p>
+<ul>
+<li><strong>Composition</strong>: Typically consists of a microcontroller or microprocessor, memory, input/output interfaces, and software tailored to the specific application.</li>
+<li><strong>Where they're found</strong>: A wide range of devices, from household appliances and automotive systems to industrial machinery and medical equipment.</li>
+<li><strong>Defining traits</strong>: Real-time operation, reliability, and efficiency in performing specific tasks (as opposed to general-purpose computing).</li>
+</ul>
+<hr/>
+<h2 id="what-is-a-microcontroller"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> What is a Microcontroller?</h2>
+<p>A microcontroller is a compact integrated circuit designed to govern a specific operation in an embedded system.</p>
+<ul>
+<li><strong>Composition</strong>: Combines a processor core, memory, and programmable input/output peripherals on a single chip.</li>
+<li><strong>Function</strong>: Allows the device to read sensor data, make decisions, and control actuators without needing separate external components.</li>
+<li><strong>Why they matter for IoT</strong>: Because they are small, low-cost, and low-power, microcontrollers are the "brain" behind most IoT devices, such as the Arduino boards used in this course.</li>
+</ul>
+<hr/>
+<h2 id="applications-of-iot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Applications of IoT</h2>
+<ol>
+<li><strong>Smart Homes</strong>: IoT devices can automate and control home appliances, lighting, security systems, and more, providing convenience and energy efficiency.</li>
+<li><strong>Healthcare</strong>: IoT can be used for remote patient monitoring, fitness tracking, and managing chronic diseases.</li>
+<li><strong>Industrial IoT (IIoT)</strong>: In manufacturing and industrial settings, IoT can optimize operations, monitor equipment health, and improve safety.</li>
+<li><strong>Agriculture</strong>: IoT can help farmers monitor soil conditions, weather, and crop health to improve yields and reduce waste.</li>
+<li><strong>Transportation</strong>: IoT can be used for fleet management, traffic monitoring, and improving vehicle safety.</li>
+<li><strong>Smart Cities</strong>: IoT can enhance urban living by improving traffic management, waste management, and energy efficiency.</li>
+</ol>
+<hr/>
+<h2 id="challenges-of-iot"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Challenges of IoT</h2>
+<ol>
+<li><strong>Security</strong>: With the increasing number of connected devices, security is a major concern. IoT devices can be vulnerable to hacking and data breaches.</li>
+<li><strong>Privacy</strong>: The collection of large amounts of data by IoT devices raises concerns about user privacy and data protection.</li>
+<li><strong>Interoperability</strong>: With a wide variety of devices and protocols, ensuring that different IoT devices can work together can be challenging.</li>
+<li><strong>Scalability</strong>: As the number of IoT devices grows, managing and scaling the infrastructure to support them can be difficult.</li>
+<li><strong>Power Consumption</strong>: Many IoT devices are battery-powered, and managing power consumption is crucial for their longevity and functionality.</li>
+</ol>
+<hr/>
+<h2 id="glossary"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> Glossary</h2>
+<ul>
+<li><strong>IoT (Internet of Things)</strong>: Network of physical devices that collect and exchange data over the internet.</li>
+<li><strong>Embedded System</strong>: A dedicated computing system built to perform specific functions within a larger device.</li>
+<li><strong>Microcontroller (MCU)</strong>: A single-chip computer combining a processor, memory, and I/O peripherals, used to control embedded/IoT devices.</li>
+<li><strong>Edge Computing</strong>: Processing data locally on or near the device rather than sending it to the cloud.</li>
+<li><strong>IIoT (Industrial IoT)</strong>: Application of IoT technologies in manufacturing and industrial settings.</li>
+<li><strong>MQTT/CoAP</strong>: Lightweight application-layer messaging protocols commonly used for IoT communication.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Next: IoT Programming Introduction" class="md-footer__link md-footer__link--next" href="../iot-programming-introduction/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                IoT Programming Introduction
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

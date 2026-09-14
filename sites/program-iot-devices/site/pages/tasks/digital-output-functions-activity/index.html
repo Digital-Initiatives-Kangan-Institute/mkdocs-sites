@@ -1,0 +1,874 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../digital-output-functions-task/" rel="prev"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Digital Output and Functions Activity - Program IoT Devices</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#digital-output-and-functions-activity">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Program IoT Devices" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Program IoT Devices
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Digital Output and Functions Activity
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Program IoT Devices" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Program IoT Devices">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Program IoT Devices
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/introduction-to-iot/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to IoT
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/iot-programming-introduction/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/comments/">
+<span class="md-ellipsis">
+    
+  
+    Comments
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/program-structure/">
+<span class="md-ellipsis">
+    
+  
+    Program Structure
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/digital-output-and-functions/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../iot-programming-activity/">
+<span class="md-ellipsis">
+    
+  
+    IoT Programming Activity
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../class-activities/">
+<span class="md-ellipsis">
+    
+  
+    Independent Practice
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../digital-output-functions-task/">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions Task
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions Activity
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Digital Output and Functions Activity
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-1-buzzer-sos-using-a-function">
+<span class="md-ellipsis">
+      
+        Task 1 — Buzzer SOS Using a Function
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-2-rgb-colour-cycle-using-a-function">
+<span class="md-ellipsis">
+      
+        Task 2 — RGB Colour Cycle Using a Function
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-3-function-with-a-return-value">
+<span class="md-ellipsis">
+      
+        Task 3 — Function With a Return Value
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-4-led-chase-sequence-using-a-function">
+<span class="md-ellipsis">
+      
+        Task 4 — LED Chase Sequence Using a Function
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-5-spot-the-bug-worksheet-extension">
+<span class="md-ellipsis">
+      
+        Task 5 — Spot-the-Bug Worksheet (Extension)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-6-miniature-traffic-light-system">
+<span class="md-ellipsis">
+      
+        Task 6 — Miniature Traffic-Light System
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#task-7-electronic-music-box-capstone">
+<span class="md-ellipsis">
+      
+        Task 7 — Electronic Music Box (Capstone)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#questions">
+<span class="md-ellipsis">
+      
+        Questions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#self-check-before-submitting">
+<span class="md-ellipsis">
+      
+        Self-Check Before Submitting
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../../resources/introduction-to-iot/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../iot-programming-activity/">
+<span class="md-ellipsis">
+    Tasks
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="digital-output-and-functions-activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Digital Output and Functions Activity</h1>
+<hr/>
+<h2 id="task-1-buzzer-sos-using-a-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> Task 1 — Buzzer SOS Using a Function</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Scenario:</strong> A hiking safety company is developing a small emergency signalling device for people travelling in remote areas. When activated, the device must repeatedly sound the international SOS distress pattern using an active buzzer.</p>
+<p>Your task is to program an ESP32-S3 to produce three short beeps, followed by three long beeps, and then three short beeps. After completing the SOS signal, the device must wait two seconds before repeating it.</p>
+<p><strong>Components:</strong> ESP32-S3, 1 × active buzzer, jumper wires.
+<strong>Wiring:</strong> buzzer (+) → GPIO8, buzzer (−) → GND.</p>
+<p>Create a reusable function named <code>beep(int onTime)</code>. The <code>onTime</code> parameter controls how long the buzzer remains on. The function must turn the buzzer off and wait 200 milliseconds after every beep. Use the same function for both short and long beeps.</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/471515514429761537">https://wokwi.com/projects/471515514429761537</a></p>
+<p><strong>Check yourself:</strong>
+- <code>beep()</code> is reused for both short and long beeps — no duplicated <code>digitalWrite</code>/<code>delay</code> blocks
+- The SOS pattern is clearly recognisable (short-short-short, long-long-long, short-short-short)
+- There is a 2-second pause between each full SOS sequence</p>
+</div>
+<hr/>
+<h2 id="task-2-rgb-colour-cycle-using-a-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> Task 2 — RGB Colour Cycle Using a Function</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Scenario:</strong> An event organiser needs a small decorative light for a concert stage model. The light must cycle through red, green, and blue, with only one colour illuminated at a time. Each colour should remain on for a specified duration before the next colour appears.</p>
+<p>Your task is to program an ESP32-S3 to control a common-cathode RGB LED.</p>
+<p><strong>Components:</strong> ESP32-S3, 1 × common-cathode RGB LED, 3 × 220 Ω resistors, jumper wires, breadboard.</p>
+<table>
+<thead>
+<tr>
+<th>RGB LED Pin</th>
+<th>ESP32-S3 GPIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red (+)</td>
+<td>GPIO14</td>
+</tr>
+<tr>
+<td>Green (+)</td>
+<td>GPIO18</td>
+</tr>
+<tr>
+<td>Blue (+)</td>
+<td>GPIO17</td>
+</tr>
+<tr>
+<td>Common (−)</td>
+<td>GND</td>
+</tr>
+</tbody>
+</table>
+<p>Create a reusable function named <code>showColor(int pin, int onTime)</code>. The <code>pin</code> parameter selects the colour, while <code>onTime</code> determines how long it remains illuminated. Use this function in <code>loop()</code> to display red, green, and blue in sequence.</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/471515878453487617">https://wokwi.com/projects/471515878453487617</a></p>
+<p><strong>Check yourself:</strong>
+- <code>showColor()</code> is used for all three colours instead of writing <code>digitalWrite</code>/<code>delay</code> three separate times
+- Only one colour is on at a time during the colour cycle</p>
+</div>
+<details class="note">
+<summary>Challenge — Click to expand</summary>
+<p>Create a second function named <code>showWhite(int onTime)</code>. This function must turn on all three colours simultaneously to produce a white flash after each complete colour cycle.</p>
+<ul>
+<li><code>showWhite()</code> turns all three colours on at once</li>
+</ul>
+</details>
+<hr/>
+<h2 id="task-3-function-with-a-return-value"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Task 3 — Function With a Return Value</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Scenario:</strong> A smart home company is building a simple app to remotely control a porch light. Whenever the app sends a command to turn the light on or off, the device needs to confirm back what state the light actually ended up in, so the app can keep its on-screen switch in sync with the real light.</p>
+<p><strong>Components:</strong> ESP32-S3, 1 × LED, 1 × 220 Ω resistor, jumper wires, breadboard.
+<strong>Wiring:</strong> LED anode (+) → 220 Ω resistor → GPIO13, LED cathode (−) → GND.</p>
+<p>Write a function <code>bool controlLED(bool turnOn)</code> that sets <code>ledPin</code> (<code>= 13</code>) HIGH or LOW based on the <code>turnOn</code> parameter, and returns the new state.</p>
+<p>In <code>loop()</code>, call it to turn the LED on, print the returned state to Serial, wait 1 second, then call it to turn the LED off and print the returned state again.</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/471516108090616833">https://wokwi.com/projects/471516108090616833</a></p>
+<p><strong>Check yourself:</strong>
+- <code>controlLED()</code> returns a <code>bool</code>, not <code>void</code>
+- The Serial Monitor prints <code>1</code> when the LED is on and <code>0</code> when it is off
+- The same function handles both turning the LED on and off</p>
+</div>
+<hr/>
+<h2 id="task-4-led-chase-sequence-using-a-function"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> Task 4 — LED Chase Sequence Using a Function</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Scenario:</strong> A school is preparing for a celebration and needs a miniature decorative lighting display. Your task is to program several LEDs to turn on and off one after another, creating a "chasing light" effect.</p>
+<p>The sequence should move from the first LED to the last LED. After reaching the final LED, it should repeat continuously. Use a function to control the sequence instead of placing all the instructions directly inside <code>loop()</code>.</p>
+<p><strong>Components:</strong> ESP32-S3, at least 4 × ordinary LEDs, 220 Ω resistors, jumper wires, breadboard. Connect the LEDs to GPIOs 4, 5, 6, and 7 (each with its own 220 Ω resistor).</p>
+<p><strong>Program requirements:</strong>
+- Use at least four LEDs.
+- Turn on only one LED at a time.
+- Use a function with parameters to control an LED: <code>void lightLED(int ledPin, int delayTime)</code>
+    - The <code>ledPin</code> parameter selects the LED.
+    - The <code>delayTime</code> parameter controls the speed.
+- Call the function for each LED from <code>loop()</code>, moving from the first LED to the last, then repeating.</p>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/471516524377458689">https://wokwi.com/projects/471516524377458689</a></p>
+<p><strong>Check yourself:</strong>
+- At least four LEDs are wired and controlled
+- Only one LED is lit at a time
+- <code>lightLED()</code> is reused for every LED — no repeated <code>digitalWrite</code>/<code>delay</code> blocks in <code>loop()</code>
+- The sequence moves from the first LED to the last, then repeats continuously</p>
+</div>
+<details class="note">
+<summary>Challenge — Click to expand</summary>
+<p>Add a buzzer sound or an OLED/LCD message that plays or updates each time the sequence reaches the last LED.</p>
+<ul>
+<li>A buzzer sound or OLED/LCD message marks the end of each full sequence</li>
+</ul>
+</details>
+<hr/>
+<h2 id="task-5-spot-the-bug-worksheet-extension"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.5</span> Task 5 — Spot-the-Bug Worksheet (Extension)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>For each round, read the snippet and write down what's wrong <strong>before</strong> revealing the answer.</p>
+</div>
+<p><strong>Round 1:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">beep</span><span class="p">(</span><span class="n">onTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="n">onTime</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">buzzerPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p>The parameter <code>onTime</code> is missing its type — it must be <code>void beep(int onTime)</code>.</p>
+</details>
+<p><strong>Round 2:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">showColor</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">onTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="n">onTime</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">showColor</span><span class="p">(</span><span class="n">redPin</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p><code>showColor</code> expects two arguments (<code>pin</code> and <code>onTime</code>), but only one was passed in — this won't compile.</p>
+</details>
+<p><strong>Round 3:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">controlLED</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">turnOn</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">turnOn</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">turnOn</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p>The function is declared <code>void</code> but tries to <code>return turnOn;</code> — a <code>void</code> function can't return a value. It should be declared <code>bool controlLED(bool turnOn)</code>.</p>
+</details>
+<p><strong>Round 4:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">controlLED</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">turnOn</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">turnOn</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">ledState</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">controlLED</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">ledState</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p><code>controlLED</code> is declared to return a <code>bool</code>, but it never uses a <code>return</code> statement — it needs <code>return turnOn;</code> at the end so <code>ledState</code> actually receives a value.</p>
+</details>
+<p><strong>Round 5:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">lightLED</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">delayTime</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="n">delayTime</span><span class="p">);</span>
+<span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">ledPin</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">lightLED</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p>The arguments are swapped — <code>lightLED(int ledPin, int delayTime)</code> expects the pin number first and the delay second, but this call passes <code>200</code> as the pin (not a real GPIO) and <code>4</code> as the delay (4 ms, barely visible). It should be <code>lightLED(4, 200)</code>.</p>
+</details>
+<p><strong>Round 6:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">getNoteDuration</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">getNoteDuration</span><span class="p">();</span>
+<span class="w">  </span><span class="n">playNote</span><span class="p">(</span><span class="mi">440</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p><code>getNoteDuration()</code> is called but its returned value is never stored or used — the code then hardcodes <code>500</code> into <code>playNote()</code> instead. Calling a value-returning function without using what it returns defeats the point of it; it should be <code>playNote(440, getNoteDuration());</code> or store the result first: <code>int duration = getNoteDuration(); playNote(440, duration);</code>.</p>
+</details>
+<p><strong>Round 7:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">checkAnswer</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="n">answer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">"red"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p><code>string</code> (lowercase) isn't a recognised type in Arduino — the built-in text type is <code>String</code> (capital S). This won't compile; it should be <code>bool checkAnswer(String answer)</code>.</p>
+</details>
+<p><strong>Round 8:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setRGBColour</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">red</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">green</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">blue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">RED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">red</span><span class="p">);</span>
+<span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">GREEN_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">green</span><span class="p">);</span>
+<span class="w">  </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">BLUE_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">blue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">setRGBColour</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="hint">
+<summary>Answer — Click to expand</summary>
+<p><code>setRGBColour</code> expects three arguments (<code>red</code>, <code>green</code>, and <code>blue</code>), but only two were passed in — this won't compile. It needs a third value, e.g. <code>setRGBColour(255, 0, 0);</code>.</p>
+</details>
+<p><strong>Self-check:</strong> How many did you spot correctly before looking?</p>
+<hr/>
+<h2 id="task-6-miniature-traffic-light-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.6</span> Task 6 — Miniature Traffic-Light System</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Scenario:</strong> The local council needs a miniature traffic-light system for a model intersection. The device cycles through green, yellow, and red using the RGB LED. The ordinary LED represents a pedestrian crossing light, the buzzer warns when the lights change, and the OLED/LCD displays instructions such as "STOP" and "GO".</p>
+<p><strong>Components:</strong> ESP32-S3, 1 × common-cathode RGB LED, 1 × ordinary LED, 1 × active buzzer, 1 × OLED/LCD display (I2C), resistors, jumper wires, breadboard.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>ESP32-S3 GPIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGB LED — Red (+)</td>
+<td>GPIO14</td>
+</tr>
+<tr>
+<td>RGB LED — Green (+)</td>
+<td>GPIO18</td>
+</tr>
+<tr>
+<td>RGB LED — Blue (+)</td>
+<td>GPIO17</td>
+</tr>
+<tr>
+<td>RGB LED — Common (−)</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>Pedestrian LED (+)</td>
+<td>GPIO5</td>
+</tr>
+<tr>
+<td>Buzzer (+)</td>
+<td>GPIO4</td>
+</tr>
+<tr>
+<td>OLED/LCD — SDA</td>
+<td>GPIO8</td>
+</tr>
+<tr>
+<td>OLED/LCD — SCL</td>
+<td>GPIO9</td>
+</tr>
+</tbody>
+</table>
+<p>Build the system using three functions, one of each kind covered in this activity:</p>
+<ol>
+<li>
+<p><strong>Function without parameters — <code>warnChange()</code></strong>
+   Beeps the buzzer once and briefly flashes the pedestrian LED. Call it every time the traffic light is about to change colour, so it always behaves the same way with no inputs needed.</p>
+</li>
+<li>
+<p><strong>Function with parameters — <code>setTrafficLight(int redPin, int greenPin, int bluePin, int onTime)</code></strong>
+   Turns on only the correct RGB colour pin for <code>onTime</code> milliseconds (the other two stay off), then turns it off. Use it three times in <code>loop()</code> — once each for green, yellow (red + green together), and red — so the same function drives the whole cycle.</p>
+</li>
+<li>
+<p><strong>Function with a return value — <code>bool pedestrianCanCross()</code></strong>
+   Returns <code>true</code> while the traffic light is red (safe to cross) and <code>false</code> otherwise. Use the returned value to decide whether the OLED/LCD shows <code>"GO"</code> or <code>"STOP"</code>, and whether the pedestrian LED is lit.</p>
+</li>
+</ol>
+<p><strong>Suggested sequence in <code>loop()</code>:</strong></p>
+<ol>
+<li>Show green (traffic light) → OLED shows <code>"STOP"</code> for pedestrians.</li>
+<li>Call <code>warnChange()</code>.</li>
+<li>Show yellow.</li>
+<li>Call <code>warnChange()</code>.</li>
+<li>Show red (traffic light) → check <code>pedestrianCanCross()</code> → OLED shows <code>"GO"</code>, pedestrian LED on.</li>
+<li>Pause, then repeat.</li>
+</ol>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/471514510742063105">https://wokwi.com/projects/471514510742063105</a></p>
+<p><strong>Check yourself:</strong>
+- All three functions exist and match the required kind (no parameters / with parameters / with a return value)
+- <code>setTrafficLight()</code> is reused for all three colours — no repeated <code>digitalWrite</code>/<code>delay</code> blocks
+- <code>warnChange()</code> runs every time the light changes colour
+- <code>pedestrianCanCross()</code> returns <code>true</code> only when the traffic light is red
+- The OLED/LCD text matches the pedestrian light state (<code>"STOP"</code> vs <code>"GO"</code>)</p>
+</div>
+<hr/>
+<h2 id="task-7-electronic-music-box-capstone"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.7</span> Task 7 — Electronic Music Box (Capstone)</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p><strong>Scenario:</strong> A toy company wants a small electronic music box. It plays a melody through the buzzer while the LED flashes with each note. The RGB LED changes colour during the song, and the OLED/LCD shows the number or name of the current note.</p>
+<p><strong>Components:</strong> ESP32-S3, 1 × active buzzer, 1 × ordinary LED, 1 × common-cathode RGB LED, 1 × OLED/LCD display (I2C), resistors, jumper wires, breadboard.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>ESP32-S3 GPIO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buzzer (+)</td>
+<td>GPIO4</td>
+</tr>
+<tr>
+<td>Note LED (+)</td>
+<td>GPIO5</td>
+</tr>
+<tr>
+<td>RGB LED — Red (+)</td>
+<td>GPIO14</td>
+</tr>
+<tr>
+<td>RGB LED — Green (+)</td>
+<td>GPIO18</td>
+</tr>
+<tr>
+<td>RGB LED — Blue (+)</td>
+<td>GPIO17</td>
+</tr>
+<tr>
+<td>RGB LED — Common (−)</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>OLED/LCD — SDA</td>
+<td>GPIO8</td>
+</tr>
+<tr>
+<td>OLED/LCD — SCL</td>
+<td>GPIO9</td>
+</tr>
+</tbody>
+</table>
+<p>Build the system using three functions, one of each kind covered in this activity:</p>
+<ol>
+<li>
+<p><strong>Function without parameters — <code>void startMelody()</code></strong>
+   Displays a "Now Playing" message on the OLED/LCD and briefly cycles the RGB LED through its colours. Call it once from <code>setup()</code>, before the song starts, so it always runs the same way with no inputs needed.</p>
+</li>
+<li>
+<p><strong>Function with parameters — <code>void playNote(int frequency, int duration)</code></strong>
+   Plays a single note on the buzzer at <code>frequency</code> for <code>duration</code> milliseconds, flashing the note LED for the same length of time. Use it once per note in <code>loop()</code>, passing in a different frequency and duration each time, so the same function plays every note in the melody.</p>
+</li>
+<li>
+<p><strong>Function with a return value — <code>int getNoteDuration()</code></strong>
+   Looks up how long the <em>current</em> note in the melody should last (e.g. from an array of durations, indexed by a note counter) and returns that value. Use the returned value as the <code>duration</code> argument passed into <code>playNote()</code>, and to update the note number/name shown on the OLED/LCD.</p>
+</li>
+</ol>
+<p><strong>Suggested sequence in <code>loop()</code>:</strong></p>
+<ol>
+<li>Call <code>startMelody()</code> once (or move it into <code>setup()</code>).</li>
+<li>For each note in the melody: call <code>getNoteDuration()</code> to find how long it should play, update the OLED/LCD with the note's number or name, then call <code>playNote()</code> with that note's frequency and the returned duration.</li>
+<li>Change the RGB LED colour every few notes.</li>
+<li>Pause after the last note, then repeat the song.</li>
+</ol>
+<p><strong>Open this Wokwi simulation:</strong> <a href="https://wokwi.com/projects/471518431484812289">https://wokwi.com/projects/471518431484812289</a></p>
+<p><strong>Check yourself:</strong>
+- All three functions exist and match the required kind (no parameters / with parameters / with a return value)
+- <code>playNote()</code> is reused for every note — no repeated <code>tone()</code>/<code>digitalWrite</code>/<code>delay</code> blocks
+- <code>getNoteDuration()</code> returns an <code>int</code> and that value is used both to play the note and to update the OLED/LCD
+- The note LED flashes in time with each note
+- The RGB LED visibly changes colour as the melody plays</p>
+</div>
+<hr/>
+<h2 id="questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.8</span> Questions</h2>
+<p>Answer these in your own words before moving on:</p>
+<ol>
+<li>What is the difference between a function with parameters and a function without parameters?</li>
+<li>Why is <code>showColor(pin, onTime)</code> more flexible than a fixed <code>showColor()</code> with no parameters?</li>
+<li>What does <code>return</code> do inside a function, and why don't <code>void</code> functions use it?</li>
+<li>In Task 1, what would happen if <code>beep()</code> didn't exist and you had to write out every beep manually?</li>
+<li>Why do <code>setup()</code> and <code>loop()</code> not need to be called manually anywhere in your code?</li>
+</ol>
+<hr/>
+<h2 id="self-check-before-submitting"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.9</span> Self-Check Before Submitting</h2>
+<ul>
+<li>All programs compile and upload without errors</li>
+<li>Every repeated on/off pattern is written once as a function and reused, not copy-pasted</li>
+<li>Functions with parameters are used where behaviour needs to change (e.g. speed, pin, duration)</li>
+<li><code>controlLED()</code> correctly returns a <code>bool</code> reflecting the LED's new state</li>
+<li>I can explain, out loud, the difference between a function with parameters, without parameters, and one with a return value</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Digital Output and Functions Task" class="md-footer__link md-footer__link--prev" href="../digital-output-functions-task/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Digital Output and Functions Task
+              </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>
