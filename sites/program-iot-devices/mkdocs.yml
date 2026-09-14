@@ -20,6 +20,7 @@ nav:
       - Combining Multiple Sensors: pages/resources/combining-multiple-sensors.md
       - Lists, Arrays and Loops: pages/resources/lists-arrays-and-loops.md
       - Structured Data: pages/resources/structured-data.md
+      - Revision: pages/resources/revision.md
     - Tasks:
       - IoT Programming Activity: pages/tasks/iot-programming-activity.md
       - Digital Output and Functions Task: pages/tasks/digital-output-functions-task.md
@@ -27,6 +28,7 @@ nav:
       - Combining Multiple Sensors Task: pages/tasks/combining-multiple-sensors-task.md
       - Lists, Arrays and Loops Task: pages/tasks/lists-arrays-and-loops-task.md
       - Structured Data Task: pages/tasks/structured-data-task.md
+      - Revision Task: pages/tasks/revision-task.md
     - Activities:
       - Independent Practice: pages/tasks/class-activities.md
       - Digital Output and Functions Activity: pages/tasks/digital-output-functions-activity.md
@@ -34,6 +36,7 @@ nav:
       - Combining Multiple Sensors Activity: pages/tasks/combining-multiple-sensors-activity.md
       - Lists, Arrays and Loops Activity: pages/tasks/lists-arrays-and-loops-activity.md
       - Structured Data Activity: pages/tasks/structured-data-activity.md
+      - Revision Activity: pages/tasks/revision-activity.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
