@@ -10,17 +10,21 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - Introduction to IoT: pages/resources/introduction-to-iot.md
-      - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
-      - Comments: pages/resources/comments.md
-      - Program Structure: pages/resources/program-structure.md
-      - Digital Output and Functions: pages/resources/digital-output-and-functions.md
-      - Reading Inputs: pages/resources/reading-inputs.md
-      - Selection and Conditional Logic: pages/resources/selection-conditional-logic.md
-      - Combining Multiple Sensors: pages/resources/combining-multiple-sensors.md
-      - Lists, Arrays and Loops: pages/resources/lists-arrays-and-loops.md
-      - Structured Data: pages/resources/structured-data.md
-      - Revision: pages/resources/revision.md
+      - Getting Started:
+        - Introduction to IoT: pages/resources/introduction-to-iot.md
+        - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
+      - Core Concepts:
+        - Comments: pages/resources/comments.md
+        - Program Structure: pages/resources/program-structure.md
+        - Digital Output and Functions: pages/resources/digital-output-and-functions.md
+        - Reading Inputs: pages/resources/reading-inputs.md
+        - Selection and Conditional Logic: pages/resources/selection-conditional-logic.md
+      - Advanced Topics:
+        - Combining Multiple Sensors: pages/resources/combining-multiple-sensors.md
+        - Lists, Arrays and Loops: pages/resources/lists-arrays-and-loops.md
+        - Structured Data: pages/resources/structured-data.md
+      - Review:
+        - Revision: pages/resources/revision.md
     - Tasks:
       - IoT Programming Activity: pages/tasks/iot-programming-activity.md
       - Digital Output and Functions Task: pages/tasks/digital-output-functions-task.md
@@ -37,6 +41,9 @@ nav:
       - Lists, Arrays and Loops Activity: pages/tasks/lists-arrays-and-loops-activity.md
       - Structured Data Activity: pages/tasks/structured-data-activity.md
       - Revision Activity: pages/tasks/revision-activity.md
+    - Practice:
+      - Warehouse Loading Dock Station: pages/tasks/practice-1.md
+      - Chemical Storage Access & Tamper Monitor: pages/tasks/practice-2.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -58,6 +65,8 @@ plugins:
       restart_increment_after:
         - pages/tasks/iot-programming-activity.md
         - pages/tasks/class-activities.md
+        - pages/tasks/practice-1.md
+        - pages/tasks/practice-2.md
 
 extra:
   generator: false
