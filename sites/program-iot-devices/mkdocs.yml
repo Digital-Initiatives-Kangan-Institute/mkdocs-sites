@@ -41,6 +41,9 @@ nav:
       - Lists, Arrays and Loops Activity: pages/tasks/lists-arrays-and-loops-activity.md
       - Structured Data Activity: pages/tasks/structured-data-activity.md
       - Revision Activity: pages/tasks/revision-activity.md
+    - Practice:
+      - Warehouse Loading Dock Station: pages/tasks/practice-1.md
+      - Chemical Storage Access & Tamper Monitor: pages/tasks/practice-2.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -62,6 +65,8 @@ plugins:
       restart_increment_after:
         - pages/tasks/iot-programming-activity.md
         - pages/tasks/class-activities.md
+        - pages/tasks/practice-1.md
+        - pages/tasks/practice-2.md
 
 extra:
   generator: false
