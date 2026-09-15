@@ -19,7 +19,7 @@ Your task is to analyse the CSV, design and create a relational database in Supa
 
 Use the supplied file:
 
-[kangalife_club_bookings_august_2026.csv](../../assets/kan) 
+[kangalife_club_bookings_august_2026.csv](../../assets/kangalife_club_bookings_august_2026.csv) 
 
 ---
 
