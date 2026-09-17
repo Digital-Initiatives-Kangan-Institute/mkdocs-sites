@@ -16,7 +16,7 @@ AI models respond to several basic styles of prompts, each suited to different t
 2. **Instruction Prompts**
     * **Purpose**: Direct, action-oriented prompts that tell the AI exactly what to do.
     * **Examples**:
-        * *"Summarize this article in 3 bullet points."*
+        * *"Summarise this article in 3 bullet points."*
         * *"Write a professional email to a new client."*
         * *"Generate a list of 5 blog post ideas about healthy eating."*
 
@@ -38,7 +38,7 @@ AI models respond to several basic styles of prompts, each suited to different t
 
 ## Adding Context and Constraints
 
-To maximize the effectiveness of an AI response, prompts must move beyond vague queries by incorporating specific **context** (such as the target audience or background) and **constraints** (such as length limitations or format requirements).
+To maximise the effectiveness of an AI response, prompts must move beyond vague queries by incorporating specific **context** (such as the target audience or background) and **constraints** (such as length limitations or format requirements).
 
 ### Comparative Examples: Vague vs. Specific Prompting
 
@@ -57,7 +57,7 @@ As you develop your capabilities, you will move from simple inputs to strategic,
 2. **Assign a Role (Persona)**: Establish the perspective, tone, and domain expertise the AI should adopt right at the beginning of the prompt.
 3. **Provide Context and Data**: Feed the AI the "raw ingredients" (supporting data, articles, background information, or internal guidelines) it needs to perform the task accurately.
 4. **Define the Output Format**: Direct the structure of the response. Specify whether you want an email, a markdown table, a bulleted list, a technical report, or a summary slide layout.
-5. **Iterate and Refine**: Recognize that a first prompt is rarely perfect. If the AI misses the mark, do not start a new session; instead, engage in **iterative prompting** by providing constructive "follow-up" feedback to guide the model toward the desired outcome.
+5. **Iterate and Refine**: Recognise that a first prompt is rarely perfect. If the AI misses the mark, do not start a new session; instead, engage in **iterative prompting** by providing constructive "follow-up" feedback to guide the model toward the desired outcome.
 
 ### Hands-On Prompt Practice Template
 
@@ -77,7 +77,7 @@ When practicing or completing class activities, use this structured template to 
 
 ### 2. Testing & Improvement Log
 *   **Draft Prompt 1 (Vague)**: [Your initial prompt]
-*   **AI Output 1 Summary**: [Briefly summarize what the AI generated]
+*   **AI Output 1 Summary**: [Briefly summarise what the AI generated]
 *   **Evaluation**: [What did the AI miss? Did it hallucinate or ignore constraints?]
 *   **How I Improved It**: [Changes made to prompt parameters]
 
