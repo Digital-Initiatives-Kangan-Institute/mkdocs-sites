@@ -4,27 +4,38 @@
 :root {
   --shared-radius-sm: 4px;
   --shared-radius-md: 8px;
-  --shared-radius-pill: 8px;
+  --shared-radius-pill: 9999px;
   --shared-outline: var(--md-default-fg-color--lightest);
+
+  /* Static fallbacks first for browsers without color-mix (older school devices),
+     then progressive enhancement via color-mix. */
+  --shared-surface-container: var(--md-default-fg-color--lightest);
+  --shared-surface-container-high: var(--md-default-fg-color--lightest);
+  --shared-state-hover: var(--md-default-fg-color--lightest);
+  --shared-state-active: var(--md-default-fg-color--lightest);
   --shared-surface-container: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
   --shared-surface-container-high: color-mix(in srgb, var(--md-default-fg-color) 7%, transparent);
   --shared-state-hover: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
   --shared-state-active: color-mix(in srgb, var(--md-primary-fg-color) 14%, transparent);
 }
 
-/* Hide the redundant sidebar title — nav already labels sections clearly. */
-.md-nav__title {
-  display: none;
+/* Hide the redundant sidebar title on desktop only — on mobile these labels
+   are the Back buttons for nested menus (label for=__nav_X), so keep them. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary .md-nav__title {
+    display: none;
+  }
 }
 
 /* Base readability */
 .md-main {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--md-default-bg-color);
 }
 
 .md-typeset {
+  font-size: 0.82rem;
   line-height: 1.7;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .md-typeset h1 {
@@ -46,25 +57,15 @@
   margin-top: 1.8rem;
 }
 
-.md-typeset p,
-.md-typeset li {
-  font-size: 0.82rem;
-}
-
-.md-content {
-  border-left: 1px solid rgb(228, 228, 228);
-  margin-left: 1rem;
-}
-
-/* Breadcrumb path: smaller, muted, easy to scan */
+/* Breadcrumb path: smaller, muted, easy to scan (colour, not opacity, so contrast holds) */
 .md-path {
-  font-size: 0.7rem;
-  opacity: 0.85;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
 }
 
 /* --- Return to Portal: Material filled button, palette-aware --- */
-/* Selects the return to portal button only */
-.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link {
+/* First nav item only — avoids brittle exact-match [class="..."] selectors. */
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,30 +81,31 @@
   padding: 0.65rem 1.25rem;
   margin: 0 0 0.75rem 0;
 
-  transition: background-color 0.15s ease, filter 0.15s ease;
+  transition: background-color 0.15s ease, background-image 0.15s ease;
 }
 
-.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link::before {
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link::before {
   content: "←";
   font-weight: 800;
   line-height: 1;
 }
 
-.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link:hover {
-  filter: brightness(1.07);
+/* Overlay tint instead of filter: brightness() so text contrast never shifts. */
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12));
 }
 
-.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link:active {
-  filter: brightness(0.96);
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12));
 }
 
-/* --- Left nav: clear hierarchy for beginners --- */
+/* --- Left nav: clear hierarchy for beginners (colour, not opacity, for contrast) --- */
 .md-nav__item--section > .md-nav__link {
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.65;
+  color: var(--md-default-fg-color--light);
   margin-top: 1.25rem;
   margin-bottom: 0.35rem;
 }
@@ -144,13 +146,11 @@
   border-radius: 4px;
 }
 
-/* --- Admonitions / details: flat tonal cards --- */
+/* --- Admonitions / details: flat tonal cards (keep theme border + type size) --- */
 .md-typeset .admonition,
 .md-typeset details {
   border-radius: var(--shared-radius-md);
-  border-width: 1px;
   overflow: hidden;
-  font-size: 0.8rem;
 }
 
 /* Admonition titles keep theme padding + line-height so icons stay vertically centered */
@@ -172,6 +172,8 @@
 
 .md-typeset pre > code {
   border: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 /* Outer wrapper carries the outline when line numbers use a table; inner panes stay flat */
@@ -194,21 +196,40 @@
   outline: none;
 }
 
+/* Gutter separator + muted numbers so code doesn't run into line numbers */
+.md-typeset .highlighttable td.linenos {
+  border-right: 1px solid var(--shared-outline);
+}
+
+.md-typeset .linenodiv pre {
+  color: var(--md-default-fg-color--lighter);
+}
+
 /* Copy button: flat */
 .md-clipboard {
   border-radius: 6px;
 }
 
-/* --- Tables: flat, tonal header, subtle row tint --- */
+/* Code annotations (content.code.annotate): match the flat theme */
+.md-typeset .md-annotation__index {
+  border-radius: 50%;
+}
+
+.md-typeset .md-tooltip {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-sm);
+  font-size: 0.75rem;
+}
+
+/* --- Tables: border on the scroll wrapper so mobile scroll + radius coexist --- */
 .md-typeset__table {
+  border: 1px solid var(--shared-outline);
   border-radius: var(--shared-radius-md);
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .md-typeset table:not([class]) {
-  border: 1px solid var(--shared-outline);
-  border-radius: var(--shared-radius-md);
-  overflow: hidden;
+  border: none;
   font-size: 0.78rem;
 }
 
@@ -226,13 +247,15 @@
   background-color: var(--shared-surface-container);
 }
 
-/* Images: soft corners so screenshots feel embedded, not pasted */
-.md-typeset img {
+/* Block screenshots only: p > img excludes inline emoji/icons (span > img). */
+.md-typeset p > img:only-child {
   border-radius: var(--shared-radius-sm);
   border: 1px solid var(--shared-outline);
+  max-width: 100%;
+  height: auto;
 }
 
-/* --- Prev / next footer: flat state-layer hover --- */
+/* --- Prev / next footer: flat state-layer hover (footer is dark in both schemes) --- */
 .md-footer__link {
   border-radius: var(--shared-radius-md);
   padding: 0.4rem 0.6rem;
@@ -254,22 +277,12 @@
   border-radius: 4px;
 }
 
-/* Dark mode: tonal surfaces, no shadows */
-[data-md-color-scheme="slate"] .md-main {
-  background-color: var(--md-default-bg-color);
-}
-
-[data-md-color-scheme="slate"] .md-content {
-  border-left-color: var(--shared-outline);
-}
-
-[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
-  background-color: rgba(255, 255, 255, 0.04);
-}
-
-@media screen and (max-width: 800px) {
-  .md-content {
-    border-left: unset;
-    margin-left: unset;
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
