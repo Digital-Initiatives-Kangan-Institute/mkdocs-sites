@@ -1,57 +1,265 @@
-.md-nav__title {
-    display: none;
+/* Shared stylesheet for all MkDocs sites (loaded via theme custom_dir).
+   Material-flat, beginner-friendly tweaks. Keep everything in this one file. */
+
+:root {
+  --shared-radius-sm: 4px;
+  --shared-radius-md: 8px;
+  --shared-radius-pill: 8px;
+  --shared-outline: var(--md-default-fg-color--lightest);
+  --shared-surface-container: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+  --shared-surface-container-high: color-mix(in srgb, var(--md-default-fg-color) 7%, transparent);
+  --shared-state-hover: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+  --shared-state-active: color-mix(in srgb, var(--md-primary-fg-color) 14%, transparent);
 }
 
+/* Hide the redundant sidebar title — nav already labels sections clearly. */
+.md-nav__title {
+  display: none;
+}
+
+/* Base readability */
 .md-main {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+}
+
+.md-typeset {
+  line-height: 1.7;
+  word-break: break-word;
+}
+
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--shared-outline);
+}
+
+.md-typeset h3 {
+  font-weight: 700;
+  margin-top: 1.8rem;
+}
+
+.md-typeset p,
+.md-typeset li {
+  font-size: 0.82rem;
 }
 
 .md-content {
-    border-left: 1px solid rgb(228, 228, 228);
-    margin-left: 1rem;
+  border-left: 1px solid rgb(228, 228, 228);
+  margin-left: 1rem;
 }
 
+/* Breadcrumb path: smaller, muted, easy to scan */
+.md-path {
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+/* --- Return to Portal: Material filled button, palette-aware --- */
 /* Selects the return to portal button only */
 .md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
 
-    font-size: 0.85rem;
-    border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--shared-radius-pill);
 
-    color: white;
-    background-color: #7e56c2;
-    font-weight: 700;
+  color: var(--md-primary-bg-color, white);
+  background-color: var(--md-primary-fg-color);
 
-    padding: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  margin: 0 0 0.75rem 0;
 
-    margin: 0;
-
-    transition: background-color 0.25s;
+  transition: background-color 0.15s ease, filter 0.15s ease;
 }
+
+.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link::before {
+  content: "←";
+  font-weight: 800;
+  line-height: 1;
+}
+
 .md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link:hover {
-    background-color: #9d77df;
+  filter: brightness(1.07);
 }
 
+.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link:active {
+  filter: brightness(0.96);
+}
+
+/* --- Left nav: clear hierarchy for beginners --- */
 .md-nav__item--section > .md-nav__link {
-    font-size: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
 }
 
+/* Resource / Task groups: tonal filled rows, no shadows */
 .md-nav__item--section .md-nav__item--nested > .md-nav__link {
-    font-size: 0.85rem;
-    border-radius: 5px;
-    background-color: rgb(245, 245, 245);
-    padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--shared-radius-sm);
+  background-color: var(--shared-surface-container);
+  padding: 0.6rem 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.md-nav__item--section .md-nav__item--nested > .md-nav__link:hover {
+  background-color: var(--shared-surface-container-high);
+}
+
+/* Individual pages: Material state-layer hover, subtle indicator for active */
+.md-nav__link {
+  border-radius: 4px;
+  padding: 0.4rem 0.9rem 0.4rem 0.75rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.md-nav__link:hover {
+  background-color: var(--shared-state-hover);
 }
 
 .md-nav__link--active {
-    font-weight: 700;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  background-color: var(--shared-state-active);
+}
+
+/* Right-hand table of contents keeps the flat indicator style */
+.md-nav--secondary .md-nav__link {
+  border-radius: 4px;
+}
+
+/* --- Admonitions / details: flat tonal cards --- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--shared-radius-md);
+  border-width: 1px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-weight: 700;
+  padding: 0.6rem 0.9rem;
+}
+
+/* --- Code blocks: flat with outline, no lift --- */
+.md-typeset pre {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-md);
+}
+
+.md-typeset :not(pre) > code {
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.md-typeset pre > code {
+  border: none;
+}
+
+/* Gutter / line numbers stay unadorned: no shadow or outline */
+.md-typeset .linenos,
+.md-typeset .linenodiv,
+.md-typeset .linenodiv pre,
+.md-typeset .lineno,
+.md-typeset .highlighttable .linenos {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Copy button: flat */
+.md-clipboard {
+  border-radius: 6px;
+}
+
+/* --- Tables: flat, tonal header, subtle row tint --- */
+.md-typeset__table {
+  border-radius: var(--shared-radius-md);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-md);
+  overflow: hidden;
+  font-size: 0.78rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--shared-state-active);
+  font-weight: 700;
+  border-bottom: 1px solid var(--shared-outline);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--shared-outline);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: var(--shared-surface-container);
+}
+
+/* Images: soft corners so screenshots feel embedded, not pasted */
+.md-typeset img {
+  border-radius: var(--shared-radius-sm);
+  border: 1px solid var(--shared-outline);
+}
+
+/* --- Prev / next footer: flat state-layer hover --- */
+.md-footer__link {
+  border-radius: var(--shared-radius-md);
+  padding: 0.4rem 0.6rem;
+  transition: background-color 0.15s ease;
+}
+
+.md-footer__link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.md-footer__link--next {
+  text-align: right;
+}
+
+/* Keyboard accessibility: always show a clear focus ring */
+:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, var(--md-primary-fg-color));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Dark mode: tonal surfaces, no shadows */
+[data-md-color-scheme="slate"] .md-main {
+  background-color: var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="slate"] .md-content {
+  border-left-color: var(--shared-outline);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 @media screen and (max-width: 800px) {
-    .md-content {
-        border-left: unset;
-        margin-left: unset;
-    }
+  .md-content {
+    border-left: unset;
+    margin-left: unset;
+  }
 }
