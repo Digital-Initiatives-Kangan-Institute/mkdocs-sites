@@ -5,7 +5,7 @@ copyright: Digital Initiatives - Bendigo Kangan Institute
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
-  - Return to Portal: https://bki-di-portal.netlify.app/
+  - Return to Portal: https://bki-di.pages.dev/
   - Menu:
     - Resources:
       - Markdown Elements: pages/resources/markdown-elements.md
