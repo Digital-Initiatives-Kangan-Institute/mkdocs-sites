@@ -54,19 +54,23 @@
         }
 
         header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;
             color: var(--portal-brand);
 
             background-color: var(--portal-dark);
             padding: 0.85rem 2rem;
 
             border-bottom: 1px solid rgb(40, 40, 40);
+        }
+
+        .brand-mark {
+            display: block;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            flex: none;
         }
 
         header h1 {
@@ -77,23 +81,88 @@
             margin: 0;
         }
 
-        header select {
-            font: inherit;
-            padding: 0.45rem 2rem 0.45rem 0.75rem;
-            border: 1px solid rgb(80, 80, 80);
+        /* Sticky filter bar: pills + search stay reachable while scrolling */
+        #filter-bar {
+            position: sticky;
+            top: 0.75rem;
+            z-index: 9;
+
+            background-color: var(--portal-surface);
+            border: 1px solid var(--portal-outline);
             border-radius: var(--portal-radius-md);
-            background-color: rgb(30, 30, 30);
-            color: var(--portal-brand);
-            font-size: 0.85rem;
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23edab0c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 0.5rem center;
-            transition: border-color 0.15s ease, background-color 0.15s ease;
+            padding: 0.75rem 1rem;
         }
 
-        header select:hover {
+        .filter-inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        #course-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.4rem 0.95rem;
+            border-radius: 9999px;
+            cursor: pointer;
+
+            color: var(--portal-muted);
+            background-color: var(--portal-bg);
+            border: 1px solid var(--portal-outline);
+
+            transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .pill:hover {
+            color: var(--portal-text);
+            border-color: #c9c9ce;
+        }
+
+        .pill[aria-pressed="true"] {
+            color: var(--portal-brand);
+            background-color: var(--portal-dark);
+            border-color: var(--portal-dark);
+        }
+
+        .search-wrap {
+            margin-left: auto;
+        }
+
+        #site-search {
+            font: inherit;
+            font-size: 0.85rem;
+            color: var(--portal-text);
+
+            width: 220px;
+            padding: 0.45rem 0.9rem 0.45rem 2.1rem;
+            border-radius: 9999px;
+            border: 1px solid var(--portal-outline);
+            background-color: var(--portal-bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 0.7rem center;
+
+            transition: border-color 0.15s ease;
+        }
+
+        #site-search::placeholder {
+            color: var(--portal-muted);
+        }
+
+        #site-search:focus {
+            outline: none;
             border-color: var(--portal-brand);
         }
 
@@ -324,6 +393,44 @@
             transform: translateX(3px);
         }
 
+        #empty-state {
+            text-align: center;
+
+            background-color: var(--portal-surface);
+            border: 1px solid var(--portal-outline);
+            border-radius: var(--portal-radius-md);
+            padding: 2.5rem 1.5rem;
+        }
+
+        #empty-state[hidden] {
+            display: none;
+        }
+
+        #empty-state p {
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+
+        #clear-filters {
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            cursor: pointer;
+
+            color: var(--portal-brand);
+            background-color: var(--portal-dark);
+            border: 1px solid var(--portal-dark);
+
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #clear-filters:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--portal-shadow-hover);
+        }
+
         @media screen and (max-width: 640px) {
             header {
                 padding: 0.85rem 1rem;
@@ -331,6 +438,19 @@
 
             header h1 {
                 font-size: 1rem;
+            }
+
+            #filter-bar {
+                padding: 0.75rem 1rem;
+            }
+
+            .search-wrap {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            #site-search {
+                width: 100%;
             }
 
             main {
@@ -361,8 +481,8 @@
 </head>
 <body>
     <header>
+        <img class="brand-mark" src="./_assets/favicon.png" alt="Digital Initiatives logo" width="28" height="28">
         <h1>Digital Initiatives - Portal</h1>
-        <select id="course-select"></select>
     </header>
 
     <main>
@@ -372,12 +492,25 @@
 
         <div id="banner">
             <p>Welcome to the <b>Digital Initiatives</b> learning portal.</p>
-            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access to these pages.</p>
+            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access.</p>
+        </div>
+
+        <div id="filter-bar">
+            <div class="filter-inner">
+                <div id="course-pills" role="group" aria-label="Filter by course"></div>
+                <div class="search-wrap">
+                    <input id="site-search" type="search" placeholder="Search sites&hellip;" aria-label="Search sites" autocomplete="off">
+                </div>
+            </div>
         </div>
 
         <section>
             <h2>Sites</h2>
             <div class="grid-layout" id="sites-grid"></div>
+            <div id="empty-state" hidden>
+                <p>No sites match your filters.</p>
+                <button id="clear-filters" type="button">Clear filters</button>
+            </div>
         </section>
     </main>
 
@@ -389,55 +522,97 @@
 
     <script>
         (function () {
-            var select = document.getElementById('course-select');
+            var pillsWrap = document.getElementById('course-pills');
+            var searchInput = document.getElementById('site-search');
             var grid = document.getElementById('sites-grid');
+            var emptyState = document.getElementById('empty-state');
+            var clearBtn = document.getElementById('clear-filters');
+            var heading = document.querySelector('section h2');
             var cards = [];
             var courseIds = [];
+            var coursesById = {};
+            var DEFAULT_COURSE = 'cert3-in-it';
+            var state = { course: DEFAULT_COURSE, query: '' };
+
+            function esc(s) {
+                return String(s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;');
+            }
 
             function renderCard(site) {
                 var a = document.createElement('a');
                 a.className = 'grid-item';
                 a.href = site.href;
                 a.setAttribute('data-courses', site.courses.join(' '));
+                a.setAttribute('data-search', (site.title + ' ' + site.description).toLowerCase());
                 a.innerHTML =
-                    '<div class="thumbnail"><img src="' + site.img + '" /></div>' +
-                    '<div class="details"><h2>' + site.title + '</h2><p>' + site.description + '</p></div>';
+                    '<div class="thumbnail"><img src="' + site.img + '" alt="' + esc(site.title) + '" loading="lazy"></div>' +
+                    '<div class="details"><h2>' + esc(site.title) + '</h2><p>' + esc(site.description) + '</p></div>';
                 return a;
             }
 
-            var heading = document.querySelector('section h2');
-            var coursesById = {};
+            function countFor(id) {
+                return window.SITES_DATA.sites.filter(function (s) {
+                    return s.courses.indexOf(id) !== -1;
+                }).length;
+            }
 
-            function renderSelect(courses) {
+            function renderPills(courses) {
                 courses.forEach(function (c) {
-                    coursesById[c.id] = c;
-                    var opt = document.createElement('option');
-                    opt.value = c.id;
-                    opt.textContent = c.label;
-                    select.appendChild(opt);
+                    var b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'pill';
+                    b.dataset.id = c.id;
+                    b.setAttribute('aria-pressed', 'false');
+                    b.textContent = c.label + ' (' + countFor(c.id) + ')';
+                    b.addEventListener('click', function () {
+                        history.replaceState(null, '', '#' + c.id);
+                        routeFromHash();
+                    });
+                    pillsWrap.appendChild(b);
                 });
             }
 
-            function applyFilter(filter) {
+            function syncPills() {
+                pillsWrap.querySelectorAll('.pill').forEach(function (p) {
+                    p.setAttribute('aria-pressed', p.dataset.id === state.course ? 'true' : 'false');
+                });
+            }
+
+            function applyFilters() {
+                var q = state.query.trim().toLowerCase();
+                var visible = 0;
                 cards.forEach(function (card) {
-                    var shouldHide = card.getAttribute('data-courses').split(' ').indexOf(filter) === -1;
-                    if (shouldHide) {
-                        card.classList.add('hidden');
-                        card.classList.remove('animating-out');
-                    } else {
+                    var inCourse = card.getAttribute('data-courses').split(' ').indexOf(state.course) !== -1;
+                    var matchesQuery = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+                    if (inCourse && matchesQuery) {
+                        visible++;
                         if (card.classList.contains('hidden')) {
                             card.classList.remove('hidden');
                             card.classList.add('animating-out');
                             void card.offsetWidth;
                             card.classList.remove('animating-out');
                         }
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('animating-out');
                     }
                 });
-                var course = coursesById[filter];
-                if (course && heading.textContent !== course.fullname) {
+                emptyState.hidden = visible !== 0;
+
+                var text;
+                if (q) {
+                    text = visible + ' result' + (visible === 1 ? '' : 's') + ' for \u201c' + state.query.trim() + '\u201d';
+                } else {
+                    text = coursesById[state.course].fullname;
+                }
+                if (heading.textContent !== text) {
                     heading.style.opacity = '0';
                     setTimeout(function () {
-                        heading.textContent = course.fullname;
+                        heading.textContent = text;
                         heading.style.opacity = '1';
                     }, 150);
                 }
@@ -445,13 +620,20 @@
 
             function routeFromHash() {
                 var hash = window.location.hash.replace('#', '');
-                var filter = courseIds.indexOf(hash) !== -1 ? hash : courseIds[0];
-                select.value = filter;
-                applyFilter(filter);
+                state.course = courseIds.indexOf(hash) !== -1 ? hash : DEFAULT_COURSE;
+                syncPills();
+                applyFilters();
             }
 
-            select.addEventListener('change', function () {
-                history.replaceState(null, '', '#' + select.value);
+            searchInput.addEventListener('input', function () {
+                state.query = searchInput.value;
+                applyFilters();
+            });
+
+            clearBtn.addEventListener('click', function () {
+                searchInput.value = '';
+                state.query = '';
+                history.replaceState(null, '', '#' + DEFAULT_COURSE);
                 routeFromHash();
             });
 
@@ -460,10 +642,11 @@
 
             (function init() {
                 var data = window.SITES_DATA;
+                // Sites can be hidden without deleting them: "disabled": true
+                data.sites = data.sites.filter(function (site) { return !site.disabled; });
                 courseIds = data.courses.map(function (c) { return c.id; });
-                renderSelect(data.courses);
-
-                heading.textContent = data.courses[0].fullname;
+                data.courses.forEach(function (c) { coursesById[c.id] = c; });
+                renderPills(data.courses);
 
                 data.sites.forEach(function (site) {
                     var card = renderCard(site);
