@@ -188,23 +188,19 @@
 }
 
 .md-nav--primary .md-nav__item--nested > .md-nav__link::before {
-  content: "+";
+  content: "";
   flex: none;
-  width: 1.25em;
-  height: 1.25em;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  font-size: 0.75em;
-  font-weight: 700;
-  line-height: 1;
+  width: 1.1em;
+  height: 1.1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/plus.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/plus.svg") center / contain no-repeat;
   opacity: 0.7;
 }
 
 .md-nav--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav__link::before {
-  content: "\2212";
+  -webkit-mask-image: url("/_assets/icons/minus.svg");
+  mask-image: url("/_assets/icons/minus.svg");
 }
 
 /* Pages (leaf links sit one level deep; the top-level Portal button is excluded) */
@@ -217,10 +213,11 @@
 .md-nav--primary li li > a.md-nav__link::before {
   content: "";
   flex: none;
-  width: 0.72em;
-  height: 0.92em;
-  border: 1.5px solid currentColor;
-  border-radius: 2px;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
   opacity: 0.55;
 }
 
@@ -236,9 +233,13 @@
 }
 
 .md-nav--primary .md-nav__item--section > .md-nav__link::before {
-  content: "#";
+  content: "";
   flex: none;
-  font-weight: 800;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
   opacity: 0.5;
 }
 
