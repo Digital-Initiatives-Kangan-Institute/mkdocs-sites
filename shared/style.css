@@ -203,14 +203,15 @@
   mask-image: url("/_assets/icons/minus.svg");
 }
 
-/* Pages (leaf links sit one level deep; the top-level Portal button is excluded) */
+/* Pages (leaf links sit one level deep; the top-level Portal button is excluded,
+   as are integrated-TOC anchors which are headings, not pages) */
 .md-nav--primary li li > a.md-nav__link {
   display: flex;
   align-items: center;
   gap: 0.55rem;
 }
 
-.md-nav--primary li li > a.md-nav__link::before {
+.md-nav--primary li li > a.md-nav__link:not([href^="#"])::before {
   content: "";
   flex: none;
   width: 1em;
@@ -219,6 +220,18 @@
   -webkit-mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
   mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
   opacity: 0.55;
+}
+
+/* Integrated page TOC (toc.integrate): anchor links are headings */
+.md-nav--primary li li > a.md-nav__link[href^="#"]::before {
+  content: "";
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  opacity: 0.5;
 }
 
 .md-nav--primary li li > a.md-nav__link--active::before {
