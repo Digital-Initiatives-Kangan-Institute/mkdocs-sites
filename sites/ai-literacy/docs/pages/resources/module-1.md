@@ -1,8 +1,8 @@
 # AI Prompt Engineering & Capability Building
 
-## Fundamentals of Prompting
+## Fundamentals of AI Prompting
 
-A **Prompt** is the text or question you give to an Artificial Intelligence (AI) model. It acts as the direct guide for the model's response; writing clear, specific prompts leads to higher-quality and more useful answers. Think of prompt engineering as giving instructions to a highly capable assistant.
+A **prompt** is the text or question you give to an Artificial Intelligence (AI) model. It acts as the direct guide for the model's response; writing clear, specific prompts leads to higher-quality and more useful answers. Think of prompt engineering as giving instructions to a highly capable assistant.
 
 AI models respond to several basic styles of prompts, each suited to different tasks:
 
