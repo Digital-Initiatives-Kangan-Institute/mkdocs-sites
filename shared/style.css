@@ -108,6 +108,24 @@
   box-shadow: none;
 }
 
+/* Mobile drawer: render as a left-aligned nav row so it sits naturally
+   among the menu links instead of a floating centred pill. */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
+    justify-content: flex-start;
+    border-radius: var(--shared-radius-sm);
+    padding: 0.6rem 0.9rem;
+    margin: 0.25rem 0.75rem 0.5rem;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 /* --- Left nav: clear hierarchy for beginners (colour, not opacity, for contrast) --- */
 .md-nav__item--section > .md-nav__link {
   font-size: 0.75rem;
