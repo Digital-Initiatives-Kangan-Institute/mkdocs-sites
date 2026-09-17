@@ -126,6 +126,18 @@
   }
 }
 
+/* Breathing room between the menu and the sidebar scrollbar */
+.md-sidebar--primary .md-sidebar__inner {
+  padding-right: 0.5rem;
+}
+
+/* Slightly wider menu on desktop (page content narrows to compensate) */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 13.5rem;
+  }
+}
+
 /* --- Left nav: clear hierarchy for beginners (colour, not opacity, for contrast) --- */
 .md-nav__item--section > .md-nav__link {
   font-size: 0.75rem;
