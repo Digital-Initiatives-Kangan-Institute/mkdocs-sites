@@ -174,12 +174,22 @@
   border: none;
 }
 
-/* Gutter / line numbers stay unadorned: no shadow or outline */
+/* Outer wrapper carries the outline when line numbers use a table; inner panes stay flat */
+.md-typeset .highlighttable {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-md);
+  overflow: hidden;
+}
+
+/* Gutter / line numbers stay unadorned: no border, shadow, or outline */
+.md-typeset .highlighttable pre,
 .md-typeset .linenos,
 .md-typeset .linenodiv,
 .md-typeset .linenodiv pre,
 .md-typeset .lineno,
 .md-typeset .highlighttable .linenos {
+  border: none;
+  border-radius: 0;
   box-shadow: none;
   outline: none;
 }
