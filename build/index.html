@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/_assets/favicon.png">
+    <title>Digital Initiatives - Portal</title>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: rgb(245, 245, 245);
+
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            color: #edab0c;
+
+            background-color: black;
+            padding: 0 2rem;
+
+            box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px;
+        }
+
+        header h1 {
+            flex: 1;
+        }
+
+        header select {
+            padding: 0.375rem 2rem 0.375rem 0.75rem;
+            border: 1px solid rgb(80, 80, 80);
+            border-radius: 6px;
+            background-color: rgb(30, 30, 30);
+            color: #edab0c;
+            font-size: 0.85rem;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23edab0c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            transition: border-color 0.15s, background-color 0.15s;
+        }
+
+        header select:hover {
+            border-color: #edab0c;
+        }
+
+        header select:focus {
+            outline: none;
+            border-color: #edab0c;
+            background-color: black;
+        }
+
+        main {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 1rem;
+
+            padding: 2rem 15rem;
+        }
+
+        footer {
+            padding: 1rem;
+
+            color: rgb(170, 170, 170);
+            background-color: black;
+
+            box-shadow: rgba(0, 0, 0, 0.25) 0 -2px 5px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-weight: normal;
+            color: rgb(60, 60, 60);
+            transition: opacity 0.15s ease;
+        }
+
+        #banner {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1rem;
+
+            background-color: white;
+            padding: 1.5rem;
+
+            border: 1px solid rgb(198, 198, 198);
+            border-radius: 10px;
+
+            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+
+            font-size: 1.1rem;
+        }
+
+        #banner p {
+            margin: 0;
+        }
+
+        #noscript {
+            display: flex;
+            justify-content: center;
+
+            background-color: white;
+            padding: 2rem;
+
+            border: 1px solid rgb(198, 198, 198);
+            border-radius: 10px;
+
+            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+
+            font-size: 1.1rem;
+        }
+        #noscript p {
+            margin: 0;
+        }
+
+        .grid-layout {
+            display: grid;
+
+            flex-wrap: wrap;
+
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            
+            position: relative;
+
+            border: 1px solid rgb(198, 198, 198);
+            border-radius: 10px;
+
+            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+
+            transition: transform 0.25s ease, opacity 0.2s ease;
+        }
+        .grid-item:hover {
+            transform: scale(102%);
+        }
+        .grid-item.animating-out {
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+        }
+
+        .construction::before {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            border-radius: 10px;
+
+            opacity: 0.25;
+
+            content: '';
+
+            background: repeating-linear-gradient(
+                45deg,
+                rgb(255, 166, 0),
+                rgb(255, 166, 0) 10px,
+                black 10px,
+                black 20px
+            );
+        }
+        .construction::after {
+            position: absolute;
+
+            top: 50%;
+            left: 0;
+            width: 100%;
+
+            content: 'Under Construction';
+            text-align: center;
+
+            text-shadow: black 1px 1px 1px;
+            font-size: 1.25rem;
+
+            color: white;
+
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+
+        .grid-item img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            max-height: 100px;
+            width: 100%;
+
+            object-fit: cover;
+        }
+
+        .grid-item .details {
+            flex: 1;
+
+            color: black;
+            background-color: white;
+            padding: 1rem;
+
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .grid-item.hidden {
+            display: none;
+        }
+
+        .grid-item .details h2 {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .grid-layout {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            main {
+                padding: 2rem 10rem;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .grid-layout {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            main {
+                padding: 2rem 5rem;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 2rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Digital Initiatives - Portal</h1>
+        <select id="course-select"></select>
+    </header>
+
+    <main>
+        <noscript id="noscript">
+            <p>JavaScript is required to view this page.</p>
+        </noscript>
+
+        <div id="banner">
+            <p>Welcome to the <b>Digital Initiatives</b> learning portal.</p>
+            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access to these pages.</p>
+        </div>
+
+        <section>
+            <h2>Sites</h2>
+            <div class="grid-layout" id="sites-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        Digital Initiatives - Bendigo Kangan Institute
+    </footer>
+
+    <script src="sites.js"></script>
+
+    <script>
+        (function () {
+            var select = document.getElementById('course-select');
+            var grid = document.getElementById('sites-grid');
+            var cards = [];
+            var courseIds = [];
+
+            function renderCard(site) {
+                var a = document.createElement('a');
+                a.className = 'grid-item';
+                a.href = site.href;
+                a.setAttribute('data-courses', site.courses.join(' '));
+                a.innerHTML =
+                    '<div class="thumbnail"><img src="' + site.img + '" /></div>' +
+                    '<div class="details"><h2>' + site.title + '</h2><p>' + site.description + '</p></div>';
+                return a;
+            }
+
+            var heading = document.querySelector('section h2');
+            var coursesById = {};
+
+            function renderSelect(courses) {
+                courses.forEach(function (c) {
+                    coursesById[c.id] = c;
+                    var opt = document.createElement('option');
+                    opt.value = c.id;
+                    opt.textContent = c.label;
+                    select.appendChild(opt);
+                });
+            }
+
+            function applyFilter(filter) {
+                cards.forEach(function (card) {
+                    var shouldHide = card.getAttribute('data-courses').split(' ').indexOf(filter) === -1;
+                    if (shouldHide) {
+                        card.classList.add('hidden');
+                        card.classList.remove('animating-out');
+                    } else {
+                        if (card.classList.contains('hidden')) {
+                            card.classList.remove('hidden');
+                            card.classList.add('animating-out');
+                            void card.offsetWidth;
+                            card.classList.remove('animating-out');
+                        }
+                    }
+                });
+                var course = coursesById[filter];
+                if (course && heading.textContent !== course.fullname) {
+                    heading.style.opacity = '0';
+                    setTimeout(function () {
+                        heading.textContent = course.fullname;
+                        heading.style.opacity = '1';
+                    }, 150);
+                }
+            }
+
+            function routeFromHash() {
+                var hash = window.location.hash.replace('#', '');
+                var filter = courseIds.indexOf(hash) !== -1 ? hash : courseIds[0];
+                select.value = filter;
+                applyFilter(filter);
+            }
+
+            select.addEventListener('change', function () {
+                history.replaceState(null, '', '#' + select.value);
+                routeFromHash();
+            });
+
+            window.addEventListener('popstate', routeFromHash);
+            window.addEventListener('hashchange', routeFromHash);
+
+            (function init() {
+                var data = window.SITES_DATA;
+                courseIds = data.courses.map(function (c) { return c.id; });
+                renderSelect(data.courses);
+
+                heading.textContent = data.courses[0].fullname;
+
+                data.sites.forEach(function (site) {
+                    var card = renderCard(site);
+                    grid.appendChild(card);
+                    cards.push(card);
+                });
+
+                routeFromHash();
+            })();
+        })();
+    </script>
+</body>
+</html>

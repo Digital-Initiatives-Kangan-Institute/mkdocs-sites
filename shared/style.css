@@ -169,6 +169,85 @@
   background-color: var(--shared-state-active);
 }
 
+/* --- Nav icons: categories get +/-, pages a document glyph, headings a # --- */
+/* Scoped to the primary (left) nav so the right-hand TOC stays clean. */
+
+/* Categories (collapsible groups): +/- replaces the default chevron */
+.md-nav--primary .md-nav__item--nested > .md-nav__link > .md-nav__icon {
+  display: none;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link > .md-ellipsis {
+  flex: 1;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link::before {
+  content: "+";
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav__link::before {
+  content: "\2212";
+}
+
+/* Pages (leaf links sit one level deep; the top-level Portal button is excluded) */
+.md-nav--primary li li > a.md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.md-nav--primary li li > a.md-nav__link::before {
+  content: "";
+  flex: none;
+  width: 0.72em;
+  height: 0.92em;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  opacity: 0.55;
+}
+
+.md-nav--primary li li > a.md-nav__link--active::before {
+  opacity: 1;
+}
+
+/* Headings (section labels) */
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-nav--primary .md-nav__item--section > .md-nav__link::before {
+  content: "#";
+  flex: none;
+  font-weight: 800;
+  opacity: 0.5;
+}
+
+/* Top-level Menu header stays clean: no icon in either variant */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link::before,
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link::before {
+  content: none;
+}
+
 /* Right-hand table of contents keeps the flat indicator style */
 .md-nav--secondary .md-nav__link {
   border-radius: 4px;
