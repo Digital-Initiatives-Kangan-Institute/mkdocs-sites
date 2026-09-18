@@ -3,6 +3,7 @@ build/*
 !build/_assets
 !build/index.html
 !build/sites.js
+!build/enrol.html
 .DS_Store
 tmp/
 dmp/
