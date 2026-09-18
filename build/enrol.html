@@ -794,11 +794,18 @@
                     .replace(/"/g, '&quot;');
             }
 
-            // Portal root = this directory without enrol.html, so the link works
-            // both locally (build/enrol.html) and deployed (/enrol.html -> /).
+            // Portal root = the directory holding this enrol page, so the link
+            // always points at the portal index, however this page is served
+            // (/enrol, /enrol/ or /enrol.html, locally or deployed).
             function portalBase() {
-                var noHash = window.location.href.split('#')[0];
-                return noHash.replace(/enrol\.html$/, '');
+                var noHash = window.location.href.split('#')[0].split('?')[0];
+                var base = noHash.replace(/enrol(\.html)?\/?$/, '');
+                if (base === noHash) {
+                    // Not on the enrol page: fall back to the current directory.
+                    base = noHash.replace(/[^\/]*$/, '');
+                }
+                if (base.charAt(base.length - 1) !== '/') base += '/';
+                return base;
             }
 
             // Pages under a ticked group are disabled (covered by the group),
