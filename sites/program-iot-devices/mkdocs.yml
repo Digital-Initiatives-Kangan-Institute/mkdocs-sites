@@ -10,17 +10,45 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - Introduction to IoT: pages/resources/introduction-to-iot.md
-      - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
-      - Comments: pages/resources/comments.md
-      - Program Structure: pages/resources/program-structure.md
+      - Getting Started:
+        - Introduction to IoT: pages/resources/introduction-to-iot.md
+        - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
+      - Core Concepts:
+        - Comments: pages/resources/comments.md
+        - Program Structure: pages/resources/program-structure.md
+        - Digital Output and Functions: pages/resources/digital-output-and-functions.md
+        - Reading Inputs: pages/resources/reading-inputs.md
+        - Selection and Conditional Logic: pages/resources/selection-conditional-logic.md
+      - Advanced Topics:
+        - Combining Multiple Sensors: pages/resources/combining-multiple-sensors.md
+        - Lists, Arrays and Loops: pages/resources/lists-arrays-and-loops.md
+        - Structured Data: pages/resources/structured-data.md
+      - Review:
+        - Revision: pages/resources/revision.md
     - Tasks:
       - IoT Programming Activity: pages/tasks/iot-programming-activity.md
+      - Digital Output and Functions Task: pages/tasks/digital-output-functions-task.md
+      - Reading Inputs and Selection Task: pages/tasks/reading-inputs-selection-task.md
+      - Combining Multiple Sensors Task: pages/tasks/combining-multiple-sensors-task.md
+      - Lists, Arrays and Loops Task: pages/tasks/lists-arrays-and-loops-task.md
+      - Structured Data Task: pages/tasks/structured-data-task.md
+      - Revision Task: pages/tasks/revision-task.md
+    - Activities:
       - Independent Practice: pages/tasks/class-activities.md
+      - Digital Output and Functions Activity: pages/tasks/digital-output-functions-activity.md
+      - Reading Inputs and Selection Activity: pages/tasks/reading-inputs-selection-activity.md
+      - Combining Multiple Sensors Activity: pages/tasks/combining-multiple-sensors-activity.md
+      - Lists, Arrays and Loops Activity: pages/tasks/lists-arrays-and-loops-activity.md
+      - Structured Data Activity: pages/tasks/structured-data-activity.md
+      - Revision Activity: pages/tasks/revision-activity.md
+    - Practice:
+      - Warehouse Loading Dock Station: pages/tasks/practice-1.md
+      - Chemical Storage Access & Tamper Monitor: pages/tasks/practice-2.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
+  custom_dir: ../../shared
   palette:
     primary: purple
   features:
@@ -32,11 +60,23 @@ theme:
     - content.code.copy
     - content.code.annotate
 
+# This is relative to the theme/base (based on custom_dir above)
+extra_css:
+  - style.css
+
+# This is here to watch the style.css file above to trigger hot-reload,
+# therefor if the custom_dir is changed it should be changed here too.
+watch:
+  - ../../shared/style.css
+
 plugins:
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after:
         - pages/tasks/iot-programming-activity.md
+        - pages/tasks/class-activities.md
+        - pages/tasks/practice-1.md
+        - pages/tasks/practice-2.md
 
 extra:
   generator: false
@@ -44,13 +84,13 @@ extra:
 markdown_extensions:
   - pymdownx.highlight:
       linenums: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.blocks.caption
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - attr_list
   - md_in_html
-
-extra_css:
-  - extra/style.css

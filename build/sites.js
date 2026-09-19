@@ -10,7 +10,8 @@ window.SITES_DATA = {
             "img": "./_assets/edison-plugged-50.jpg",
             "title": "Python - Edison",
             "description": "Introduction to Python programming through structured, hands-on activities using the Edison robot.",
-            "courses": []
+            "courses": ["cert3-in-it"],
+            "disabled": true
         },
         {
             "href": "/design",

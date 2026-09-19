@@ -1,0 +1,787 @@
+Student_ID,Student_First_Name,Student_Last_Name,Student_Email,Class_ID,Teacher_ID,Teacher_Name,Subject_Code,Subject_Name,Room,Day,Start_Time,End_Time
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS023,T004,Noah Williams,ART201,Digital Media,C305,Tuesday,08:30,10:00
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S001,Benjamin,Johnson,benjamin.johnson001@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS028,T002,Liam Chen,ROB101,Robotics Fundamentals,A210,Tuesday,10:15,11:45
+S002,Amir,Green,amir.green002@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S003,Jessica,White,jessica.white003@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S003,Jessica,White,jessica.white003@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S003,Jessica,White,jessica.white003@student.kangalife.edu.au,CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+S003,Jessica,White,jessica.white003@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S003,Jessica,White,jessica.white003@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S004,Jasmine,Scott,jasmine.scott004@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S004,Jasmine,Scott,jasmine.scott004@student.kangalife.edu.au,CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+S004,Jasmine,Scott,jasmine.scott004@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S004,Jasmine,Scott,jasmine.scott004@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S004,Jasmine,Scott,jasmine.scott004@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S004,Jasmine,Scott,jasmine.scott004@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S005,Grace,Ahmed,grace.ahmed005@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S005,Grace,Ahmed,grace.ahmed005@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S005,Grace,Ahmed,grace.ahmed005@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S005,Grace,Ahmed,grace.ahmed005@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S005,Grace,Ahmed,grace.ahmed005@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S005,Grace,Ahmed,grace.ahmed005@student.kangalife.edu.au,CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+S006,Archer,Hall,archer.hall006@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S006,Archer,Hall,archer.hall006@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S006,Archer,Hall,archer.hall006@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S006,Archer,Hall,archer.hall006@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S006,Archer,Hall,archer.hall006@student.kangalife.edu.au,CLS028,T002,Liam Chen,ROB101,Robotics Fundamentals,A210,Tuesday,10:15,11:45
+S007,Elijah,White,elijah.white007@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S007,Elijah,White,elijah.white007@student.kangalife.edu.au,CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+S007,Elijah,White,elijah.white007@student.kangalife.edu.au,CLS007,T005,Grace Nguyen,SCI201,Environmental Science,A105,Monday,10:15,11:45
+S007,Elijah,White,elijah.white007@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S007,Elijah,White,elijah.white007@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S007,Elijah,White,elijah.white007@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S008,Blake,Martin,blake.martin008@student.kangalife.edu.au,CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+S009,Sam,Lewis,sam.lewis009@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S009,Sam,Lewis,sam.lewis009@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S009,Sam,Lewis,sam.lewis009@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S009,Sam,Lewis,sam.lewis009@student.kangalife.edu.au,CLS045,T007,Isabella Rossi,ICT301,Database Fundamentals,A105,Wednesday,08:30,10:00
+S009,Sam,Lewis,sam.lewis009@student.kangalife.edu.au,CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+S010,Riley,Chen,riley.chen010@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S010,Riley,Chen,riley.chen010@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S010,Riley,Chen,riley.chen010@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S010,Riley,Chen,riley.chen010@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S010,Riley,Chen,riley.chen010@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S011,Oliver,Johnson,oliver.johnson011@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S011,Oliver,Johnson,oliver.johnson011@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S011,Oliver,Johnson,oliver.johnson011@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S011,Oliver,Johnson,oliver.johnson011@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S011,Oliver,Johnson,oliver.johnson011@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S012,Thomas,Garcia,thomas.garcia012@student.kangalife.edu.au,CLS092,T005,Grace Nguyen,ENG201,Academic Writing,C301,Friday,12:30,14:00
+S012,Thomas,Garcia,thomas.garcia012@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S012,Thomas,Garcia,thomas.garcia012@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S012,Thomas,Garcia,thomas.garcia012@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S012,Thomas,Garcia,thomas.garcia012@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S012,Thomas,Garcia,thomas.garcia012@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S013,Harper,Davis,harper.davis013@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS045,T007,Isabella Rossi,ICT301,Database Fundamentals,A105,Wednesday,08:30,10:00
+S014,Fatima,Lee,fatima.lee014@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S015,Maya,Hoang,maya.hoang015@student.kangalife.edu.au,CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+S015,Maya,Hoang,maya.hoang015@student.kangalife.edu.au,CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+S015,Maya,Hoang,maya.hoang015@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S015,Maya,Hoang,maya.hoang015@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S015,Maya,Hoang,maya.hoang015@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S015,Maya,Hoang,maya.hoang015@student.kangalife.edu.au,CLS045,T007,Isabella Rossi,ICT301,Database Fundamentals,A105,Wednesday,08:30,10:00
+S016,Olivia,Walker,olivia.walker016@student.kangalife.edu.au,CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+S016,Olivia,Walker,olivia.walker016@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S016,Olivia,Walker,olivia.walker016@student.kangalife.edu.au,CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+S016,Olivia,Walker,olivia.walker016@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S016,Olivia,Walker,olivia.walker016@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS028,T002,Liam Chen,ROB101,Robotics Fundamentals,A210,Tuesday,10:15,11:45
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S017,Sarah,OBrien,sarah.obrien017@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S018,Zara,Pham,zara.pham018@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S018,Zara,Pham,zara.pham018@student.kangalife.edu.au,CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+S018,Zara,Pham,zara.pham018@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S018,Zara,Pham,zara.pham018@student.kangalife.edu.au,CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+S018,Zara,Pham,zara.pham018@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS099,T006,Ethan Brown,ART101,Visual Arts,E110,Friday,14:15,15:45
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS075,T004,Noah Williams,MAT201,Applied Mathematics,E205,Thursday,12:30,14:00
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+S019,Sofia,Thomas,sofia.thomas019@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S020,Darcy,Mitchell,darcy.mitchell020@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S021,Xavier,Jones,xavier.jones021@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S022,Isaac,Ahmed,isaac.ahmed022@student.kangalife.edu.au,CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+S022,Isaac,Ahmed,isaac.ahmed022@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S022,Isaac,Ahmed,isaac.ahmed022@student.kangalife.edu.au,CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+S022,Isaac,Ahmed,isaac.ahmed022@student.kangalife.edu.au,CLS075,T004,Noah Williams,MAT201,Applied Mathematics,E205,Thursday,12:30,14:00
+S022,Isaac,Ahmed,isaac.ahmed022@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S022,Isaac,Ahmed,isaac.ahmed022@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S023,Amara,Lim,amara.lim023@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S023,Amara,Lim,amara.lim023@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S023,Amara,Lim,amara.lim023@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S023,Amara,Lim,amara.lim023@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S023,Amara,Lim,amara.lim023@student.kangalife.edu.au,CLS023,T004,Noah Williams,ART201,Digital Media,C305,Tuesday,08:30,10:00
+S023,Amara,Lim,amara.lim023@student.kangalife.edu.au,CLS041,T001,Amelia Hart,HIS101,Modern History,C301,Wednesday,08:30,10:00
+S024,Hamza,Miller,hamza.miller024@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S024,Hamza,Miller,hamza.miller024@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S024,Hamza,Miller,hamza.miller024@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S024,Hamza,Miller,hamza.miller024@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S024,Hamza,Miller,hamza.miller024@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S024,Hamza,Miller,hamza.miller024@student.kangalife.edu.au,CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS099,T006,Ethan Brown,ART101,Visual Arts,E110,Friday,14:15,15:45
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S025,Evie,Garcia,evie.garcia025@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S026,Mila,Campbell,mila.campbell026@student.kangalife.edu.au,CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+S026,Mila,Campbell,mila.campbell026@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S026,Mila,Campbell,mila.campbell026@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S026,Mila,Campbell,mila.campbell026@student.kangalife.edu.au,CLS075,T004,Noah Williams,MAT201,Applied Mathematics,E205,Thursday,12:30,14:00
+S026,Mila,Campbell,mila.campbell026@student.kangalife.edu.au,CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+S026,Mila,Campbell,mila.campbell026@student.kangalife.edu.au,CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S027,Oscar,King,oscar.king027@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S028,Freya,Roberts,freya.roberts028@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S028,Freya,Roberts,freya.roberts028@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S028,Freya,Roberts,freya.roberts028@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S028,Freya,Roberts,freya.roberts028@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S028,Freya,Roberts,freya.roberts028@student.kangalife.edu.au,CLS028,T002,Liam Chen,ROB101,Robotics Fundamentals,A210,Tuesday,10:15,11:45
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS090,T006,Ethan Brown,ICT201,Programming Fundamentals,A105,Friday,10:15,11:45
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S029,Nathan,Rodriguez,nathan.rodriguez029@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S030,Yasmin,Hughes,yasmin.hughes030@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S030,Yasmin,Hughes,yasmin.hughes030@student.kangalife.edu.au,CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+S030,Yasmin,Hughes,yasmin.hughes030@student.kangalife.edu.au,CLS023,T004,Noah Williams,ART201,Digital Media,C305,Tuesday,08:30,10:00
+S030,Yasmin,Hughes,yasmin.hughes030@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S030,Yasmin,Hughes,yasmin.hughes030@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S031,Sienna,Pham,sienna.pham031@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S031,Sienna,Pham,sienna.pham031@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S031,Sienna,Pham,sienna.pham031@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S031,Sienna,Pham,sienna.pham031@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S031,Sienna,Pham,sienna.pham031@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S032,Hamza,Anderson,hamza.anderson032@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S032,Hamza,Anderson,hamza.anderson032@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S032,Hamza,Anderson,hamza.anderson032@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S032,Hamza,Anderson,hamza.anderson032@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S032,Hamza,Anderson,hamza.anderson032@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S033,Layla,Miller,layla.miller033@student.kangalife.edu.au,CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS046,T010,Oliver Wilson,AI101,Artificial Intelligence Foundations,A105,Wednesday,10:15,11:45
+S034,Zoe,Pham,zoe.pham034@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S035,Sophie,Robinson,sophie.robinson035@student.kangalife.edu.au,CLS052,T004,Noah Williams,SCI101,General Science,A105,Wednesday,12:30,14:00
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS041,T001,Amelia Hart,HIS101,Modern History,C301,Wednesday,08:30,10:00
+S036,Finn,Young,finn.young036@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS037,T002,Liam Chen,ICT201,Programming Fundamentals,E205,Tuesday,14:15,15:45
+S037,Freya,Kim,freya.kim037@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S038,Benjamin,Walker,benjamin.walker038@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S038,Benjamin,Walker,benjamin.walker038@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S038,Benjamin,Walker,benjamin.walker038@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S038,Benjamin,Walker,benjamin.walker038@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S038,Benjamin,Walker,benjamin.walker038@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+S039,Michael,Roberts,michael.roberts039@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S040,Riley,Hughes,riley.hughes040@student.kangalife.edu.au,CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+S041,Isaac,Kaur,isaac.kaur041@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S041,Isaac,Kaur,isaac.kaur041@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S041,Isaac,Kaur,isaac.kaur041@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S041,Isaac,Kaur,isaac.kaur041@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S041,Isaac,Kaur,isaac.kaur041@student.kangalife.edu.au,CLS037,T002,Liam Chen,ICT201,Programming Fundamentals,E205,Tuesday,14:15,15:45
+S041,Isaac,Kaur,isaac.kaur041@student.kangalife.edu.au,CLS041,T001,Amelia Hart,HIS101,Modern History,C301,Wednesday,08:30,10:00
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S042,Fatima,Hall,fatima.hall042@student.kangalife.edu.au,CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+S043,Caleb,Evans,caleb.evans043@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S044,Harper,Kaur,harper.kaur044@student.kangalife.edu.au,CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+S044,Harper,Kaur,harper.kaur044@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S044,Harper,Kaur,harper.kaur044@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S044,Harper,Kaur,harper.kaur044@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S044,Harper,Kaur,harper.kaur044@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S045,Blake,Baker,blake.baker045@student.kangalife.edu.au,CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+S045,Blake,Baker,blake.baker045@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S045,Blake,Baker,blake.baker045@student.kangalife.edu.au,CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+S045,Blake,Baker,blake.baker045@student.kangalife.edu.au,CLS045,T007,Isabella Rossi,ICT301,Database Fundamentals,A105,Wednesday,08:30,10:00
+S045,Blake,Baker,blake.baker045@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S046,Harper,Jackson,harper.jackson046@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S046,Harper,Jackson,harper.jackson046@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S046,Harper,Jackson,harper.jackson046@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S046,Harper,Jackson,harper.jackson046@student.kangalife.edu.au,CLS046,T010,Oliver Wilson,AI101,Artificial Intelligence Foundations,A105,Wednesday,10:15,11:45
+S046,Harper,Jackson,harper.jackson046@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S046,Harper,Jackson,harper.jackson046@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS045,T007,Isabella Rossi,ICT301,Database Fundamentals,A105,Wednesday,08:30,10:00
+S047,Freya,King,freya.king047@student.kangalife.edu.au,CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS023,T004,Noah Williams,ART201,Digital Media,C305,Tuesday,08:30,10:00
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+S048,Amelia,Thomas,amelia.thomas048@student.kangalife.edu.au,CLS052,T004,Noah Williams,SCI101,General Science,A105,Wednesday,12:30,14:00
+S049,Oliver,Robinson,oliver.robinson049@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S049,Oliver,Robinson,oliver.robinson049@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S049,Oliver,Robinson,oliver.robinson049@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S049,Oliver,Robinson,oliver.robinson049@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S049,Oliver,Robinson,oliver.robinson049@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S049,Oliver,Robinson,oliver.robinson049@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S050,Mohammed,Williams,mohammed.williams050@student.kangalife.edu.au,CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+S050,Mohammed,Williams,mohammed.williams050@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S050,Mohammed,Williams,mohammed.williams050@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S050,Mohammed,Williams,mohammed.williams050@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S050,Mohammed,Williams,mohammed.williams050@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S051,Isla,Kim,isla.kim051@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S051,Isla,Kim,isla.kim051@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S051,Isla,Kim,isla.kim051@student.kangalife.edu.au,CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+S051,Isla,Kim,isla.kim051@student.kangalife.edu.au,CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+S051,Isla,Kim,isla.kim051@student.kangalife.edu.au,CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+S051,Isla,Kim,isla.kim051@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S052,Daniel,Patel,daniel.patel052@student.kangalife.edu.au,CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+S052,Daniel,Patel,daniel.patel052@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S052,Daniel,Patel,daniel.patel052@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S052,Daniel,Patel,daniel.patel052@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S052,Daniel,Patel,daniel.patel052@student.kangalife.edu.au,CLS052,T004,Noah Williams,SCI101,General Science,A105,Wednesday,12:30,14:00
+S053,Amara,Roberts,amara.roberts053@student.kangalife.edu.au,CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+S053,Amara,Roberts,amara.roberts053@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S053,Amara,Roberts,amara.roberts053@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S053,Amara,Roberts,amara.roberts053@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S053,Amara,Roberts,amara.roberts053@student.kangalife.edu.au,CLS028,T002,Liam Chen,ROB101,Robotics Fundamentals,A210,Tuesday,10:15,11:45
+S053,Amara,Roberts,amara.roberts053@student.kangalife.edu.au,CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S054,Priya,Roberts,priya.roberts054@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+S055,Sam,Williams,sam.williams055@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S056,Ruby,Clarke,ruby.clarke056@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S056,Ruby,Clarke,ruby.clarke056@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S056,Ruby,Clarke,ruby.clarke056@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S056,Ruby,Clarke,ruby.clarke056@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S056,Ruby,Clarke,ruby.clarke056@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S057,Adam,Thompson,adam.thompson057@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S058,Jordan,Brown,jordan.brown058@student.kangalife.edu.au,CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S059,Jordan,Hoang,jordan.hoang059@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S060,Fatima,Kim,fatima.kim060@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S060,Fatima,Kim,fatima.kim060@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S060,Fatima,Kim,fatima.kim060@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S060,Fatima,Kim,fatima.kim060@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S060,Fatima,Kim,fatima.kim060@student.kangalife.edu.au,CLS046,T010,Oliver Wilson,AI101,Artificial Intelligence Foundations,A105,Wednesday,10:15,11:45
+S060,Fatima,Kim,fatima.kim060@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S061,Noah,Harris,noah.harris061@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S061,Noah,Harris,noah.harris061@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S061,Noah,Harris,noah.harris061@student.kangalife.edu.au,CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+S061,Noah,Harris,noah.harris061@student.kangalife.edu.au,CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+S061,Noah,Harris,noah.harris061@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S062,Aria,OBrien,aria.obrien062@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S062,Aria,OBrien,aria.obrien062@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S062,Aria,OBrien,aria.obrien062@student.kangalife.edu.au,CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+S062,Aria,OBrien,aria.obrien062@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S062,Aria,OBrien,aria.obrien062@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S063,Gabriel,Singh,gabriel.singh063@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S063,Gabriel,Singh,gabriel.singh063@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S063,Gabriel,Singh,gabriel.singh063@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S063,Gabriel,Singh,gabriel.singh063@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S063,Gabriel,Singh,gabriel.singh063@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S063,Gabriel,Singh,gabriel.singh063@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S064,Zoe,Lee,zoe.lee064@student.kangalife.edu.au,CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+S064,Zoe,Lee,zoe.lee064@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S064,Zoe,Lee,zoe.lee064@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S064,Zoe,Lee,zoe.lee064@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S064,Zoe,Lee,zoe.lee064@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S064,Zoe,Lee,zoe.lee064@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S065,Fatima,Jackson,fatima.jackson065@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S065,Fatima,Jackson,fatima.jackson065@student.kangalife.edu.au,CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+S065,Fatima,Jackson,fatima.jackson065@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S065,Fatima,Jackson,fatima.jackson065@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S065,Fatima,Jackson,fatima.jackson065@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S066,Caleb,Lee,caleb.lee066@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S066,Caleb,Lee,caleb.lee066@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S066,Caleb,Lee,caleb.lee066@student.kangalife.edu.au,CLS066,T010,Oliver Wilson,ICT301,Database Fundamentals,D205,Thursday,10:15,11:45
+S066,Caleb,Lee,caleb.lee066@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S066,Caleb,Lee,caleb.lee066@student.kangalife.edu.au,CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+S066,Caleb,Lee,caleb.lee066@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+S067,Zara,Young,zara.young067@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS099,T006,Ethan Brown,ART101,Visual Arts,E110,Friday,14:15,15:45
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+S068,Jasmine,Singh,jasmine.singh068@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S069,Lucas,Garcia,lucas.garcia069@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S070,Zoe,Lim,zoe.lim070@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S071,Imogen,Hall,imogen.hall071@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S071,Imogen,Hall,imogen.hall071@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S071,Imogen,Hall,imogen.hall071@student.kangalife.edu.au,CLS007,T005,Grace Nguyen,SCI201,Environmental Science,A105,Monday,10:15,11:45
+S071,Imogen,Hall,imogen.hall071@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S071,Imogen,Hall,imogen.hall071@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S071,Imogen,Hall,imogen.hall071@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S072,Henry,Baker,henry.baker072@student.kangalife.edu.au,CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+S072,Henry,Baker,henry.baker072@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S072,Henry,Baker,henry.baker072@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S072,Henry,Baker,henry.baker072@student.kangalife.edu.au,CLS023,T004,Noah Williams,ART201,Digital Media,C305,Tuesday,08:30,10:00
+S072,Henry,Baker,henry.baker072@student.kangalife.edu.au,CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+S072,Henry,Baker,henry.baker072@student.kangalife.edu.au,CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+S073,Aaron,Kim,aaron.kim073@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S073,Aaron,Kim,aaron.kim073@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S073,Aaron,Kim,aaron.kim073@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S073,Aaron,Kim,aaron.kim073@student.kangalife.edu.au,CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+S073,Aaron,Kim,aaron.kim073@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS046,T010,Oliver Wilson,AI101,Artificial Intelligence Foundations,A105,Wednesday,10:15,11:45
+S074,Maddison,Baker,maddison.baker074@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS075,T004,Noah Williams,MAT201,Applied Mathematics,E205,Thursday,12:30,14:00
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S075,Archer,OBrien,archer.obrien075@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S076,Henry,Campbell,henry.campbell076@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S076,Henry,Campbell,henry.campbell076@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S076,Henry,Campbell,henry.campbell076@student.kangalife.edu.au,CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+S076,Henry,Campbell,henry.campbell076@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S076,Henry,Campbell,henry.campbell076@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S077,Daniel,Scott,daniel.scott077@student.kangalife.edu.au,CLS058,T009,Maya Singh,HIS201,Australian History,A105,Wednesday,14:15,15:45
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS007,T005,Grace Nguyen,SCI201,Environmental Science,A105,Monday,10:15,11:45
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S078,Jacob,Hughes,jacob.hughes078@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S079,Michael,Green,michael.green079@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S079,Michael,Green,michael.green079@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S079,Michael,Green,michael.green079@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S079,Michael,Green,michael.green079@student.kangalife.edu.au,CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+S079,Michael,Green,michael.green079@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S079,Michael,Green,michael.green079@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S080,Harper,Clarke,harper.clarke080@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S080,Harper,Clarke,harper.clarke080@student.kangalife.edu.au,CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+S080,Harper,Clarke,harper.clarke080@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S080,Harper,Clarke,harper.clarke080@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S080,Harper,Clarke,harper.clarke080@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S081,Harper,Khan,harper.khan081@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS007,T005,Grace Nguyen,SCI201,Environmental Science,A105,Monday,10:15,11:45
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S082,Jordan,Jones,jordan.jones082@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS008,T002,Liam Chen,BUS301,Project Management,C301,Monday,10:15,11:45
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S083,Zara,Khan,zara.khan083@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS053,T001,Amelia Hart,BUS201,Marketing Principles,C301,Wednesday,12:30,14:00
+S084,Oscar,Chen,oscar.chen084@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S085,Henry,Khan,henry.khan085@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S085,Henry,Khan,henry.khan085@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S085,Henry,Khan,henry.khan085@student.kangalife.edu.au,CLS018,T008,Jack Thompson,ENG201,Academic Writing,D102,Monday,14:15,15:45
+S085,Henry,Khan,henry.khan085@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S085,Henry,Khan,henry.khan085@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S085,Henry,Khan,henry.khan085@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+S086,Benjamin,Tran,benjamin.tran086@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S087,Aaliyah,Hughes,aaliyah.hughes087@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S087,Aaliyah,Hughes,aaliyah.hughes087@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S087,Aaliyah,Hughes,aaliyah.hughes087@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S087,Aaliyah,Hughes,aaliyah.hughes087@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S087,Aaliyah,Hughes,aaliyah.hughes087@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S088,Isla,Young,isla.young088@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S089,Aaliyah,Miller,aaliyah.miller089@student.kangalife.edu.au,CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+S089,Aaliyah,Miller,aaliyah.miller089@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S089,Aaliyah,Miller,aaliyah.miller089@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S089,Aaliyah,Miller,aaliyah.miller089@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S089,Aaliyah,Miller,aaliyah.miller089@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S090,Blake,Hall,blake.hall090@student.kangalife.edu.au,CLS090,T006,Ethan Brown,ICT201,Programming Fundamentals,A105,Friday,10:15,11:45
+S090,Blake,Hall,blake.hall090@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S090,Blake,Hall,blake.hall090@student.kangalife.edu.au,CLS068,T003,Sofia Patel,ART101,Visual Arts,C305,Thursday,10:15,11:45
+S090,Blake,Hall,blake.hall090@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S090,Blake,Hall,blake.hall090@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S091,Sarah,Wong,sarah.wong091@student.kangalife.edu.au,CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+S091,Sarah,Wong,sarah.wong091@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S091,Sarah,Wong,sarah.wong091@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S091,Sarah,Wong,sarah.wong091@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S091,Sarah,Wong,sarah.wong091@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S091,Sarah,Wong,sarah.wong091@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S092,Aaron,Evans,aaron.evans092@student.kangalife.edu.au,CLS092,T005,Grace Nguyen,ENG201,Academic Writing,C301,Friday,12:30,14:00
+S092,Aaron,Evans,aaron.evans092@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S092,Aaron,Evans,aaron.evans092@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S092,Aaron,Evans,aaron.evans092@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S092,Aaron,Evans,aaron.evans092@student.kangalife.edu.au,CLS056,T006,Ethan Brown,BUS101,Business Essentials,B201,Wednesday,14:15,15:45
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS089,T009,Maya Singh,MAT101,General Mathematics,D102,Friday,10:15,11:45
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS073,T001,Amelia Hart,DES201,User Experience Design,A210,Thursday,12:30,14:00
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS033,T010,Oliver Wilson,MAT201,Applied Mathematics,D205,Tuesday,12:30,14:00
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS050,T005,Grace Nguyen,BUS301,Project Management,D102,Wednesday,10:15,11:45
+S093,Anika,Martinez,anika.martinez093@student.kangalife.edu.au,CLS060,T002,Liam Chen,ENG201,Academic Writing,E110,Wednesday,14:15,15:45
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS094,T008,Jack Thompson,SCI101,General Science,B201,Friday,12:30,14:00
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS061,T002,Liam Chen,ENG201,Academic Writing,A210,Thursday,08:30,10:00
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS079,T006,Ethan Brown,ICT201,Programming Fundamentals,A210,Thursday,14:15,15:45
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+S094,Mila,Martinez,mila.martinez094@student.kangalife.edu.au,CLS049,T009,Maya Singh,SCI201,Environmental Science,B201,Wednesday,10:15,11:45
+S095,Henry,Tran,henry.tran095@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S095,Henry,Tran,henry.tran095@student.kangalife.edu.au,CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+S095,Henry,Tran,henry.tran095@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S095,Henry,Tran,henry.tran095@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S095,Henry,Tran,henry.tran095@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S095,Henry,Tran,henry.tran095@student.kangalife.edu.au,CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S096,Ava,Lee,ava.lee096@student.kangalife.edu.au,CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS097,T003,Sofia Patel,ICT301,Database Fundamentals,A105,Friday,14:15,15:45
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS069,T009,Maya Singh,HIS201,Australian History,E205,Thursday,10:15,11:45
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS076,T007,Isabella Rossi,DES101,Design Thinking,E205,Thursday,14:15,15:45
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S097,Oscar,Jackson,oscar.jackson097@student.kangalife.edu.au,CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+S098,Harper,King,harper.king098@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S098,Harper,King,harper.king098@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S098,Harper,King,harper.king098@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S098,Harper,King,harper.king098@student.kangalife.edu.au,CLS032,T004,Noah Williams,ENG101,English Foundations,B204,Tuesday,12:30,14:00
+S098,Harper,King,harper.king098@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S098,Harper,King,harper.king098@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS099,T006,Ethan Brown,ART101,Visual Arts,E110,Friday,14:15,15:45
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S099,Ali,Patel,ali.patel099@student.kangalife.edu.au,CLS052,T004,Noah Williams,SCI101,General Science,A105,Wednesday,12:30,14:00
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S100,Amir,Scott,amir.scott100@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS096,T007,Isabella Rossi,MAT201,Applied Mathematics,D102,Friday,14:15,15:45
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS014,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,C301,Monday,12:30,14:00
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS040,T001,Amelia Hart,HIS101,Modern History,A210,Tuesday,14:15,15:45
+S101,Lucas,Wilson,lucas.wilson101@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S102,Samuel,Garcia,samuel.garcia102@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S102,Samuel,Garcia,samuel.garcia102@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S102,Samuel,Garcia,samuel.garcia102@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S102,Samuel,Garcia,samuel.garcia102@student.kangalife.edu.au,CLS099,T006,Ethan Brown,ART101,Visual Arts,E110,Friday,14:15,15:45
+S102,Samuel,Garcia,samuel.garcia102@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S102,Samuel,Garcia,samuel.garcia102@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS092,T005,Grace Nguyen,ENG201,Academic Writing,C301,Friday,12:30,14:00
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS019,T005,Grace Nguyen,ICT101,Digital Technologies,A105,Monday,14:15,15:45
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S103,Charlotte,Nguyen,charlotte.nguyen103@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS100,T002,Liam Chen,HIS201,Australian History,B201,Friday,14:15,15:45
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS078,T009,Maya Singh,MAT101,General Mathematics,D205,Thursday,14:15,15:45
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS022,T007,Isabella Rossi,BUS201,Marketing Principles,A210,Tuesday,08:30,10:00
+S104,Jordan,Williams,jordan.williams104@student.kangalife.edu.au,CLS046,T010,Oliver Wilson,AI101,Artificial Intelligence Foundations,A105,Wednesday,10:15,11:45
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS004,T010,Oliver Wilson,BUS101,Business Essentials,B201,Monday,08:30,10:00
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S105,Imogen,Martinez,imogen.martinez105@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S106,Samuel,Lee,samuel.lee106@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S106,Samuel,Lee,samuel.lee106@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S106,Samuel,Lee,samuel.lee106@student.kangalife.edu.au,CLS063,T004,Noah Williams,SCI101,General Science,E205,Thursday,08:30,10:00
+S106,Samuel,Lee,samuel.lee106@student.kangalife.edu.au,CLS027,T006,Ethan Brown,HIS201,Australian History,D205,Tuesday,10:15,11:45
+S106,Samuel,Lee,samuel.lee106@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S107,Alex,Evans,alex.evans107@student.kangalife.edu.au,CLS085,T007,Isabella Rossi,ENG101,English Foundations,C301,Friday,08:30,10:00
+S107,Alex,Evans,alex.evans107@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S107,Alex,Evans,alex.evans107@student.kangalife.edu.au,CLS038,T009,Maya Singh,SCI201,Environmental Science,B204,Tuesday,14:15,15:45
+S107,Alex,Evans,alex.evans107@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S107,Alex,Evans,alex.evans107@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS013,T010,Oliver Wilson,DES101,Design Thinking,A105,Monday,12:30,14:00
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS072,T005,Grace Nguyen,HIS101,Modern History,D205,Thursday,12:30,14:00
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS080,T002,Liam Chen,SCI201,Environmental Science,C305,Thursday,14:15,15:45
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+S108,Hamza,Scott,hamza.scott108@student.kangalife.edu.au,CLS041,T001,Amelia Hart,HIS101,Modern History,C301,Wednesday,08:30,10:00
+S109,Jack,Tran,jack.tran109@student.kangalife.edu.au,CLS086,T010,Oliver Wilson,ART201,Digital Media,C301,Friday,10:15,11:45
+S109,Jack,Tran,jack.tran109@student.kangalife.edu.au,CLS012,T004,Noah Williams,ART201,Digital Media,D102,Monday,12:30,14:00
+S109,Jack,Tran,jack.tran109@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S109,Jack,Tran,jack.tran109@student.kangalife.edu.au,CLS025,T006,Ethan Brown,AI101,Artificial Intelligence Foundations,B204,Tuesday,08:30,10:00
+S109,Jack,Tran,jack.tran109@student.kangalife.edu.au,CLS059,T005,Grace Nguyen,ROB101,Robotics Fundamentals,C301,Wednesday,14:15,15:45
+S110,Yasmin,Harris,yasmin.harris110@student.kangalife.edu.au,CLS088,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B201,Friday,10:15,11:45
+S110,Yasmin,Harris,yasmin.harris110@student.kangalife.edu.au,CLS098,T010,Oliver Wilson,BUS101,Business Essentials,C301,Friday,14:15,15:45
+S110,Yasmin,Harris,yasmin.harris110@student.kangalife.edu.au,CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+S110,Yasmin,Harris,yasmin.harris110@student.kangalife.edu.au,CLS007,T005,Grace Nguyen,SCI201,Environmental Science,A105,Monday,10:15,11:45
+S110,Yasmin,Harris,yasmin.harris110@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S110,Yasmin,Harris,yasmin.harris110@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS084,T001,Amelia Hart,DES201,User Experience Design,A105,Friday,08:30,10:00
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS011,T007,Isabella Rossi,BUS201,Marketing Principles,B201,Monday,12:30,14:00
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS074,T007,Isabella Rossi,ENG101,English Foundations,C305,Thursday,12:30,14:00
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S111,Isla,Hall,isla.hall111@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS015,T003,Sofia Patel,MAT101,General Mathematics,E110,Monday,12:30,14:00
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS026,T009,Maya Singh,ART101,Visual Arts,B204,Tuesday,10:15,11:45
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS037,T002,Liam Chen,ICT201,Programming Fundamentals,E205,Tuesday,14:15,15:45
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS048,T002,Liam Chen,ICT201,Programming Fundamentals,E110,Wednesday,10:15,11:45
+S112,Sienna,Singh,sienna.singh112@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS002,T007,Isabella Rossi,MAT201,Applied Mathematics,C301,Monday,08:30,10:00
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS062,T008,Jack Thompson,ICT101,Digital Technologies,C305,Thursday,08:30,10:00
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS021,T001,Amelia Hart,SCI101,General Science,D205,Tuesday,08:30,10:00
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS036,T006,Ethan Brown,MAT101,General Mathematics,C305,Tuesday,14:15,15:45
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS042,T008,Jack Thompson,DES201,User Experience Design,E110,Wednesday,08:30,10:00
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S113,William,Lim,william.lim113@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45
+S114,Kai,Green,kai.green114@student.kangalife.edu.au,CLS082,T008,Jack Thompson,BUS301,Project Management,B201,Friday,08:30,10:00
+S114,Kai,Green,kai.green114@student.kangalife.edu.au,CLS095,T004,Noah Williams,BUS201,Marketing Principles,D102,Friday,12:30,14:00
+S114,Kai,Green,kai.green114@student.kangalife.edu.au,CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+S114,Kai,Green,kai.green114@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S114,Kai,Green,kai.green114@student.kangalife.edu.au,CLS030,T005,Grace Nguyen,ICT101,Digital Technologies,E205,Tuesday,10:15,11:45
+S114,Kai,Green,kai.green114@student.kangalife.edu.au,CLS031,T008,Jack Thompson,DES201,User Experience Design,E205,Tuesday,12:30,14:00
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS081,T002,Liam Chen,SCI201,Environmental Science,E110,Friday,08:30,10:00
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS091,T009,Maya Singh,ROB101,Robotics Fundamentals,A105,Friday,12:30,14:00
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS003,T003,Sofia Patel,ICT301,Database Fundamentals,E110,Monday,08:30,10:00
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS009,T008,Jack Thompson,HIS101,Modern History,E110,Monday,10:15,11:45
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS067,T006,Ethan Brown,BUS101,Business Essentials,A210,Thursday,10:15,11:45
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S115,Amara,Thomas,amara.thomas115@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS090,T006,Ethan Brown,ICT201,Programming Fundamentals,A105,Friday,10:15,11:45
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS016,T006,Ethan Brown,HIS201,Australian History,E110,Monday,14:15,15:45
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS024,T010,Oliver Wilson,DES101,Design Thinking,E205,Tuesday,08:30,10:00
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS035,T003,Sofia Patel,BUS101,Business Essentials,C305,Tuesday,12:30,14:00
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS047,T006,Ethan Brown,MAT101,General Mathematics,C301,Wednesday,10:15,11:45
+S116,Maddison,Mitchell,maddison.mitchell116@student.kangalife.edu.au,CLS051,T008,Jack Thompson,ICT101,Digital Technologies,D102,Wednesday,12:30,14:00
+S117,Ali,Green,ali.green117@student.kangalife.edu.au,CLS010,T004,Noah Williams,DES201,User Experience Design,B201,Monday,10:15,11:45
+S117,Ali,Green,ali.green117@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S117,Ali,Green,ali.green117@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S117,Ali,Green,ali.green117@student.kangalife.edu.au,CLS029,T008,Jack Thompson,ENG201,Academic Writing,C305,Tuesday,10:15,11:45
+S117,Ali,Green,ali.green117@student.kangalife.edu.au,CLS044,T010,Oliver Wilson,MAT201,Applied Mathematics,D102,Wednesday,08:30,10:00
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS090,T006,Ethan Brown,ICT201,Programming Fundamentals,A105,Friday,10:15,11:45
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS093,T001,Amelia Hart,ICT101,Digital Technologies,E110,Friday,12:30,14:00
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS005,T006,Ethan Brown,ART101,Visual Arts,D102,Monday,08:30,10:00
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS020,T001,Amelia Hart,SCI101,General Science,C301,Monday,14:15,15:45
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS043,T004,Noah Williams,ENG101,English Foundations,B201,Wednesday,08:30,10:00
+S118,Sienna,Thompson,sienna.thompson118@student.kangalife.edu.au,CLS054,T007,Isabella Rossi,ART201,Digital Media,E110,Wednesday,12:30,14:00
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS090,T006,Ethan Brown,ICT201,Programming Fundamentals,A105,Friday,10:15,11:45
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS006,T009,Maya Singh,ICT201,Programming Fundamentals,D102,Monday,10:15,11:45
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS017,T002,Liam Chen,ROB101,Robotics Fundamentals,B201,Monday,14:15,15:45
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS064,T001,Amelia Hart,BUS201,Marketing Principles,B204,Thursday,08:30,10:00
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS071,T008,Jack Thompson,BUS301,Project Management,B204,Thursday,12:30,14:00
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS034,T007,Isabella Rossi,ICT301,Database Fundamentals,A210,Tuesday,12:30,14:00
+S119,Hamza,Kim,hamza.kim119@student.kangalife.edu.au,CLS039,T005,Grace Nguyen,BUS301,Project Management,D205,Tuesday,14:15,15:45
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS083,T005,Grace Nguyen,HIS101,Modern History,D102,Friday,08:30,10:00
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS087,T007,Isabella Rossi,DES101,Design Thinking,E110,Friday,10:15,11:45
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS001,T001,Amelia Hart,ENG101,English Foundations,A105,Monday,08:30,10:00
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS065,T007,Isabella Rossi,ART201,Digital Media,D205,Thursday,08:30,10:00
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS070,T005,Grace Nguyen,ROB101,Robotics Fundamentals,B204,Thursday,10:15,11:45
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS077,T003,Sofia Patel,AI101,Artificial Intelligence Foundations,B204,Thursday,14:15,15:45
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS055,T003,Sofia Patel,DES101,Design Thinking,B201,Wednesday,12:30,14:00
+S120,Finn,Baker,finn.baker120@student.kangalife.edu.au,CLS057,T003,Sofia Patel,ART101,Visual Arts,D102,Wednesday,14:15,15:45

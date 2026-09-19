@@ -46,12 +46,14 @@ nav:
         - npm Packages: pages/resources/nextjs/npm-packages.md
         - Routing: pages/resources/nextjs/routing.md
         - Components and Layouts: pages/resources/nextjs/components-layouts.md
+        - Client and Server Components: pages/resources/nextjs/client-server-components.md
         - Events and State: pages/resources/nextjs/events-and-state.md
         - Arrow Functions: pages/resources/nextjs/arrow-functions.md
-        - Fetch, Async, and JSON: pages/resources/nextjs/fetch-async-json.md
+        - Fetching Data: pages/resources/nextjs/fetching-data.md
         - useState and useEffect: pages/resources/nextjs/usestate-useeffect.md
         - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
       - Component Libraries:
+        - Tailwind CSS: pages/resources/tailwind/tailwind.md
         - Mantine UI: pages/resources/mantine/mantine.md
       - MQTT:
         - MQTT Overview: pages/resources/mqtt/mqtt-overview.md
@@ -73,12 +75,17 @@ nav:
       - JavaScript and APIs:
         - Cafe Recipes Page: pages/tasks/fetch-api-data.md
       - Next.js:
+        - Creating a Next.js App: pages/tasks/create-nextjs-app.md
+        - Components: pages/tasks/components-props.md
         - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
         - Interactive Component: pages/tasks/interactive-component.md
         - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
         - Fetching Data with State: pages/tasks/fetching-data-with-state.md
         - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
+        - User Directory App: pages/tasks/user-directory.md
+        - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
       - Libraries and Integrations:
+        - Tailwind CSS: pages/tasks/tailwind.md
         - Mantine Component Library: pages/tasks/mantine-components.md
         - React Confetti: pages/tasks/react-confetti.md
         - Supabase as a CMS: pages/tasks/supabase-cms.md
@@ -86,6 +93,7 @@ nav:
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
+  custom_dir: ../../shared
   palette:
     primary: indigo
   features:
@@ -96,6 +104,15 @@ theme:
     - header.hide
     - content.code.copy
     - content.code.annotate
+
+# This is relative to the theme/base (based on custom_dir above)
+extra_css:
+  - style.css
+
+# This is here to watch the style.css file above to trigger hot-reload,
+# therefor if the custom_dir is changed it should be changed here too.
+watch:
+  - ../../shared/style.css
 
 plugins:
   - enumerate-headings:
@@ -118,6 +135,3 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
-
-extra_css:
-  - extra/style.css

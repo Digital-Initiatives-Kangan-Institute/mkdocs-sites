@@ -42,12 +42,7 @@ print_step "Upgrading pip..."
 # ── Dependencies ──────────────────────────────
 print_step "Installing dependencies..."
 
-./.venv/bin/pip install \
-    mkdocs \
-    mkdocs-material \
-    mkdocs-enumerate-headings-plugin \
-    pymdown-extensions \
-    pygments
+./.venv/bin/pip install -r requirements.txt
 
 print_success "mkdocs installed"
 print_success "mkdocs-material installed"
