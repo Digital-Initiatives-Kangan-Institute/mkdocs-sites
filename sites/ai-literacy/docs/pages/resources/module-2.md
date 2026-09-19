@@ -1,4 +1,4 @@
-# Information Literacy, Verification & Deep Research
+<!-- # Information Literacy, Verification & Deep Research
 
 ## Deep Research vs. Standard LLMs
 
@@ -61,3 +61,5 @@ To research efficiently, select the appropriate search methodology and tools:
 
 *   **Zoom Out (Look Wide)**: Spend time scanning a broad landscape of articles to establish a high-level overview of a topic, mapping out key subtopics or emerging trends.
 *   **Zoom In (Dive Deep)**: Select a highly specific, credible source or technical case study and read deeply to build a thorough, granular understanding of the mechanics, challenges, and solutions.
+
+-->
