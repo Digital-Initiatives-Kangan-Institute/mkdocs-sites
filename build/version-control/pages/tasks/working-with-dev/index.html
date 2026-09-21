@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../daily-workflow/" rel="prev"/>
+<link href="../pull-request-workflow/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Working with a dev Branch - Version Control</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#working-with-a-dev-branch">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Version Control" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Version Control
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Working with a dev Branch
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Version Control" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Version Control
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/what-is-vc/">
+<span class="md-ellipsis">
+    
+  
+    What is Version Control
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/git-in-vscode/">
+<span class="md-ellipsis">
+    
+  
+    Git with VS Code
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/branching-strategy/">
+<span class="md-ellipsis">
+    
+  
+    Branching Strategy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/git-tools/">
+<span class="md-ellipsis">
+    
+  
+    Git Tools and Clients
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/what-is-github/">
+<span class="md-ellipsis">
+    
+  
+    What is GitHub
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/gitignore/">
+<span class="md-ellipsis">
+    
+  
+    .gitignore
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/merge-conflicts/">
+<span class="md-ellipsis">
+    
+  
+    Merge Conflicts
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../resources/version-control/git-cli/">
+<span class="md-ellipsis">
+    
+  
+    Git CLI Reference
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../initialise-and-commit/">
+<span class="md-ellipsis">
+    
+  
+    Initialise and Commit
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branch-and-merge/">
+<span class="md-ellipsis">
+    
+  
+    Branch and Merge
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../daily-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Daily Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Working with a dev Branch
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Working with a dev Branch
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-up-dev-from-main">
+<span class="md-ellipsis">
+      
+        Set Up dev from main
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#create-a-feature-the-right-way">
+<span class="md-ellipsis">
+      
+        Create a Feature the Right Way
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-another-feature-through-dev">
+<span class="md-ellipsis">
+      
+        Add Another Feature Through dev
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#release-to-main">
+<span class="md-ellipsis">
+      
+        Release to main
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#check-your-understanding">
+<span class="md-ellipsis">
+      
+        Check Your Understanding
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../pull-request-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Pull Request Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../../resources/version-control/what-is-vc/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../initialise-and-commit/">
+<span class="md-ellipsis">
+    Tasks
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="working-with-a-dev-branch"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Working with a dev Branch</h1>
+<p>The earlier tasks used <code>main</code> directly to keep things simple. Now you will add a <code>dev</code> branch as the integration point where features come together. From now on, you will not commit directly to <code>main</code>.</p>
+<h2 id="set-up-dev-from-main"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> Set Up dev from main</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Create a <code>dev</code> branch from your current <code>main</code> branch.</p>
+<ol>
+<li>Switch to your <code>main</code> branch and Sync to get the latest</li>
+<li>Create a new branch called <code>dev</code></li>
+<li>Push <code>dev</code> to GitHub so it exists on the remote as well</li>
+</ol>
+<p>You now have two long-lived branches: <code>main</code> and <code>dev</code>.</p>
+</div>
+<hr/>
+<h2 id="create-a-feature-the-right-way"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> Create a Feature the Right Way</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Practice the full main/dev/feature workflow by adding a new feature through <code>dev</code>.</p>
+<ol>
+<li>Switch to <code>dev</code> and Sync to get the latest</li>
+<li>Create a branch from <code>dev</code> called <code>feature/hero-section</code></li>
+<li>Add a hero section to your <code>index.html</code> — a large heading, a subheading, and a call-to-action paragraph</li>
+<li>Stage and commit your changes on the feature branch</li>
+<li>Switch to <code>dev</code>, then merge <code>feature/hero-section</code> into <code>dev</code></li>
+<li>Delete the feature branch</li>
+<li>Push <code>dev</code> to GitHub</li>
+</ol>
+<p>Notice the difference: you merged into <code>dev</code>, not <code>main</code>.</p>
+</div>
+<hr/>
+<h2 id="add-another-feature-through-dev"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Add Another Feature Through dev</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Repeat the workflow with another feature.</p>
+<ol>
+<li>Switch to <code>dev</code> and Sync</li>
+<li>Create a branch from <code>dev</code> called <code>feature/testimonials</code></li>
+<li>Add a testimonials section to your <code>index.html</code> with at least two customer quotes</li>
+<li>Stage and commit your changes on the feature branch</li>
+<li>Switch to <code>dev</code>, merge <code>feature/testimonials</code>, delete the branch</li>
+<li>Push <code>dev</code> to GitHub</li>
+</ol>
+</div>
+<hr/>
+<h2 id="release-to-main"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> Release to main</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Now that <code>dev</code> has the hero section and testimonials, release it to <code>main</code>.</p>
+<ol>
+<li>Switch to <code>main</code> and Sync</li>
+<li>Merge <code>dev</code> into <code>main</code></li>
+<li>Push <code>main</code> to GitHub</li>
+</ol>
+<p>Your <code>main</code> branch now contains both features, but they arrived through a single <code>dev</code> → <code>main</code> merge rather than multiple feature merges.</p>
+</div>
+<hr/>
+<h2 id="check-your-understanding"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.5</span> Check Your Understanding</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Instructions</p>
+<p>Append your answers to the <code>answers.md</code> file in your project. Stage, commit, and push it to GitHub.</p>
+<ul>
+<li>Why merge features into <code>dev</code> instead of directly into <code>main</code>?</li>
+<li>What is the difference between a long-lived branch (like <code>main</code> and <code>dev</code>) and a short-lived branch (like <code>feature/hero-section</code>)?</li>
+<li>When would you merge <code>dev</code> into <code>main</code>? After every feature, or after a group of features? Why?</li>
+</ul>
+</div>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Daily Workflow" class="md-footer__link md-footer__link--prev" href="../daily-workflow/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Daily Workflow
+              </div>
+</div>
+</a>
+<a aria-label="Next: Pull Request Workflow" class="md-footer__link md-footer__link--next" href="../pull-request-workflow/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Pull Request Workflow
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

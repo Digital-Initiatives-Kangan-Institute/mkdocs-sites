@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../multiple-sources/" rel="prev"/>
+<link href="../unstructured-data/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Common Transformation Patterns - Data Handling</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#common-data-transformation-patterns">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Data Handling" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Data Handling
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Common Transformation Patterns
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Data Handling" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Data Handling
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bki-di-portal.netlify.app/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raw-data/">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../excel-transformation-techniques/">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query-transformations/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-transformation-pattern">
+<span class="md-ellipsis">
+      
+        What is a Transformation Pattern?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#report-data-vs-analysis-data">
+<span class="md-ellipsis">
+      
+        Report Data vs Analysis Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-unpivot">
+<span class="md-ellipsis">
+      
+        Understanding Unpivot
+      
+    </span>
+</a>
+<nav aria-label="Understanding Unpivot" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before">
+<span class="md-ellipsis">
+      
+        Before
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#after">
+<span class="md-ellipsis">
+      
+        After
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-unpivot-matters">
+<span class="md-ellipsis">
+      
+        Why Unpivot Matters
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fill-down">
+<span class="md-ellipsis">
+      
+        Fill Down
+      
+    </span>
+</a>
+<nav aria-label="Fill Down" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before_1">
+<span class="md-ellipsis">
+      
+        Before
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#after_1">
+<span class="md-ellipsis">
+      
+        After
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-fill-down-is-useful">
+<span class="md-ellipsis">
+      
+        Why Fill Down is Useful
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extracting-text">
+<span class="md-ellipsis">
+      
+        Extracting Text
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extracting-postcodes">
+<span class="md-ellipsis">
+      
+        Extracting Postcodes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extracting-dates">
+<span class="md-ellipsis">
+      
+        Extracting Dates
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conditional-columns">
+<span class="md-ellipsis">
+      
+        Conditional Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_1">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#another-example">
+<span class="md-ellipsis">
+      
+        Another Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#categorising-data">
+<span class="md-ellipsis">
+      
+        Categorising Data
+      
+    </span>
+</a>
+<nav aria-label="Categorising Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before_2">
+<span class="md-ellipsis">
+      
+        Before
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#after_2">
+<span class="md-ellipsis">
+      
+        After
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-survey-responses">
+<span class="md-ellipsis">
+      
+        Standardising Survey Responses
+      
+    </span>
+</a>
+<nav aria-label="Standardising Survey Responses" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before_3">
+<span class="md-ellipsis">
+      
+        Before
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#after_3">
+<span class="md-ellipsis">
+      
+        After
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-business-rules">
+<span class="md-ellipsis">
+      
+        Creating Business Rules
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifying-outliers">
+<span class="md-ellipsis">
+      
+        Identifying Outliers
+      
+    </span>
+</a>
+<nav aria-label="Identifying Outliers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_2">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-youth-survey-data">
+<span class="md-ellipsis">
+      
+        Working with Youth Survey Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#building-a-transformation-pipeline">
+<span class="md-ellipsis">
+      
+        Building a Transformation Pipeline
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-fixing-report-style-data">
+<span class="md-ellipsis">
+      
+        Activity: Fixing Report-Style Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-youth-survey-transformation-patterns">
+<span class="md-ellipsis">
+      
+        Activity: Youth Survey Transformation Patterns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-takeaways">
+<span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unstructured-data/">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="common-data-transformation-patterns"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.</span> Common Data Transformation Patterns</h1>
+<h2 id="introduction"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.1</span> Introduction</h2>
+<p>Certain data problems appear repeatedly across organisations and industries.</p>
+<p>Learning these common transformation patterns allows you to solve many real-world data issues quickly.</p>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Recognise common transformation patterns</li>
+<li>Convert report-style data into tabular data</li>
+<li>Unpivot columns</li>
+<li>Fill missing values</li>
+<li>Create conditional columns</li>
+<li>Extract useful information from text</li>
+</ul>
+<hr/>
+<h2 id="what-is-a-transformation-pattern"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.2</span> What is a Transformation Pattern?</h2>
+<p>A transformation pattern is a common technique used to convert data from one structure into another.</p>
+<p>Examples include:</p>
+<ul>
+<li>Unpivoting</li>
+<li>Filling values</li>
+<li>Extracting text</li>
+<li>Categorising data</li>
+<li>Creating calculated fields</li>
+</ul>
+<hr/>
+<h2 id="report-data-vs-analysis-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3</span> Report Data vs Analysis Data</h2>
+<p>Data created for humans often differs from data required for analysis.</p>
+<p><strong>Report Format</strong></p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Jan</th>
+<th>Feb</th>
+<th>Mar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis Format</strong></p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Month</th>
+<th>Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This transformation is one of the most common in Power Query.</p>
+<hr/>
+<h2 id="understanding-unpivot"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.4</span> Understanding Unpivot</h2>
+<p>Unpivot converts multiple columns into rows.</p>
+<h3 id="before"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.4.1</span> Before</h3>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Jan</th>
+<th>Feb</th>
+<th>Mar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laptop</td>
+<td>100</td>
+<td>120</td>
+<td>130</td>
+</tr>
+</tbody>
+</table>
+<h3 id="after"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.4.2</span> After</h3>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Month</th>
+<th>Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laptop</td>
+<td>Jan</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Laptop</td>
+<td>Feb</td>
+<td>120</td>
+</tr>
+<tr>
+<td>Laptop</td>
+<td>Mar</td>
+<td>130</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="why-unpivot-matters"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.5</span> Why Unpivot Matters</h2>
+<p>Many reporting tools expect data to be stored in:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>One row per observation
+</code></pre></div></td></tr></table></div>
+<p>rather than:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>One column per period
+</code></pre></div></td></tr></table></div>
+<p>Unpivoting helps satisfy this requirement.</p>
+<hr/>
+<h2 id="fill-down"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.6</span> Fill Down</h2>
+<p>Some datasets place headings above groups of records.</p>
+<h3 id="before_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.6.1</span> Before</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardware</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td>Software</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="after_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.6.2</span> After</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hardware</td>
+</tr>
+<tr>
+<td>Hardware</td>
+</tr>
+<tr>
+<td>Hardware</td>
+</tr>
+<tr>
+<td>Software</td>
+</tr>
+<tr>
+<td>Software</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="why-fill-down-is-useful"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.7</span> Why Fill Down is Useful</h2>
+<p>Common uses include:</p>
+<ul>
+<li>Financial reports</li>
+<li>Survey exports</li>
+<li>Legacy systems</li>
+<li>Government reports</li>
+</ul>
+<hr/>
+<h2 id="extracting-text"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.8</span> Extracting Text</h2>
+<p>Text often contains useful information hidden inside larger values.</p>
+<hr/>
+<h2 id="example"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.9</span> Example</h2>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Customer-1047
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>1047
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="extracting-postcodes"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.10</span> Extracting Postcodes</h2>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Broadmeadows VIC 3047
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>3047
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="extracting-dates"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.11</span> Extracting Dates</h2>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Meeting held on 12 March 2026
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>12 March 2026
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="conditional-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.12</span> Conditional Columns</h2>
+<p>Conditional Columns allow us to create categories based on rules.</p>
+<hr/>
+<h2 id="example_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.13</span> Example</h2>
+<p>Sales:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>1500
+</code></pre></div></td></tr></table></div>
+<p>New Column:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>High Value
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="another-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.14</span> Another Example</h2>
+<p>Age:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>16
+</code></pre></div></td></tr></table></div>
+<p>Age Group:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>15-17
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="categorising-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.15</span> Categorising Data</h2>
+<p>Many datasets contain similar values that can be grouped together.</p>
+<h3 id="before_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.15.1</span> Before</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Sports
+Basketball
+Football
+Netball
+</code></pre></div></td></tr></table></div>
+<h3 id="after_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.15.2</span> After</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Sport
+Sport
+Sport
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="standardising-survey-responses"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.16</span> Standardising Survey Responses</h2>
+<h3 id="before_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.16.1</span> Before</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>YES
+Yes
+Y
+</code></pre></div></td></tr></table></div>
+<h3 id="after_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.16.2</span> After</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Yes
+Yes
+Yes
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="creating-business-rules"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.17</span> Creating Business Rules</h2>
+<p>Business rules help standardise data.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Ratings between 1 and 5 only</li>
+<li>Ages must be positive</li>
+<li>Postcodes must be four digits</li>
+<li>Dates must be valid</li>
+</ul>
+<hr/>
+<h2 id="identifying-outliers"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.18</span> Identifying Outliers</h2>
+<p>Transformation often reveals unusual values.</p>
+<h3 id="example_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.18.1</span> Example</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>12
+15
+16
+250
+</code></pre></div></td></tr></table></div>
+<p>The value:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>250
+</code></pre></div></td></tr></table></div>
+<p>may require investigation.</p>
+<hr/>
+<h2 id="working-with-youth-survey-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.19</span> Working with Youth Survey Data</h2>
+<p>Common transformations include:</p>
+<ul>
+<li>Standardising suburb names</li>
+<li>Standardising program categories</li>
+<li>Creating age groups</li>
+<li>Categorising comments</li>
+<li>Extracting keywords</li>
+</ul>
+<hr/>
+<h2 id="building-a-transformation-pipeline"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.20</span> Building a Transformation Pipeline</h2>
+<p>A typical workflow might be:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Import Data
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Remove Blank Rows
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Standardise Values
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Unpivot
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Create Categories
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Load Dataset
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="activity-fixing-report-style-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.21</span> Activity: Fixing Report-Style Data</h2>
+<p>Using the supplied workbook:</p>
+<ol>
+<li>Identify report-style structures.</li>
+<li>Remove unnecessary formatting.</li>
+<li>Unpivot monthly columns.</li>
+<li>Create an analysis-ready table.</li>
+</ol>
+<hr/>
+<h2 id="activity-youth-survey-transformation-patterns"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.22</span> Activity: Youth Survey Transformation Patterns</h2>
+<ol>
+<li>Standardise program names.</li>
+<li>Create age groups.</li>
+<li>Extract keywords from comments.</li>
+<li>Create categories.</li>
+<li>Produce an analysis-ready dataset.</li>
+</ol>
+<hr/>
+<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.23</span> Key Takeaways</h2>
+<p>Many transformation problems follow predictable patterns.</p>
+<p>Common patterns include:</p>
+<ul>
+<li>Unpivot</li>
+<li>Fill Down</li>
+<li>Text Extraction</li>
+<li>Categorisation</li>
+<li>Conditional Columns</li>
+</ul>
+<p>Remember:</p>
+<blockquote>
+<p>The more transformation patterns you recognise, the faster you can prepare data for analysis.</p>
+</blockquote>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Multiple Data Sources" class="md-footer__link md-footer__link--prev" href="../multiple-sources/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Multiple Data Sources
+              </div>
+</div>
+</a>
+<a aria-label="Next: Unstructured Data" class="md-footer__link md-footer__link--next" href="../unstructured-data/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Unstructured Data
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

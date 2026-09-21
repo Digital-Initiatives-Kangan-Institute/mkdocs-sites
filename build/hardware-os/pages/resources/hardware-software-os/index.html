@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../raspberry-pi-zero/" rel="prev"/>
+<link href="../installing-os/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Hardware, Software, and Operating Systems - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#hardware-software-and-operating-systems">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Hardware, Software, and Operating Systems
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-software-stack">
+<span class="md-ellipsis">
+      
+        The Software Stack
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-software-vs-application-software">
+<span class="md-ellipsis">
+      
+        System Software vs Application Software
+      
+    </span>
+</a>
+<nav aria-label="System Software vs Application Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-software">
+<span class="md-ellipsis">
+      
+        System Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#application-software">
+<span class="md-ellipsis">
+      
+        Application Software
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-the-os-bridges-hardware-and-software">
+<span class="md-ellipsis">
+      
+        How the OS Bridges Hardware and Software
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compatibility-between-components">
+<span class="md-ellipsis">
+      
+        Compatibility Between Components
+      
+    </span>
+</a>
+<nav aria-label="Compatibility Between Components" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hardware-os-compatibility">
+<span class="md-ellipsis">
+      
+        Hardware ↔ OS Compatibility
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#os-application-compatibility">
+<span class="md-ellipsis">
+      
+        OS ↔ Application Compatibility
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hardware-peripheral-compatibility">
+<span class="md-ellipsis">
+      
+        Hardware ↔ Peripheral Compatibility
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organisational-requirements-and-specifications">
+<span class="md-ellipsis">
+      
+        Organisational Requirements and Specifications
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="hardware-software-and-operating-systems"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Hardware, Software, and Operating Systems</h1>
+<p>A computer system is built from three layers that work together: hardware at the bottom, the operating system in the middle, and application software on top. Understanding how these layers interact is essential for configuring, troubleshooting, and supporting computer systems.</p>
+<hr/>
+<h2 id="the-software-stack"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> The Software Stack</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>┌─────────────────────────────┐
+│     Application Software    │  ← Word, Chrome, Spotify
+├─────────────────────────────┤
+│     Operating System        │  ← Windows, macOS, Linux
+├─────────────────────────────┤
+│     Hardware                │  ← CPU, RAM, storage, peripherals
+└─────────────────────────────┘
+</code></pre></div></td></tr></table></div>
+<p>Each layer depends on the layer below it:</p>
+<ul>
+<li><strong>Applications</strong> do not talk to hardware directly. They ask the OS to perform tasks.</li>
+<li>The <strong>operating system</strong> translates those requests into instructions the hardware can understand.</li>
+<li>The <strong>hardware</strong> executes the instructions — reading from disk, displaying to screen, sending data over the network.</li>
+</ul>
+<p>This layered design means application developers do not need to write code for every possible hardware combination. They write for the OS, and the OS handles the hardware.</p>
+<hr/>
+<h2 id="system-software-vs-application-software"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> System Software vs Application Software</h2>
+<p>Software falls into two broad categories:</p>
+<h3 id="system-software"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2.1</span> System Software</h3>
+<p>System software manages and controls the computer hardware so that application software can function. It includes:</p>
+<ul>
+<li><strong>Operating systems</strong> — Windows, macOS, Linux</li>
+<li><strong>Device drivers</strong> — Software that lets the OS communicate with specific hardware</li>
+<li><strong>Firmware</strong> — Low-level software stored on hardware (BIOS/UEFI)</li>
+<li><strong>Utility software</strong> — Disk management, antivirus, backup tools</li>
+</ul>
+<h3 id="application-software"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2.2</span> Application Software</h3>
+<p>Application software helps users perform specific tasks. It includes:</p>
+<ul>
+<li><strong>Productivity</strong> — Microsoft Word, Excel, Google Docs</li>
+<li><strong>Communication</strong> — Outlook, Teams, Slack, Zoom</li>
+<li><strong>Web browsers</strong> — Chrome, Edge, Firefox</li>
+<li><strong>Creative tools</strong> — Photoshop, Premiere Pro, Blender</li>
+<li><strong>Development tools</strong> — VS Code, Git, Docker</li>
+</ul>
+<p>Application software is what most users interact with day-to-day. It relies on the system software underneath to actually get things done.</p>
+<hr/>
+<h2 id="how-the-os-bridges-hardware-and-software"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> How the OS Bridges Hardware and Software</h2>
+<p>When you save a file in a word processor, this is what happens:</p>
+<ol>
+<li>You press <strong>Ctrl+S</strong> — the application receives the keyboard event from the OS</li>
+<li>The application calls an OS function to write data to disk</li>
+<li>The OS's <strong>file system driver</strong> determines where on the disk to store the data</li>
+<li>The OS's <strong>storage driver</strong> sends the write command to the disk controller</li>
+<li>The <strong>hardware</strong> writes the data to the physical storage medium</li>
+</ol>
+<p>At no point does the word processor need to know whether the file is being saved to an SSD, an HDD, or a network drive. The OS abstracts that complexity away.</p>
+<hr/>
+<h2 id="compatibility-between-components"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> Compatibility Between Components</h2>
+<p>Not every combination of hardware, OS, and software will work together. Compatibility must be checked at each boundary.</p>
+<h3 id="hardware-os-compatibility"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.1</span> Hardware ↔ OS Compatibility</h3>
+<p>Before installing an operating system, verify:</p>
+<ul>
+<li>The CPU architecture is supported (x86-64 for Windows, Apple Silicon or Intel for macOS)</li>
+<li>Sufficient RAM and storage are available (check minimum requirements)</li>
+<li>Drivers exist for critical components (graphics, network, storage)</li>
+</ul>
+<h3 id="os-application-compatibility"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.2</span> OS ↔ Application Compatibility</h3>
+<p>Before installing software, check:</p>
+<ul>
+<li>The application version supports your OS version</li>
+<li>32-bit vs 64-bit architecture (most modern systems are 64-bit)</li>
+<li>Any additional dependencies or frameworks are installed (.NET, Java, etc.)</li>
+</ul>
+<h3 id="hardware-peripheral-compatibility"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4.3</span> Hardware ↔ Peripheral Compatibility</h3>
+<p>When adding external devices:</p>
+<ul>
+<li>Ensure the computer has the correct port type (USB-A, USB-C, HDMI)</li>
+<li>Check that drivers are available for your operating system</li>
+<li>Verify power requirements (some devices need external power)</li>
+</ul>
+<hr/>
+<h2 id="organisational-requirements-and-specifications"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.5</span> Organisational Requirements and Specifications</h2>
+<p>In a workplace setting, IT decisions are guided by organisational requirements. These are documented guidelines that define what hardware and software are approved for use. Common considerations include:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compatibility</strong></td>
+<td>All staff computers must run Windows 11 to ensure compatibility with corporate software</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Workstations must have at least 16 GB RAM and a 512 GB SSD</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Only approved, vendor-supported software may be installed</td>
+</tr>
+<tr>
+<td><strong>Budget</strong></td>
+<td>Hardware must fall within per-unit budget limits</td>
+</tr>
+<tr>
+<td><strong>Supportability</strong></td>
+<td>IT support staff must be trained on the chosen technology</td>
+</tr>
+<tr>
+<td><strong>Licensing</strong></td>
+<td>All software must have valid, documented licences</td>
+</tr>
+</tbody>
+</table>
+<p>Following organisational specifications ensures that systems are consistent, supportable, and secure across the entire organisation.</p>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.6</span> Summary</h2>
+<ul>
+<li>Computers operate as a three-layer stack: hardware → OS → applications</li>
+<li>The OS abstracts hardware complexity so applications can work across different hardware</li>
+<li>System software (OS, drivers, firmware) manages the computer; application software performs user tasks</li>
+<li>Compatibility must be checked at each layer boundary</li>
+<li>Organisational requirements guide hardware and software choices in professional environments</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Raspberry Pi Zero" class="md-footer__link md-footer__link--prev" href="../raspberry-pi-zero/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Raspberry Pi Zero
+              </div>
+</div>
+</a>
+<a aria-label="Next: Installing an Operating System" class="md-footer__link md-footer__link--next" href="../installing-os/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Installing an Operating System
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

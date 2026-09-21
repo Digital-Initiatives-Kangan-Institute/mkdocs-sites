@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../what-is-vc/" rel="prev"/>
+<link href="../branching-strategy/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Git with VS Code - Version Control</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#git-with-vs-code">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Version Control" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Version Control
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Git with VS Code
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Version Control" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Version Control
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    
+  
+    What is Version Control
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Git with VS Code
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Git with VS Code
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#one-time-setup">
+<span class="md-ellipsis">
+      
+        One-Time Setup
+      
+    </span>
+</a>
+<nav aria-label="One-Time Setup" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-git">
+<span class="md-ellipsis">
+      
+        Install Git
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sign-in-to-github-in-vs-code">
+<span class="md-ellipsis">
+      
+        Sign In to GitHub in VS Code
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#starting-a-new-project">
+<span class="md-ellipsis">
+      
+        Starting a New Project
+      
+    </span>
+</a>
+<nav aria-label="Starting a New Project" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-open-the-source-control-panel">
+<span class="md-ellipsis">
+      
+        1. Open the Source Control Panel
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-initialise-a-repository">
+<span class="md-ellipsis">
+      
+        2. Initialise a Repository
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-publish-to-github">
+<span class="md-ellipsis">
+      
+        3. Publish to GitHub
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#daily-workflow">
+<span class="md-ellipsis">
+      
+        Daily Workflow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-reference">
+<span class="md-ellipsis">
+      
+        Quick Reference
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    
+  
+    Branching Strategy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-tools/">
+<span class="md-ellipsis">
+    
+  
+    Git Tools and Clients
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-github/">
+<span class="md-ellipsis">
+    
+  
+    What is GitHub
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gitignore/">
+<span class="md-ellipsis">
+    
+  
+    .gitignore
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../merge-conflicts/">
+<span class="md-ellipsis">
+    
+  
+    Merge Conflicts
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-cli/">
+<span class="md-ellipsis">
+    
+  
+    Git CLI Reference
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/initialise-and-commit/">
+<span class="md-ellipsis">
+    
+  
+    Initialise and Commit
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/branch-and-merge/">
+<span class="md-ellipsis">
+    
+  
+    Branch and Merge
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/daily-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Daily Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/working-with-dev/">
+<span class="md-ellipsis">
+    
+  
+    Working with a dev Branch
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/pull-request-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Pull Request Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="git-with-vs-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Git with VS Code</h1>
+<p>Version control tracks changes to your code over time and lets you back up your work to GitHub. VS Code has built-in tools that let you do this without typing any commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Why Use Version Control?</p>
+<ul>
+<li><strong>Back up your work</strong> — your code is stored safely on GitHub</li>
+<li><strong>Track changes</strong> — see what changed, when, and why</li>
+<li><strong>Revert mistakes</strong> — go back to an earlier working version</li>
+<li><strong>Submit assessments</strong> — trainers review your work through GitHub links</li>
+</ul>
+<p>You should use version control from day one of any project.</p>
+</div>
+<hr/>
+<h2 id="one-time-setup"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> One-Time Setup</h2>
+<h3 id="install-git"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.1</span> Install Git</h3>
+<p>Download and install Git from <a href="https://git-scm.com">git-scm.com</a>. VS Code will detect it automatically.</p>
+<h3 id="sign-in-to-github-in-vs-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1.2</span> Sign In to GitHub in VS Code</h3>
+<ol>
+<li>Open VS Code</li>
+<li>Click the <strong>Accounts</strong> icon in the bottom-left corner</li>
+<li>Select <strong>Sign in to GitHub</strong></li>
+<li>Follow the prompts in your browser to authorise VS Code</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">Once signed in, VS Code can push and pull code to your GitHub repositories.</p>
+</div>
+<hr/>
+<h2 id="starting-a-new-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Starting a New Project</h2>
+<div class="admonition abstract">
+<p class="admonition-title">Step by Step</p>
+<h3 id="1-open-the-source-control-panel"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.1</span> 1. Open the Source Control Panel</h3>
+<p>Click the <strong>Source Control</strong> icon in the left sidebar (it looks like a branch with circles). Or press <code>Ctrl+Shift+G</code>.</p>
+<h3 id="2-initialise-a-repository"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.2</span> 2. Initialise a Repository</h3>
+<p>Click the <strong>Initialise Repository</strong> button. This creates a local Git repository in your project folder.</p>
+<h3 id="3-publish-to-github"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2.3</span> 3. Publish to GitHub</h3>
+<p>After initialising, you will see a <strong>Publish Branch</strong> button. Click it, choose whether the repository should be <strong>private</strong>, and VS Code will create a repository on your GitHub account and push your code to it.</p>
+</div>
+<hr/>
+<h2 id="daily-workflow"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> Daily Workflow</h2>
+<p>Every time you make progress, follow these three steps:</p>
+<div class="admonition tip">
+<p class="admonition-title">1. Stage Your Changes</p>
+<p>In the Source Control panel, you will see a list of changed files under <strong>Changes</strong>.</p>
+<ul>
+<li>Click the <strong>+</strong> next to a file to stage it individually</li>
+<li>Or click the <strong>+</strong> next to <strong>Changes</strong> to stage everything at once</li>
+</ul>
+<p>Staged files move to a section called <strong>Staged Changes</strong>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">2. Commit Your Changes</p>
+<p>Type a short message describing what you changed in the message box at the top of the Source Control panel. Then click the <strong>Commit</strong> button.</p>
+<p>A good commit message: <code>"Add home page with cafe welcome text"</code></p>
+<p>A bad commit message: <code>"stuff"</code> or <code>"changes"</code></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">3. Push to GitHub</p>
+<p>Click the <strong>Sync Changes</strong> button. This uploads your commits to GitHub.</p>
+<p>If you see <strong>Publish Branch</strong> instead, click it — this means it is your first push for this project.</p>
+</div>
+<hr/>
+<h2 id="quick-reference"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.4</span> Quick Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Where to Click</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Source Control</td>
+<td>Sidebar icon (branch) or <code>Ctrl+Shift+G</code></td>
+</tr>
+<tr>
+<td>Start tracking a project</td>
+<td><strong>Initialise Repository</strong></td>
+</tr>
+<tr>
+<td>Stage a file</td>
+<td><strong>+</strong> next to the file</td>
+</tr>
+<tr>
+<td>Save a snapshot</td>
+<td>Type message + click <strong>Commit</strong></td>
+</tr>
+<tr>
+<td>Upload to GitHub</td>
+<td><strong>Sync Changes</strong> or <strong>Publish Branch</strong></td>
+</tr>
+<tr>
+<td>Get latest from GitHub</td>
+<td><strong>Sync Changes</strong> (pulls automatically)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.5</span> Summary</h2>
+<ul>
+<li>Set up once: install Git and sign in to GitHub in VS Code</li>
+<li>Initialise a repository to start tracking a project</li>
+<li>Workflow: stage → commit with a message → push</li>
+<li>Repeat this loop regularly — after every feature or at the end of each session</li>
+<li>Your code on GitHub is your backup and your submission</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: What is Version Control" class="md-footer__link md-footer__link--prev" href="../what-is-vc/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                What is Version Control
+              </div>
+</div>
+</a>
+<a aria-label="Next: Branching Strategy" class="md-footer__link md-footer__link--next" href="../branching-strategy/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Branching Strategy
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../lists/" rel="prev"/>
+<link href="../../tasks/intro-to-microbit/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>File Manipulation - microbit</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#file-manipulation-microbit-python-online-editor-part-3">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="microbit" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="microbit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            microbit
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              File Manipulation
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="microbit" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="microbit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    microbit
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-variables/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Microbits and variables
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../functions/">
+<span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../event-loop/">
+<span class="md-ellipsis">
+    
+  
+    Event Loop
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-if-else-elif/">
+<span class="md-ellipsis">
+    
+  
+    Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../selection-event-loop/">
+<span class="md-ellipsis">
+    
+  
+    Selection in Event Loop
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../loops/">
+<span class="md-ellipsis">
+    
+  
+    Loops and conditions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../datatypes/">
+<span class="md-ellipsis">
+    
+  
+    DataTypes - Strings and Numbers
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../strings/">
+<span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lists/">
+<span class="md-ellipsis">
+    
+  
+    Lists
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    File Manipulation
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    File Manipulation
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-modes">
+<span class="md-ellipsis">
+      
+        File Modes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reading-from-a-file">
+<span class="md-ellipsis">
+      
+        Reading from a File
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#writing-to-a-file">
+<span class="md-ellipsis">
+      
+        Writing to a File
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-files-in-the-current-directory">
+<span class="md-ellipsis">
+      
+        Viewing files in the current directory
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#appending-to-a-file">
+<span class="md-ellipsis">
+      
+        "Appending" to a file
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#class-activities">
+<span class="md-ellipsis">
+      
+        Class Activities
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/intro-to-microbit/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to micro:bit
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/variables/">
+<span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/functions/">
+<span class="md-ellipsis">
+    
+  
+    Functions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/functions-params-returns/">
+<span class="md-ellipsis">
+    
+  
+    Functions, Parameters, and Returns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/event-loop/">
+<span class="md-ellipsis">
+    
+  
+    Event Loop
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selection/">
+<span class="md-ellipsis">
+    
+  
+    Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/loops-with-conditions/">
+<span class="md-ellipsis">
+    
+  
+    Loops with Conditions
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/for-loops/">
+<span class="md-ellipsis">
+    
+  
+    For Loops
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/lists/">
+<span class="md-ellipsis">
+    
+  
+    Lists
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/file-manipulation/">
+<span class="md-ellipsis">
+    
+  
+    File Manipulation
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-variables/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-variables/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="file-manipulation-microbit-python-online-editor-part-3"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.</span> File Manipulation (Micro:bit Python - Online Editor) - PART 3</h1>
+<p>Up until now, our Micro:bit programs have run in the simulator and have not kept data once the program restarts. In standard Python, we can save data into files and read it back later. With the Micro:bit Python Editor online, we can still learn the <em>ideas</em> behind file handling, but there are some important limitations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Students using the online Micro:bit Python Editor do not have a physical micro:bit device, so they cannot use the micro:bit as a real storage device.  This means that there is some important functionality unavailable.  We cannot see changes that we make to files in the file editor nor <em>append</em> to files.</p>
+</div>
+<p>In this topic, we are learning the syntax and logic of file handling in Python. On a real micro:bit, files would be stored on the device itself. In the online editor, file-related code may not behave exactly the same way, so the main goal is to understand how open(), write(), and read() work.</p>
+<hr/>
+<h2 id="file-modes"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.1</span> File Modes</h2>
+<p>There are several file modes in Python:</p>
+<ul>
+<li>'w': Write mode. Creates a file or overwrites an existing one.</li>
+<li>'r': Read mode. Opens a file for reading.</li>
+</ul>
+<p>In this course, we will focus on 'w' and 'r'.  We will simulate 'a' by making use of string manipulation.</p>
+<details class="abstract">
+<summary>extra modes that we won't use - click to expand</summary>
+<ul>
+<li>'a': Append mode. Adds new content to the end of a file.</li>
+<li>'x': Exclusive creation mode. Creates a new file, but gives an error if the file already exists.</li>
+</ul>
+</details>
+<details class="abstract">
+<summary>What is append? - click to expand</summary>
+<p>Append mode is used when we want to add new content without deleting the old content.  Basically, it allows us to keep adding lines to the end of a file.  We will reproduct this behaviour by reading the contents of a file into a variable, then adding new text to that variable, and writing the whole thing back to the file.</p>
+</details>
+<hr/>
+<h2 id="reading-from-a-file"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.2</span> Reading from a File</h2>
+<p>To read from a file, we use open() with mode 'r' for read mode. This allows us to access the contents of the file.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'main.py'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="c1"># Sends output directly to the simulated serial console</span>
+</code></pre></div></td></tr></table></div>
+<p>There are 3 notable things that we've not seen before.</p>
+<ol>
+<li><em>from os import</em></li>
+<li><em>open('main.py', 'r') as file</em></li>
+<li><em>with</em></li>
+</ol>
+<p><strong>from os import</strong>
+This line allows us to use file handling functions. In the online Micro:bit editor, this is necessary to access files. In a standard Python environment, you can read and write files without this import.</p>
+<p><strong>open('main.py', 'r') as file</strong>
+This line does two things:</p>
+<ol>
+<li><em>open('main.py', 'r')</em> - this opens the <em>main.py</em> file in read mode ('r').</li>
+<li><em>as file</em> - this store the content of <em>open</em> in a variable called <em>file</em>.  Obviously, this <em>file</em> variable could be called whatever we want, but <em>file</em> is a common convention.</li>
+<li><em>with</em> - this is a special syntax that ensures the file is properly closed after we're done with it.  It is a good practice to use <em>with</em> when working with files because it handles closing the file for us, even if an error occurs.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are opening the contents <em>main.py</em> in this example.  That's not something normally done.  We're just doing that to show the functionality of opening a file and reading it.</p>
+</div>
+<hr/>
+<h2 id="writing-to-a-file"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.3</span> Writing to a File</h2>
+<p>To write to a file, we use open() with mode 'w' for write mode. This creates a new file or overwrites an existing one.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Open file in write mode ("w")</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Write text into the file</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Hello Minh's class!</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Another line of text.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>file = open("myfile.txt", "w")</strong> - this opens the file in write mode. If the file does not exist, it will be created. If it already exists, it will be overwritten.
+<strong>file.write("Hello Minh's class!\n")</strong> - this writes the specified text into the file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The file <em>myfile.txt</em> will be created but not viewable in the files list in the micro:bit online editor.  This is a limitation of the online editor.  In a real Python environment, you would be able to see the file in the directory.  We will be able to see it programmatically by reading from it (next section).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The \n means newline. It tells Python to start the next text on a new line.</p>
+</div>
+<p>Writing again to the file will <em>overwrite</em> the contents of the file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Write text into the file</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Hello Minh's class!</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Another line of text.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'myfile.txt'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Goodbye, Micro:bit!'</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'myfile.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="c1"># This will print "Goodbye, Micro:bit!" and the previous lines will be lost</span>
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="viewing-files-in-the-current-directory"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.4</span> Viewing files in the current directory</h2>
+<p>We can view files in the current directory using listdir() from the os module.</p>
+<p>append the following code to the file writing code from the previous section:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">all_files</span> <span class="o">=</span> <span class="n">listdir</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">all_files</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>You will see a list of files in the current directory, which should include main.py and myfile.txt (if it was created successfully).  This is a way to confirm that the file was created, even though we cannot see it in the file editor.</p>
+<p>Now go to the file editor and create a new file called <em>temp.py</em>.  If you run the code again, you should see temp.py in the list of files.  This is a way to confirm that the file was created, even though we cannot see it in the file editor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are creating a <em>.py</em> file due to limitations of the online editor.  In a real Python environment, you could create any type of file.</p>
+</div>
+<hr/>
+<h2 id="appending-to-a-file"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.5</span> "Appending" to a file</h2>
+<p>Appending means adding new content to the end of a file without deleting the existing content.  In Python, we can use mode 'a' to append to a file. However, in the online Micro:bit editor, this functionality is not available.  Instead, we can simulate appending by reading the existing content of the file into a variable, adding new text to that variable, and then writing the whole thing back to the file.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">microbit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="c1"># Write text into the file</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Hello Minh's class!</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"Another line of text.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># append new text by reading the existing content, adding new text, and writing it back</span>
+<span class="n">content</span> <span class="o">=</span> <span class="s2">""</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>  <span class="c1"># write the existing content back to the file</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"This is new text that simulates appending.</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>  <span class="c1"># add new text</span>
+<span class="c1"># end of the append simulation</span>
+
+<span class="c1"># read contents after the new write to confirm that the new text was added</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"myfile.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="c1"># This will show the original lines plus the new line that simulates appending</span>
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="class-activities"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.6</span> Class Activities</h2>
+<p><strong>Task:</strong></p>
+<ul>
+<li>Write a file called example.txt</li>
+<li>Add this message:</li>
+<li><em>Hello students!</em></li>
+</ul>
+<hr/>
+<p><strong>Task:</strong></p>
+<ul>
+<li>Use your previous file</li>
+<li>Print all contents</li>
+</ul>
+<hr/>
+<p><strong>Task:</strong></p>
+<ul>
+<li>Create a file using 'w'</li>
+<li>Add:</li>
+<li>
+<p>Line 1: <em>My favourite food is BanhMi.</em></p>
+</li>
+<li>
+<p>Use appending to add the following lines:</p>
+</li>
+<li>Line 2: <em>I also like KFC.</em></li>
+<li>Line 3: <em>Ice cream is great too.</em></li>
+</ul>
+<hr/>
+<p><strong>Task:</strong></p>
+<ul>
+<li>Use your previous file</li>
+<li>Print all contents</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Lists" class="md-footer__link md-footer__link--prev" href="../lists/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Lists
+              </div>
+</div>
+</a>
+<a aria-label="Next: Introduction to micro:bit" class="md-footer__link md-footer__link--next" href="../../tasks/intro-to-microbit/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Introduction to micro:bit
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

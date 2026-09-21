@@ -1,0 +1,903 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../raw-data/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>What is Data? - Data Handling</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#good-data-practices">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Data Handling" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Data Handling
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              What is Data?
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Data Handling" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Data Handling
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bki-di-portal.netlify.app/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-data-quality-matters">
+<span class="md-ellipsis">
+      
+        Why Data Quality Matters
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-vs-information">
+<span class="md-ellipsis">
+      
+        Data vs Information
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-does-good-data-look-like">
+<span class="md-ellipsis">
+      
+        What Does Good Data Look Like?
+      
+    </span>
+</a>
+<nav aria-label="What Does Good Data Look Like?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accurate">
+<span class="md-ellipsis">
+      
+        Accurate
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#complete">
+<span class="md-ellipsis">
+      
+        Complete
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consistent">
+<span class="md-ellipsis">
+      
+        Consistent
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unique">
+<span class="md-ellipsis">
+      
+        Unique
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#timely">
+<span class="md-ellipsis">
+      
+        Timely
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#valid">
+<span class="md-ellipsis">
+      
+        Valid
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-and-computers">
+<span class="md-ellipsis">
+      
+        Data and Computers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabular-data">
+<span class="md-ellipsis">
+      
+        Tabular Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#one-observation-per-row">
+<span class="md-ellipsis">
+      
+        One Observation Per Row
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#one-attribute-per-column">
+<span class="md-ellipsis">
+      
+        One Attribute Per Column
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-spreadsheet-problems">
+<span class="md-ellipsis">
+      
+        Common Spreadsheet Problems
+      
+    </span>
+</a>
+<nav aria-label="Common Spreadsheet Problems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-tables-on-one-sheet">
+<span class="md-ellipsis">
+      
+        Multiple Tables on One Sheet
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blank-rows-and-columns">
+<span class="md-ellipsis">
+      
+        Blank Rows and Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merged-cells">
+<span class="md-ellipsis">
+      
+        Merged Cells
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#totals-inside-the-data">
+<span class="md-ellipsis">
+      
+        Totals Inside the Data
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-profiling">
+<span class="md-ellipsis">
+      
+        Data Profiling
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#class-activity">
+<span class="md-ellipsis">
+      
+        Class Activity
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-takeaways">
+<span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raw-data/">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../excel-transformation-techniques/">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query-transformations/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common-transform-patterns/">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unstructured-data/">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="good-data-practices"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Good Data Practices</h1>
+<h2 id="why-data-quality-matters"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> Why Data Quality Matters</h2>
+<p>Before we can analyse, visualise, or report on data, we need to ensure the data is accurate and usable.</p>
+<p>A common saying in data analytics is:</p>
+<p>If poor quality data is entered into a system, poor quality information will be produced.</p>
+<p>Poor quality data can lead to:
+- Incorrect reports
+- Poor business decisions
+- Failed automation
+- Duplicate records
+- Inaccurate dashboards
+- Wasted time cleaning data</p>
+<h2 id="data-vs-information"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Data vs Information</h2>
+<p>In addition to poor data quality, we also need to consider the difference between data and information.
+<strong>Data</strong> has no context or meaning.  <strong>Information</strong> is data that has been processed and given context.</p>
+<p>For example, an address on <em>85 Smith St, Cremorne, Vic, 3121</em> is <strong>information</strong>.  This information is made up of <strong>data</strong> such as the street number, street name, suburb, state, and postcode - (85 | Smith St | Cremorne | Vic | 3121).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Data transformation is often less about analysing data and more about fixing problems created by how humans enter and store information.</p>
+</div>
+<hr/>
+<h2 id="what-does-good-data-look-like"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> What Does Good Data Look Like?</h2>
+<p>Good data should have several important characteristics.</p>
+<h3 id="accurate"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.1</span> Accurate</h3>
+<p>Data should reflect reality.</p>
+<table>
+<thead>
+<tr>
+<th>Bad Data</th>
+<th>Good Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer age = 250</td>
+<td>Customer age = 25</td>
+</tr>
+<tr>
+<td>Quantity sold = -100</td>
+<td>Quantity sold = 100</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="complete"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.2</span> Complete</h3>
+<p>Required information should be present.</p>
+<table>
+<thead>
+<tr>
+<th>CustomerID</th>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>Anh Nguyen</td>
+<td><a href="mailto:anh@example.com">anh@example.com</a></td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Sarah Smith</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The second record is incomplete because the email address is missing.</p>
+<hr/>
+<h3 id="consistent"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.3</span> Consistent</h3>
+<p>Data should use the same format throughout the dataset.</p>
+<p><strong>Bad Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIC</td>
+</tr>
+<tr>
+<td>Victoria</td>
+</tr>
+<tr>
+<td>vic</td>
+</tr>
+<tr>
+<td>V.I.C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Good Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIC</td>
+</tr>
+<tr>
+<td>VIC</td>
+</tr>
+<tr>
+<td>VIC</td>
+</tr>
+<tr>
+<td>VIC</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="unique"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.4</span> Unique</h3>
+<p>Duplicate records should be avoided.</p>
+<p><strong>Bad Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>CustomerID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>Jane Doe</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>Jane Doe</td>
+</tr>
+</tbody>
+</table>
+<p>Duplicate records can lead to incorrect reporting and calculations.</p>
+<hr/>
+<h3 id="timely"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.5</span> Timely</h3>
+<p>Data should be current and up to date.</p>
+<p>Old information may no longer be useful for decision making.</p>
+<p><strong>Example</strong></p>
+<p>A customer's address from 10 years ago may no longer be valid.</p>
+<hr/>
+<h3 id="valid"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3.6</span> Valid</h3>
+<p>Data should follow agreed business rules.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Postcodes must have four digits.</li>
+<li>Ages cannot be negative.</li>
+<li>Dates must be valid calendar dates.</li>
+</ul>
+<hr/>
+<h2 id="data-and-computers"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Data and Computers</h2>
+<p>Humans can understand messy information surprisingly well.</p>
+<p>Computers cannot.</p>
+<p>Consider the following values:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>VIC
+Victoria
+vic
+Vict.
+</code></pre></div></td></tr></table></div>
+<p>A person understands these all refer to Victoria.</p>
+<p>A computer sees four completely different values.</p>
+<hr/>
+<h2 id="tabular-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Tabular Data</h2>
+<p>Most systems work best when data is organised into rows and columns.</p>
+<p><strong>Example</strong> of Good Tabular Data</p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>FirstName</th>
+<th>LastName</th>
+<th>Course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>Sarah</td>
+<td>Lee</td>
+<td>Cyber</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>David</td>
+<td>Tran</td>
+<td>Networking</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>Priya</td>
+<td>Sharma</td>
+<td>Programming</td>
+</tr>
+</tbody>
+</table>
+<p>Each row represents one record.</p>
+<p>Each column represents one attribute.</p>
+<hr/>
+<h2 id="one-observation-per-row"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> One Observation Per Row</h2>
+<p>Each row should represent a single thing.</p>
+<p><strong>Good Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>OrderID</th>
+<th>Customer</th>
+<th>Product</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>101</td>
+<td>Sarah</td>
+<td>Laptop</td>
+</tr>
+<tr>
+<td>102</td>
+<td>David</td>
+<td>Keyboard</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="one-attribute-per-column"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.7</span> One Attribute Per Column</h2>
+<p>Each column should contain one piece of information.</p>
+<p><strong>Bad Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Customer Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah, VIC, 0400000000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Good Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>State</th>
+<th>Phone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>VIC</td>
+<td>0400000000</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="common-spreadsheet-problems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8</span> Common Spreadsheet Problems</h2>
+<p>Many Excel files are designed for people to read, not for computers to process.</p>
+<p>These files often contain problems that make transformation difficult.</p>
+<h3 id="multiple-tables-on-one-sheet"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.1</span> Multiple Tables on One Sheet</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>Customer Table
+
+(blank rows)
+
+Sales Table
+
+(blank rows)
+
+Inventory Table
+</code></pre></div></td></tr></table></div>
+<p>Computers generally expect a single table of data.</p>
+<hr/>
+<h3 id="blank-rows-and-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.2</span> Blank Rows and Columns</h3>
+<p>Blank rows often break imports and calculations.</p>
+<p><strong>Bad Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>Name
+Sarah
+David
+
+Priya
+Minh
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h3 id="merged-cells"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.3</span> Merged Cells</h3>
+<p>Merged cells look nice in reports but make processing difficult.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Sales Report 2025
+</code></pre></div></td></tr></table></div>
+<p>Merged across ten columns.</p>
+<p>This may look good for humans but creates issues for data tools.</p>
+<hr/>
+<h3 id="totals-inside-the-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.8.4</span> Totals Inside the Data</h3>
+<p><strong>Bad Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laptop</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Mouse</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Keyboard</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<p>The Total row is not actual data and can cause problems during analysis.</p>
+<details class="example">
+<summary>Why are things such as totals, averages and maximum/minimum values not considered data?</summary>
+<p>Because they are not observations of a single thing.  They are calculations based on the data.</p>
+</details>
+<hr/>
+<h2 id="data-profiling"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.9</span> Data Profiling</h2>
+<p>Before cleaning data we should investigate it.
+ 
+Ask the following questions:</p>
+<ul>
+<li>What does each column represent?</li>
+<li>Are there missing values?</li>
+<li>Are there duplicate rows?</li>
+<li>Are formats consistent?</li>
+<li>Are there invalid values?</li>
+<li>Is every row describing the same thing?
+ 
+This process is known as <strong>data profiling</strong>.</li>
+</ul>
+<hr/>
+<h2 id="class-activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.10</span> Class Activity</h2>
+<p>In the Excel file found <a href="../../../assets/Module1_Data_Quality_Activity.xlsx">here</a></p>
+<p>Identify:</p>
+<ul>
+<li>Missing values</li>
+<li>Duplicate records</li>
+<li>Inconsistent values</li>
+<li>Invalid values</li>
+<li>Blank rows</li>
+<li>Multiple tables</li>
+<li>Merged cells</li>
+</ul>
+<hr/>
+<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.11</span> Key Takeaways</h2>
+<p>Good data is:</p>
+<ul>
+<li>Accurate</li>
+<li>Complete</li>
+<li>Consistent</li>
+<li>Unique</li>
+<li>Timely</li>
+<li>Valid</li>
+</ul>
+<p>Data should:</p>
+<ul>
+<li>Have one observation per row</li>
+<li>Have one attribute per column</li>
+<li>Avoid merged cells</li>
+<li>Avoid blank rows</li>
+<li>Avoid report formatting</li>
+<li>Be easy for computers to process</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Next: Raw Data" class="md-footer__link md-footer__link--next" href="../raw-data/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Raw Data
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

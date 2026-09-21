@@ -1,0 +1,931 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../boot-process/" rel="prev"/>
+<link href="../command-line-basics/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Interfaces — GUI and Command Line - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#interfaces-gui-and-command-line">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Interfaces — GUI and Command Line
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-graphical-user-interface">
+<span class="md-ellipsis">
+      
+        What is a Graphical User Interface?
+      
+    </span>
+</a>
+<nav aria-label="What is a Graphical User Interface?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-gui-elements">
+<span class="md-ellipsis">
+      
+        Common GUI Elements
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#benefits-of-a-gui">
+<span class="md-ellipsis">
+      
+        Benefits of a GUI
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-command-line-interface">
+<span class="md-ellipsis">
+      
+        What is a Command Line Interface?
+      
+    </span>
+</a>
+<nav aria-label="What is a Command Line Interface?" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#terminal-applications">
+<span class="md-ellipsis">
+      
+        Terminal Applications
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-to-use-the-command-line">
+<span class="md-ellipsis">
+      
+        When to Use the Command Line
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-cli-commands">
+<span class="md-ellipsis">
+      
+        Basic CLI Commands
+      
+    </span>
+</a>
+<nav aria-label="Basic CLI Commands" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#navigation">
+<span class="md-ellipsis">
+      
+        Navigation
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#file-operations">
+<span class="md-ellipsis">
+      
+        File Operations
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-information">
+<span class="md-ellipsis">
+      
+        System Information
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#powershell-vs-command-prompt">
+<span class="md-ellipsis">
+      
+        PowerShell vs Command Prompt
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gui-vs-cli-when-to-use-each">
+<span class="md-ellipsis">
+      
+        GUI vs CLI: When to Use Each
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#customising-the-interface">
+<span class="md-ellipsis">
+      
+        Customising the Interface
+      
+    </span>
+</a>
+<nav aria-label="Customising the Interface" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gui-customisation">
+<span class="md-ellipsis">
+      
+        GUI Customisation
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cli-customisation">
+<span class="md-ellipsis">
+      
+        CLI Customisation
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="interfaces-gui-and-command-line"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.</span> Interfaces: GUI and Command Line</h1>
+<p>Every operating system provides at least one way for users to interact with it. The two main types of interface are the Graphical User Interface (GUI) and the Command Line Interface (CLI). Both serve the same purpose — letting you control the computer — but they work in different ways and are suited to different tasks.</p>
+<hr/>
+<h2 id="what-is-a-graphical-user-interface"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.1</span> What is a Graphical User Interface?</h2>
+<p>A GUI uses visual elements — windows, icons, menus, and buttons — that you interact with using a mouse, keyboard, or touch. It is designed to be intuitive and accessible.</p>
+<h3 id="common-gui-elements"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.1.1</span> Common GUI Elements</h3>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Desktop</strong></td>
+<td>The main workspace with a background and shortcuts</td>
+<td>Windows desktop with icons</td>
+</tr>
+<tr>
+<td><strong>Taskbar / Dock</strong></td>
+<td>Launches and switches between applications</td>
+<td>Windows taskbar, macOS Dock</td>
+</tr>
+<tr>
+<td><strong>Start Menu / App Launcher</strong></td>
+<td>Central menu for finding and opening programs</td>
+<td>Windows Start, GNOME Activities</td>
+</tr>
+<tr>
+<td><strong>File Manager</strong></td>
+<td>Browse, copy, move, and delete files graphically</td>
+<td>File Explorer, Finder, Nautilus</td>
+</tr>
+<tr>
+<td><strong>System Tray</strong></td>
+<td>Shows background apps and status indicators</td>
+<td>Wi-Fi, volume, battery, clock</td>
+</tr>
+<tr>
+<td><strong>Settings App</strong></td>
+<td>Configure system preferences through menus</td>
+<td>Windows Settings, System Preferences</td>
+</tr>
+</tbody>
+</table>
+<h3 id="benefits-of-a-gui"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.1.2</span> Benefits of a GUI</h3>
+<ul>
+<li>Easy to learn and use without technical knowledge</li>
+<li>Visual feedback makes it clear what is happening</li>
+<li>Multiple windows allow multitasking with a clear overview</li>
+<li>Drag-and-drop, right-click menus, and keyboard shortcuts make tasks efficient</li>
+</ul>
+<hr/>
+<h2 id="what-is-a-command-line-interface"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.2</span> What is a Command Line Interface?</h2>
+<p>A CLI is a text-based interface where you type commands and the computer responds with text output. It does not use windows, icons, or a mouse — everything happens through typed instructions.</p>
+<h3 id="terminal-applications"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.2.1</span> Terminal Applications</h3>
+<p>Every major OS includes a CLI application:</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>CLI Application</th>
+<th>Shell (Default)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>Command Prompt, PowerShell, Windows Terminal</td>
+<td>cmd.exe, PowerShell</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>Terminal</td>
+<td>zsh</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>Terminal, Console</td>
+<td>bash</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>shell</strong> is the program that interprets your commands. The terminal is the window that hosts the shell. Different shells have slightly different syntax, but the core concepts are the same.</p>
+<h3 id="when-to-use-the-command-line"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.2.2</span> When to Use the Command Line</h3>
+<ul>
+<li><strong>Automation</strong> — Write scripts to perform repetitive tasks</li>
+<li><strong>System administration</strong> — Manage users, services, and configurations</li>
+<li><strong>Server management</strong> — Most servers have no GUI, only a CLI</li>
+<li><strong>Batch operations</strong> — Rename, convert, or process many files at once</li>
+<li><strong>Precision</strong> — Commands are exact; no risk of clicking the wrong button</li>
+<li><strong>Speed</strong> — Experienced users can work faster with a keyboard than a mouse</li>
+</ul>
+<hr/>
+<h2 id="basic-cli-commands"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3</span> Basic CLI Commands</h2>
+<p>These commands work across Windows (PowerShell/CMD) and Linux/macOS. Where the command differs, both are shown.</p>
+<h3 id="navigation"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.1</span> Navigation</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Windows (CMD)</th>
+<th>Linux / macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show current directory</td>
+<td><code>cd</code></td>
+<td><code>pwd</code></td>
+</tr>
+<tr>
+<td>List files</td>
+<td><code>dir</code></td>
+<td><code>ls</code></td>
+</tr>
+<tr>
+<td>Change directory</td>
+<td><code>cd &lt;folder&gt;</code></td>
+<td><code>cd &lt;folder&gt;</code></td>
+</tr>
+<tr>
+<td>Go up one level</td>
+<td><code>cd ..</code></td>
+<td><code>cd ..</code></td>
+</tr>
+<tr>
+<td>Go to root of drive</td>
+<td><code>cd \</code></td>
+<td><code>cd /</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-operations"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.2</span> File Operations</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Windows (CMD)</th>
+<th>Linux / macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create folder</td>
+<td><code>mkdir &lt;name&gt;</code></td>
+<td><code>mkdir &lt;name&gt;</code></td>
+</tr>
+<tr>
+<td>Create empty file</td>
+<td>—</td>
+<td><code>touch file.txt</code> (Linux/macOS)</td>
+</tr>
+<tr>
+<td>Copy file</td>
+<td><code>copy &lt;src&gt; &lt;dest&gt;</code></td>
+<td><code>cp &lt;src&gt; &lt;dest&gt;</code></td>
+</tr>
+<tr>
+<td>Move/rename file</td>
+<td><code>move &lt;src&gt; &lt;dest&gt;</code></td>
+<td><code>mv &lt;src&gt; &lt;dest&gt;</code></td>
+</tr>
+<tr>
+<td>Delete file</td>
+<td><code>del &lt;file&gt;</code></td>
+<td><code>rm &lt;file&gt;</code></td>
+</tr>
+<tr>
+<td>Delete folder</td>
+<td><code>rmdir &lt;folder&gt;</code></td>
+<td><code>rm -r &lt;folder&gt;</code></td>
+</tr>
+<tr>
+<td>View file contents</td>
+<td><code>type &lt;file&gt;</code></td>
+<td><code>cat &lt;file&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="system-information"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.3</span> System Information</h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Windows (CMD)</th>
+<th>Linux / macOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display hostname</td>
+<td><code>hostname</code></td>
+<td><code>hostname</code></td>
+</tr>
+<tr>
+<td>Show IP configuration</td>
+<td><code>ipconfig</code></td>
+<td><code>ip address</code></td>
+</tr>
+<tr>
+<td>List running processes</td>
+<td><code>tasklist</code></td>
+<td><code>ps</code> (and <code>ps -e</code> to show all)</td>
+</tr>
+<tr>
+<td>Show disk usage</td>
+<td><code>chkdsk</code></td>
+<td><code>df</code> (and <code>df -h</code> for human-readable sizes)</td>
+</tr>
+<tr>
+<td>Clear screen</td>
+<td><code>cls</code></td>
+<td><code>clear</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="powershell-vs-command-prompt"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.4</span> PowerShell vs Command Prompt</h3>
+<p>Windows offers two CLI environments:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Command Prompt (CMD)</th>
+<th>PowerShell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Age</td>
+<td>Legacy (1980s)</td>
+<td>Modern (2006+)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Plain text</td>
+<td>Structured objects</td>
+</tr>
+<tr>
+<td>Scripting</td>
+<td>Batch files (.bat)</td>
+<td>PowerShell scripts (.ps1)</td>
+</tr>
+<tr>
+<td>Capability</td>
+<td>Basic operations</td>
+<td>Advanced administration</td>
+</tr>
+<tr>
+<td>Modern Windows</td>
+<td>Still available</td>
+<td>Recommended for new work</td>
+</tr>
+</tbody>
+</table>
+<p>PowerShell uses a verb-noun format (e.g. <code>Get-Process</code>, <code>Set-Location</code>) and is the recommended CLI for Windows system administration.</p>
+<hr/>
+<h2 id="gui-vs-cli-when-to-use-each"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.4</span> GUI vs CLI: When to Use Each</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Best Interface</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Browsing the web</td>
+<td>GUI</td>
+<td>Visual content, links, and media</td>
+</tr>
+<tr>
+<td>Writing a document</td>
+<td>GUI</td>
+<td>Formatting, layout, spell check visible</td>
+</tr>
+<tr>
+<td>Renaming 100 files</td>
+<td>CLI</td>
+<td>A single command can do it in seconds</td>
+</tr>
+<tr>
+<td>Installing one program</td>
+<td>GUI</td>
+<td>Double-click installer or app store</td>
+</tr>
+<tr>
+<td>Checking disk space</td>
+<td>Either</td>
+<td>GUI shows a chart; CLI shows exact numbers</td>
+</tr>
+<tr>
+<td>Configuring a web server</td>
+<td>CLI</td>
+<td>Servers rarely have a GUI installed</td>
+</tr>
+<tr>
+<td>Editing a photo</td>
+<td>GUI</td>
+<td>Visual adjustments need a graphical preview</td>
+</tr>
+</tbody>
+</table>
+<p>The best IT professionals are comfortable with both. The GUI handles everyday tasks efficiently; the CLI provides power, precision, and automation for technical work.</p>
+<hr/>
+<h2 id="customising-the-interface"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.5</span> Customising the Interface</h2>
+<h3 id="gui-customisation"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.5.1</span> GUI Customisation</h3>
+<ul>
+<li>Change wallpaper, theme, and accent colours through Settings</li>
+<li>Rearrange the taskbar or dock position</li>
+<li>Adjust display scaling and resolution</li>
+<li>Add or remove desktop shortcuts</li>
+</ul>
+<h3 id="cli-customisation"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.5.2</span> CLI Customisation</h3>
+<ul>
+<li><strong>Prompt</strong> — Customise the text shown before each command (e.g. show the current directory, username, or time)</li>
+<li><strong>Aliases</strong> — Create shortcuts for long commands</li>
+<li><strong>Colour scheme</strong> — Change terminal background and text colours for readability</li>
+<li><strong>Profile</strong> — Save preferred settings as a default profile</li>
+</ul>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.6</span> Summary</h2>
+<ul>
+<li>A GUI uses windows, icons, and a mouse — it is intuitive and visual</li>
+<li>A CLI uses typed text commands — it is powerful and precise</li>
+<li>Every OS includes both: terminal applications for CLI, desktop environments for GUI</li>
+<li>Navigate the CLI with <code>cd</code>, <code>dir</code>/<code>ls</code>, and <code>mkdir</code></li>
+<li>Windows offers both Command Prompt (legacy) and PowerShell (modern)</li>
+<li>Use the right interface for the job; skilled IT workers use both</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: The Boot Process" class="md-footer__link md-footer__link--prev" href="../boot-process/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                The Boot Process
+              </div>
+</div>
+</a>
+<a aria-label="Next: Command Line Basics" class="md-footer__link md-footer__link--next" href="../command-line-basics/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Command Line Basics
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

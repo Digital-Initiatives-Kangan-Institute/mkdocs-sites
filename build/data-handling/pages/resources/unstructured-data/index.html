@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../common-transform-patterns/" rel="prev"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Unstructured Data - Data Handling</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction-to-unstructured-data">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Data Handling" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Data Handling
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Unstructured Data
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Data Handling" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Data Handling
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bki-di-portal.netlify.app/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raw-data/">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../excel-transformation-techniques/">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query-transformations/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common-transform-patterns/">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-unstructured-data">
+<span class="md-ellipsis">
+      
+        What is Unstructured Data?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#examples-of-unstructured-data">
+<span class="md-ellipsis">
+      
+        Examples of Unstructured Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structured-vs-unstructured-data">
+<span class="md-ellipsis">
+      
+        Structured vs Unstructured Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-unstructured-data-is-valuable">
+<span class="md-ellipsis">
+      
+        Why Unstructured Data is Valuable
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-challenges">
+<span class="md-ellipsis">
+      
+        Common Challenges
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleaning-text-data">
+<span class="md-ellipsis">
+      
+        Cleaning Text Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#categorising-comments">
+<span class="md-ellipsis">
+      
+        Categorising Comments
+      
+    </span>
+</a>
+<nav aria-label="Categorising Comments" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_1">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#another-example">
+<span class="md-ellipsis">
+      
+        Another Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keyword-identification">
+<span class="md-ellipsis">
+      
+        Keyword Identification
+      
+    </span>
+</a>
+<nav aria-label="Keyword Identification" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comment">
+<span class="md-ellipsis">
+      
+        Comment
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keywords">
+<span class="md-ellipsis">
+      
+        Keywords
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-categories">
+<span class="md-ellipsis">
+      
+        Creating Categories
+      
+    </span>
+</a>
+<nav aria-label="Creating Categories" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-categories">
+<span class="md-ellipsis">
+      
+        Example Categories
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pattern-extraction">
+<span class="md-ellipsis">
+      
+        Pattern Extraction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_2">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-survey-feedback">
+<span class="md-ellipsis">
+      
+        Working with Survey Feedback
+      
+    </span>
+</a>
+<nav aria-label="Working with Survey Feedback" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_3">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#multiple-categories">
+<span class="md-ellipsis">
+      
+        Multiple Categories
+      
+    </span>
+</a>
+<nav aria-label="Multiple Categories" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_4">
+<span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#human-review">
+<span class="md-ellipsis">
+      
+        Human Review
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-query-text-functions">
+<span class="md-ellipsis">
+      
+        Power Query Text Functions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparing-text-for-analysis">
+<span class="md-ellipsis">
+      
+        Preparing Text for Analysis
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-categorising-survey-responses">
+<span class="md-ellipsis">
+      
+        Activity: Categorising Survey Responses
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-extracting-information-from-text">
+<span class="md-ellipsis">
+      
+        Activity: Extracting Information from Text
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-takeaways">
+<span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="introduction-to-unstructured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.</span> Introduction to Unstructured Data</h1>
+<h2 id="introduction"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.1</span> Introduction</h2>
+<p>Not all useful information is stored in rows and columns.</p>
+<p>Many organisations collect information in the form of:</p>
+<ul>
+<li>Comments</li>
+<li>Emails</li>
+<li>Support tickets</li>
+<li>Feedback forms</li>
+<li>Survey responses</li>
+</ul>
+<p>This type of information is known as unstructured data.</p>
+<p>By the end of this module, you will be able to:</p>
+<ul>
+<li>Identify unstructured data</li>
+<li>Understand common challenges</li>
+<li>Extract useful information from text</li>
+<li>Categorise comments</li>
+<li>Prepare text data for analysis</li>
+</ul>
+<hr/>
+<h2 id="what-is-unstructured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.2</span> What is Unstructured Data?</h2>
+<p>Unstructured data is information that does not follow a predefined structure.</p>
+<p>Unlike spreadsheets, unstructured data does not naturally fit into rows and columns.</p>
+<hr/>
+<h2 id="examples-of-unstructured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.3</span> Examples of Unstructured Data</h2>
+<ul>
+<li>Survey comments</li>
+<li>Social media posts</li>
+<li>Emails</li>
+<li>Chat transcripts</li>
+<li>Support tickets</li>
+<li>Meeting notes</li>
+</ul>
+<hr/>
+<h2 id="structured-vs-unstructured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.4</span> Structured vs Unstructured Data</h2>
+<p><strong>Structured</strong></p>
+<table>
+<thead>
+<tr>
+<th>ResponseID</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R001</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Unstructured</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>The youth centre is great but public transport is limited after 6pm.
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="why-unstructured-data-is-valuable"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.5</span> Why Unstructured Data is Valuable</h2>
+<p>Although difficult to analyse, comments often contain:</p>
+<ul>
+<li>Opinions</li>
+<li>Suggestions</li>
+<li>Concerns</li>
+<li>Opportunities</li>
+<li>Context</li>
+</ul>
+<p>This information is often unavailable in numerical data.</p>
+<hr/>
+<h2 id="common-challenges"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.6</span> Common Challenges</h2>
+<p>Unstructured data can contain:</p>
+<ul>
+<li>Different wording</li>
+<li>Spelling mistakes</li>
+<li>Abbreviations</li>
+<li>Incomplete sentences</li>
+<li>Mixed topics</li>
+</ul>
+<hr/>
+<h2 id="example"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.7</span> Example</h2>
+<p>Three people may describe the same issue:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Need more buses.
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Transport is difficult.
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Hard to get home after activities.
+</code></pre></div></td></tr></table></div>
+<p>Humans recognise a common theme.</p>
+<p>Computers require additional processing.</p>
+<hr/>
+<h2 id="cleaning-text-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.8</span> Cleaning Text Data</h2>
+<p>Before analysis we often clean text.</p>
+<p>Common tasks include:</p>
+<ul>
+<li>Removing extra spaces</li>
+<li>Standardising capitalisation</li>
+<li>Fixing formatting</li>
+<li>Removing unwanted characters</li>
+</ul>
+<hr/>
+<h2 id="categorising-comments"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.9</span> Categorising Comments</h2>
+<p>One of the most common approaches is categorisation.</p>
+<h3 id="example_1"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.9.1</span> Example</h3>
+<p>Comment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Need more basketball programs.
+</code></pre></div></td></tr></table></div>
+<p>Category:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Sport
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="another-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.10</span> Another Example</h2>
+<p>Comment:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>More buses are needed after evening activities.
+</code></pre></div></td></tr></table></div>
+<p>Category:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Transport
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="keyword-identification"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.11</span> Keyword Identification</h2>
+<p>Keywords can help summarise comments.</p>
+<h3 id="comment"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.11.1</span> Comment</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Need more buses after youth activities.
+</code></pre></div></td></tr></table></div>
+<h3 id="keywords"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.11.2</span> Keywords</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>buses
+transport
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="creating-categories"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.12</span> Creating Categories</h2>
+<p>Categories help convert free text into structured information.</p>
+<h3 id="example-categories"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.12.1</span> Example Categories</h3>
+<ul>
+<li>Sport</li>
+<li>Wellbeing</li>
+<li>Education</li>
+<li>Employment</li>
+<li>Transport</li>
+<li>Safety</li>
+<li>Social Activities</li>
+</ul>
+<hr/>
+<h2 id="pattern-extraction"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.13</span> Pattern Extraction</h2>
+<p>Sometimes we need to identify specific information.</p>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Email addresses</li>
+<li>Reference numbers</li>
+<li>Postcodes</li>
+<li>Dates</li>
+<li>Program names</li>
+</ul>
+<hr/>
+<h2 id="example_2"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.14</span> Example</h2>
+<p>Text:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Please contact me at student@example.com
+</code></pre></div></td></tr></table></div>
+<p>Extract:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>student@example.com
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="working-with-survey-feedback"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.15</span> Working with Survey Feedback</h2>
+<p>Survey comments are often highly valuable.</p>
+<h3 id="example_3"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.15.1</span> Example</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>I would like more study spaces and access to free WiFi.
+</code></pre></div></td></tr></table></div>
+<p>Possible Category:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Education
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="multiple-categories"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.16</span> Multiple Categories</h2>
+<p>Some comments belong to more than one category.</p>
+<h3 id="example_4"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.16.1</span> Example</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>I would like more buses and safer places to meet friends.
+</code></pre></div></td></tr></table></div>
+<p>Potential Categories:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Transport
+Safety
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="human-review"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.17</span> Human Review</h2>
+<p>Not every comment can be categorised automatically.</p>
+<p>Some responses require:</p>
+<ul>
+<li>Human judgement</li>
+<li>Context</li>
+<li>Local knowledge</li>
+</ul>
+<hr/>
+<h2 id="power-query-text-functions"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.18</span> Power Query Text Functions</h2>
+<p>Useful text functions include:</p>
+<ul>
+<li>Trim</li>
+<li>Clean</li>
+<li>Replace Values</li>
+<li>Split Column</li>
+<li>Extract Text</li>
+<li>Format Text</li>
+</ul>
+<p>These functions help convert messy text into structured information.</p>
+<hr/>
+<h2 id="preparing-text-for-analysis"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.19</span> Preparing Text for Analysis</h2>
+<p>A common workflow is:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Import Comments
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Clean Text
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Extract Keywords
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Categorise Responses
+</code></pre></div></td></tr></table></div>
+<p>↓</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Create Structured Dataset
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="activity-categorising-survey-responses"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.20</span> Activity: Categorising Survey Responses</h2>
+<p>Using the supplied survey comments:</p>
+<ol>
+<li>Read each response.</li>
+<li>Identify key themes.</li>
+<li>Assign a category.</li>
+<li>Record the category in a new column.</li>
+</ol>
+<hr/>
+<h2 id="activity-extracting-information-from-text"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.21</span> Activity: Extracting Information from Text</h2>
+<p>Using the supplied comments:</p>
+<ol>
+<li>Identify keywords.</li>
+<li>Extract relevant information.</li>
+<li>Create structured fields.</li>
+<li>Produce a table suitable for analysis.</li>
+</ol>
+<hr/>
+<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.22</span> Key Takeaways</h2>
+<p>Unstructured data contains valuable information that often cannot be found in numerical datasets.</p>
+<p>Common approaches include:</p>
+<ul>
+<li>Cleaning text</li>
+<li>Extracting keywords</li>
+<li>Categorising responses</li>
+<li>Creating structured datasets</li>
+</ul>
+<p>Remember:</p>
+<blockquote>
+<p>The goal of transforming unstructured data is to convert human language into information that can be consistently analysed.</p>
+</blockquote>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Common Transformation Patterns" class="md-footer__link md-footer__link--prev" href="../common-transform-patterns/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Common Transformation Patterns
+              </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

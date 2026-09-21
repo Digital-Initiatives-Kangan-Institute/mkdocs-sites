@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../gitignore/" rel="prev"/>
+<link href="../git-cli/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Merge Conflicts - Version Control</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#merge-conflicts">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Version Control" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Version Control
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Merge Conflicts
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Version Control" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Version Control
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    
+  
+    What is Version Control
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-in-vscode/">
+<span class="md-ellipsis">
+    
+  
+    Git with VS Code
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    
+  
+    Branching Strategy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-tools/">
+<span class="md-ellipsis">
+    
+  
+    Git Tools and Clients
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-github/">
+<span class="md-ellipsis">
+    
+  
+    What is GitHub
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gitignore/">
+<span class="md-ellipsis">
+    
+  
+    .gitignore
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Merge Conflicts
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Merge Conflicts
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-causes-a-merge-conflict">
+<span class="md-ellipsis">
+      
+        What Causes a Merge Conflict?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-a-conflict-looks-like">
+<span class="md-ellipsis">
+      
+        What a Conflict Looks Like
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resolving-a-merge-conflict-in-vs-code">
+<span class="md-ellipsis">
+      
+        Resolving a Merge Conflict in VS Code
+      
+    </span>
+</a>
+<nav aria-label="Resolving a Merge Conflict in VS Code" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-open-the-conflicted-file">
+<span class="md-ellipsis">
+      
+        1. Open the Conflicted File
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-choose-what-to-keep">
+<span class="md-ellipsis">
+      
+        2. Choose What to Keep
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-review-and-save">
+<span class="md-ellipsis">
+      
+        3. Review and Save
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-stage-the-resolved-file">
+<span class="md-ellipsis">
+      
+        4. Stage the Resolved File
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-complete-the-merge">
+<span class="md-ellipsis">
+      
+        5. Complete the Merge
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avoiding-merge-conflicts">
+<span class="md-ellipsis">
+      
+        Avoiding Merge Conflicts
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-cli/">
+<span class="md-ellipsis">
+    
+  
+    Git CLI Reference
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/initialise-and-commit/">
+<span class="md-ellipsis">
+    
+  
+    Initialise and Commit
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/branch-and-merge/">
+<span class="md-ellipsis">
+    
+  
+    Branch and Merge
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/daily-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Daily Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/working-with-dev/">
+<span class="md-ellipsis">
+    
+  
+    Working with a dev Branch
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/pull-request-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Pull Request Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="merge-conflicts"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.</span> Merge Conflicts</h1>
+<p>A merge conflict happens when Git cannot automatically combine two sets of changes. This is normal and not a mistake — it just needs a human decision.</p>
+<hr/>
+<h2 id="what-causes-a-merge-conflict"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.1</span> What Causes a Merge Conflict?</h2>
+<p>A conflict occurs when two branches have edited the <strong>same part of the same file</strong> and Git does not know which version to keep.</p>
+<p>For example:</p>
+<ul>
+<li>You edit line 5 of <code>index.html</code> on <code>feature/nav-bar</code></li>
+<li>A teammate edits line 5 of <code>index.html</code> on <code>feature/footer</code></li>
+<li>When you try to merge both into <code>dev</code>, Git sees two different versions of line 5 and cannot decide which one to use</li>
+</ul>
+<p>This is not a bug — it is Git asking you to make a decision.</p>
+<hr/>
+<h2 id="what-a-conflict-looks-like"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.2</span> What a Conflict Looks Like</h2>
+<p>When a conflict occurs, Git marks the file with conflict markers:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to Our Cafe<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="err">&lt;&lt;&lt;&lt;&lt;&lt;</span><span class="p">&lt;</span> <span class="nt">HEAD</span>
+<span class="err">&lt;</span><span class="na">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"index.html"</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"menu.html"</span><span class="p">&gt;</span>Menu<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+=======
+<span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>2026 My Cafe. All rights reserved.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/footer
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> marks the start of your current branch's version</li>
+<li><code>=======</code> separates the two versions</li>
+<li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/footer</code> marks the end of the incoming branch's version</li>
+</ul>
+<p>Your job is to replace this entire block with the correct final version.</p>
+<hr/>
+<h2 id="resolving-a-merge-conflict-in-vs-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3</span> Resolving a Merge Conflict in VS Code</h2>
+<p>VS Code makes resolving conflicts visual and straightforward.</p>
+<h3 id="1-open-the-conflicted-file"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.1</span> 1. Open the Conflicted File</h3>
+<p>The file appears in the Source Control panel under <strong>Merge Changes</strong> with a <code>C</code> badge. Open it and you will see the conflict markers highlighted in colour.</p>
+<h3 id="2-choose-what-to-keep"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.2</span> 2. Choose What to Keep</h3>
+<p>Above each conflicted section, VS Code shows clickable options:</p>
+<ul>
+<li><strong>Accept Current Change</strong> — keep your version</li>
+<li><strong>Accept Incoming Change</strong> — keep the other branch's version</li>
+<li><strong>Accept Both Changes</strong> — keep both, one after the other</li>
+<li><strong>Compare Changes</strong> — see a side-by-side diff of the two versions</li>
+</ul>
+<p>Click the option that makes sense. You can mix and match — keep your navigation from one section and the other person's footer from another.</p>
+<h3 id="3-review-and-save"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.3</span> 3. Review and Save</h3>
+<p>After resolving all conflicts, review the file to make sure everything looks correct. The conflict markers should be gone.</p>
+<h3 id="4-stage-the-resolved-file"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.4</span> 4. Stage the Resolved File</h3>
+<p>The resolved file moves from <strong>Merge Changes</strong> to <strong>Staged Changes</strong>. Stage it by clicking the <strong>+</strong>.</p>
+<h3 id="5-complete-the-merge"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.3.5</span> 5. Complete the Merge</h3>
+<p>Commit the staged file. VS Code will suggest a default merge commit message like <code>Merge branch 'feature/footer' into dev</code>. You can accept this or write your own.</p>
+<hr/>
+<h2 id="avoiding-merge-conflicts"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.4</span> Avoiding Merge Conflicts</h2>
+<p>While conflicts cannot always be prevented, these habits reduce them:</p>
+<ul>
+<li><strong>Pull often</strong> — sync your branch before starting new work</li>
+<li><strong>Keep branches short-lived</strong> — merge feature branches quickly rather than letting them drift</li>
+<li><strong>Communicate</strong> — if you know someone else is working on the same file, coordinate</li>
+<li><strong>Commit small</strong> — small, focused commits are easier to reconcile than large ones</li>
+</ul>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.5</span> Summary</h2>
+<ul>
+<li>Merge conflicts happen when Git cannot automatically combine two versions of the same code</li>
+<li>VS Code highlights conflicts and provides buttons to accept one version or both</li>
+<li>Resolve all conflicts, stage the file, and commit to complete the merge</li>
+<li>Conflicts are normal — they are not an error, just a decision point</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: .gitignore" class="md-footer__link md-footer__link--prev" href="../gitignore/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                .gitignore
+              </div>
+</div>
+</a>
+<a aria-label="Next: Git CLI Reference" class="md-footer__link md-footer__link--next" href="../git-cli/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Git CLI Reference
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

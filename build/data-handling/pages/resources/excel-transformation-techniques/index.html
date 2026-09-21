@@ -1,0 +1,1291 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../raw-data/" rel="prev"/>
+<link href="../power-query/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Transformation Techniques using Excel - Data Handling</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#core-transformation-techniques-in-excel">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Data Handling" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Data Handling
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Transformation Techniques using Excel
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Data Handling" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Data Handling
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bki-di-portal.netlify.app/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raw-data/">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-transformation-process">
+<span class="md-ellipsis">
+      
+        The Transformation Process
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-unnecessary-data">
+<span class="md-ellipsis">
+      
+        Removing Unnecessary Data
+      
+    </span>
+</a>
+<nav aria-label="Removing Unnecessary Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blank-rows">
+<span class="md-ellipsis">
+      
+        Blank Rows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#blank-columns">
+<span class="md-ellipsis">
+      
+        Blank Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#totals-rows">
+<span class="md-ellipsis">
+      
+        Totals Rows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#notes-and-comments">
+<span class="md-ellipsis">
+      
+        Notes and Comments
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-text-values">
+<span class="md-ellipsis">
+      
+        Standardising Text Values
+      
+    </span>
+</a>
+<nav aria-label="Standardising Text Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inconsistent-categories">
+<span class="md-ellipsis">
+      
+        Inconsistent Categories
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-and-replace">
+<span class="md-ellipsis">
+      
+        Find and Replace
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cleaning-text">
+<span class="md-ellipsis">
+      
+        Cleaning Text
+      
+    </span>
+</a>
+<nav aria-label="Cleaning Text" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-extra-spaces">
+<span class="md-ellipsis">
+      
+        Removing Extra Spaces
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#consistent-capitalisation">
+<span class="md-ellipsis">
+      
+        Consistent Capitalisation
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-dates">
+<span class="md-ellipsis">
+      
+        Standardising Dates
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-numbers">
+<span class="md-ellipsis">
+      
+        Standardising Numbers
+      
+    </span>
+</a>
+<nav aria-label="Standardising Numbers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-number-problems">
+<span class="md-ellipsis">
+      
+        Common Number Problems
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-missing-values">
+<span class="md-ellipsis">
+      
+        Working with Missing Values
+      
+    </span>
+</a>
+<nav aria-label="Working with Missing Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-for-handling-missing-values">
+<span class="md-ellipsis">
+      
+        Options for Handling Missing Values
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#splitting-columns">
+<span class="md-ellipsis">
+      
+        Splitting Columns
+      
+    </span>
+</a>
+<nav aria-label="Splitting Columns" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-examples">
+<span class="md-ellipsis">
+      
+        Other Examples
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#combining-columns">
+<span class="md-ellipsis">
+      
+        Combining Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-yesno-values">
+<span class="md-ellipsis">
+      
+        Standardising Yes/No Values
+      
+    </span>
+</a>
+<nav aria-label="Standardising Yes/No Values" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#before">
+<span class="md-ellipsis">
+      
+        Before
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#after">
+<span class="md-ellipsis">
+      
+        After
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#another-example">
+<span class="md-ellipsis">
+      
+        Another Example
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-duplicates">
+<span class="md-ellipsis">
+      
+        Removing Duplicates
+      
+    </span>
+</a>
+<nav aria-label="Removing Duplicates" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-question">
+<span class="md-ellipsis">
+      
+        Important Question
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checking-for-invalid-values">
+<span class="md-ellipsis">
+      
+        Checking for Invalid Values
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-survey-data">
+<span class="md-ellipsis">
+      
+        Working with Survey Data
+      
+    </span>
+</a>
+<nav aria-label="Working with Survey Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-program-names">
+<span class="md-ellipsis">
+      
+        Standardising Program Names
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standardising-school-year-levels">
+<span class="md-ellipsis">
+      
+        Standardising School Year Levels
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preparing-data-for-analysis">
+<span class="md-ellipsis">
+      
+        Preparing Data for Analysis
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transformation-checklist">
+<span class="md-ellipsis">
+      
+        Transformation Checklist
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-clean-a-customer-dataset">
+<span class="md-ellipsis">
+      
+        Activity: Clean a Customer Dataset
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-clean-a-youth-survey-dataset">
+<span class="md-ellipsis">
+      
+        Activity: Clean a Youth Survey Dataset
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-takeaways">
+<span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query-transformations/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common-transform-patterns/">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unstructured-data/">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="core-transformation-techniques-in-excel"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> Core Transformation Techniques in Excel</h1>
+<h2 id="introduction"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> Introduction</h2>
+<p>Once we understand the structure and quality of our data, we can begin transforming it into a format suitable for analysis.</p>
+<p>Data transformation is the process of modifying data so that it becomes:</p>
+<ul>
+<li>Consistent</li>
+<li>Accurate</li>
+<li>Complete</li>
+<li>Analysis-ready</li>
+</ul>
+<p>In this module, we will use standard Excel tools to clean and transform messy datasets.</p>
+<hr/>
+<h2 id="the-transformation-process"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> The Transformation Process</h2>
+<p>Data transformation typically follows a series of steps:</p>
+<ol>
+<li>Inspect the data</li>
+<li>Remove unnecessary information</li>
+<li>Standardise formats</li>
+<li>Correct inconsistencies</li>
+<li>Handle missing values</li>
+<li>Remove duplicates</li>
+<li>Restructure columns where necessary</li>
+<li>Validate the final dataset</li>
+</ol>
+<hr/>
+<h2 id="removing-unnecessary-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Removing Unnecessary Data</h2>
+<p>One of the first tasks is removing information that does not belong in the dataset.</p>
+<h3 id="blank-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.1</span> Blank Rows</h3>
+<p>Blank rows often cause problems when:</p>
+<ul>
+<li>Filtering</li>
+<li>Sorting</li>
+<li>Importing into Power Query</li>
+<li>Creating Pivot Tables</li>
+</ul>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>David</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td>Minh</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>David</td>
+</tr>
+<tr>
+<td>Minh</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blank-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.2</span> Blank Columns</h3>
+<p>Blank columns can make datasets difficult to work with and should generally be removed.</p>
+<h3 id="totals-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.3</span> Totals Rows</h3>
+<p>Report-style totals should not exist within raw data.</p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laptop</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Mouse</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Total</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Keyboard</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laptop</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Mouse</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Keyboard</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes-and-comments"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.4</span> Notes and Comments</h3>
+<p>Notes intended for humans should usually be separated from the dataset.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Data exported from old system.
+Need to verify records before reporting.
+</code></pre></div></td></tr></table></div>
+<p>These notes are useful but should not be mixed into the data table.</p>
+<hr/>
+<h2 id="standardising-text-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4</span> Standardising Text Values</h2>
+<p>Computers treat different text values as different categories.</p>
+<h3 id="inconsistent-categories"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4.1</span> Inconsistent Categories</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>VIC
+Victoria
+vic
+V.I.C
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>VIC
+VIC
+VIC
+VIC
+</code></pre></div></td></tr></table></div>
+<h3 id="find-and-replace"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4.2</span> Find and Replace</h3>
+<p>Excel's Find and Replace tool can quickly standardise data.</p>
+<p>Example:</p>
+<p>Find:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Victoria
+</code></pre></div></td></tr></table></div>
+<p>Replace with:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>VIC
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="cleaning-text"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5</span> Cleaning Text</h2>
+<p>Text values often contain unwanted spaces or formatting.</p>
+<h3 id="removing-extra-spaces"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.1</span> Removing Extra Spaces</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code> Sarah
+Sarah
+Sarah
+</code></pre></div></td></tr></table></div>
+<p>Although these may look identical, they are actually different values.</p>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Sarah
+Sarah
+Sarah
+</code></pre></div></td></tr></table></div>
+<h3 id="consistent-capitalisation"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.2</span> Consistent Capitalisation</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>SARAH
+sarah
+Sarah
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Sarah
+Sarah
+Sarah
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="standardising-dates"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.6</span> Standardising Dates</h2>
+<p>Dates commonly appear in different formats.</p>
+<p><strong>Before</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>01/02/2026
+1 Feb 2026
+2026-02-01
+</code></pre></div></td></tr></table></div></p>
+<p><strong>After</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>2026-02-01
+2026-02-01
+2026-02-01
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Why This Matters</strong>
+Dates stored inconsistently can cause problems when:</p>
+<ul>
+<li>Sorting</li>
+<li>Filtering</li>
+<li>Reporting</li>
+<li>Creating timelines</li>
+</ul>
+<hr/>
+<h2 id="standardising-numbers"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.7</span> Standardising Numbers</h2>
+<p>Numbers must be stored as numbers rather than text.</p>
+<p><strong>Example</strong></p>
+<p><strong>Text</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>"100"
+</code></pre></div></td></tr></table></div>
+<p><strong>Number</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>100
+</code></pre></div></td></tr></table></div>
+<p>A text value may look like a number but cannot always be used in calculations.</p>
+<h3 id="common-number-problems"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.7.1</span> Common Number Problems</h3>
+<p><strong>Currency Symbols</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>$1,200
+</code></pre></div></td></tr></table></div>
+<p><strong>Commas</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>1,200
+</code></pre></div></td></tr></table></div>
+<p><strong>Text Mixed with Numbers</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>1200 dollars
+</code></pre></div></td></tr></table></div>
+<p>These may need cleaning before analysis.</p>
+<hr/>
+<h2 id="working-with-missing-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.8</span> Working with Missing Values</h2>
+<p>Missing values are common in real-world data.</p>
+<p><strong>Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>sarah@email.com</td>
+</tr>
+<tr>
+<td>David</td>
+<td></td>
+</tr>
+<tr>
+<td>Minh</td>
+<td>minh@email.com</td>
+</tr>
+</tbody>
+</table>
+<h3 id="options-for-handling-missing-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.8.1</span> Options for Handling Missing Values</h3>
+<p><strong>Keep the Record</strong></p>
+<p>If the missing data is not important.</p>
+<p><strong>Remove the Record</strong></p>
+<p>If the record cannot be used without the missing value.</p>
+<p><strong>Replace the Value</strong></p>
+<p>Examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Unknown
+Not Provided
+N/A
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no single correct approach. The appropriate solution depends on the business requirements.</p>
+</div>
+<hr/>
+<h2 id="splitting-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.9</span> Splitting Columns</h2>
+<p>Sometimes data contains multiple pieces of information in a single field.</p>
+<p><strong>Example</strong></p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Full Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah Lee</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>Lee</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other-examples"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.9.1</span> Other Examples</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Broadmeadows, VIC
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Suburb</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broadmeadows</td>
+<td>VIC</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="combining-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.10</span> Combining Columns</h2>
+<p>Sometimes separate columns should be joined together.</p>
+<p><strong>Example</strong></p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>Lee</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Full Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah Lee</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="standardising-yesno-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.11</span> Standardising Yes/No Values</h2>
+<p>Survey data often contains inconsistent responses.</p>
+<h3 id="before"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.11.1</span> Before</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Yes
+YES
+yes
+Y
+True
+</code></pre></div></td></tr></table></div>
+<h3 id="after"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.11.2</span> After</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Yes
+Yes
+Yes
+Yes
+Yes
+</code></pre></div></td></tr></table></div>
+<h3 id="another-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.11.3</span> Another Example</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>No
+NO
+N
+False
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>No
+No
+No
+No
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="removing-duplicates"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.12</span> Removing Duplicates</h2>
+<p>Duplicate records can distort reporting and analysis.</p>
+<p><strong>Example</strong></p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>ResponseID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R001</td>
+</tr>
+<tr>
+<td>R001</td>
+</tr>
+<tr>
+<td>R002</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>ResponseID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R001</td>
+</tr>
+<tr>
+<td>R002</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-question"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.12.1</span> Important Question</h3>
+<p>Are the records actually duplicates?</p>
+<p>Sometimes two records look similar but represent different events.</p>
+<p>Always review duplicates before removing them.</p>
+<hr/>
+<h2 id="checking-for-invalid-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.13</span> Checking for Invalid Values</h2>
+<p>Transformation is also an opportunity to identify invalid data.</p>
+<p><strong>Example: Age</strong></p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15</td>
+</tr>
+<tr>
+<td>17</td>
+</tr>
+<tr>
+<td>250</td>
+</tr>
+</tbody>
+</table>
+<p>The value 250 is likely incorrect.</p>
+<p><strong>Example: Rating</strong></p>
+<p>Survey scale:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>1 to 5
+</code></pre></div></td></tr></table></div>
+<p>Values such as:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>0
+6
+10
+</code></pre></div></td></tr></table></div>
+<p>may indicate data entry issues.</p>
+<hr/>
+<h2 id="working-with-survey-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.14</span> Working with Survey Data</h2>
+<p>Survey datasets contain many common transformation challenges.</p>
+<h3 id="standardising-program-names"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.14.1</span> Standardising Program Names</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Sports
+Sport
+sports
+SPORTS
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Sports
+Sports
+Sports
+Sports
+</code></pre></div></td></tr></table></div>
+<h3 id="standardising-school-year-levels"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.14.2</span> Standardising School Year Levels</h3>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Year 10
+Y10
+Yr 10
+10
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Year 10
+Year 10
+Year 10
+Year 10
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="preparing-data-for-analysis"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.15</span> Preparing Data for Analysis</h2>
+<p>Before analysis begins, check:</p>
+<ul>
+<li>Are column names meaningful?</li>
+<li>Are rows complete?</li>
+<li>Are formats consistent?</li>
+<li>Are duplicates removed?</li>
+<li>Are invalid values addressed?</li>
+<li>Are categories standardised?</li>
+</ul>
+<hr/>
+<h2 id="transformation-checklist"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.16</span> Transformation Checklist</h2>
+<p>Before finishing your work:</p>
+<p>✅ Blank rows removed</p>
+<p>✅ Blank columns removed</p>
+<p>✅ Totals rows removed</p>
+<p>✅ Dates standardised</p>
+<p>✅ Text values standardised</p>
+<p>✅ Categories standardised</p>
+<p>✅ Missing values reviewed</p>
+<p>✅ Duplicates reviewed</p>
+<p>✅ Invalid values investigated</p>
+<p>✅ Dataset ready for analysis</p>
+<hr/>
+<h2 id="activity-clean-a-customer-dataset"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.17</span> Activity: Clean a Customer Dataset</h2>
+<p>Using Excel tools only:</p>
+<ol>
+<li>Remove blank rows.</li>
+<li>Remove unnecessary columns.</li>
+<li>Standardise state values.</li>
+<li>Standardise dates.</li>
+<li>Remove duplicates.</li>
+<li>Fix inconsistent text.</li>
+<li>Investigate invalid values.</li>
+<li>Produce a clean dataset.</li>
+</ol>
+<hr/>
+<h2 id="activity-clean-a-youth-survey-dataset"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.18</span> Activity: Clean a Youth Survey Dataset</h2>
+<p>Using the supplied workbook:</p>
+<ol>
+<li>Standardise Yes/No responses.</li>
+<li>Standardise program names.</li>
+<li>Standardise year level values.</li>
+<li>Remove duplicate responses.</li>
+<li>Identify invalid ages.</li>
+<li>Identify missing values.</li>
+<li>Produce an analysis-ready table.</li>
+</ol>
+<hr/>
+<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.19</span> Key Takeaways</h2>
+<p>Data transformation is the process of converting messy data into reliable information.</p>
+<p>Good transformation results in data that is:</p>
+<ul>
+<li>Consistent</li>
+<li>Accurate</li>
+<li>Complete</li>
+<li>Easy to analyse</li>
+</ul>
+<p>Remember:</p>
+<blockquote>
+<p>The goal is not simply to clean data. The goal is to create a dataset that can be trusted for decision making.</p>
+</blockquote>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Raw Data" class="md-footer__link md-footer__link--prev" href="../raw-data/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Raw Data
+              </div>
+</div>
+</a>
+<a aria-label="Next: Power Query Fundamentals" class="md-footer__link md-footer__link--next" href="../power-query/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Power Query Fundamentals
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

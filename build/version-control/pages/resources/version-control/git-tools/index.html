@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../branching-strategy/" rel="prev"/>
+<link href="../what-is-github/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Git Tools and Clients - Version Control</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#git-tools-and-clients">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Version Control" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Version Control
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Git Tools and Clients
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Version Control" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Version Control
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    
+  
+    What is Version Control
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-in-vscode/">
+<span class="md-ellipsis">
+    
+  
+    Git with VS Code
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../branching-strategy/">
+<span class="md-ellipsis">
+    
+  
+    Branching Strategy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Git Tools and Clients
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Git Tools and Clients
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-use-a-tool">
+<span class="md-ellipsis">
+      
+        Why Use a Tool?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-in-vs-code">
+<span class="md-ellipsis">
+      
+        Git in VS Code
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-desktop">
+<span class="md-ellipsis">
+      
+        GitHub Desktop
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gitkraken">
+<span class="md-ellipsis">
+      
+        GitKraken
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#choosing-a-tool">
+<span class="md-ellipsis">
+      
+        Choosing a Tool
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-github/">
+<span class="md-ellipsis">
+    
+  
+    What is GitHub
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gitignore/">
+<span class="md-ellipsis">
+    
+  
+    .gitignore
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../merge-conflicts/">
+<span class="md-ellipsis">
+    
+  
+    Merge Conflicts
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-cli/">
+<span class="md-ellipsis">
+    
+  
+    Git CLI Reference
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/initialise-and-commit/">
+<span class="md-ellipsis">
+    
+  
+    Initialise and Commit
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/branch-and-merge/">
+<span class="md-ellipsis">
+    
+  
+    Branch and Merge
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/daily-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Daily Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/working-with-dev/">
+<span class="md-ellipsis">
+    
+  
+    Working with a dev Branch
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/pull-request-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Pull Request Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="git-tools-and-clients"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Git Tools and Clients</h1>
+<p>There are many ways to use Git. You can type commands in a terminal, use a graphical desktop application, or work inside your code editor. Each approach has its strengths and suits different preferences.</p>
+<hr/>
+<h2 id="why-use-a-tool"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> Why Use a Tool?</h2>
+<p>Git itself is a command-line tool. While the terminal is powerful and available everywhere, graphical tools can:</p>
+<ul>
+<li>Make complex operations more visible and discoverable</li>
+<li>Reduce the need to memorise commands</li>
+<li>Show you the state of your repository at a glance</li>
+<li>Help you visualise branches, commits, and diffs</li>
+</ul>
+<p>The best tool is the one you are comfortable with and will actually use.</p>
+<hr/>
+<h2 id="git-in-vs-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> Git in VS Code</h2>
+<p>The source control features built into VS Code let you stage, commit, push, and manage branches without leaving the editor.</p>
+<table>
+<thead>
+<tr>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Already installed with VS Code</td>
+<td>Limited to basic operations</td>
+</tr>
+<tr>
+<td>No extra setup required</td>
+<td>Advanced features require the terminal</td>
+</tr>
+<tr>
+<td>Tight integration with your code</td>
+<td>Merge conflict resolution is basic</td>
+</tr>
+<tr>
+<td>Perfect for the daily stage-commit-push cycle</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>This is the tool we focus on throughout this site because it is available to everyone using VS Code and covers the most common workflows.</p>
+<hr/>
+<h2 id="github-desktop"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> GitHub Desktop</h2>
+<p>A free, open-source desktop application from GitHub. It provides a visual interface for common Git operations and deep integration with GitHub repositories.</p>
+<table>
+<thead>
+<tr>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clean, straightforward interface</td>
+<td>GitHub-focused (limited with GitLab/Bitbucket)</td>
+</tr>
+<tr>
+<td>Easy to see diffs and history</td>
+<td>Slower for power users who know the terminal</td>
+</tr>
+<tr>
+<td>Great for resolving merge conflicts visually</td>
+<td>Less flexible than a full-featured Git client</td>
+</tr>
+<tr>
+<td>Free and actively maintained</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>GitHub Desktop is a good choice if you want a dedicated Git application that stays out of your way and focuses on the core workflow.</p>
+<hr/>
+<h2 id="gitkraken"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.4</span> GitKraken</h2>
+<p>A professional Git client with a strong focus on visualising branch history. The commit graph is its standout feature, making it easy to understand complex branching structures.</p>
+<table>
+<thead>
+<tr>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Beautiful branch visualisation</td>
+<td>Paid for private repositories (free for public)</td>
+</tr>
+<tr>
+<td>Built-in merge conflict editor</td>
+<td>Heavier than simpler clients</td>
+</tr>
+<tr>
+<td>Supports GitHub, GitLab, Bitbucket, Azure DevOps</td>
+<td>Can feel overwhelming for beginners</td>
+</tr>
+<tr>
+<td>Drag-and-drop branch management</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>GitKraken is well-suited for teams working with many branches and for learners who benefit from seeing the branch structure visually.</p>
+<hr/>
+<h2 id="choosing-a-tool"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.5</span> Choosing a Tool</h2>
+<table>
+<thead>
+<tr>
+<th>If you want...</th>
+<th>Try...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everything in one place, no extra apps</td>
+<td>Git in VS Code</td>
+</tr>
+<tr>
+<td>A simple dedicated Git app</td>
+<td>GitHub Desktop</td>
+</tr>
+<tr>
+<td>Visual branch management</td>
+<td>GitKraken</td>
+</tr>
+</tbody>
+</table>
+<p>There is no wrong choice. Many developers use a combination — VS Code for daily commits, GitHub Desktop for reviewing pull requests, and the terminal for one-off advanced operations. Start with what feels natural and explore other tools as your needs grow.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Branching Strategy" class="md-footer__link md-footer__link--prev" href="../branching-strategy/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Branching Strategy
+              </div>
+</div>
+</a>
+<a aria-label="Next: What is GitHub" class="md-footer__link md-footer__link--next" href="../what-is-github/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                What is GitHub
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

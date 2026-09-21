@@ -1,0 +1,192 @@
+Week,Teaching focus,Learning activities / content,Tools / resources,Assessment / checkpoint,Unit code,Unit title,,
+1,Basic web development with LLM support,"• Use Copilot to help build a multi-file web app.
+• Set up VS Code with Live Preview.
+• Learn HTML5 structure, start tags, content, end tags, headings, paragraphs, bold, italic, horizontal rules, nested elements, divs and spans.
+• Link CSS in three ways: inline, internal, and external.
+• Use element, ID, and class selectors.
+• Write CSS rules with a selector, property, value, and line ending.","• VS Code with Live Preview
+• W3Schools HTML + CSS tutorials
+• Copilot Web","• Activity:
+  • create a working two-page HTML and CSS cafe site with linked pages and at least three selector types.
+
+• Takeaway:
+  • push the cafe website activity to GitHub and submit the GitHub link through the Checkpoint site.
+  • Include Home and Menu pages, images, navigation, headings, sections, and external CSS.",ICTWEB527,Research and apply emerging web technology trends,,
+2,Basic web development: JavaScript,"• Learn JavaScript basics: variables, if/else, for loops, functions, events, load order, JavaScript libraries, Bootstrap, and AI context.
+• Add simple interaction to a web page and break repeated code into functions.","• VS Code with Live Preview
+• W3Schools JavaScript tutorials
+• Copilot Web","• Activity:
+  • demonstrate one working JavaScript interaction and explain the event, function, and variables used.
+
+• Takeaway:
+  • push the improved cafe site to GitHub and submit the GitHub link through the Checkpoint site.
+  • Add one Bootstrap component and one custom JavaScript feature.",ICTWEB521,Customise complex ICT content management systems,,
+3,AI tools and agent workflows,"• Explore how AI can be used as more than a chatbot.
+• Use AI tools and agents to plan and complete small coding tasks.
+• Practise writing clear prompts and keeping token use low.","• OpenCode
+• Big Pickle
+• Copilot Web","• Activity:
+  • complete or plan a small agent-assisted coding task and save the prompts used.
+
+• Takeaway:
+  • push the activity to GitHub and submit the GitHub link through the Checkpoint site.
+  • Add a short reflection on how agents can help web development and one risk to watch for.",ICTPRG535,Build advanced user interfaces,,
+4,To be confirmed,"• Use this week to catch up, troubleshoot, and extend skills from HTML, CSS, JavaScript, and AI tools.",,"• Activity:
+  • complete an individual progress check for Weeks 1 to 3 skills.
+
+• Takeaway:
+  • push the cleaned-up portfolio folder to GitHub and submit the GitHub link through the Checkpoint site.",,,,
+5,Web architecture,"• Learn how data moves from Data to API to Front End.
+• Connect MockAPI or DummyJSON to a front end.
+• Build a login page using HTML, CSS, JavaScript, and fetch.","• DummyJSON
+• MockAPI
+• Fetch API","• Activity:
+  • create a front end that fetches and displays data from DummyJSON or MockAPI.
+
+• Takeaway:
+  • push the API display activity to GitHub and submit the GitHub link through the Checkpoint site.
+  • Show at least five records in cards, a list, or a table.",,,,
+6,Web architecture and rendering,"• Learn the idea of server-side rendering, frameworks, and how to improve a login page.
+• Improve layout, validation messages, labels, and visual design.","• Next.js docs/examples
+• Login page examples","• Activity:
+  • improve the login page with validation and accessible labels.
+
+• Takeaway:
+  • push the redesigned login page to GitHub and submit the GitHub link through the Checkpoint site.
+  • Include a short before and after note.",,,,
+7,Next.js foundations,"• Start a Next.js project.
+• Learn the app structure, TypeScript basics, reusable components, static routes, dynamic routes, and shared layouts.","• Next.js
+• TypeScript","• Activity:
+  • create a Next.js app with two static routes, one dynamic route, and a shared layout.
+
+• Takeaway:
+  • push the mini portfolio or product catalogue to GitHub and submit the GitHub link through the Checkpoint site.",,,,
+8,Next.js events and state,"• Use events, arrow functions, and React state.
+• Build small interactive components such as counters, toggles, filters, favourites, or simple forms.","• Next.js
+• React hooks","• Activity:
+  • build a component where the screen changes when the user interacts with it.
+
+• Takeaway:
+  • push the updated Next.js project to GitHub and submit the GitHub link through the Checkpoint site.
+  • Add two interactive features and comments explaining the state and events.",,,,
+9,Practice assessment,"• Complete a timed practice task that combines components, routing, styling, state, and basic data handling.
+• Practise reading requirements, planning work, and testing.",,"• Activity:
+  • submit the practice assessment attempt and complete a self-check against the marking criteria.
+
+• Takeaway:
+  • push the practice task to GitHub and submit the GitHub link through the Checkpoint site.
+  • Revise weak areas and bring questions for assessment week.",,,,
+10,Assessment,"• Complete the formal assessment task using HTML, CSS, JavaScript, AI-supported development, and Next.js skills.",,"• Assessment:
+  • complete and submit the required assessment evidence.
+
+• Takeaway:
+  • push final evidence to GitHub where required and submit the GitHub link through the Checkpoint site.
+  • Add screenshots, notes, or reflection if required.",,,,
+11,Next.js revision,"• Revise Next.js and arrow functions.
+• Review project structure, routing, components, and common errors.
+• Refactor one component to make it clearer.","• Next.js
+• TypeScript","• Activity:
+  • correct or refactor one component that uses arrow functions clearly.
+
+• Takeaway:
+  • push the revised component to GitHub and submit the GitHub link through the Checkpoint site.
+  • Document three improvements you made.",,,,
+12,Fetch and state,"• Use fetch from a button with useState.
+• Learn async code, JSON, APIs, loading states, and showing useful fields on the page.","• Fetch API
+• JSONPlaceholder/DummyJSON","• Activity:
+  • build a button that fetches API data and updates the page using useState.
+
+• Takeaway:
+  • push the fetch activity to GitHub and submit the GitHub link through the Checkpoint site.
+  • Connect to a different endpoint and display the data clearly.",,,,
+13,Fetch and JSON,"• Continue using fetch, useState, async code, and JSON.
+• Add error handling, empty states, loading messages, and clearer data formatting.","• Fetch API
+• Browser console","• Activity:
+  • update the fetch component so it handles success, loading, and error states.
+
+• Takeaway:
+  • push the updated API feature to GitHub and submit the GitHub link through the Checkpoint site.
+  • Include evidence of loading, success, and error states where possible.",,,,
+14,useEffect and async workflows,"• Use useEffect for work that should happen when a page loads.
+• Compare button-based fetch with automatic fetch.
+• Learn dependency arrays and how to avoid repeated fetch loops.","• React useEffect
+• API endpoint","• Activity:
+  • load API data automatically using useEffect without repeated fetch loops.
+
+• Takeaway:
+  • push the useEffect version to GitHub and submit the GitHub link through the Checkpoint site.
+  • Explain when button fetch and page-load fetch are useful.",,,,
+15,Component libraries,"• Start using the Shadcn component library.
+• Add a button, card, or form component.
+• Learn how component libraries speed up UI work but still need good design choices.",• Shadcn UI,"• Activity:
+  • add and customise at least one Shadcn component in the app.
+
+• Takeaway:
+  • push the Shadcn activity to GitHub and submit the GitHub link through the Checkpoint site.
+  • Replace one plain UI section with Shadcn components.",,,,
+16,Component libraries,"• Continue using Shadcn.
+• Build a more complete interface with components such as cards, dialogs, forms, tables, navigation, or alerts.
+• Focus on consistency and accessibility.",• Shadcn UI,"• Activity:
+  • build a mini interface that uses several Shadcn components consistently.
+
+• Takeaway:
+  • push the polished UI to GitHub and submit the GitHub link through the Checkpoint site.
+  • Prepare a short demo explaining your component choices.",,,,
+17,Supabase as a CMS,"• Learn how Supabase can work as a content management system.
+• Discuss projects, tables, records, and how a front end can read managed content.",• Supabase,"• Activity:
+  • draft a content model and, if available, display Supabase data in the app.
+
+• Takeaway:
+  • push the Supabase planning or connection activity to GitHub and submit the GitHub link through the Checkpoint site.
+  • Include fields and sample records.",,,,
+18,Supabase as a CMS,"• Continue using Supabase as a content management system.
+• Improve how data is displayed.
+• Plan or build simple create and update workflows.
+• Discuss permissions, keys, and safe setup.",• Supabase,"• Activity:
+  • show CMS-style content in the app and outline or mock a create/update workflow.
+
+• Takeaway:
+  • push the updated Supabase work to GitHub and submit the GitHub link through the Checkpoint site.
+  • Add notes on how the front end uses the Supabase data.",,,,
+19,Deployment,"• Prepare a project for deployment.
+• Check build errors, set environment variables if needed, deploy to Vercel, Netlify, Cloudflare, or an FTP server, and test the live site.","• Vercel
+• Netlify
+• Cloudflare
+• FTP server","• Activity:
+  • deploy the project or document the deployment attempt and any errors.
+
+• Takeaway:
+  • push the deployed project files to GitHub and submit the GitHub link through the Checkpoint site.
+  • Include the live link and a short release note.",,,,
+20,Practice assessment,"• Complete a second practice task focused on building features, using data, polishing the UI, and preparing for deployment.",,"• Activity:
+  • submit the practice assessment attempt with a completed checklist.
+
+• Takeaway:
+  • push the practice task to GitHub and submit the GitHub link through the Checkpoint site.
+  • Revise based on feedback and prepare final evidence.",,,,
+21,Assessment,"• Complete the formal assessment task using interface development, API/data, components, CMS, and deployment skills.",,"• Assessment:
+  • complete and submit the required assessment evidence.
+
+• Takeaway:
+  • push final evidence to GitHub where required and submit the GitHub link through the Checkpoint site.
+  • Include deployment links, documentation, or reflection notes if required.",,,,
+22,Project,"• Plan the project scope.
+• Define user needs, pages, components, data, and required features.
+• Create a simple backlog or checklist.","• Wireframes
+• Project backlog","• Activity:
+  • complete a project proposal, feature list, and first wireframe or backlog.
+
+• Takeaway:
+  • push the project plan to GitHub and submit the GitHub link through the Checkpoint site.
+  • Prepare assets, content, data sources, or API needs for next week.",,,,
+23,Project,"• Build and polish the project.
+• Complete core features, test user flows, improve UI consistency, fix issues, and prepare the final demo.","• Deployment platform
+• Testing checklist","• Activity:
+  • present a project demo or progress review showing the core features working.
+
+• Takeaway:
+  • push the final project to GitHub and submit the GitHub link through the Checkpoint site.
+  • Include deployment link, screenshots, and reflection.",,,,
+,,,,"• Submission workflow:
+  • students push each activity to GitHub, then submit the GitHub link through the Checkpoint site so trainers can review completion.",,,,
+Teacher,Lewis,,,,,,,

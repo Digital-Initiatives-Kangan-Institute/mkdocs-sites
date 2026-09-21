@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../command-line-basics/" rel="prev"/>
+<link href="../system-optimisation/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Managing Software and Hardware - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#managing-software-and-hardware">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Managing Software and Hardware
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-application-software">
+<span class="md-ellipsis">
+      
+        Installing Application Software
+      
+    </span>
+</a>
+<nav aria-label="Installing Application Software" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#windows">
+<span class="md-ellipsis">
+      
+        Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macos">
+<span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linux">
+<span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-and-managing-hardware-drivers">
+<span class="md-ellipsis">
+      
+        Installing and Managing Hardware Drivers
+      
+    </span>
+</a>
+<nav aria-label="Installing and Managing Hardware Drivers" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-drivers-work">
+<span class="md-ellipsis">
+      
+        How Drivers Work
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#finding-and-installing-drivers">
+<span class="md-ellipsis">
+      
+        Finding and Installing Drivers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#checking-driver-status">
+<span class="md-ellipsis">
+      
+        Checking Driver Status
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#connecting-and-configuring-peripherals">
+<span class="md-ellipsis">
+      
+        Connecting and Configuring Peripherals
+      
+    </span>
+</a>
+<nav aria-label="Connecting and Configuring Peripherals" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-connection-types">
+<span class="md-ellipsis">
+      
+        Common Connection Types
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-a-new-monitor">
+<span class="md-ellipsis">
+      
+        Configuring a New Monitor
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-a-printer">
+<span class="md-ellipsis">
+      
+        Configuring a Printer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-audio-devices">
+<span class="md-ellipsis">
+      
+        Configuring Audio Devices
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#software-configuration">
+<span class="md-ellipsis">
+      
+        Software Configuration
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organisational-procedures">
+<span class="md-ellipsis">
+      
+        Organisational Procedures
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="managing-software-and-hardware"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.</span> Managing Software and Hardware</h1>
+<p>Once an operating system is installed, the next tasks are installing application software and configuring hardware peripherals. This page covers how applications and drivers are installed across different operating systems, and how to connect and configure hardware components.</p>
+<hr/>
+<h2 id="installing-application-software"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.1</span> Installing Application Software</h2>
+<p>Applications are the programs users run to perform tasks: web browsers, office suites, communication tools, and specialist software. The installation method varies by operating system.</p>
+<h3 id="windows"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.1.1</span> Windows</h3>
+<p>Windows offers several ways to install software:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft Store</strong></td>
+<td>Built-in app store with curated, sandboxed applications</td>
+</tr>
+<tr>
+<td><strong>Executable installer (.exe, .msi)</strong></td>
+<td>Download from the vendor's website and run the installer</td>
+</tr>
+<tr>
+<td><strong>Portable applications</strong></td>
+<td>Self-contained programs that require no installation — just run the .exe</td>
+</tr>
+<tr>
+<td><strong>Package managers (winget)</strong></td>
+<td>CLI tool to search, install, and update software from a central repository</td>
+</tr>
+</tbody>
+</table>
+<p><strong>winget example:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>winget install Mozilla.Firefox
+</code></pre></div></td></tr></table></div></p>
+<p>The installer typically prompts for:
+- Licence agreement acceptance
+- Installation location (default is usually <code>C:\Program Files\</code>)
+- Optional components or features
+- Start menu shortcuts and desktop icons</p>
+<h3 id="macos"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.1.2</span> macOS</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>App Store</strong></td>
+<td>Built-in curated marketplace for macOS applications</td>
+</tr>
+<tr>
+<td><strong>DMG files</strong></td>
+<td>Downloaded disk images — open, then drag the app to the Applications folder</td>
+</tr>
+<tr>
+<td><strong>PKG installers</strong></td>
+<td>Guided installation wizard, similar to Windows .msi files</td>
+</tr>
+<tr>
+<td><strong>Homebrew</strong></td>
+<td>Popular third-party CLI package manager (<code>brew install firefox</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="linux"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.1.3</span> Linux</h3>
+<p>Linux distributions use package managers that download and install software from central repositories. This ensures compatibility and automatic updates. The command needs <code>sudo</code> because installing software affects the whole system — you will be asked for your password.</p>
+<table>
+<thead>
+<tr>
+<th>Distro</th>
+<th>Install Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu / Debian</td>
+<td><code>sudo apt install firefox</code></td>
+</tr>
+<tr>
+<td>Fedora</td>
+<td><code>sudo dnf install firefox</code></td>
+</tr>
+<tr>
+<td>Arch</td>
+<td><code>sudo pacman -S firefox</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="installing-and-managing-hardware-drivers"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.2</span> Installing and Managing Hardware Drivers</h2>
+<p>A device driver is software that tells the operating system how to communicate with a specific piece of hardware. Without the correct driver, hardware either will not work or will work with limited functionality.</p>
+<h3 id="how-drivers-work"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.2.1</span> How Drivers Work</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Application  →  OS  →  Driver  →  Hardware Device
+</code></pre></div></td></tr></table></div>
+<p>When you plug in a printer, the OS needs a driver that understands the printer's communication protocol, print language, and capabilities. The application does not need to know any of this — it just sends a generic "print" command to the OS.</p>
+<h3 id="finding-and-installing-drivers"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.2.2</span> Finding and Installing Drivers</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Windows Update</strong></td>
+<td>Automatically installs drivers for most common hardware</td>
+</tr>
+<tr>
+<td><strong>Manufacturer's website</strong></td>
+<td>Download the latest driver directly (e.g. NVIDIA, HP, Logitech)</td>
+</tr>
+<tr>
+<td><strong>Device Manager</strong></td>
+<td>Right-click a device → Update driver → Search automatically</td>
+</tr>
+<tr>
+<td><strong>Included with the device</strong></td>
+<td>Some hardware ships with a driver CD or USB drive</td>
+</tr>
+<tr>
+<td><strong>Linux kernel</strong></td>
+<td>Most drivers are built into the kernel and work automatically</td>
+</tr>
+<tr>
+<td><strong>Additional Drivers (Ubuntu)</strong></td>
+<td>GUI tool for installing proprietary drivers (NVIDIA, Wi-Fi)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="checking-driver-status"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.2.3</span> Checking Driver Status</h3>
+<p><strong>Windows — Device Manager:</strong>
+- Devices with a yellow exclamation mark have driver issues
+- Right-click any device → Properties → Driver tab for version and date
+- Use <strong>Action</strong> → <strong>Scan for hardware changes</strong> after connecting a new device</p>
+<p><strong>Linux — Command line:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>lspci<span class="w">      </span><span class="c1"># Lists internal hardware and their drivers</span>
+lsusb<span class="w">      </span><span class="c1"># Lists USB devices connected</span>
+</code></pre></div></td></tr></table></div></p>
+<hr/>
+<h2 id="connecting-and-configuring-peripherals"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.3</span> Connecting and Configuring Peripherals</h2>
+<h3 id="common-connection-types"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.3.1</span> Common Connection Types</h3>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>Typical Devices</th>
+<th>Setup Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>USB</strong></td>
+<td>Keyboard, mouse, printer, flash drive, webcam</td>
+<td>Usually plug-and-play</td>
+</tr>
+<tr>
+<td><strong>Bluetooth</strong></td>
+<td>Wireless keyboard, mouse, headphones, speakers</td>
+<td>Pairing required</td>
+</tr>
+<tr>
+<td><strong>HDMI / DisplayPort</strong></td>
+<td>Monitor, projector</td>
+<td>May need to adjust resolution</td>
+</tr>
+<tr>
+<td><strong>Wi-Fi</strong></td>
+<td>Network access</td>
+<td>Select network, enter password</td>
+</tr>
+<tr>
+<td><strong>Ethernet</strong></td>
+<td>Wired network</td>
+<td>Usually plug-and-play; configure IP if not using DHCP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuring-a-new-monitor"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.3.2</span> Configuring a New Monitor</h3>
+<ol>
+<li>Connect the monitor to the computer via HDMI, DisplayPort, or USB-C</li>
+<li>The OS should detect it automatically</li>
+<li>Open Display Settings to:</li>
+<li>Set the correct resolution</li>
+<li>Choose duplicate or extend desktop</li>
+<li>Arrange monitor positions if using multiple displays</li>
+<li>Adjust scaling if text and icons are too small or large</li>
+</ol>
+<h3 id="configuring-a-printer"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.3.3</span> Configuring a Printer</h3>
+<ol>
+<li>Connect via USB or add as a network printer</li>
+<li>Windows: <strong>Settings → Bluetooth &amp; devices → Printers &amp; scanners → Add device</strong></li>
+<li>macOS: <strong>System Settings → Printers &amp; Scanners → Add Printer</strong></li>
+<li>Linux: <strong>Settings → Printers → Add Printer</strong></li>
+<li>Install drivers if prompted; set as default printer if desired</li>
+</ol>
+<h3 id="configuring-audio-devices"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.3.4</span> Configuring Audio Devices</h3>
+<ul>
+<li><strong>System tray / menu bar</strong> — Click the speaker icon to switch between output devices</li>
+<li><strong>Sound Settings</strong> — Set input (microphone) and output (speakers/headphones) devices</li>
+<li><strong>Test</strong> — Play a test sound to confirm the correct device is selected</li>
+</ul>
+<hr/>
+<h2 id="software-configuration"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.4</span> Software Configuration</h2>
+<p>After installing software, it often needs to be configured. Common configuration tasks include:</p>
+<ul>
+<li><strong>Set as default</strong> — Make a browser, mail client, or media player the default for file types</li>
+<li><strong>Startup behaviour</strong> — Control whether the app launches when you log in</li>
+<li><strong>File associations</strong> — Specify which application opens which file types</li>
+<li><strong>User preferences</strong> — Theme, language, autosave, privacy settings</li>
+<li><strong>Licence activation</strong> — Enter a product key or sign in with an account</li>
+</ul>
+<hr/>
+<h2 id="organisational-procedures"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.5</span> Organisational Procedures</h2>
+<p>In a workplace environment, software and hardware installation must follow organisational procedures. These typically include:</p>
+<ul>
+<li>Only installing software from an approved list</li>
+<li>Obtaining authorisation before installing new hardware</li>
+<li>Documenting what was installed, when, and on which computer</li>
+<li>Using standard configurations so all workstations are consistent</li>
+<li>Testing that the installed software or hardware works correctly before handing over</li>
+</ul>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">9.6</span> Summary</h2>
+<ul>
+<li>Applications can be installed via app stores, downloaded installers, or package managers</li>
+<li>Drivers enable the OS to communicate with hardware — check Device Manager (Windows) or <code>lspci</code> (Linux)</li>
+<li>Most USB devices are plug-and-play; Bluetooth requires pairing</li>
+<li>Configure monitors, printers, and audio through system settings</li>
+<li>Follow organisational procedures when installing anything in a workplace</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Command Line Basics" class="md-footer__link md-footer__link--prev" href="../command-line-basics/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Command Line Basics
+              </div>
+</div>
+</a>
+<a aria-label="Next: System Optimisation and Maintenance" class="md-footer__link md-footer__link--next" href="../system-optimisation/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                System Optimisation and Maintenance
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

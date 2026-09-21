@@ -1,0 +1,856 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../system-optimisation/" rel="prev"/>
+<link href="../implementing-evaluating-tech/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Identifying Industry Technologies - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#identifying-industry-technologies">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Identifying Industry Technologies
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ict-industry-overview">
+<span class="md-ellipsis">
+      
+        ICT Industry Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-technology-trends">
+<span class="md-ellipsis">
+      
+        Current Technology Trends
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#major-industry-standards">
+<span class="md-ellipsis">
+      
+        Major Industry Standards
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vendor-product-directions">
+<span class="md-ellipsis">
+      
+        Vendor Product Directions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#researching-technologies">
+<span class="md-ellipsis">
+      
+        Researching Technologies
+      
+    </span>
+</a>
+<nav aria-label="Researching Technologies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-define-the-requirement">
+<span class="md-ellipsis">
+      
+        Step 1: Define the Requirement
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-identify-candidate-technologies">
+<span class="md-ellipsis">
+      
+        Step 2: Identify Candidate Technologies
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-compare-against-criteria">
+<span class="md-ellipsis">
+      
+        Step 3: Compare Against Criteria
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-test-before-committing">
+<span class="md-ellipsis">
+      
+        Step 4: Test Before Committing
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#classifying-technologies">
+<span class="md-ellipsis">
+      
+        Classifying Technologies
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organisational-requirements">
+<span class="md-ellipsis">
+      
+        Organisational Requirements
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="identifying-industry-technologies"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.</span> Identifying Industry Technologies</h1>
+<p>The ICT industry evolves rapidly. New hardware, software, and standards emerge constantly. The ability to identify, research, and classify technologies is a valuable skill that helps organisations stay competitive, secure, and efficient.</p>
+<hr/>
+<h2 id="ict-industry-overview"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.1</span> ICT Industry Overview</h2>
+<p>The Information and Communications Technology industry encompasses:</p>
+<ul>
+<li><strong>Hardware</strong> — Computers, servers, networking equipment, mobile devices, IoT</li>
+<li><strong>Software</strong> — Operating systems, applications, cloud services, development tools</li>
+<li><strong>Services</strong> — IT support, consulting, managed services, cybersecurity, training</li>
+<li><strong>Infrastructure</strong> — Data centres, fibre networks, wireless towers, satellite systems</li>
+</ul>
+<p>Technology choices made by an organisation directly affect its productivity, security, costs, and ability to compete. Making informed decisions requires systematic research and evaluation.</p>
+<hr/>
+<h2 id="current-technology-trends"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.2</span> Current Technology Trends</h2>
+<p>Staying current with industry trends helps organisations identify opportunities and risks. Here are significant areas of development:</p>
+<table>
+<thead>
+<tr>
+<th>Trend</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud Computing</strong></td>
+<td>Running applications and storing data on remote servers (AWS, Azure, Google Cloud) instead of on-premises hardware</td>
+</tr>
+<tr>
+<td><strong>Artificial Intelligence</strong></td>
+<td>Machine learning, generative AI, and automation transforming how work gets done</td>
+</tr>
+<tr>
+<td><strong>Cybersecurity</strong></td>
+<td>Growing threats driving demand for zero-trust architectures, multi-factor authentication, and endpoint protection</td>
+</tr>
+<tr>
+<td><strong>Internet of Things (IoT)</strong></td>
+<td>Networked sensors and devices in manufacturing, logistics, healthcare, and smart buildings</td>
+</tr>
+<tr>
+<td><strong>Edge Computing</strong></td>
+<td>Processing data near where it is generated rather than sending it to a central data centre</td>
+</tr>
+<tr>
+<td><strong>5G and Connectivity</strong></td>
+<td>Faster wireless networks enabling new mobile and remote work capabilities</td>
+</tr>
+<tr>
+<td><strong>Sustainability</strong></td>
+<td>Energy-efficient hardware, e-waste reduction, and green data centres</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="major-industry-standards"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.3</span> Major Industry Standards</h2>
+<p>Standards ensure that products from different vendors can work together. Key ICT standards include:</p>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Domain</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IEEE 802.3</strong></td>
+<td>Ethernet</td>
+<td>Defines wired networking</td>
+</tr>
+<tr>
+<td><strong>IEEE 802.11</strong></td>
+<td>Wi-Fi</td>
+<td>Defines wireless networking (Wi-Fi 6, Wi-Fi 7)</td>
+</tr>
+<tr>
+<td><strong>USB (Universal Serial Bus)</strong></td>
+<td>Connectivity</td>
+<td>Standardised connection for peripherals</td>
+</tr>
+<tr>
+<td><strong>HDMI / DisplayPort</strong></td>
+<td>Video</td>
+<td>Standardised display connections</td>
+</tr>
+<tr>
+<td><strong>HTML / CSS / JavaScript</strong></td>
+<td>Web</td>
+<td>Core web technologies maintained by W3C and WHATWG</td>
+</tr>
+<tr>
+<td><strong>SQL</strong></td>
+<td>Databases</td>
+<td>Standard language for querying relational databases</td>
+</tr>
+<tr>
+<td><strong>TCP/IP</strong></td>
+<td>Networking</td>
+<td>The fundamental protocol suite of the internet</td>
+</tr>
+<tr>
+<td><strong>ISO 27001</strong></td>
+<td>Security</td>
+<td>International standard for information security management</td>
+</tr>
+</tbody>
+</table>
+<p>Organisations prefer standards-based solutions because they avoid vendor lock-in, ensure interoperability, and have broad industry support.</p>
+<hr/>
+<h2 id="vendor-product-directions"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.4</span> Vendor Product Directions</h2>
+<p>Major technology vendors publish roadmaps showing where their products are heading. Understanding vendor direction helps organisations plan upgrades and avoid investing in technology that may be discontinued.</p>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Key Product Areas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Microsoft</strong></td>
+<td>Windows, Microsoft 365, Azure cloud, AI (Copilot), GitHub</td>
+</tr>
+<tr>
+<td><strong>Apple</strong></td>
+<td>macOS, iOS, Apple Silicon, iCloud, services ecosystem</td>
+</tr>
+<tr>
+<td><strong>Google</strong></td>
+<td>Android, Chrome OS, Google Cloud, Workspace, AI (Gemini)</td>
+</tr>
+<tr>
+<td><strong>Amazon (AWS)</strong></td>
+<td>Cloud infrastructure, serverless computing, AI/ML services</td>
+</tr>
+<tr>
+<td><strong>Dell / HP / Lenovo</strong></td>
+<td>Enterprise and consumer hardware, support services</td>
+</tr>
+<tr>
+<td><strong>Cisco</strong></td>
+<td>Networking hardware, security, collaboration tools</td>
+</tr>
+<tr>
+<td><strong>CrowdStrike / Palo Alto</strong></td>
+<td>Cybersecurity platforms</td>
+</tr>
+</tbody>
+</table>
+<p>Sources for vendor direction information:
+- Vendor official websites and blogs
+- Industry conferences and keynote presentations
+- Technology news outlets (Ars Technica, The Verge, ZDNet)
+- IT analyst reports (Gartner, IDC, Forrester)</p>
+<hr/>
+<h2 id="researching-technologies"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.5</span> Researching Technologies</h2>
+<p>When an organisation needs to evaluate a new technology, a structured research approach produces better results than ad-hoc Googling.</p>
+<h3 id="step-1-define-the-requirement"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.5.1</span> Step 1: Define the Requirement</h3>
+<p>What problem needs to be solved? Be specific:
+- "We need a video conferencing platform for 50 staff" (not just "we need better communication")
+- "We need a backup solution that meets our 4-hour recovery target" (not just "better backup")</p>
+<h3 id="step-2-identify-candidate-technologies"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.5.2</span> Step 2: Identify Candidate Technologies</h3>
+<ul>
+<li>Search industry publications and technology comparison sites</li>
+<li>Ask peers in similar organisations what they use</li>
+<li>Check vendor websites for products in the category</li>
+<li>Use review platforms (G2, Capterra, TrustRadius) for user feedback</li>
+</ul>
+<h3 id="step-3-compare-against-criteria"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.5.3</span> Step 3: Compare Against Criteria</h3>
+<p>Create a comparison matrix. Score each option against your requirements.</p>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Technology A</th>
+<th>Technology B</th>
+<th>Technology C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meets functional requirements</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>Within budget</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Compatible with existing systems</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Vendor support available</td>
+<td>24/7</td>
+<td>Business hours</td>
+<td>Community only</td>
+</tr>
+<tr>
+<td>Training resources available</td>
+<td>Extensive</td>
+<td>Limited</td>
+<td>Good</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-4-test-before-committing"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.5.4</span> Step 4: Test Before Committing</h3>
+<ul>
+<li>Trial versions, free tiers, or proof-of-concept deployments</li>
+<li>Involve the people who will actually use the technology</li>
+<li>Test with realistic workloads, not just demos</li>
+</ul>
+<hr/>
+<h2 id="classifying-technologies"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.6</span> Classifying Technologies</h2>
+<p>Organisations classify technologies to help with planning, budgeting, and support:</p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strategic</strong></td>
+<td>Critical to the organisation's future success</td>
+<td>Customer relationship management system</td>
+</tr>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Required for day-to-day operations</td>
+<td>Email, file sharing, payroll</td>
+</tr>
+<tr>
+<td><strong>Emerging</strong></td>
+<td>New, not yet widely adopted; may become strategic</td>
+<td>Blockchain, quantum computing</td>
+</tr>
+<tr>
+<td><strong>Legacy</strong></td>
+<td>Older technology still in use, possibly unsupported</td>
+<td>Windows 7, COBOL applications</td>
+</tr>
+<tr>
+<td><strong>Commodity</strong></td>
+<td>Widely available, interchangeable</td>
+<td>Keyboards, monitors, basic printers</td>
+</tr>
+</tbody>
+</table>
+<p>Classifications guide decisions: strategic technologies justify investment; legacy technologies need a migration plan; commodity items should be chosen based on price and reliability.</p>
+<hr/>
+<h2 id="organisational-requirements"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.7</span> Organisational Requirements</h2>
+<p>Organisational requirements shape technology decisions. Common factors include:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Impact on Technology Choice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Budget</strong></td>
+<td>Sets the upper limit; open source may be preferred over paid licences</td>
+</tr>
+<tr>
+<td><strong>Security policy</strong></td>
+<td>May require specific encryption, authentication, or data residency</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Industry regulations may mandate certain technologies or restrict others</td>
+</tr>
+<tr>
+<td><strong>Existing infrastructure</strong></td>
+<td>New technology must integrate with what is already in place</td>
+</tr>
+<tr>
+<td><strong>Staff skills</strong></td>
+<td>The organisation must be able to support and use the technology</td>
+</tr>
+<tr>
+<td><strong>Growth plans</strong></td>
+<td>Technology should scale as the organisation grows</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">11.8</span> Summary</h2>
+<ul>
+<li>The ICT industry spans hardware, software, services, and infrastructure</li>
+<li>Current trends include cloud computing, AI, cybersecurity, IoT, and sustainability</li>
+<li>Industry standards (IEEE, USB, TCP/IP) ensure products from different vendors work together</li>
+<li>Track vendor roadmaps to avoid investing in technology being phased out</li>
+<li>Use a structured research process: define requirements, identify candidates, compare, test</li>
+<li>Classify technologies as strategic, operational, emerging, legacy, or commodity</li>
+<li>Organisational requirements — budget, security, compliance, staff skills — guide all technology decisions</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: System Optimisation and Maintenance" class="md-footer__link md-footer__link--prev" href="../system-optimisation/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                System Optimisation and Maintenance
+              </div>
+</div>
+</a>
+<a aria-label="Next: Implementing and Evaluating Technology" class="md-footer__link md-footer__link--next" href="../implementing-evaluating-tech/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Implementing and Evaluating Technology
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

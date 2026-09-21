@@ -1,0 +1,655 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../hardware-components/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Introduction to Operating Systems - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#introduction-to-operating-systems">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Introduction to Operating Systems
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-does-an-operating-system-do">
+<span class="md-ellipsis">
+      
+        What Does an Operating System Do?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-operating-systems">
+<span class="md-ellipsis">
+      
+        Types of Operating Systems
+      
+    </span>
+</a>
+<nav aria-label="Types of Operating Systems" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#microsoft-windows">
+<span class="md-ellipsis">
+      
+        Microsoft Windows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macos">
+<span class="md-ellipsis">
+      
+        macOS
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linux">
+<span class="md-ellipsis">
+      
+        Linux
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comparing-operating-systems">
+<span class="md-ellipsis">
+      
+        Comparing Operating Systems
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mobile-operating-systems">
+<span class="md-ellipsis">
+      
+        Mobile Operating Systems
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#choosing-an-operating-system">
+<span class="md-ellipsis">
+      
+        Choosing an Operating System
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="introduction-to-operating-systems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> Introduction to Operating Systems</h1>
+<p>An operating system (OS) is the most important piece of software on any computer. It manages all of the computer's hardware and software resources, and provides a platform for applications to run on. Without an operating system, a computer cannot function.</p>
+<hr/>
+<h2 id="what-does-an-operating-system-do"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> What Does an Operating System Do?</h2>
+<p>Every operating system performs several core functions:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resource Management</strong></td>
+<td>Allocates CPU time, memory, and storage to running programs</td>
+</tr>
+<tr>
+<td><strong>File Management</strong></td>
+<td>Organises, stores, and retrieves files on storage devices</td>
+</tr>
+<tr>
+<td><strong>User Interface</strong></td>
+<td>Provides a way for users to interact with the computer (GUI or CLI)</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Controls user access, permissions, and protects against threats</td>
+</tr>
+<tr>
+<td><strong>Process Management</strong></td>
+<td>Handles multiple running programs simultaneously</td>
+</tr>
+<tr>
+<td><strong>Device Management</strong></td>
+<td>Communicates with hardware through device drivers</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="types-of-operating-systems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Types of Operating Systems</h2>
+<p>There are many operating systems in use today, but three dominate the personal computer market:</p>
+<h3 id="microsoft-windows"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.1</span> Microsoft Windows</h3>
+<p>Windows is the most widely used desktop operating system in business and education environments. It is known for broad hardware and software compatibility, and is pre-installed on most new PCs from major manufacturers.</p>
+<p><strong>Key features:</strong>
+- Familiar Start menu and taskbar interface
+- Extensive software library (Microsoft Office, Adobe Creative Suite, games)
+- Active Directory integration for enterprise environments
+- Regular updates through Windows Update</p>
+<h3 id="macos"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.2</span> macOS</h3>
+<p>macOS is Apple's operating system, designed exclusively for Mac computers. It is known for its clean design, tight integration with other Apple devices, and strong multimedia capabilities.</p>
+<p><strong>Key features:</strong>
+- Unified design language and gesture-based navigation
+- Built-in productivity apps (Pages, Numbers, Keynote)
+- Seamless integration with iPhone, iPad, and Apple Watch
+- Unix-based foundation with a powerful Terminal</p>
+<h3 id="linux"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2.3</span> Linux</h3>
+<p>Linux is a free and open-source operating system available in many different distributions (distros) such as Ubuntu, Fedora, and Debian. It powers everything from web servers and supercomputers to Android phones.</p>
+<p><strong>Key features:</strong>
+- Free to download, use, and modify
+- Highly customisable through different desktop environments
+- Excellent for programming and server administration
+- Strong security model with user permissions</p>
+<hr/>
+<h2 id="comparing-operating-systems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Comparing Operating Systems</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Windows</th>
+<th>macOS</th>
+<th>Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost</td>
+<td>Paid license (~$200 AUD)</td>
+<td>Free with Apple hardware</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Hardware</td>
+<td>Most PCs</td>
+<td>Apple only</td>
+<td>Most PCs</td>
+</tr>
+<tr>
+<td>Software library</td>
+<td>Largest</td>
+<td>Strong creative tools</td>
+<td>Growing; mostly open-source</td>
+</tr>
+<tr>
+<td>Customisation</td>
+<td>Moderate</td>
+<td>Limited</td>
+<td>Extensive</td>
+</tr>
+<tr>
+<td>Gaming</td>
+<td>Best support</td>
+<td>Growing</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Frequent target</td>
+<td>Strong reputation</td>
+<td>Very strong</td>
+</tr>
+<tr>
+<td>Command line</td>
+<td>PowerShell / CMD</td>
+<td>Terminal (zsh/bash)</td>
+<td>Terminal (bash)</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="mobile-operating-systems"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Mobile Operating Systems</h2>
+<p>Mobile devices use their own operating systems:</p>
+<ul>
+<li><strong>Android</strong> — Google's Linux-based OS, used by Samsung, Google Pixel, Oppo, and many other manufacturers</li>
+<li><strong>iOS</strong> — Apple's mobile OS, used exclusively on iPhones</li>
+<li><strong>iPadOS</strong> — A variant of iOS designed specifically for iPad's larger screen</li>
+</ul>
+<hr/>
+<h2 id="choosing-an-operating-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.5</span> Choosing an Operating System</h2>
+<p>The right operating system depends on what you need to do:</p>
+<ul>
+<li><strong>General office work and business?</strong> Windows is the most common choice in Australian workplaces.</li>
+<li><strong>Design, video editing, or music production?</strong> macOS is widely used in creative industries.</li>
+<li><strong>Programming, servers, or learning how computers work?</strong> Linux gives you full control and is valued in IT careers.</li>
+<li><strong>Specific software requirements?</strong> Choose the OS that runs the software you need.</li>
+</ul>
+<p>Many IT professionals work with multiple operating systems — running Windows on their desktop, using Linux servers, and testing on macOS. Understanding the strengths and differences of each is a fundamental IT skill.</p>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.6</span> Summary</h2>
+<ul>
+<li>An operating system manages hardware, software, files, and security</li>
+<li>The three major desktop OSes are Windows, macOS, and Linux</li>
+<li>Each OS has different strengths, costs, and software ecosystems</li>
+<li>Choosing an OS depends on the task, the available hardware, and organisational requirements</li>
+<li>IT professionals should be familiar with multiple operating systems</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Next: Computer Hardware Components" class="md-footer__link md-footer__link--next" href="../hardware-components/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Computer Hardware Components
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

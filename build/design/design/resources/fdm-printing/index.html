@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../3d-printing-intro/" rel="prev"/>
+<link href="../design-thinking-double-diamond/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Fused Deposition Modeling (FDM) Printing - Design Thinking</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="light-blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#fused-deposition-modeling-fdm-printing">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Design Thinking" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Design Thinking">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Design Thinking
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Fused Deposition Modeling (FDM) Printing
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Design Thinking" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Design Thinking">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Design Thinking
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Design Thinking
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Design Thinking
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../3d-printing-intro/">
+<span class="md-ellipsis">
+    
+  
+    3D Printing Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Fused Deposition Modeling (FDM) Printing
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Fused Deposition Modeling (FDM) Printing
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-fdm-printing">
+<span class="md-ellipsis">
+      
+        What is FDM Printing?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-parts-of-an-fdm-3d-printer">
+<span class="md-ellipsis">
+      
+        Main Parts of an FDM 3D Printer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-filament">
+<span class="md-ellipsis">
+      
+        What is Filament?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-fdm-printing-process">
+<span class="md-ellipsis">
+      
+        The FDM Printing Process
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#advantages-of-fdm-printing">
+<span class="md-ellipsis">
+      
+        Advantages of FDM Printing
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#challenges-and-tips">
+<span class="md-ellipsis">
+      
+        Challenges and Tips
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#class-activity">
+<span class="md-ellipsis">
+      
+        Class Activity
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-thinking-double-diamond/">
+<span class="md-ellipsis">
+    
+  
+    Design Thinking - Double Diamond
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../double-diamond-develop-deliver/">
+<span class="md-ellipsis">
+    
+  
+    Double Diamond - Develop and Deliver
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../miro/">
+<span class="md-ellipsis">
+    
+  
+    Miro - Visual Collaboration Platform
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tinkercad/">
+<span class="md-ellipsis">
+    
+  
+    TinkerCAD - 3D Modeling Tool
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-1-basic-tinkercad/">
+<span class="md-ellipsis">
+    
+  
+    Task 1 - Basic 3D Design
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-2-basic-modeling/">
+<span class="md-ellipsis">
+    
+  
+    Task 2 - Basic 3D Modeling
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-3-develop-deliver/">
+<span class="md-ellipsis">
+    
+  
+    Task 3 - Develop and Deliver
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-4-accessibility-aid/">
+<span class="md-ellipsis">
+    
+  
+    Task 4 - Accessibility Aid
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Class Activities
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Class Activities
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/class/class-activity-1-double-diamond-discover/">
+<span class="md-ellipsis">
+    
+  
+    Activity 1 - Double Diamond - Discover
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/class/class-activity-2-double-diamond-define/">
+<span class="md-ellipsis">
+    
+  
+    Activity 2 - Double Diamond - Define
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../3d-printing-intro/">
+<span class="md-ellipsis">
+    Design Thinking
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../3d-printing-intro/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="fused-deposition-modeling-fdm-printing"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Fused Deposition Modeling (FDM) Printing</h1>
+<h2 id="what-is-fdm-printing"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> What is FDM Printing?</h2>
+<p>FDM stands for <strong>Fused Deposition Modeling</strong>, and it’s the most common and accessible form of 3D printing used in schools, makerspaces, and homes.
+It works by <strong>melting a plastic filament</strong> and <strong>depositing it layer by layer</strong> to build up a 3D object from the bottom to the top.</p>
+<p>Imagine squeezing toothpaste onto a surface in a specific pattern — each new layer stacks on the previous one until the shape is complete. That’s essentially how FDM printing works, but with melted plastic instead of toothpaste!</p>
+<h2 id="main-parts-of-an-fdm-3d-printer"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> Main Parts of an FDM 3D Printer</h2>
+<p>Most FDM printers have a similar setup. Here are the key components: </p>
+<ul>
+<li><strong>Filament Spool</strong> – The roll of plastic filament that feeds into the printer.</li>
+<li><strong>Extruder</strong> – Pulls in the filament and pushes it through a heated nozzle.</li>
+<li><strong>Hotend and Nozzle</strong> – The filament is melted here and precisely deposited layer by layer.</li>
+<li><strong>Print Bed</strong> – The flat surface where the model is built. Some are heated to help prints stick better.</li>
+<li><strong>Stepper Motors and Belts</strong> – Move the print head and bed along the X, Y, and Z axes for accurate positioning.</li>
+<li><strong>Cooling Fans</strong> – Help solidify the plastic quickly so each layer can support the next.</li>
+</ul>
+<p><img alt="FDM Printer Parts Legend" src="../../assets/fdm-printer-parts.png" width="600"/></p>
+<h2 id="what-is-filament"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> What is Filament?</h2>
+<p><strong>Filament</strong> is the <strong>plastic material</strong> that a <strong>3D printer melts and uses to build objects</strong>.</p>
+<p>In <strong>FDM (Fused Deposition Modeling)</strong> 3D printing, the filament comes in the form of a <strong>long, thin strand of plastic</strong> wound onto a spool — it looks a bit like thick fishing line or wire.</p>
+<p>During printing, the filament is <strong>fed into the printer’s extruder</strong>, where it’s <strong>heated until it melts</strong>, then <strong>squeezed out through a nozzle</strong> to form each layer of the model.</p>
+<p><img alt="Filament Spools" src="../../assets/filament-spools.png" width="500"/></p>
+<p><strong>Filament Sizes</strong>
+Most FDM printers use filament that’s either:</p>
+<ul>
+<li>1.75 mm in diameter (the most common), or</li>
+<li>2.85 mm (used by some brands)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>It’s important to match the filament size to your printer’s specifications.</strong></p>
+</div>
+<h2 id="the-fdm-printing-process"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.4</span> The FDM Printing Process</h2>
+<p>Here’s how a print usually happens:</p>
+<ol>
+<li>
+<p><strong>Design Your Model</strong></p>
+<ul>
+<li>You start by creating or downloading a 3D model file (usually in .STL format).</li>
+</ul>
+</li>
+<li>
+<p><strong>Slice the Model</strong></p>
+<ul>
+<li>The 3D model is processed in slicing software (like OrcaSlicer, Bambu Studio or PrusaSlicer), which converts it into layers and creates instructions (called G-code) for the printer to follow.</li>
+</ul>
+</li>
+<li>
+<p><strong>Prepare the Printer</strong></p>
+<ul>
+<li>Load the filament, level the bed (to make sure the nozzle is at the correct height), and preheat the nozzle and bed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Print the Object</strong></p>
+<ul>
+<li>The printer lays down the filament layer by layer, following the G-code path.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cool and Remove the Print</strong></p>
+<ul>
+<li>Once complete, the print bed cools down and you can carefully remove the finished model.</li>
+</ul>
+</li>
+</ol>
+<h2 id="advantages-of-fdm-printing"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.5</span> Advantages of FDM Printing</h2>
+<ul>
+<li><strong>Affordable</strong> – FDM printers and materials are relatively low-cost.</li>
+<li><strong>Easy to Learn</strong> – Great for beginners and classrooms.</li>
+<li><strong>Wide Material Choice</strong> – You can print with PLA, PETG, ABS, and many others.</li>
+<li><strong>Customizable</strong> – Easy to adjust print settings for speed, strength, and quality.</li>
+</ul>
+<h2 id="challenges-and-tips"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.6</span> Challenges and Tips</h2>
+<p>While FDM printing is user-friendly, it can take some practice to get great results. 
+Here are a few common challenges and how to handle them:
+- <strong>Poor Bed Adhesion</strong>: Make sure the print bed is level and clean. Using glue stick or painter’s tape can help PLA stick better.
+- <strong>Warping</strong>: Use a heated bed (especially for ABS) and avoid drafts in the room.
+- <strong>Stringing or Blobs</strong>: Adjust temperature or retraction settings in the slicer.
+- <strong>Layer Shifting</strong>: Check that belts are tight and the printer is on a stable surface.</p>
+<h2 id="class-activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.7</span> Class Activity</h2>
+<p>What are some FDM filament materials? What are advantages and disadvantages with them?</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 3D Printing Introduction" class="md-footer__link md-footer__link--prev" href="../3d-printing-intro/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                3D Printing Introduction
+              </div>
+</div>
+</a>
+<a aria-label="Next: Design Thinking - Double Diamond" class="md-footer__link md-footer__link--next" href="../design-thinking-double-diamond/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Design Thinking - Double Diamond
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

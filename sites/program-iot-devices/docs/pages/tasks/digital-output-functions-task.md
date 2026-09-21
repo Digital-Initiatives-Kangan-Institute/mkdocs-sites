@@ -8,7 +8,6 @@
     Build the LED circuit and write a program that blinks it using a function.
 
     **Components required:**
-
     - ESP32-S3 development board
     - 1 × LED
     - 1 × 220 Ω resistor
@@ -16,14 +15,12 @@
     - Breadboard
 
     **Requirements:**
-
     - Wire the LED to GPIO13 through the 220 Ω resistor.
     - Write a function that blinks the LED, and call it from `loop()`.
     - Give the function parameters so it can blink at different speeds.
     - Write a function that turns the LED on or off and returns its new state, and print that state to the Serial Monitor.
 
     **Check yourself:**
-
     - LED is wired to GPIO13 through the 220 Ω resistor
     - A parameterised function controls the blink speed, called from `loop()`
     - A second function returns the LED's new state and it's printed to the Serial Monitor

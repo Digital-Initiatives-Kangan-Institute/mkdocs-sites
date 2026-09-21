@@ -22,7 +22,6 @@
     4. Upload the code and confirm the LED blinks in time with the Serial Monitor output.
 
     **Check yourself:**
-
     - Program compiles with no errors
     - Serial Monitor shows the start-up message once
     - LED blinks in sync with `"LED: ON"` / `"LED: OFF"` messages
@@ -66,13 +65,11 @@
     Write a program that creates a **"heartbeat" pattern**: two quick blinks followed by a long pause.
 
     Requirements:
-
     - Use clearly named variables for every delay value, e.g.:
         ```cpp
         int shortBlink = 100;
         int longPause = 1500;
         ```
-
     - Do not hardcode delay numbers directly inside `loop()` — always reference your variables.
 
 ??? hint "Hint — Click to expand"
@@ -118,7 +115,6 @@ void loop() {
 ```
 
 **Check yourself:**
-
 - Program compiles with no errors
 - LED blinks as expected
 - Each fix has a comment explaining the original mistake
@@ -144,7 +140,6 @@ void loop() {
 ```
 
 **Check yourself:**
-
 - Program compiles with no errors
 - All variable names follow the naming rules
 - Each fix has a comment explaining the original mistake
@@ -168,7 +163,6 @@ void loop() {
 ```
 
 **Check yourself:**
-
 - Program compiles with no errors
 - Serial Monitor shows "Starting..." on upload
 - Every comment accurately describes the line below it
