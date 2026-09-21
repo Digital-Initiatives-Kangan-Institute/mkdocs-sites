@@ -1,5 +1,8 @@
 .venv
-build
+build/*
+!build/_assets
+!build/index.html
+!build/sites.js
 .DS_Store
 tmp/
 dmp/

@@ -1,57 +1,521 @@
-.md-nav__title {
+/* Shared stylesheet for all MkDocs sites (loaded via theme custom_dir).
+   Material-flat, beginner-friendly tweaks. Keep everything in this one file. */
+
+:root {
+  --shared-radius-sm: 4px;
+  --shared-radius-md: 8px;
+  --shared-radius-pill: 9999px;
+  --shared-outline: var(--md-default-fg-color--lightest);
+
+  /* Static fallbacks first for browsers without color-mix (older school devices),
+     then progressive enhancement via color-mix. */
+  --shared-surface-container: var(--md-default-fg-color--lightest);
+  --shared-surface-container-high: var(--md-default-fg-color--lightest);
+  --shared-state-hover: var(--md-default-fg-color--lightest);
+  --shared-state-active: var(--md-default-fg-color--lightest);
+  --shared-surface-container: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+  --shared-surface-container-high: color-mix(in srgb, var(--md-default-fg-color) 7%, transparent);
+  --shared-state-hover: color-mix(in srgb, var(--md-primary-fg-color) 8%, transparent);
+  --shared-state-active: color-mix(in srgb, var(--md-primary-fg-color) 14%, transparent);
+}
+
+/* Hide the redundant sidebar title on desktop only — on mobile these labels
+   are the Back buttons for nested menus (label for=__nav_X), so keep them. */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary .md-nav__title {
     display: none;
+  }
 }
 
+/* Base readability */
 .md-main {
-    background-color: rgb(255, 255, 255);
+  background-color: var(--md-default-bg-color);
 }
 
-.md-content {
-    border-left: 1px solid rgb(228, 228, 228);
-    margin-left: 1rem;
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  overflow-wrap: break-word;
 }
 
-/* Selects the return to portal button only */
-.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 0.85rem;
-    border-radius: 5px;
-
-    color: white;
-    background-color: #7e56c2;
-    font-weight: 700;
-
-    padding: 0.5rem;
-
-    margin: 0;
-
-    transition: background-color 0.25s;
-}
-.md-sidebar__inner > .md-nav > .md-nav__list > [class="md-nav__item"] > .md-nav__link:hover {
-    background-color: #9d77df;
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
 }
 
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 2.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--shared-outline);
+}
+
+.md-typeset h3 {
+  font-weight: 700;
+  margin-top: 1.8rem;
+}
+
+/* Breadcrumb path: smaller, muted, easy to scan (colour, not opacity, so contrast holds) */
+.md-path {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* --- Return to Portal: Material filled button, palette-aware --- */
+/* First nav item only — avoids brittle exact-match [class="..."] selectors. */
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--shared-radius-pill);
+
+  color: var(--md-primary-bg-color, white);
+  background-color: var(--md-primary-fg-color);
+
+  padding: 0.65rem 1.25rem;
+  margin: 0 0 0.75rem 0;
+
+  transition: background-color 0.15s ease, background-image 0.15s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link::before {
+  content: "";
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/back.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/back.svg") center / contain no-repeat;
+  transition: transform 0.2s ease;
+}
+
+/* Overlay tint instead of filter: brightness() so text contrast never shifts. */
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12));
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:hover::before {
+  transform: translateX(-2px);
+}
+
+.md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:active {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12));
+  transform: none;
+  box-shadow: none;
+}
+
+/* Mobile drawer: render as a left-aligned nav row so it sits naturally
+   among the menu links instead of a floating centred pill. */
+@media screen and (max-width: 76.1875em) {
+  .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
+    justify-content: flex-start;
+    border-radius: var(--shared-radius-sm);
+    padding: 0.6rem 0.9rem;
+    margin: 0.25rem 0.75rem 0.5rem;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* Breathing room between the menu and the sidebar scrollbar */
+.md-sidebar--primary .md-sidebar__inner {
+  padding-right: 0.5rem;
+}
+
+/* Slightly wider menu on desktop (page content narrows to compensate) */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary {
+    width: 13.5rem;
+  }
+}
+
+/* --- Left nav: clear hierarchy for beginners (colour, not opacity, for contrast) --- */
 .md-nav__item--section > .md-nav__link {
-    font-size: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-default-fg-color--light);
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
 }
 
+/* Resource / Task groups: tonal filled rows, no shadows */
 .md-nav__item--section .md-nav__item--nested > .md-nav__link {
-    font-size: 0.85rem;
-    border-radius: 5px;
-    background-color: rgb(245, 245, 245);
-    padding: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--shared-radius-sm);
+  background-color: var(--shared-surface-container);
+  padding: 0.6rem 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.md-nav__item--section .md-nav__item--nested > .md-nav__link:hover {
+  background-color: var(--shared-surface-container-high);
+}
+
+/* Individual pages: Material state-layer hover, subtle indicator for active */
+.md-nav__link {
+  border-radius: 4px;
+  padding: 0.4rem 0.9rem 0.4rem 0.75rem;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.md-nav__link:hover {
+  background-color: var(--shared-state-hover);
+  transform: translateX(2px);
 }
 
 .md-nav__link--active {
-    font-weight: 700;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  background-color: var(--shared-state-active);
 }
 
-@media screen and (max-width: 800px) {
-    .md-content {
-        border-left: unset;
-        margin-left: unset;
-    }
+/* --- Nav icons: categories get +/-, pages a document glyph, headings a # --- */
+/* Scoped to the primary (left) nav so the right-hand TOC stays clean. */
+
+/* Categories (collapsible groups): +/- replaces the default chevron */
+.md-nav--primary .md-nav__item--nested > .md-nav__link > .md-nav__icon {
+  display: none;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link > .md-ellipsis {
+  flex: 1;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__link::before {
+  content: "";
+  flex: none;
+  width: 1.1em;
+  height: 1.1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/plus.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/plus.svg") center / contain no-repeat;
+  opacity: 0.7;
+}
+
+.md-nav--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav__link::before {
+  -webkit-mask-image: url("/_assets/icons/minus.svg");
+  mask-image: url("/_assets/icons/minus.svg");
+}
+
+/* Pages (leaf links sit one level deep; the top-level Portal button is excluded,
+   as are integrated-TOC anchors which are headings, not pages) */
+.md-nav--primary li li > a.md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.md-nav--primary li li > a.md-nav__link:not([href^="#"])::before {
+  content: "";
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
+  opacity: 0.55;
+}
+
+/* Integrated page TOC (toc.integrate): anchor links are headings */
+.md-nav--primary li li > a.md-nav__link[href^="#"]::before {
+  content: "";
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  opacity: 0.5;
+}
+
+.md-nav--primary li li > a.md-nav__link--active::before {
+  opacity: 1;
+}
+
+/* Headings (section labels) */
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-nav--primary .md-nav__item--section > .md-nav__link::before {
+  content: "";
+  flex: none;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  opacity: 0.5;
+}
+
+/* Top-level Menu header stays clean: no icon in either variant */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link::before,
+.md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link::before {
+  content: none;
+}
+
+/* Right-hand table of contents keeps the flat indicator style */
+.md-nav--secondary .md-nav__link {
+  border-radius: 4px;
+}
+
+/* --- Admonitions / details: flat tonal cards (keep theme border + type size) --- */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--shared-radius-md);
+  overflow: hidden;
+}
+
+/* Admonition titles keep theme padding + line-height so icons stay vertically centered */
+.md-typeset .admonition-title,
+.md-typeset summary {
+  line-height: 1.6;
+}
+
+/* --- Code blocks: flat with outline, no lift --- */
+.md-typeset pre {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-md);
+}
+
+.md-typeset :not(pre) > code {
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+.md-typeset pre > code {
+  border: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* Outer wrapper carries the outline when line numbers use a table; inner panes stay flat */
+.md-typeset .highlighttable {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-md);
+  overflow: hidden;
+}
+
+/* Gutter / line numbers stay unadorned: no border, shadow, or outline */
+.md-typeset .highlighttable pre,
+.md-typeset .linenos,
+.md-typeset .linenodiv,
+.md-typeset .linenodiv pre,
+.md-typeset .lineno,
+.md-typeset .highlighttable .linenos {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Gutter separator + muted numbers so code doesn't run into line numbers */
+.md-typeset .highlighttable td.linenos {
+  border-right: 1px solid var(--shared-outline);
+}
+
+.md-typeset .linenodiv pre {
+  color: var(--md-default-fg-color--lighter);
+}
+
+/* Copy button: flat, revealed when the block is hovered or focused */
+.md-clipboard {
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.highlight:hover .md-clipboard,
+.highlight:focus-within .md-clipboard,
+.md-clipboard:focus {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .md-clipboard {
+    opacity: 1;
+  }
+}
+
+/* Code annotations (content.code.annotate): match the flat theme */
+.md-typeset .md-annotation__index {
+  border-radius: 50%;
+}
+
+.md-typeset .md-tooltip {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-sm);
+  font-size: 0.75rem;
+}
+
+/* --- Tables: border on the scroll wrapper so mobile scroll + radius coexist --- */
+.md-typeset__table {
+  border: 1px solid var(--shared-outline);
+  border-radius: var(--shared-radius-md);
+  overflow-x: auto;
+  padding: 0;
+}
+
+/* Same reset inside admonitions/details, where the theme re-adds wrapper padding */
+.md-typeset .admonition .md-typeset__table,
+.md-typeset details .md-typeset__table {
+  padding: 0;
+}
+
+.md-typeset table:not([class]) {
+  border: none;
+  font-size: 0.78rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--shared-state-active);
+  font-weight: 700;
+  border-bottom: 1px solid var(--shared-outline);
+  padding: 0.6rem 0.8rem;
+  vertical-align: top;
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--shared-outline);
+  padding: 0.6rem 0.8rem;
+  vertical-align: top;
+  transition: background-color 0.15s ease;
+}
+
+.md-typeset table:not([class]) tbody tr:hover td {
+  background-color: var(--shared-state-hover);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background-color: var(--shared-surface-container);
+}
+
+/* Block screenshots only: p > img excludes inline emoji/icons (span > img). */
+.md-typeset p > img:only-child {
+  border-radius: var(--shared-radius-sm);
+  border: 1px solid var(--shared-outline);
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.md-typeset p > img:only-child:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Prev / next footer: flat state-layer hover (footer is dark in both schemes) --- */
+.md-footer__link {
+  border-radius: var(--shared-radius-md);
+  padding: 0.4rem 0.6rem;
+  transition: background-color 0.15s ease;
+}
+
+.md-footer__link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.md-footer__link .md-icon {
+  transition: transform 0.2s ease;
+}
+
+.md-footer__link--prev:hover .md-icon {
+  transform: translateX(-3px);
+}
+
+.md-footer__link--next:hover .md-icon {
+  transform: translateX(3px);
+}
+
+.md-footer__link--next {
+  text-align: right;
+}
+
+/* Keyboard accessibility: always show a clear focus ring */
+:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, var(--md-primary-fg-color));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Subtle motion: entrance + micro-interactions (transform/opacity only) --- */
+@keyframes shared-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shared-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Page entrance: gentle rise on each navigation */
+.md-content__inner {
+  animation: shared-fade-up 0.35s ease both;
+}
+
+/* Expanding hints/details fade their content in on open */
+.md-typeset details[open] > :not(summary) {
+  animation: shared-fade-in 0.2s ease both;
+}
+
+/* Content links: underline drifts slightly on hover */
+.md-typeset a {
+  text-underline-offset: 2px;
+  transition: text-underline-offset 0.15s ease;
+}
+
+.md-typeset a:hover {
+  text-underline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

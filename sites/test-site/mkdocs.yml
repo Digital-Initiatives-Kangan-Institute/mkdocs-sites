@@ -5,7 +5,13 @@ copyright: Digital Initiatives - Bendigo Kangan Institute
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
-  - Return to Portal: https://bki-di-portal.netlify.app/
+  - Return to Portal: https://bki-di.pages.dev/
+  - Menu:
+    - Resources:
+      - Markdown Elements: pages/resources/markdown-elements.md
+      - Code and Callouts: pages/resources/code-and-callouts.md
+    - Tasks:
+      - Example Task: pages/tasks/example-task.md
 
   # Add additional navigation below this point:
 
@@ -36,10 +42,8 @@ watch:
 plugins:
   - enumerate-headings:
       increment_across_pages: true
-      # Uncomment below if you would like to reset the table of contents numbering
-      # after a certain page:
-      # restart_increment_after: 
-      #  - path/to/page.md
+      restart_increment_after:
+        - pages/tasks/example-task.md
 
 extra:
   generator: false

@@ -8,6 +8,8 @@ This file contains instructions for AI agents (Claude Code, Copilot, Codex, etc.
 
 This is a collection of **MkDocs Material** sites deployed to **Cloudflare**. Each site lives in `sites/<slug>/`, gets built into `build/<slug>/`, and the portal at `build/index.html` links them all together via `build/sites.js`.
 
+All sites share a single stylesheet at `shared/style.css` (wired up via `theme.custom_dir: ../../shared` in each `mkdocs.yml`). Any site style / stylesheet modifications must be done in this file and this file only — never create per-site `style.css` files.
+
 ### Existing Sites
 
 | Slug | Site Name | Palette | Course |
@@ -48,8 +50,6 @@ sites/<slug>/
 ├── mkdocs.yml
 └── docs/
     ├── index.md           # Minimal: "Select a resource or task in the menu to begin."
-    ├── extra/
-    │   └── style.css      # Copy from any existing site, update the button colour
     └── pages/
         ├── resources/     # Reference/instructional content
         │   └── *.md
@@ -76,12 +76,16 @@ nav:
 
 - `theme.palette.primary`: Your chosen colour
 - `plugins.enumerate-headings.restart_increment_after`: Set to the first task page path to reset heading numbering
-- `extra_css: [extra/style.css]`
+- Do not touch `theme.custom_dir`, `extra_css`, or `watch` — these already point at the shared stylesheet (`../../shared/style.css`). Styling is palette-aware, so setting `primary` is enough to theme buttons/nav per site.
 - The rest (features, markdown_extensions) should match existing sites exactly
 
-### 4. Write style.css
+### 4. Shared stylesheet (do not create per-site CSS)
 
-Copy from any existing site's `docs/extra/style.css`. Update the button background-colour to match your palette — use the Material Design hex codes:
+All sites use the single shared stylesheet at `shared/style.css` (loaded via `theme.custom_dir: ../../shared` + `extra_css: [style.css]`). It is palette-aware (uses `var(--md-primary-fg-color)` etc.), so per-site button/nav colours come from `theme.palette.primary` automatically — no per-site CSS needed.
+
+- Do NOT create `sites/<slug>/docs/extra/style.css` or add new `extra_css` entries.
+- Any site style / stylesheet modifications must be done in `shared/style.css` and in this file only, so the change applies consistently to every site.
+- If you need a new palette's hex values, use the Material Design hex codes:
 
 | Palette | Hex | Hover Hex |
 |---|---|---|
