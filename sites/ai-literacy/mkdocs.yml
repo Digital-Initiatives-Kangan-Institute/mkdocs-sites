@@ -1,0 +1,58 @@
+site_name: AI Literacy & Professional Ethics
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+
+  # Add additional navigation below this point:
+  - Menu:
+    - Resources:
+      - AI Prompt Engineering & Capability Building: pages/resources/module-1.md
+      - Information Literacy, Verification & Deep Research: pages/resources/module-2.md
+      - Legal & Ethical Frameworks in AI: pages/resources/module-3.md
+      - Practical Project Scenario & Digital Skills: pages/resources/module-4.md
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  name: material
+  custom_dir: ../../shared
+  palette:
+    primary: amber
+  features:
+    - toc.integrate
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+# This is relative to the theme/base (based on custom_dir above)
+extra_css:
+  - style.css
+
+# This is here to watch the style.css file above to trigger hot-reload,
+# therefor if the custom_dir is changed it should be changed here too.
+watch:
+  - ../../shared/style.css
+
+plugins:
+  - enumerate-headings:
+      increment_across_pages: true
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
