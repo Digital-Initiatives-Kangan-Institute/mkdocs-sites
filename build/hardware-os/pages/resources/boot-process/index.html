@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../installing-os/" rel="prev"/>
+<link href="../gui-cli/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>The Boot Process - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-boot-process">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              The Boot Process
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview-of-boot-stages">
+<span class="md-ellipsis">
+      
+        Overview of Boot Stages
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stage-1-power-on-self-test-post">
+<span class="md-ellipsis">
+      
+        Stage 1: Power-On Self-Test (POST)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stage-2-bios-uefi-firmware">
+<span class="md-ellipsis">
+      
+        Stage 2: BIOS / UEFI Firmware
+      
+    </span>
+</a>
+<nav aria-label="Stage 2: BIOS / UEFI Firmware" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bios-basic-inputoutput-system">
+<span class="md-ellipsis">
+      
+        BIOS (Basic Input/Output System)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#uefi-unified-extensible-firmware-interface">
+<span class="md-ellipsis">
+      
+        UEFI (Unified Extensible Firmware Interface)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stage-3-the-boot-loader">
+<span class="md-ellipsis">
+      
+        Stage 3: The Boot Loader
+      
+    </span>
+</a>
+<nav aria-label="Stage 3: The Boot Loader" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#windows-boot-manager">
+<span class="md-ellipsis">
+      
+        Windows Boot Manager
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grub-grand-unified-bootloader">
+<span class="md-ellipsis">
+      
+        GRUB (Grand Unified Bootloader)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stage-4-kernel-loading">
+<span class="md-ellipsis">
+      
+        Stage 4: Kernel Loading
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#stage-5-login-and-user-session">
+<span class="md-ellipsis">
+      
+        Stage 5: Login and User Session
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#important-boot-functions-and-features">
+<span class="md-ellipsis">
+      
+        Important Boot Functions and Features
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting-boot-issues">
+<span class="md-ellipsis">
+      
+        Troubleshooting Boot Issues
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="the-boot-process"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.</span> The Boot Process</h1>
+<p>When you press the power button on a computer, a precise sequence of events takes place before you see the desktop. This is called the boot process. Understanding what happens during boot helps diagnose startup problems and configure system settings.</p>
+<hr/>
+<h2 id="overview-of-boot-stages"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.1</span> Overview of Boot Stages</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Power On  →  POST  →  BIOS/UEFI  →  Boot Loader  →  Kernel  →  Login Screen
+</code></pre></div></td></tr></table></div>
+<p>Each stage prepares the system for the next. If any stage fails, the computer will not start correctly.</p>
+<hr/>
+<h2 id="stage-1-power-on-self-test-post"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.2</span> Stage 1: Power-On Self-Test (POST)</h2>
+<p>The moment power reaches the motherboard, the system runs a Power-On Self-Test. This is a diagnostic routine stored in the firmware that checks whether critical hardware is present and functioning.</p>
+<p>POST verifies:
+- CPU is working
+- RAM is detected and functional
+- Storage drives are connected
+- Keyboard and basic input devices are present
+- Graphics output is available</p>
+<p>If POST detects a problem, the computer signals it through:
+- <strong>Beep codes</strong> — Patterns of beeps that indicate specific hardware faults (varies by manufacturer)
+- <strong>LED indicators</strong> — Some motherboards have diagnostic LEDs
+- <strong>Error messages</strong> — Displayed on screen if video is working</p>
+<p>A successful POST usually produces a single short beep and the manufacturer's logo appears.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your computer is beeping and not starting, count the beeps and search the manufacturer's website for the meaning. For example, three long beeps on a Dell may indicate a RAM issue.</p>
+</div>
+<hr/>
+<h2 id="stage-2-bios-uefi-firmware"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3</span> Stage 2: BIOS / UEFI Firmware</h2>
+<p>After POST completes, control passes to the system firmware.</p>
+<h3 id="bios-basic-inputoutput-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3.1</span> BIOS (Basic Input/Output System)</h3>
+<p>BIOS is the older firmware standard, used in PCs for decades. It:
+- Has a text-based setup interface (press Del/F2 during startup)
+- Uses the Master Boot Record (MBR) partitioning scheme
+- Supports drives up to 2 TB
+- Is limited to 16-bit real mode during boot</p>
+<h3 id="uefi-unified-extensible-firmware-interface"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.3.2</span> UEFI (Unified Extensible Firmware Interface)</h3>
+<p>UEFI is the modern replacement for BIOS. It:
+- Has a graphical setup interface with mouse support
+- Uses the GUID Partition Table (GPT)
+- Supports drives larger than 2 TB
+- Provides Secure Boot to protect against malware
+- Boots faster than legacy BIOS</p>
+<p>The firmware looks for a storage device marked as bootable, reads the boot sector (MBR) or EFI System Partition (GPT), and hands off to the boot loader.</p>
+<hr/>
+<h2 id="stage-3-the-boot-loader"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.4</span> Stage 3: The Boot Loader</h2>
+<p>The boot loader is a small program that loads the operating system kernel into memory.</p>
+<h3 id="windows-boot-manager"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.4.1</span> Windows Boot Manager</h3>
+<p>On Windows systems:
+1. The firmware loads <strong>Windows Boot Manager</strong> (<code>bootmgfw.efi</code> on UEFI systems)
+2. Boot Manager reads the <strong>Boot Configuration Data (BCD)</strong> store
+3. If multiple Windows installations exist, it displays a menu to choose one
+4. It loads <code>winload.efi</code>, which initialises the Windows kernel</p>
+<h3 id="grub-grand-unified-bootloader"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.4.2</span> GRUB (Grand Unified Bootloader)</h3>
+<p>On most Linux systems:
+1. The firmware loads <strong>GRUB</strong> from the EFI partition or MBR
+2. GRUB displays a menu with available operating systems and kernels
+3. After selection (or timeout), GRUB loads the Linux kernel into memory
+4. GRUB passes control to the kernel along with boot parameters</p>
+<hr/>
+<h2 id="stage-4-kernel-loading"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.5</span> Stage 4: Kernel Loading</h2>
+<p>The kernel is the core of the operating system. Once loaded:</p>
+<ol>
+<li>The kernel initialises hardware drivers for CPU, memory, storage, and devices</li>
+<li>It mounts the root file system (the drive partition containing the OS)</li>
+<li>It starts the first user-space process:</li>
+<li>On Windows: <strong>Session Manager (<code>smss.exe</code>)</strong> which then starts <strong><code>winlogon.exe</code></strong></li>
+<li>On Linux: <strong><code>init</code></strong> (or <code>systemd</code> on modern distributions)</li>
+<li>Essential system services are launched — networking, audio, display manager, security</li>
+</ol>
+<p>During this stage, Windows displays the spinning dots and logo; Linux displays scrolling boot messages (unless a splash screen hides them).</p>
+<hr/>
+<h2 id="stage-5-login-and-user-session"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.6</span> Stage 5: Login and User Session</h2>
+<p>Once system services are running, the login screen appears:</p>
+<ul>
+<li><strong>Windows</strong>: <code>winlogon.exe</code> presents the lock screen; after authentication, <code>userinit.exe</code> starts Explorer (the desktop, taskbar, and Start menu)</li>
+<li><strong>Linux</strong>: The display manager (GDM, LightDM) presents a graphical login; after login, it starts the desktop environment (GNOME, KDE, etc.)</li>
+<li><strong>macOS</strong>: <code>loginwindow</code> manages user authentication and starts the Finder and Dock</li>
+</ul>
+<p>After login, user-specific startup programs run — applications set to launch at login, background services, and system tray items. The desktop is now ready to use.</p>
+<hr/>
+<h2 id="important-boot-functions-and-features"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.7</span> Important Boot Functions and Features</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Boot Menu</strong></td>
+<td>Press a key (F12, Esc) during POST to choose which device to boot from</td>
+</tr>
+<tr>
+<td><strong>BIOS/UEFI Setup</strong></td>
+<td>Press a key (F2, Del) during POST to configure firmware settings</td>
+</tr>
+<tr>
+<td><strong>Boot Order</strong></td>
+<td>The sequence of devices the firmware checks for bootable media</td>
+</tr>
+<tr>
+<td><strong>Secure Boot</strong></td>
+<td>UEFI feature that only allows signed boot loaders to run</td>
+</tr>
+<tr>
+<td><strong>Fast Startup</strong></td>
+<td>Windows feature that hibernates the kernel instead of shutting down fully</td>
+</tr>
+<tr>
+<td><strong>Safe Mode</strong></td>
+<td>Boots Windows or macOS with minimal drivers for troubleshooting</td>
+</tr>
+<tr>
+<td><strong>Recovery Mode</strong></td>
+<td>Linux option that boots into a minimal environment for repairs</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="troubleshooting-boot-issues"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.8</span> Troubleshooting Boot Issues</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No power, no lights</td>
+<td>Power supply, outlet, or cable</td>
+<td>Try a different outlet and cable</td>
+</tr>
+<tr>
+<td>Fans spin, no display</td>
+<td>RAM, GPU, or display cable</td>
+<td>Reseat RAM and GPU, check monitor input</td>
+</tr>
+<tr>
+<td>Beep codes on startup</td>
+<td>Hardware failure</td>
+<td>Look up beep codes for your motherboard</td>
+</tr>
+<tr>
+<td>"Boot device not found"</td>
+<td>Storage drive disconnected or failed, boot order wrong</td>
+<td>Check BIOS/UEFI boot order and drive connections</td>
+</tr>
+<tr>
+<td>"Operating system not found"</td>
+<td>Boot loader missing or corrupted</td>
+<td>Use installation media to repair boot loader</td>
+</tr>
+<tr>
+<td>Boots to wrong OS</td>
+<td>Incorrect boot order</td>
+<td>Change boot order in BIOS/UEFI</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.9</span> Summary</h2>
+<ul>
+<li>The boot process has five stages: POST, firmware, boot loader, kernel, and login</li>
+<li>POST checks that essential hardware is working before anything else</li>
+<li>BIOS is the older firmware standard; UEFI is the modern replacement with more features</li>
+<li>The boot loader (Windows Boot Manager or GRUB) loads the OS kernel</li>
+<li>The kernel initialises drivers, services, and presents the login screen</li>
+<li>Understanding the boot process helps diagnose startup problems</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Installing an Operating System" class="md-footer__link md-footer__link--prev" href="../installing-os/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Installing an Operating System
+              </div>
+</div>
+</a>
+<a aria-label="Next: Interfaces — GUI and Command Line" class="md-footer__link md-footer__link--next" href="../gui-cli/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Interfaces — GUI and Command Line
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

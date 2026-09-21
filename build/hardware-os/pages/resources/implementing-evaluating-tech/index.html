@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../identifying-industry-tech/" rel="prev"/>
+<link href="../../tasks/hardware-os-software-selection/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Implementing and Evaluating Technology - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#implementing-and-evaluating-technology">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Implementing and Evaluating Technology
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementing-new-technology">
+<span class="md-ellipsis">
+      
+        Implementing New Technology
+      
+    </span>
+</a>
+<nav aria-label="Implementing New Technology" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-1-plan-the-implementation">
+<span class="md-ellipsis">
+      
+        Step 1: Plan the Implementation
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-2-prepare-the-environment">
+<span class="md-ellipsis">
+      
+        Step 2: Prepare the Environment
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-3-install-and-configure">
+<span class="md-ellipsis">
+      
+        Step 3: Install and Configure
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#step-4-test">
+<span class="md-ellipsis">
+      
+        Step 4: Test
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-features-and-functions">
+<span class="md-ellipsis">
+      
+        Using Features and Functions
+      
+    </span>
+</a>
+<nav aria-label="Using Features and Functions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifying-relevant-features">
+<span class="md-ellipsis">
+      
+        Identifying Relevant Features
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-microsoft-teams">
+<span class="md-ellipsis">
+      
+        Example: Microsoft Teams
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accessing-and-using-information-sources">
+<span class="md-ellipsis">
+      
+        Accessing and Using Information Sources
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evaluating-technology-performance">
+<span class="md-ellipsis">
+      
+        Evaluating Technology Performance
+      
+    </span>
+</a>
+<nav aria-label="Evaluating Technology Performance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-criteria">
+<span class="md-ellipsis">
+      
+        Performance Criteria
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-sources-for-evaluation">
+<span class="md-ellipsis">
+      
+        Data Sources for Evaluation
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#environmental-considerations">
+<span class="md-ellipsis">
+      
+        Environmental Considerations
+      
+    </span>
+</a>
+<nav aria-label="Environmental Considerations" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reducing-environmental-impact">
+<span class="md-ellipsis">
+      
+        Reducing Environmental Impact
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#seeking-and-responding-to-feedback">
+<span class="md-ellipsis">
+      
+        Seeking and Responding to Feedback
+      
+    </span>
+</a>
+<nav aria-label="Seeking and Responding to Feedback" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gathering-feedback">
+<span class="md-ellipsis">
+      
+        Gathering Feedback
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#responding-to-feedback">
+<span class="md-ellipsis">
+      
+        Responding to Feedback
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+<span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="implementing-and-evaluating-technology"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.</span> Implementing and Evaluating Technology</h1>
+<p>Once an organisation has identified a new technology to adopt, the next stage is implementation and evaluation. This involves deploying the technology in a controlled way, testing that it works as expected, assessing its value, and gathering feedback from users.</p>
+<hr/>
+<h2 id="implementing-new-technology"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.1</span> Implementing New Technology</h2>
+<p>Implementation is the process of making a new technology operational within an organisation. A careful, planned approach reduces risk and disruption.</p>
+<h3 id="step-1-plan-the-implementation"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.1.1</span> Step 1: Plan the Implementation</h3>
+<p>Before touching any systems, document the plan:</p>
+<ul>
+<li><strong>Scope</strong> — Which users, departments, or locations are affected?</li>
+<li><strong>Timeline</strong> — When will it happen? Allow time for testing and rollback.</li>
+<li><strong>Dependencies</strong> — What other systems or data does the new technology rely on?</li>
+<li><strong>Rollback plan</strong> — How do you undo the change if something goes wrong?</li>
+<li><strong>Success criteria</strong> — How will you know the implementation worked?</li>
+</ul>
+<h3 id="step-2-prepare-the-environment"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.1.2</span> Step 2: Prepare the Environment</h3>
+<ul>
+<li>Verify hardware meets the technology's requirements</li>
+<li>Ensure the OS and supporting software are up to date</li>
+<li>Back up existing data and configuration</li>
+<li>Inform users about the change and expected downtime</li>
+</ul>
+<h3 id="step-3-install-and-configure"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.1.3</span> Step 3: Install and Configure</h3>
+<ul>
+<li>Install the technology following vendor instructions</li>
+<li>Apply the organisation's standard configuration</li>
+<li>Set up user accounts, permissions, and access controls</li>
+<li>Configure integration with existing systems (single sign-on, data imports)</li>
+</ul>
+<h3 id="step-4-test"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.1.4</span> Step 4: Test</h3>
+<p>Test before releasing to all users:</p>
+<table>
+<thead>
+<tr>
+<th>Test Type</th>
+<th>What to Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Functional</strong></td>
+<td>Do the features work as expected?</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>Does it work with existing systems?</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Is it responsive under normal and peak loads?</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Are permissions correct? Is data protected?</td>
+</tr>
+<tr>
+<td><strong>User acceptance</strong></td>
+<td>Can a typical user complete their tasks?</td>
+</tr>
+</tbody>
+</table>
+<p>Start with a small pilot group before rolling out to the entire organisation.</p>
+<hr/>
+<h2 id="using-features-and-functions"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.2</span> Using Features and Functions</h2>
+<p>Organisations rarely use every feature of a technology. The goal is to use the features that provide value for the task at hand.</p>
+<h3 id="identifying-relevant-features"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.2.1</span> Identifying Relevant Features</h3>
+<ol>
+<li>Read the vendor's documentation and feature list</li>
+<li>Map features to the organisation's requirements</li>
+<li>Prioritise: which features address the most important needs?</li>
+<li>Train users on the features they actually need — avoid overwhelming new users with everything at once</li>
+</ol>
+<h3 id="example-microsoft-teams"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.2.2</span> Example: Microsoft Teams</h3>
+<p>Microsoft Teams has hundreds of features, but a small organisation might only need:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Chat</strong></td>
+<td>One-on-one and group text messaging</td>
+</tr>
+<tr>
+<td><strong>Video calls</strong></td>
+<td>Face-to-face meetings with screen sharing</td>
+</tr>
+<tr>
+<td><strong>Teams and channels</strong></td>
+<td>Organised conversation spaces by topic or department</td>
+</tr>
+<tr>
+<td><strong>File sharing</strong></td>
+<td>Share documents within a team channel</td>
+</tr>
+</tbody>
+</table>
+<p>Other features (Power Automate integrations, advanced telephony, webinar hosting) can be adopted later as needs grow.</p>
+<hr/>
+<h2 id="accessing-and-using-information-sources"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.3</span> Accessing and Using Information Sources</h2>
+<p>During implementation and ongoing use, you will need to reference information sources.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vendor documentation</strong></td>
+<td>Installation guides, feature descriptions, API references</td>
+</tr>
+<tr>
+<td><strong>Knowledge base articles</strong></td>
+<td>Specific how-to questions and troubleshooting steps</td>
+</tr>
+<tr>
+<td><strong>Community forums</strong></td>
+<td>Real-world solutions from other users (Stack Overflow, Reddit, vendor forums)</td>
+</tr>
+<tr>
+<td><strong>Training materials</strong></td>
+<td>Structured learning for new users</td>
+</tr>
+<tr>
+<td><strong>Internal documentation</strong></td>
+<td>Organisation-specific procedures and configurations</td>
+</tr>
+<tr>
+<td><strong>Vendor support</strong></td>
+<td>Assistance with bugs, licencing, and critical issues</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="evaluating-technology-performance"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.4</span> Evaluating Technology Performance</h2>
+<p>After the technology has been in use for a period, evaluate whether it has delivered the expected benefits.</p>
+<h3 id="performance-criteria"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.4.1</span> Performance Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Questions to Ask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Functionality</strong></td>
+<td>Does it do what we needed it to do? Are there gaps?</td>
+</tr>
+<tr>
+<td><strong>Usability</strong></td>
+<td>Can users complete tasks efficiently? Is training adequate?</td>
+</tr>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>How often does it fail or need support intervention?</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Is it fast enough? Does it slow down under load?</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Has the total cost (licences, training, support) matched the budget?</td>
+</tr>
+<tr>
+<td><strong>Benefit</strong></td>
+<td>Has productivity, quality, or another metric improved?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-sources-for-evaluation"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.4.2</span> Data Sources for Evaluation</h3>
+<ul>
+<li><strong>User feedback</strong> — Surveys, interviews, support ticket analysis</li>
+<li><strong>System metrics</strong> — Uptime reports, response times, error logs</li>
+<li><strong>Business metrics</strong> — Time saved, costs reduced, output increased</li>
+</ul>
+<hr/>
+<h2 id="environmental-considerations"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.5</span> Environmental Considerations</h2>
+<p>Technology has an environmental impact throughout its lifecycle. Organisations should consider:</p>
+<table>
+<thead>
+<tr>
+<th>Lifecycle Stage</th>
+<th>Consideration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Manufacturing</strong></td>
+<td>Raw material extraction, energy used in production, hazardous substances</td>
+</tr>
+<tr>
+<td><strong>Packaging and shipping</strong></td>
+<td>Plastic waste, transport emissions</td>
+</tr>
+<tr>
+<td><strong>Usage</strong></td>
+<td>Power consumption, cooling requirements, paper and consumable usage</td>
+</tr>
+<tr>
+<td><strong>End of life</strong></td>
+<td>E-waste, recycling programs, secure data destruction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reducing-environmental-impact"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.5.1</span> Reducing Environmental Impact</h3>
+<ul>
+<li>Choose energy-efficient hardware (look for ENERGY STAR certification)</li>
+<li>Enable power-saving settings on all computers (sleep after inactivity)</li>
+<li>Recycle e-waste through certified recyclers (not general waste)</li>
+<li>Use cloud services that run on renewable energy where possible</li>
+<li>Extend hardware lifespan through upgrades rather than full replacements</li>
+<li>Print only when necessary; use duplex (double-sided) printing by default</li>
+</ul>
+<hr/>
+<h2 id="seeking-and-responding-to-feedback"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.6</span> Seeking and Responding to Feedback</h2>
+<p>Feedback from users and stakeholders is essential for continuous improvement.</p>
+<h3 id="gathering-feedback"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.6.1</span> Gathering Feedback</h3>
+<ul>
+<li><strong>Surveys</strong> — Short, focused questionnaires after rollout</li>
+<li><strong>Interviews</strong> — One-on-one conversations with key users</li>
+<li><strong>Support ticket analysis</strong> — What are people asking for help with?</li>
+<li><strong>Usage analytics</strong> — Which features are being used? Which are ignored?</li>
+</ul>
+<h3 id="responding-to-feedback"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.6.2</span> Responding to Feedback</h3>
+<p>Take feedback seriously — it tells you whether the technology is working and what needs to change.</p>
+<ol>
+<li><strong>Acknowledge</strong> — Let people know their feedback was received</li>
+<li><strong>Analyse</strong> — Look for patterns; is it one person or many with the same issue?</li>
+<li><strong>Act</strong> — Fix problems, provide additional training, or adjust configuration</li>
+<li><strong>Communicate</strong> — Tell people what changed and why</li>
+</ol>
+<h3 id="documentation"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.6.3</span> Documentation</h3>
+<p>Record the evaluation results and feedback for future reference. This helps when:
+- Renewing licences (is it worth keeping?)
+- Planning upgrades (what needs to improve?)
+- Selecting future technologies (what lesson was learned?)</p>
+<p>A simple evaluation document should include:
+- Technology name and version
+- Date of implementation and evaluation period
+- Summary of user feedback
+- Performance against success criteria
+- Recommendations (keep, replace, upgrade, expand)</p>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">12.7</span> Summary</h2>
+<ul>
+<li>Implementation should be planned with clear scope, timeline, and rollback strategy</li>
+<li>Test thoroughly — functionality, integration, performance, security, and user acceptance</li>
+<li>Use only the features that provide value; train users on what they actually need</li>
+<li>Reference vendor documentation, community forums, and internal procedures for support</li>
+<li>Evaluate technology against objective criteria: functionality, usability, reliability, cost, and benefit</li>
+<li>Consider environmental impact at every lifecycle stage — from manufacturing to disposal</li>
+<li>Gather and act on user feedback to continuously improve</li>
+<li>Document evaluation results for future decision-making</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Identifying Industry Technologies" class="md-footer__link md-footer__link--prev" href="../identifying-industry-tech/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Identifying Industry Technologies
+              </div>
+</div>
+</a>
+<a aria-label="Next: Research: Hardware, OS, and Software Selection" class="md-footer__link md-footer__link--next" href="../../tasks/hardware-os-software-selection/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Research: Hardware, OS, and Software Selection
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

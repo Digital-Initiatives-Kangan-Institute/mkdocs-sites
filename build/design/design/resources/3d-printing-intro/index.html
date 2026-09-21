@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../fdm-printing/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>3D Printing Introduction - Design Thinking</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="light-blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#3d-printing-introduction">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Design Thinking" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Design Thinking">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Design Thinking
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              3D Printing Introduction
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Design Thinking" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Design Thinking">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Design Thinking
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Design Thinking
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Design Thinking
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    3D Printing Introduction
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    3D Printing Introduction
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-3d-printing">
+<span class="md-ellipsis">
+      
+        What is 3D Printing?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-3d-printers-are-useful">
+<span class="md-ellipsis">
+      
+        Why 3D Printers Are Useful
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-types-of-3d-printing">
+<span class="md-ellipsis">
+      
+        Main Types of 3D Printing
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#popular-filament-types">
+<span class="md-ellipsis">
+      
+        Popular Filament Types
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fdm-printing/">
+<span class="md-ellipsis">
+    
+  
+    Fused Deposition Modeling (FDM) Printing
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../design-thinking-double-diamond/">
+<span class="md-ellipsis">
+    
+  
+    Design Thinking - Double Diamond
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../double-diamond-develop-deliver/">
+<span class="md-ellipsis">
+    
+  
+    Double Diamond - Develop and Deliver
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../miro/">
+<span class="md-ellipsis">
+    
+  
+    Miro - Visual Collaboration Platform
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tinkercad/">
+<span class="md-ellipsis">
+    
+  
+    TinkerCAD - 3D Modeling Tool
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-1-basic-tinkercad/">
+<span class="md-ellipsis">
+    
+  
+    Task 1 - Basic 3D Design
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-2-basic-modeling/">
+<span class="md-ellipsis">
+    
+  
+    Task 2 - Basic 3D Modeling
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-3-develop-deliver/">
+<span class="md-ellipsis">
+    
+  
+    Task 3 - Develop and Deliver
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-4-accessibility-aid/">
+<span class="md-ellipsis">
+    
+  
+    Task 4 - Accessibility Aid
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Class Activities
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Class Activities
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/class/class-activity-1-double-diamond-discover/">
+<span class="md-ellipsis">
+    
+  
+    Activity 1 - Double Diamond - Discover
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/class/class-activity-2-double-diamond-define/">
+<span class="md-ellipsis">
+    
+  
+    Activity 2 - Double Diamond - Define
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Design Thinking
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="./">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="3d-printing-introduction"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.</span> 3D Printing Introduction</h1>
+<h2 id="what-is-3d-printing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.1</span> What is 3D Printing?</h2>
+<p>3D printing is a process that creates three-dimensional objects by building them layer by layer from a digital model. Instead of cutting or shaping material like traditional manufacturing, 3D printing adds material where it’s needed — this is why it’s often called additive manufacturing.</p>
+<h2 id="why-3d-printers-are-useful"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.2</span> Why 3D Printers Are Useful</h2>
+<p>3D printers are powerful tools used in education, design, engineering, and even healthcare. They allow people to: </p>
+<ul>
+<li><strong>Turn ideas into real objects quickly</strong> — you can design something on a computer and print it within hours. </li>
+<li><strong>Create custom parts</strong> — perfect for prototypes, repairs, or personalized products. </li>
+<li><strong>Reduce waste</strong> — only the required material is used, unlike subtractive methods such as cutting or milling. </li>
+<li><strong>Encourage creativity and innovation</strong> — students and designers can experiment and iterate easily. </li>
+</ul>
+<p>In classrooms, 3D printing helps students learn design thinking, problem-solving, and how digital models connect to real-world manufacturing.</p>
+<h2 id="main-types-of-3d-printing"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.3</span> Main Types of 3D Printing</h2>
+<p>There are several 3D printing technologies, but the three most common types are: </p>
+<p><strong>Fused Deposition Modelling (FDM)</strong>
+- The most widely used and affordable type. 
+- Works by melting plastic filament and laying it down in thin layers. 
+- Common for hobbyists, schools, and prototypes. </p>
+<p><img alt="Three FDM Printers" src="../../assets/fdm-printers.png" width="600"/></p>
+<p><strong>Stereolithography (SLA) - often called Resin Printing</strong>
+- Uses a laser to harden liquid resin into solid layers.
+- Produces very smooth and detailed prints.
+- Often used for jewellery, dental models, and miniatures.</p>
+<p><img alt="SLA Printer" src="../../assets/sla-printer.png" width="200"/></p>
+<p><strong>Selective Laser Sintering (SLS)</strong>
+- Uses a laser to fuse powdered material (usually nylon).
+- Strong, durable parts without needing support structures.
+- Used in professional and industrial settings.</p>
+<p><img alt="SLA Printer" src="../../assets/sls-printer.png" width="400"/></p>
+<h2 id="popular-filament-types"><span class="enumerate-headings-plugin enumerate-heading-plugin">1.4</span> Popular Filament Types</h2>
+<p>For FDM printers, the filament material you choose affects the strength, flexibility, and appearance of your print.
+Here are the most common types:</p>
+<ul>
+<li>
+<p><strong>PLA (Polylactic Acid)</strong></p>
+<ul>
+<li>Easy to print, biodegradable, and available in many colors.</li>
+<li>Great for beginners and general projects.</li>
+</ul>
+</li>
+<li>
+<p><strong>ABS (Acrylonitrile Butadiene Styrene)</strong></p>
+<ul>
+<li>Stronger and more heat-resistant than PLA.</li>
+<li>Used for functional parts and engineering projects (but requires good ventilation).</li>
+</ul>
+</li>
+<li>
+<p><strong>PETG (Polyethylene Terephthalate Glycol)</strong></p>
+<ul>
+<li>Combines strength, flexibility, and ease of printing.</li>
+<li>Good for parts that need durability and a bit of flexibility.</li>
+</ul>
+</li>
+<li>
+<p><strong>TPU (Thermoplastic Polyurethane)</strong></p>
+<ul>
+<li>A flexible, rubber-like filament.</li>
+<li>Perfect for printing phone cases, grips, or wearable items.</li>
+</ul>
+</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Next: Fused Deposition Modeling (FDM) Printing" class="md-footer__link md-footer__link--next" href="../fdm-printing/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Fused Deposition Modeling (FDM) Printing
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

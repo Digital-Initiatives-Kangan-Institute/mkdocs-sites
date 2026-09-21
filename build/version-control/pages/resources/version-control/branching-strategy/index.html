@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../git-in-vscode/" rel="prev"/>
+<link href="../git-tools/" rel="next"/>
+<link href="../../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Branching Strategy - Version Control</title>
+<link href="../../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#branching-strategy">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Version Control" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Version Control
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Branching Strategy
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Version Control" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Version Control">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Version Control
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    
+  
+    What is Version Control
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-in-vscode/">
+<span class="md-ellipsis">
+    
+  
+    Git with VS Code
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Branching Strategy
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Branching Strategy
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-branch">
+<span class="md-ellipsis">
+      
+        What is a Branch?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-branching-strategies">
+<span class="md-ellipsis">
+      
+        Common Branching Strategies
+      
+    </span>
+</a>
+<nav aria-label="Common Branching Strategies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-flow">
+<span class="md-ellipsis">
+      
+        Git Flow
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trunk-based-development">
+<span class="md-ellipsis">
+      
+        Trunk-Based Development
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-staging-dev-feature">
+<span class="md-ellipsis">
+      
+        Main / Staging / Dev / Feature
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-dev-feature">
+<span class="md-ellipsis">
+      
+        Main / Dev / Feature
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-main-dev-feature-strategy">
+<span class="md-ellipsis">
+      
+        The Main / Dev / Feature Strategy
+      
+    </span>
+</a>
+<nav aria-label="The Main / Dev / Feature Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main">
+<span class="md-ellipsis">
+      
+        main
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dev">
+<span class="md-ellipsis">
+      
+        dev
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#feature-branches">
+<span class="md-ellipsis">
+      
+        feature Branches
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-use-this-strategy">
+<span class="md-ellipsis">
+      
+        Why Use This Strategy?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#working-with-branches-in-vs-code">
+<span class="md-ellipsis">
+      
+        Working with Branches in VS Code
+      
+    </span>
+</a>
+<nav aria-label="Working with Branches in VS Code" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-feature-branch">
+<span class="md-ellipsis">
+      
+        Creating a Feature Branch
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#switching-between-branches">
+<span class="md-ellipsis">
+      
+        Switching Between Branches
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merging-in-vs-code">
+<span class="md-ellipsis">
+      
+        Merging in VS Code
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-typical-workflow">
+<span class="md-ellipsis">
+      
+        A Typical Workflow
+      
+    </span>
+</a>
+<nav aria-label="A Typical Workflow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-pull-requests">
+<span class="md-ellipsis">
+      
+        Why Pull Requests?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merging-dev-into-main">
+<span class="md-ellipsis">
+      
+        Merging dev into main
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-tools/">
+<span class="md-ellipsis">
+    
+  
+    Git Tools and Clients
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-github/">
+<span class="md-ellipsis">
+    
+  
+    What is GitHub
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gitignore/">
+<span class="md-ellipsis">
+    
+  
+    .gitignore
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../merge-conflicts/">
+<span class="md-ellipsis">
+    
+  
+    Merge Conflicts
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git-cli/">
+<span class="md-ellipsis">
+    
+  
+    Git CLI Reference
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/initialise-and-commit/">
+<span class="md-ellipsis">
+    
+  
+    Initialise and Commit
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/branch-and-merge/">
+<span class="md-ellipsis">
+    
+  
+    Branch and Merge
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/daily-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Daily Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/working-with-dev/">
+<span class="md-ellipsis">
+    
+  
+    Working with a dev Branch
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../tasks/pull-request-workflow/">
+<span class="md-ellipsis">
+    
+  
+    Pull Request Workflow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-vc/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="branching-strategy"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> Branching Strategy</h1>
+<p>Branches let you work on new features without risking the stable version of your code. A good branching strategy keeps your project organised and your main code always working.</p>
+<hr/>
+<h2 id="what-is-a-branch"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> What is a Branch?</h2>
+<p>A branch is a separate line of development. Think of it as a copy of your project where you can experiment, build features, or fix bugs without affecting the main codebase.</p>
+<p>When you are happy with your changes, you merge the branch back into the main code.</p>
+<hr/>
+<h2 id="common-branching-strategies"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> Common Branching Strategies</h2>
+<p>There is no single correct way to organise branches. Different teams and projects use different strategies depending on their size, release cadence, and risk tolerance.</p>
+<h3 id="git-flow"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2.1</span> Git Flow</h3>
+<p>A more structured approach with long-lived branches: <code>main</code>, <code>develop</code>, <code>release</code>, <code>hotfix</code>, and <code>feature</code> branches. Suited to projects with scheduled releases.</p>
+<h3 id="trunk-based-development"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2.2</span> Trunk-Based Development</h3>
+<p>Developers work on short-lived branches (or directly on <code>main</code>/<code>trunk</code>) and merge frequently — sometimes multiple times a day. Popular in continuous deployment environments.</p>
+<h3 id="main-staging-dev-feature"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2.3</span> Main / Staging / Dev / Feature</h3>
+<p>Adds a staging branch to the main/dev/feature model so changes can be tested in a production-like environment before going live. Useful when you need extra confidence before releasing.</p>
+<h3 id="main-dev-feature"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2.4</span> Main / Dev / Feature</h3>
+<p>A simpler model with just three branch types. Easy to learn, effective for small to medium teams, and the strategy we will focus on throughout this site.</p>
+<hr/>
+<h2 id="the-main-dev-feature-strategy"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> The Main / Dev / Feature Strategy</h2>
+<p>This simple branching model uses three types of branches:</p>
+<p><img alt="Main, dev, and feature branches" src="../../../../assets/branching-strategy.svg"/></p>
+<h3 id="main"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.1</span> <code>main</code></h3>
+<p>The production branch. This is what is live or ready to deploy. Only tested, working code goes here.</p>
+<ul>
+<li>Never work directly on <code>main</code></li>
+<li>Always merge into <code>main</code> from <code>dev</code></li>
+</ul>
+<h3 id="dev"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.2</span> <code>dev</code></h3>
+<p>The development branch where changes come together before they reach <code>main</code>. All feature branches merge into <code>dev</code> first.</p>
+<ul>
+<li>Your day-to-day integration branch</li>
+<li>Test everything here before merging to <code>main</code></li>
+</ul>
+<h3 id="feature-branches"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3.3</span> <code>feature</code> Branches</h3>
+<p>Short-lived branches for building one specific thing. Created from <code>dev</code> and merged back into <code>dev</code> when complete.</p>
+<ul>
+<li>Name them after what you are building: <code>feature/add-login</code>, <code>feature/menu-page</code></li>
+<li>Keep them focused — one feature per branch</li>
+<li>Delete after merging</li>
+</ul>
+<hr/>
+<h2 id="why-use-this-strategy"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4</span> Why Use This Strategy?</h2>
+<div class="admonition note">
+<p class="admonition-title">Benefits</p>
+<ul>
+<li><strong>Main stays stable</strong> — broken code never reaches the main branch</li>
+<li><strong>Work in parallel</strong> — multiple features can be built at the same time</li>
+<li><strong>Safe to experiment</strong> — if a feature does not work out, delete the branch</li>
+<li><strong>Clear history</strong> — each feature appears as a separate set of changes</li>
+</ul>
+</div>
+<hr/>
+<h2 id="working-with-branches-in-vs-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5</span> Working with Branches in VS Code</h2>
+<h3 id="creating-a-feature-branch"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.1</span> Creating a Feature Branch</h3>
+<ol>
+<li>Click the branch name in the bottom-left corner of VS Code</li>
+<li>Select <strong>Create new branch</strong></li>
+<li>Name it <code>feature/your-feature-name</code></li>
+<li>Start working on your feature</li>
+</ol>
+<h3 id="switching-between-branches"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.2</span> Switching Between Branches</h3>
+<p>Click the branch name in the bottom-left corner and select the branch you want from the list.</p>
+<h3 id="merging-in-vs-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5.3</span> Merging in VS Code</h3>
+<ol>
+<li>Switch to the branch you want to merge <strong>into</strong> (e.g. <code>dev</code>)</li>
+<li>Open the Source Control panel</li>
+<li>Click the <strong>...</strong> (more actions) menu</li>
+<li>Select <strong>Branch</strong> &gt; <strong>Merge</strong></li>
+<li>Choose the branch you want to merge <strong>from</strong> (e.g. <code>feature/add-login</code>)</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always switch to the target branch first, then merge the source branch into it. For example: switch to <code>dev</code>, then merge <code>feature/add-login</code> into <code>dev</code>.</p>
+</div>
+<hr/>
+<h2 id="a-typical-workflow"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.6</span> A Typical Workflow</h2>
+<p>The full cycle from idea to production follows these steps:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Switch to dev and pull latest:      Sync Changes
+2. Create a feature branch:            feature/add-menu-page
+3. Build the feature, commit often
+4. Push the feature branch to GitHub:  Sync Changes
+5. Open a pull request on GitHub
+   merging feature/add-menu-page → dev
+6. Review the changes and confirm
+   everything looks good
+7. Merge the pull request into dev
+8. Delete the feature branch
+9. When dev is tested and stable,
+   open a pull request merging
+   dev → main
+</code></pre></div></td></tr></table></div>
+<h3 id="why-pull-requests"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.6.1</span> Why Pull Requests?</h3>
+<p>A pull request (PR) is a GitHub feature that lets you propose changes and have them reviewed before they are merged. Instead of merging directly in VS Code, a PR lets you:</p>
+<ul>
+<li><strong>Review the diff</strong> — see exactly what changed before it lands on <code>dev</code></li>
+<li><strong>Discuss changes</strong> — teammates can leave comments and suggestions</li>
+<li><strong>Run automated checks</strong> — CI tools can verify the code builds and tests pass</li>
+<li><strong>Keep a record</strong> — every PR documents why a change was made and who approved it</li>
+</ul>
+<p>For solo projects, the PR is still valuable as a final checkpoint before merging — a moment to review your own work with fresh eyes.</p>
+<h3 id="merging-dev-into-main"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.6.2</span> Merging dev into main</h3>
+<p>When <code>dev</code> has been tested and is ready to go live, the same PR process is used to merge into <code>main</code>. This keeps <code>main</code> as the single source of truth for what is deployed to production.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Commit early and often. Small commits are easier to understand and undo than large ones. A good rule: commit after every meaningful change — a new page, a styled section, a working function.</p>
+</div>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.7</span> Summary</h2>
+<ul>
+<li><code>main</code> — stable, production-ready code. Do not work on it directly.</li>
+<li><code>dev</code> — integration branch where features come together</li>
+<li><code>feature/&lt;name&gt;</code> — short-lived branches for one feature each</li>
+<li>Create branches from <code>dev</code>, open a pull request to merge back into <code>dev</code></li>
+<li>Open a pull request to merge <code>dev</code> into <code>main</code> when you are ready to release</li>
+<li>All of this is done through the VS Code interface and GitHub</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Git with VS Code" class="md-footer__link md-footer__link--prev" href="../git-in-vscode/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Git with VS Code
+              </div>
+</div>
+</a>
+<a aria-label="Next: Git Tools and Clients" class="md-footer__link md-footer__link--next" href="../git-tools/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Git Tools and Clients
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../plan-mode/" rel="prev"/>
+<link href="../writing-effective-prompts/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>AGENTS.md - AI-Assisted Development</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="cyan" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#agentsmd">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="AI-Assisted Development" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="AI-Assisted Development">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            AI-Assisted Development
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              AGENTS.md
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="AI-Assisted Development" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="AI-Assisted Development">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    AI-Assisted Development
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-ai-assisted-dev/">
+<span class="md-ellipsis">
+    
+  
+    What is AI-Assisted Development
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-chatbots/">
+<span class="md-ellipsis">
+    
+  
+    AI Chatbots
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ai-agents/">
+<span class="md-ellipsis">
+    
+  
+    AI Agents
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../plan-mode/">
+<span class="md-ellipsis">
+    
+  
+    Plan Mode in Agents
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    AGENTS.md
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-agentsmd">
+<span class="md-ellipsis">
+      
+        What is AGENTS.md?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-use-agentsmd">
+<span class="md-ellipsis">
+      
+        Why Use AGENTS.md?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-to-include">
+<span class="md-ellipsis">
+      
+        What to Include
+      
+    </span>
+</a>
+<nav aria-label="What to Include" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-overview">
+<span class="md-ellipsis">
+      
+        Project Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tech-stack">
+<span class="md-ellipsis">
+      
+        Tech Stack
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conventions">
+<span class="md-ellipsis">
+      
+        Conventions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rules-and-boundaries">
+<span class="md-ellipsis">
+      
+        Rules and Boundaries
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#verification">
+<span class="md-ellipsis">
+      
+        Verification
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-complete-example">
+<span class="md-ellipsis">
+      
+        A Complete Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variants-of-agentsmd">
+<span class="md-ellipsis">
+      
+        Variants of AGENTS.md
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#when-to-create-one">
+<span class="md-ellipsis">
+      
+        When to Create One
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../writing-effective-prompts/">
+<span class="md-ellipsis">
+    
+  
+    Writing Effective Prompts
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/plan-with-chatbot/">
+<span class="md-ellipsis">
+    
+  
+    Plan a Feature with a Chatbot
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/task-with-agent/">
+<span class="md-ellipsis">
+    
+  
+    Complete a Task with an AI Agent
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/prompt-writing-practice/">
+<span class="md-ellipsis">
+    
+  
+    Prompt Writing Practice
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-ai-assisted-dev/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-ai-assisted-dev/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="agentsmd"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> AGENTS.md</h1>
+<p><code>AGENTS.md</code> is a file you place in the root of your project that gives AI agents standing instructions about your codebase. The agent reads it automatically every time it starts working, so you never have to re-explain your conventions, rules, or project structure.</p>
+<hr/>
+<h2 id="what-is-agentsmd"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1</span> What is AGENTS.md?</h2>
+<p>An <code>AGENTS.md</code> file is a markdown document that lives at the top level of your project. When an AI agent opens your project, it reads this file first — before you even say anything. This means the agent starts every session already knowing:</p>
+<ul>
+<li>What your project does</li>
+<li>What conventions you follow</li>
+<li>What tools and frameworks you use</li>
+<li>What rules it should obey</li>
+<li>What files it should never touch</li>
+</ul>
+<p>Think of it as an onboarding document that every agent gets on day one.</p>
+<hr/>
+<h2 id="why-use-agentsmd"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2</span> Why Use AGENTS.md?</h2>
+<p>Without an <code>AGENTS.md</code>, every session starts from scratch. You re-explain the project, the patterns, and the boundaries. The agent makes mistakes you have already encountered before.</p>
+<p>With an <code>AGENTS.md</code>:</p>
+<ul>
+<li>The agent follows your conventions without being told</li>
+<li>It avoids known pitfalls you have documented</li>
+<li>It works consistently across different sessions and different team members</li>
+<li>You spend less time explaining and more time building</li>
+</ul>
+<p>The file grows with your project. Whenever the agent does something wrong that you wish it had known not to do, add a line to the file so it does not happen again.</p>
+<hr/>
+<h2 id="what-to-include"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3</span> What to Include</h2>
+<p>A good <code>AGENTS.md</code> answers the questions an agent would otherwise have to ask.</p>
+<h3 id="project-overview"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.1</span> Project Overview</h3>
+<p>What is this project? What does it do?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># AGENTS.md — My Cafe Website</span>
+
+This is a multi-page HTML and CSS cafe website. Students build pages
+to demonstrate HTML structure, CSS selectors, and linking.
+</code></pre></div></td></tr></table></div>
+<h3 id="tech-stack"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.2</span> Tech Stack</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Tech Stack</span>
+
+<span class="k">-</span><span class="w"> </span>HTML5, CSS3, vanilla JavaScript
+<span class="k">-</span><span class="w"> </span>No frameworks or build tools
+<span class="k">-</span><span class="w"> </span>Deployed via Cloudflare Pages
+</code></pre></div></td></tr></table></div>
+<h3 id="conventions"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.3</span> Conventions</h3>
+<p>What patterns should the agent match?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Conventions</span>
+
+<span class="k">-</span><span class="w"> </span>Use kebab-case for CSS class names
+<span class="k">-</span><span class="w"> </span>Indent with 2 spaces
+<span class="k">-</span><span class="w"> </span>External CSS only — no inline styles
+<span class="k">-</span><span class="w"> </span>Images go in an <span class="sb">`images/`</span> folder
+</code></pre></div></td></tr></table></div>
+<h3 id="rules-and-boundaries"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.4</span> Rules and Boundaries</h3>
+<p>What must the agent never do?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Rules</span>
+
+<span class="k">-</span><span class="w"> </span>Do not modify the footer — it is consistent across all pages
+<span class="k">-</span><span class="w"> </span>Never commit changes
+<span class="k">-</span><span class="w"> </span>Do not guess or invent URLs
+<span class="k">-</span><span class="w"> </span>Always explain what you changed and why
+</code></pre></div></td></tr></table></div>
+<h3 id="verification"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.5</span> Verification</h3>
+<p>How should the agent check its work?</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Verification</span>
+
+<span class="k">-</span><span class="w"> </span>After making changes, run <span class="sb">`npm run build`</span> to check for errors
+<span class="k">-</span><span class="w"> </span>Confirm all linked pages are reachable
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="a-complete-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.4</span> A Complete Example</h2>
+<p>Here is the <code>AGENTS.md</code> from this project:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># AGENTS.md — Building MkDocs Sites</span>
+
+This is a collection of MkDocs Material sites deployed to Cloudflare.
+Each site lives in <span class="sb">`sites/&lt;slug&gt;/`</span>, gets built into <span class="sb">`build/&lt;slug&gt;/`</span>,
+and the portal at <span class="sb">`build/index.html`</span> links them all together.
+
+<span class="gu">## Content Conventions</span>
+
+<span class="k">-</span><span class="w"> </span>Sites use MkDocs Material theme with specific palette colours
+<span class="k">-</span><span class="w"> </span>Navigation is organised into Resources and Tasks
+<span class="k">-</span><span class="w"> </span>Task pages use <span class="sb">`!!! abstract "Instructions"`</span> for briefs
+<span class="k">-</span><span class="w"> </span>Starter code goes in <span class="sb">`??? code "click to expand"`</span> blocks
+<span class="k">-</span><span class="w"> </span>Hints go in <span class="sb">`??? hint`</span> blocks
+<span class="k">-</span><span class="w"> </span>Never use <span class="sb">`- [ ]`</span> checklist syntax in markdown
+
+<span class="gu">## Rules</span>
+
+<span class="k">-</span><span class="w"> </span>Never commit changes unless explicitly asked
+<span class="k">-</span><span class="w"> </span>Do not build MkDocs output into the <span class="sb">`build/`</span> directory
+<span class="k">-</span><span class="w"> </span>Never generate or guess URLs
+<span class="k">-</span><span class="w"> </span>Delete temporary build artifacts after verifying
+
+<span class="gu">## Palette Reference</span>
+
+| Colour | Hex | Hover |
+|---|---|---|
+| purple | <span class="ni">#7e56c2</span> | <span class="ni">#9d77df</span> |
+| teal   | <span class="ni">#009688</span> | <span class="ni">#26a69a</span> |
+| indigo | <span class="ni">#3f51b5</span> | <span class="ni">#5c6bc0</span> |
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="variants-of-agentsmd"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.5</span> Variants of AGENTS.md</h2>
+<p>Some tools look for different filenames, but the idea is the same:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AGENTS.md</code></td>
+<td>OpenCode, general agents</td>
+</tr>
+<tr>
+<td><code>CLAUDE.md</code></td>
+<td>Claude Code, Claude</td>
+</tr>
+<tr>
+<td><code>.cursorrules</code></td>
+<td>Cursor editor</td>
+</tr>
+</tbody>
+</table>
+<p>If you use multiple tools, you can create multiple files — or keep one <code>AGENTS.md</code> and symlink or copy it. The content should be the same: your project's conventions and rules in one place.</p>
+<hr/>
+<h2 id="when-to-create-one"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.6</span> When to Create One</h2>
+<p>Create an <code>AGENTS.md</code> file when:</p>
+<ul>
+<li>You start a new project — set the conventions before anyone asks</li>
+<li>An agent keeps repeating the same mistake — document the rule</li>
+<li>You bring a new tool into your workflow</li>
+<li>You want consistent agent behaviour across sessions</li>
+</ul>
+<p>Start small. Three lines of conventions are better than no file at all. Add to it whenever you think "I wish the agent already knew that."</p>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.7</span> Summary</h2>
+<ul>
+<li><code>AGENTS.md</code> sits in your project root and gives agents standing instructions</li>
+<li>It describes your project, conventions, rules, and how to verify work</li>
+<li>The agent reads it automatically at the start of every session</li>
+<li>It saves time, prevents mistakes, and keeps behaviour consistent</li>
+<li>Start small and grow it alongside your project</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Plan Mode in Agents" class="md-footer__link md-footer__link--prev" href="../plan-mode/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Plan Mode in Agents
+              </div>
+</div>
+</a>
+<a aria-label="Next: Writing Effective Prompts" class="md-footer__link md-footer__link--next" href="../writing-effective-prompts/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Writing Effective Prompts
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

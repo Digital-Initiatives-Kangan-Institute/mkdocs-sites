@@ -93,7 +93,6 @@ nav:
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
-  custom_dir: ../../shared
   palette:
     primary: indigo
   features:
@@ -104,15 +103,6 @@ theme:
     - header.hide
     - content.code.copy
     - content.code.annotate
-
-# This is relative to the theme/base (based on custom_dir above)
-extra_css:
-  - style.css
-
-# This is here to watch the style.css file above to trigger hot-reload,
-# therefor if the custom_dir is changed it should be changed here too.
-watch:
-  - ../../shared/style.css
 
 plugins:
   - enumerate-headings:
@@ -135,3 +125,6 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+
+extra_css:
+  - extra/style.css

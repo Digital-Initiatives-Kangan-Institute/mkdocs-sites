@@ -10,7 +10,6 @@
     **Scenario:** A small control panel has a red button and a green button. Pressing the red button should light the red LED only; pressing the green button should light the green LED only; if neither is pressed, both LEDs stay off.
 
     **Components required:**
-
     - ESP32-S3 development board
     - 2 × push buttons
     - 2 × LEDs (red, green)
@@ -41,7 +40,6 @@
     ```
 
     **Requirements:**
-
     - Configure both buttons as `INPUT_PULLUP` and both LEDs as `OUTPUT`.
     - Read both buttons every loop with `digitalRead()`.
     - Use `if / else if / else` so exactly one outcome happens per loop: red pressed → red LED on, green off; green pressed → green LED on, red off; neither pressed → both off.

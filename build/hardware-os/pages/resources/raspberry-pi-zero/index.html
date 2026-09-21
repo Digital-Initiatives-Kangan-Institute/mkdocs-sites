@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../hardware-components/" rel="prev"/>
+<link href="../hardware-software-os/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Raspberry Pi Zero - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#raspberry-pi-zero">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Raspberry Pi Zero
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-single-board-computer">
+<span class="md-ellipsis">
+      
+        What is a Single-Board Computer?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#raspberry-pi-zero-specifications">
+<span class="md-ellipsis">
+      
+        Raspberry Pi Zero Specifications
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pi-zero-vs-a-normal-computer">
+<span class="md-ellipsis">
+      
+        Pi Zero vs a Normal Computer
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-a-raspberry-pi-zero">
+<span class="md-ellipsis">
+      
+        Setting Up a Raspberry Pi Zero
+      
+    </span>
+</a>
+<nav aria-label="Setting Up a Raspberry Pi Zero" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-you-need">
+<span class="md-ellipsis">
+      
+        What You Need
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installing-the-operating-system">
+<span class="md-ellipsis">
+      
+        Installing the Operating System
+      
+    </span>
+</a>
+<nav aria-label="Installing the Operating System" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#using-raspberry-pi-imager">
+<span class="md-ellipsis">
+      
+        Using Raspberry Pi Imager
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#headless-setup">
+<span class="md-ellipsis">
+      
+        Headless Setup
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-can-you-do-with-a-pi-zero">
+<span class="md-ellipsis">
+      
+        What Can You Do with a Pi Zero?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#raspberry-pi-zero-vs-other-pi-models">
+<span class="md-ellipsis">
+      
+        Raspberry Pi Zero vs Other Pi Models
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary">
+<span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../command-line-basics/">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="raspberry-pi-zero"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.</span> Raspberry Pi Zero</h1>
+<p>The Raspberry Pi is a series of small, low-cost, single-board computers developed by the Raspberry Pi Foundation. The Pi Zero is the smallest and most affordable model in the range — a fully functional computer about the size of a stick of gum.</p>
+<hr/>
+<h2 id="what-is-a-single-board-computer"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.1</span> What is a Single-Board Computer?</h2>
+<p>A single-board computer (SBC) packs all the core components of a computer onto one circuit board:</p>
+<ul>
+<li>CPU and RAM (soldered directly to the board)</li>
+<li>GPU for graphics output</li>
+<li>USB ports for peripherals</li>
+<li>Video output (mini HDMI)</li>
+<li>Storage via microSD card</li>
+</ul>
+<p>Unlike a desktop PC, there are no expansion slots, no separate graphics card, and no internal drive bays. Everything you need is on one board, and you add only what you need via USB.</p>
+<hr/>
+<h2 id="raspberry-pi-zero-specifications"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2</span> Raspberry Pi Zero Specifications</h2>
+<p>The Pi Zero is available in several variants:</p>
+<table>
+<thead>
+<tr>
+<th>Specification</th>
+<th>Pi Zero</th>
+<th>Pi Zero W</th>
+<th>Pi Zero 2 W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>1 GHz single-core ARM11</td>
+<td>1 GHz single-core ARM11</td>
+<td>1 GHz quad-core Cortex-A53</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>512 MB</td>
+<td>512 MB</td>
+<td>512 MB</td>
+</tr>
+<tr>
+<td>Wi-Fi</td>
+<td>No</td>
+<td>802.11 b/g/n (2.4 GHz)</td>
+<td>802.11 b/g/n (2.4 GHz)</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>No</td>
+<td>4.1</td>
+<td>4.2</td>
+</tr>
+<tr>
+<td>Video Output</td>
+<td>Mini HDMI</td>
+<td>Mini HDMI</td>
+<td>Mini HDMI</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>1 × Micro-USB OTG</td>
+<td>1 × Micro-USB OTG</td>
+<td>1 × Micro-USB OTG</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>MicroSD</td>
+<td>MicroSD</td>
+<td>MicroSD</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>Micro-USB (5V)</td>
+<td>Micro-USB (5V)</td>
+<td>Micro-USB (5V)</td>
+</tr>
+<tr>
+<td>Size</td>
+<td>65 mm × 30 mm</td>
+<td>65 mm × 30 mm</td>
+<td>65 mm × 30 mm</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Pi Zero 2 W</strong> is the most capable current model, with a quad-core processor that handles light desktop use, web browsing, and programming tasks.</p>
+<hr/>
+<h2 id="pi-zero-vs-a-normal-computer"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Pi Zero vs a Normal Computer</h2>
+<p>The Pi Zero works like any other computer, but there are important differences to be aware of:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Pi Zero 2 W</th>
+<th>Typical Desktop / Laptop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>65 mm × 30 mm (credit card sized)</td>
+<td>Tower case or laptop chassis</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>~$25 AUD</td>
+<td>$500–$2000+ AUD</td>
+</tr>
+<tr>
+<td><strong>CPU</strong></td>
+<td>1 GHz quad-core ARM</td>
+<td>2–5 GHz multi-core Intel/AMD</td>
+</tr>
+<tr>
+<td><strong>RAM</strong></td>
+<td>512 MB</td>
+<td>8–32 GB</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>MicroSD card (you supply it)</td>
+<td>Built-in SSD or HDD</td>
+</tr>
+<tr>
+<td><strong>Operating System</strong></td>
+<td>Raspberry Pi OS (Linux)</td>
+<td>Windows, macOS, or Linux</td>
+</tr>
+<tr>
+<td><strong>Power</strong></td>
+<td>2.5 W, powered via USB</td>
+<td>65–500+ W, plugged into mains</td>
+</tr>
+<tr>
+<td><strong>Expandability</strong></td>
+<td>USB ports only; no internal slots</td>
+<td>Internal PCIe slots, drive bays, RAM slots</td>
+</tr>
+</tbody>
+</table>
+<p>The Pi Zero is not a replacement for a normal desktop or laptop. It is designed for projects where a full-sized computer would be too large, too expensive, or uses too much power. For everyday tasks like word processing, web browsing, and watching videos, a standard computer is the better choice.</p>
+<hr/>
+<h2 id="setting-up-a-raspberry-pi-zero"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4</span> Setting Up a Raspberry Pi Zero</h2>
+<h3 id="what-you-need"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4.1</span> What You Need</h3>
+<p>To get a Pi Zero up and running, you will need:</p>
+<ul>
+<li><strong>Raspberry Pi Zero</strong> board (any variant)</li>
+<li><strong>MicroSD card</strong> (8 GB minimum, 16 GB or more recommended)</li>
+<li><strong>Micro-USB power supply</strong> (5V, at least 1.2A; a phone charger often works)</li>
+<li><strong>Mini HDMI to HDMI adapter</strong> (to connect a monitor)</li>
+<li><strong>Micro-USB OTG adapter</strong> (to connect a standard USB keyboard/mouse or hub)</li>
+<li><strong>Optional</strong> — A case to protect the board</li>
+</ul>
+<h3 id="installing-the-operating-system"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4.2</span> Installing the Operating System</h3>
+<p>The Raspberry Pi runs Raspberry Pi OS (formerly called Raspbian), a Debian-based Linux distribution optimised for the Pi hardware. Other operating systems are also available, including Ubuntu and specialised media centre and retro-gaming distributions.</p>
+<h4 id="using-raspberry-pi-imager"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4.2.1</span> Using Raspberry Pi Imager</h4>
+<p>The easiest way to prepare a microSD card is with the <strong>Raspberry Pi Imager</strong> tool:</p>
+<ol>
+<li>Download and install Raspberry Pi Imager from <a href="https://www.raspberrypi.com/software/">raspberrypi.com/software</a></li>
+<li>Insert your microSD card into your computer</li>
+<li>Open Raspberry Pi Imager</li>
+<li>Click <strong>Choose Device</strong> → Select <strong>Raspberry Pi Zero 2 W</strong> (or Pi Zero)</li>
+<li>Click <strong>Choose OS</strong> → Select <strong>Raspberry Pi OS (32-bit)</strong> (the Lite version if using headless)</li>
+<li>Click <strong>Choose Storage</strong> → Select your microSD card</li>
+<li>Click the gear icon to configure advanced settings:</li>
+<li>Set a hostname</li>
+<li>Enable SSH for remote access</li>
+<li>Configure Wi-Fi (SSID and password)</li>
+<li>Set username and password</li>
+<li>Click <strong>Write</strong> and wait for the process to complete</li>
+</ol>
+<h4 id="headless-setup"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.4.2.2</span> Headless Setup</h4>
+<p>A <strong>headless</strong> setup means running the Pi without a monitor, keyboard, or mouse attached. This is common for projects where the Pi is embedded in a device or accessed remotely.</p>
+<p>For a headless setup, choose <strong>Raspberry Pi OS Lite</strong> (no desktop) and enable both SSH and Wi-Fi in the Imager settings. Once the Pi boots, you can connect to it from another computer via SSH:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>ssh<span class="w"> </span>pi@raspberrypi.local
+</code></pre></div></td></tr></table></div>
+<p>Replace <code>raspberrypi.local</code> with the hostname you set in Imager, and <code>pi</code> with your username.</p>
+<hr/>
+<h2 id="what-can-you-do-with-a-pi-zero"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.5</span> What Can You Do with a Pi Zero?</h2>
+<p>The Pi Zero's small size, low cost, and low power consumption make it ideal for embedded and portable projects:</p>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Retro gaming console</strong></td>
+<td>Run RetroPie to emulate classic consoles (NES, SNES, Game Boy, etc.)</td>
+</tr>
+<tr>
+<td><strong>Network ad blocker (Pi-hole)</strong></td>
+<td>Block ads and trackers for every device on your home network</td>
+</tr>
+<tr>
+<td><strong>Home automation controller</strong></td>
+<td>Run Home Assistant to control smart lights, sensors, and switches</td>
+</tr>
+<tr>
+<td><strong>Security camera</strong></td>
+<td>Connect a Raspberry Pi Camera Module for a compact surveillance camera</td>
+</tr>
+<tr>
+<td><strong>Media server</strong></td>
+<td>Stream music, video, or photos to devices on your network</td>
+</tr>
+<tr>
+<td><strong>Portable NAS</strong></td>
+<td>Turn a USB drive into network-attached storage</td>
+</tr>
+<tr>
+<td><strong>Weather station</strong></td>
+<td>Connect temperature, humidity, and pressure sensors to log environmental data</td>
+</tr>
+<tr>
+<td><strong>Desktop computer</strong></td>
+<td>With a hub, keyboard, mouse, and monitor, browse the web and edit documents</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="raspberry-pi-zero-vs-other-pi-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.6</span> Raspberry Pi Zero vs Other Pi Models</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Pi Zero 2 W</th>
+<th>Pi 4 Model B</th>
+<th>Pi 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>Quad-core 1 GHz</td>
+<td>Quad-core 1.8 GHz</td>
+<td>Quad-core 2.4 GHz</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>512 MB</td>
+<td>1–8 GB</td>
+<td>4–8 GB</td>
+</tr>
+<tr>
+<td>USB Ports</td>
+<td>1 × Micro-USB OTG</td>
+<td>2 × USB 2.0, 2 × USB 3.0</td>
+<td>2 × USB 2.0, 2 × USB 3.0</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>Mini HDMI</td>
+<td>2 × Micro HDMI</td>
+<td>2 × Micro HDMI</td>
+</tr>
+<tr>
+<td>Ethernet</td>
+<td>No</td>
+<td>Gigabit</td>
+<td>Gigabit</td>
+</tr>
+<tr>
+<td>Wi-Fi</td>
+<td>2.4 GHz only</td>
+<td>Dual-band (2.4/5 GHz)</td>
+<td>Dual-band (2.4/5 GHz)</td>
+</tr>
+<tr>
+<td>Price (approx.)</td>
+<td>~$25 AUD</td>
+<td>~$55–$120 AUD</td>
+<td>~$80–$130 AUD</td>
+</tr>
+<tr>
+<td>Best For</td>
+<td>Embedded projects, low power</td>
+<td>Desktop use, servers, general purpose</td>
+<td>Desktop replacement, heavy workloads</td>
+</tr>
+</tbody>
+</table>
+<p>Choose the Pi Zero when size, cost, and power consumption are priorities. Choose the Pi 4 or Pi 5 when you need more RAM, faster USB, dual displays, or a smoother desktop experience.</p>
+<hr/>
+<h2 id="summary"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.7</span> Summary</h2>
+<ul>
+<li>The Raspberry Pi Zero is a full computer on a single small board, starting at about $25 AUD</li>
+<li>It runs Linux (Raspberry Pi OS) from a microSD card</li>
+<li>Use Raspberry Pi Imager to write the OS and pre-configure Wi-Fi and SSH</li>
+<li>The Pi Zero excels at embedded, portable, and low-power projects</li>
+<li>For desktop computing or heavier workloads, consider a Pi 4 or Pi 5 instead</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Computer Hardware Components" class="md-footer__link md-footer__link--prev" href="../hardware-components/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Computer Hardware Components
+              </div>
+</div>
+</a>
+<a aria-label="Next: Hardware, Software, and Operating Systems" class="md-footer__link md-footer__link--next" href="../hardware-software-os/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Hardware, Software, and Operating Systems
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

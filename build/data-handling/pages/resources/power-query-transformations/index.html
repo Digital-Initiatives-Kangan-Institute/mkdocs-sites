@@ -1,0 +1,975 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../power-query/" rel="prev"/>
+<link href="../multiple-sources/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Power Query Transformations - Data Handling</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#power-query-transformations">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Data Handling" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Data Handling
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Power Query Transformations
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Data Handling" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Data Handling
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bki-di-portal.netlify.app/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raw-data/">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../excel-transformation-techniques/">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-steps-matter">
+<span class="md-ellipsis">
+      
+        Why Steps Matter
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-a-header-row">
+<span class="md-ellipsis">
+      
+        Setting a header row
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-rows">
+<span class="md-ellipsis">
+      
+        Removing Rows
+      
+    </span>
+</a>
+<nav aria-label="Removing Rows" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-blank-rows">
+<span class="md-ellipsis">
+      
+        Remove Blank Rows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-top-rows">
+<span class="md-ellipsis">
+      
+        Remove Top Rows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#remove-bottom-rows">
+<span class="md-ellipsis">
+      
+        Remove Bottom Rows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-duplicates">
+<span class="md-ellipsis">
+      
+        Removing Duplicates
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#removing-columns">
+<span class="md-ellipsis">
+      
+        Removing Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#right-click-menu">
+<span class="md-ellipsis">
+      
+        Right Click Menu
+      
+    </span>
+</a>
+<nav aria-label="Right Click Menu" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#renaming-columns">
+<span class="md-ellipsis">
+      
+        Renaming Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changing-data-types">
+<span class="md-ellipsis">
+      
+        Changing Data Types
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#replacing-values">
+<span class="md-ellipsis">
+      
+        Replacing Values
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#filtering-data">
+<span class="md-ellipsis">
+      
+        Filtering Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sorting-data">
+<span class="md-ellipsis">
+      
+        Sorting Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#splitting-columns">
+<span class="md-ellipsis">
+      
+        Splitting Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#merging-columns">
+<span class="md-ellipsis">
+      
+        Merging Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-new-columns">
+<span class="md-ellipsis">
+      
+        Creating New Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-query-refresh">
+<span class="md-ellipsis">
+      
+        Understanding Query Refresh
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#loading-results-back-into-excel">
+<span class="md-ellipsis">
+      
+        Loading Results Back into Excel
+      
+    </span>
+</a>
+<nav aria-label="Loading Results Back into Excel" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#close-load">
+<span class="md-ellipsis">
+      
+        Close &amp; Load
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#close-load-to">
+<span class="md-ellipsis">
+      
+        Close &amp; Load To
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity">
+<span class="md-ellipsis">
+      
+        Activity
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common-transform-patterns/">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unstructured-data/">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="power-query-transformations"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Power Query Transformations</h1>
+<p>Power Query allows us to clean and transform data to get ready for analysis.  It allows us to apply transformations in steps, which can be repeated whenever new data arrives.</p>
+<h2 id="why-steps-matter"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1</span> Why Steps Matter</h2>
+<p>Because every transformation is recorded:</p>
+<ul>
+<li>Work can be repeated</li>
+<li>Work can be reviewed</li>
+<li>Errors can be corrected</li>
+<li>Queries can be refreshed</li>
+</ul>
+<p>This is one of Power Query's major advantages over manual Excel cleaning.</p>
+<details class="abstract">
+<summary>Click to show image</summary>
+<p><img alt="Get Data" src="../../../assets/applied_steps.png"/></p>
+</details>
+<hr/>
+<h2 id="setting-a-header-row"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2</span> Setting a header row</h2>
+<p>Often data is exported with a header row that is not recognised by Power Query.  We can manually set the header row to ensure that column names are meaningful.  this is done by selecting the <code>Use First Row as Headers</code> option in the ribbon.</p>
+<details class="abstract">
+<summary>Click to show image</summary>
+<p><img alt="Get Data" src="../../../assets/header_row.png"/></p>
+</details>
+<p><strong>Activity</strong>
+From the <code>names.xlsx</code> workbook that was loaded into Power Query from the previous module, set the first row as headers.</p>
+<hr/>
+<h2 id="removing-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3</span> Removing Rows</h2>
+<p>One of the most common transformations.</p>
+<h3 id="remove-blank-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.1</span> Remove Blank Rows</h3>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>David</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+<tr>
+<td>Minh</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>David</td>
+</tr>
+<tr>
+<td>Minh</td>
+</tr>
+</tbody>
+</table>
+<h3 id="remove-top-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.2</span> Remove Top Rows</h3>
+<p>Useful when reports contain:</p>
+<ul>
+<li>Titles</li>
+<li>Export information</li>
+<li>Notes</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Youth Survey Report
+Generated 1 March 2026
+</code></pre></div></td></tr></table></div>
+<p>These rows can be removed before analysis.</p>
+<h3 id="remove-bottom-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.3</span> Remove Bottom Rows</h3>
+<p>Useful when reports contain:</p>
+<ul>
+<li>Totals</li>
+<li>Notes</li>
+<li>Summary information</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Grand Total
+Records Exported
+</code></pre></div></td></tr></table></div>
+<h3 id="removing-duplicates"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.4</span> Removing Duplicates</h3>
+<p>Duplicates are common in imported data.</p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>ResponseID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R001</td>
+</tr>
+<tr>
+<td>R001</td>
+</tr>
+<tr>
+<td>R002</td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>ResponseID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R001</td>
+</tr>
+<tr>
+<td>R002</td>
+</tr>
+</tbody>
+</table>
+<p>Always review duplicates before removing them.</p>
+<details class="abstract">
+<summary>Click to show image</summary>
+<p><img alt="Get Data" src="../../../assets/remove_rows.png"/></p>
+</details>
+<p><strong>Activity</strong>
+There are blank rows in the <code>names.xlsx</code> workbook that was opened in Power Query.  Remove the blank rows, duplicates and any other rows that are not useful.</p>
+<details class="note">
+<summary>Tip</summary>
+<p>To check if duplicates or blanks exist before removing them choose the relevent option/s in the <em>Keep Rows</em> section of the ribbon.  This will filter the data to show only the duplicates or blanks.  You can then review the data before removing them.</p>
+</details>
+<hr/>
+<h2 id="removing-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.4</span> Removing Columns</h2>
+<p>Many datasets contain unnecessary information.</p>
+<p><strong>Example</strong></p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Fax Number</th>
+<th>Legacy ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Removing unused columns:</p>
+<ul>
+<li>Simplifies analysis</li>
+<li>Improves performance</li>
+<li>Reduces clutter</li>
+</ul>
+<p><strong>Activity</strong>
+Remove the unused column from the <code>names.xlsx</code> workbook that was opened in Power Query.</p>
+<hr/>
+<h2 id="right-click-menu"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.5</span> Right Click Menu</h2>
+<p>Clicking on a column header opens a menu with many useful options.  Some of these are outlined below.</p>
+<h3 id="renaming-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.5.1</span> Renaming Columns</h3>
+<p>Column names should be meaningful.</p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column1</th>
+<th>Column2</th>
+<th>Column3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Suburb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Good naming improves readability and maintainability.</p>
+<hr/>
+<h3 id="changing-data-types"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.5.2</span> Changing Data Types</h3>
+<p>Power Query automatically attempts to detect data types.</p>
+<p>Common data types include:</p>
+<ul>
+<li>Text</li>
+<li>Whole Number</li>
+<li>Decimal Number</li>
+<li>Date</li>
+<li>Time</li>
+<li>True/False</li>
+</ul>
+<p><strong>Why Data Types Matter</strong></p>
+<p>Consider:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>100
+</code></pre></div></td></tr></table></div>
+<p>If stored as text:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>"100"
+</code></pre></div></td></tr></table></div>
+<p>calculations may fail.</p>
+<p>Correct data types improve:</p>
+<ul>
+<li>Sorting</li>
+<li>Filtering</li>
+<li>Calculations</li>
+<li>Reporting</li>
+</ul>
+<hr/>
+<h3 id="replacing-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.5.3</span> Replacing Values</h3>
+<p>One of the most useful transformations.</p>
+<p><strong>Example</strong></p>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Victoria
+VIC
+vic
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>VIC
+VIC
+VIC
+</code></pre></div></td></tr></table></div>
+<p><strong>Survey Example</strong></p>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>YES
+Yes
+Y
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Yes
+Yes
+Yes
+</code></pre></div></td></tr></table></div>
+<p><strong>Activity</strong>
+Use the right click menu to replace the values in the <code>names.xlsx</code> workbook that was opened in Power Query.  Rename columns appropriately and change data types where necessary.  Standardise column data where appropriate.</p>
+<hr/>
+<h2 id="filtering-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.6</span> Filtering Data</h2>
+<p>Filtering can remove irrelevant records.</p>
+<p><strong>Example</strong></p>
+<p>Keep only:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>VIC
+</code></pre></div></td></tr></table></div>
+<p>records.</p>
+<p>Or remove:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Blank values
+</code></pre></div></td></tr></table></div>
+<p>records.</p>
+<hr/>
+<h2 id="sorting-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.7</span> Sorting Data</h2>
+<p>Sorting helps identify:</p>
+<ul>
+<li>Missing values</li>
+<li>Duplicates</li>
+<li>Outliers</li>
+<li>Invalid values</li>
+</ul>
+<p><strong>Example</strong></p>
+<p>Sort Age:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>-1
+12
+14
+15
+250
+</code></pre></div></td></tr></table></div>
+<p>The unusual values become obvious.</p>
+<hr/>
+<h2 id="splitting-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.8</span> Splitting Columns</h2>
+<p>Columns sometimes contain multiple values.</p>
+<p><strong>Example</strong></p>
+<p><strong>Before</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Broadmeadows, VIC
+</code></pre></div></td></tr></table></div>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Suburb</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broadmeadows</td>
+<td>VIC</td>
+</tr>
+</tbody>
+</table>
+<p>Power Query can split columns using:</p>
+<ul>
+<li>Delimiters</li>
+<li>Fixed widths</li>
+<li>Positions</li>
+</ul>
+<p><strong>Activity</strong>
+Split up the location column in the <code>names.xlsx</code> workbook that was opened in Power Query.</p>
+<hr/>
+<h2 id="merging-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.9</span> Merging Columns</h2>
+<p>The opposite of splitting.</p>
+<p><strong>Before</strong></p>
+<table>
+<thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>After</strong></p>
+<table>
+<thead>
+<tr>
+<th>Full Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Useful when creating display fields.</p>
+<hr/>
+<h2 id="creating-new-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.10</span> Creating New Columns</h2>
+<p>Power Query can generate new columns from existing data.</p>
+<p><strong>Example</strong></p>
+<p>Age:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>16
+</code></pre></div></td></tr></table></div>
+<p>Create:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Age Group
+</code></pre></div></td></tr></table></div>
+<p>Result:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>15-17
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="understanding-query-refresh"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.11</span> Understanding Query Refresh</h2>
+<p>One of the biggest advantages of Power Query is refreshability.</p>
+<p><strong>Example</strong></p>
+<p>Original file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>100 records
+</code></pre></div></td></tr></table></div>
+<p>Next month:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>500 records
+</code></pre></div></td></tr></table></div>
+<p>Instead of repeating the entire process:</p>
+<ol>
+<li>Replace the source file</li>
+<li>Refresh query</li>
+</ol>
+<p>Power Query reapplies all transformation steps.</p>
+<hr/>
+<h2 id="loading-results-back-into-excel"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.12</span> Loading Results Back into Excel</h2>
+<p>Once transformations are complete:</p>
+<h3 id="close-load"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.12.1</span> Close &amp; Load</h3>
+<p>Loads data into:</p>
+<ul>
+<li>Excel Worksheet</li>
+<li>Excel Table</li>
+</ul>
+<h3 id="close-load-to"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.12.2</span> Close &amp; Load To</h3>
+<p>Allows loading into:</p>
+<ul>
+<li>Pivot Tables</li>
+<li>Data Model</li>
+<li>Existing worksheets</li>
+</ul>
+<hr/>
+<h2 id="activity"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.13</span> Activity</h2>
+<ul>
+<li>Apply the above tranformations to the <a href="../../../assets/names2.xlsx">names2</a> file.  Once complete, load the results into a new worksheet in Excel.</li>
+<li>Apply the query created for <code>names2.xlsx</code> to <a href="../../../assets/names3.xlsx">names3</a>.  Refresh the query to see the results.</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Power Query Fundamentals" class="md-footer__link md-footer__link--prev" href="../power-query/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Power Query Fundamentals
+              </div>
+</div>
+</a>
+<a aria-label="Next: Multiple Data Sources" class="md-footer__link md-footer__link--next" href="../multiple-sources/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Multiple Data Sources
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

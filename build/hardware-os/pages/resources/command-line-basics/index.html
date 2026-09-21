@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../gui-cli/" rel="prev"/>
+<link href="../managing-software-hardware/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Command Line Basics - Hardware &amp; OS</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="red" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#command-line-basics">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Hardware &amp; OS" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Hardware &amp; OS
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Command Line Basics
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Hardware &amp; OS" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Hardware &amp; OS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Hardware &amp; OS
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    
+  
+    Introduction to Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-components/">
+<span class="md-ellipsis">
+    
+  
+    Computer Hardware Components
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../raspberry-pi-zero/">
+<span class="md-ellipsis">
+    
+  
+    Raspberry Pi Zero
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hardware-software-os/">
+<span class="md-ellipsis">
+    
+  
+    Hardware, Software, and Operating Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installing-os/">
+<span class="md-ellipsis">
+    
+  
+    Installing an Operating System
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../boot-process/">
+<span class="md-ellipsis">
+    
+  
+    The Boot Process
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gui-cli/">
+<span class="md-ellipsis">
+    
+  
+    Interfaces — GUI and Command Line
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Command Line Basics
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-a-command">
+<span class="md-ellipsis">
+      
+        What is a Command?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how-commands-are-structured">
+<span class="md-ellipsis">
+      
+        How Commands Are Structured
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options-and-flags">
+<span class="md-ellipsis">
+      
+        Options and Flags
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getting-help">
+<span class="md-ellipsis">
+      
+        Getting Help
+      
+    </span>
+</a>
+<nav aria-label="Getting Help" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-help-flag">
+<span class="md-ellipsis">
+      
+        The --help Flag
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-manual-man">
+<span class="md-ellipsis">
+      
+        The Manual (man)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-command-output">
+<span class="md-ellipsis">
+      
+        Understanding Command Output
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#administrative-access-sudo">
+<span class="md-ellipsis">
+      
+        Administrative Access (sudo)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safety-tips">
+<span class="md-ellipsis">
+      
+        Safety Tips
+      
+    </span>
+</a>
+<nav aria-label="Safety Tips" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#be-careful-with-destructive-commands">
+<span class="md-ellipsis">
+      
+        Be Careful with Destructive Commands
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#copy-and-paste-carefully">
+<span class="md-ellipsis">
+      
+        Copy and Paste Carefully
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avoid-these-patterns-until-you-are-confident">
+<span class="md-ellipsis">
+      
+        Avoid These Patterns Until You Are Confident
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps">
+<span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../managing-software-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Managing Software and Hardware
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../system-optimisation/">
+<span class="md-ellipsis">
+    
+  
+    System Optimisation and Maintenance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../identifying-industry-tech/">
+<span class="md-ellipsis">
+    
+  
+    Identifying Industry Technologies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../implementing-evaluating-tech/">
+<span class="md-ellipsis">
+    
+  
+    Implementing and Evaluating Technology
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Tasks
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/hardware-os-software-selection/">
+<span class="md-ellipsis">
+    
+  
+    Research: Hardware, OS, and Software Selection
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/selecting-project-hardware/">
+<span class="md-ellipsis">
+    
+  
+    Research: Selecting Hardware for a Small Project
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tasks/creating-files-folders-cli/">
+<span class="md-ellipsis">
+    
+  
+    Creating Files and Folders on the Linux CLI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../intro-to-os/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="command-line-basics"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.</span> Command Line Basics</h1>
+<p>The command line is a powerful way to control your computer by typing instructions instead of clicking. While it looks different from the windows and icons you are used to, every command follows a simple structure. Once you understand the pattern, you can learn new commands quickly.</p>
+<hr/>
+<h2 id="what-is-a-command"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.1</span> What is a Command?</h2>
+<p>A <strong>command</strong> is a text instruction you type into the terminal that tells the computer to do something. When you press Enter, the computer runs that instruction and shows you the result.</p>
+<p>For example, on Windows you can type <code>dir</code> to see a list of files in the current folder. On Linux or macOS you would type <code>ls</code> instead. Different operating systems have slightly different commands, but the way commands are structured is the same everywhere.</p>
+<hr/>
+<h2 id="how-commands-are-structured"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.2</span> How Commands Are Structured</h2>
+<p>Most commands follow this pattern:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>command [options] [arguments]
+</code></pre></div></td></tr></table></div>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What It Is</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Command</strong></td>
+<td>The program you want to run</td>
+<td><code>mkdir</code> (make directory)</td>
+</tr>
+<tr>
+<td><strong>Options (or flags)</strong></td>
+<td>Change how the command behaves. Usually start with <code>-</code> or <code>--</code></td>
+<td><code>-p</code> or <code>--verbose</code></td>
+</tr>
+<tr>
+<td><strong>Arguments</strong></td>
+<td>The thing you want the command to act on</td>
+<td><code>projects</code> (the name of a folder)</td>
+</tr>
+</tbody>
+</table>
+<p>Putting it together:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>projects
+</code></pre></div></td></tr></table></div>
+<p>This runs the <code>mkdir</code> command with the argument <code>projects</code> — it creates a new folder called <code>projects</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>projects/website/images
+</code></pre></div></td></tr></table></div>
+<p>The <code>-p</code> option tells <code>mkdir</code> to create all the parent folders automatically. Without <code>-p</code>, the command would fail if <code>projects</code> or <code>website</code> did not already exist.</p>
+<hr/>
+<h2 id="options-and-flags"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.3</span> Options and Flags</h2>
+<p>Options modify what a command does. They come in two forms:</p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Short option</strong></td>
+<td><code>-h</code></td>
+<td>Single letter, prefixed with a single dash</td>
+</tr>
+<tr>
+<td><strong>Long option</strong></td>
+<td><code>--help</code></td>
+<td>Full word, prefixed with two dashes</td>
+</tr>
+</tbody>
+</table>
+<p>Short options can often be combined. On Linux, <code>ls -l -a</code> (long format, show hidden files) can be written as <code>ls -la</code>.</p>
+<p>Not every command uses the same options. <code>-h</code> might mean "help" for one command and "human-readable" for another. You always need to check what a command supports.</p>
+<hr/>
+<h2 id="getting-help"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.4</span> Getting Help</h2>
+<p>You do not need to memorise every option. Commands include their own documentation that you can read right in the terminal.</p>
+<h3 id="the-help-flag"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.4.1</span> The <code>--help</code> Flag</h3>
+<p>Almost every command supports <code>--help</code>. It prints a quick summary of what the command does and what options it accepts:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir<span class="w"> </span>--help
+</code></pre></div></td></tr></table></div>
+<p>On Windows Command Prompt, many commands use <code>/?</code> instead:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdir /?
+</code></pre></div></td></tr></table></div>
+<h3 id="the-manual-man"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.4.2</span> The Manual (<code>man</code>)</h3>
+<p>Linux and macOS include a built-in manual called <code>man</code>. It provides detailed documentation for almost every command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>man<span class="w"> </span>ls
+</code></pre></div></td></tr></table></div>
+<p>This opens a full page describing what <code>ls</code> does, every option it supports, and examples of how to use it. Press the <strong>arrow keys</strong> to scroll, and press <strong>Q</strong> to quit and return to the terminal.</p>
+<p>Windows PowerShell has a similar feature with the <code>Get-Help</code> command:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nb">Get-Help</span> <span class="nb">Get-Process</span>
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="understanding-command-output"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.5</span> Understanding Command Output</h2>
+<p>When a command runs successfully, it may:</p>
+<ul>
+<li><strong>Print something to the screen</strong> — for example, <code>dir</code> lists files</li>
+<li><strong>Do something silently</strong> — for example, <code>mkdir</code> creates a folder but prints nothing unless there is an error</li>
+<li><strong>Ask for confirmation</strong> — some commands ask "Are you sure?" before doing something destructive</li>
+</ul>
+<p>If a command fails, it usually prints an error message explaining what went wrong. Common errors include:</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>What It Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>command not found</code></td>
+<td>The command is misspelled or not installed</td>
+</tr>
+<tr>
+<td><code>permission denied</code></td>
+<td>You do not have the right to do that — you may need administrative access</td>
+</tr>
+<tr>
+<td><code>no such file or directory</code></td>
+<td>The file or folder you named does not exist</td>
+</tr>
+<tr>
+<td><code>is a directory</code></td>
+<td>You tried to use a file command on a folder</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="administrative-access-sudo"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.6</span> Administrative Access (<code>sudo</code>)</h2>
+<p>Some commands affect the entire system and require extra permission to run. On Linux and macOS, you prefix these commands with <code>sudo</code> (short for "superuser do"):</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>firefox
+</code></pre></div></td></tr></table></div>
+<p>The terminal will ask for your password. When you type it, nothing appears on screen — that is normal. Press Enter and the command runs with elevated permissions.</p>
+<p>Windows has a similar concept called "Run as Administrator." Right-click the Command Prompt or PowerShell icon and select <strong>Run as administrator</strong> to get the same level of access.</p>
+<hr/>
+<h2 id="safety-tips"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.7</span> Safety Tips</h2>
+<h3 id="be-careful-with-destructive-commands"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.7.1</span> Be Careful with Destructive Commands</h3>
+<p>Commands that delete files or modify the system cannot be undone. There is no Recycle Bin for the command line. Before running a command you found online:</p>
+<ul>
+<li>Read what it does — use <code>--help</code> or <code>man</code></li>
+<li>Make sure you understand which files or folders it affects</li>
+<li>Double-check the spelling of file paths</li>
+<li>Start with a test folder if you are unsure</li>
+</ul>
+<h3 id="copy-and-paste-carefully"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.7.2</span> Copy and Paste Carefully</h3>
+<p>Do not paste commands from websites into your terminal without understanding them. Malicious websites sometimes hide extra commands in copied text. If you are learning, type commands out instead of copying them.</p>
+<h3 id="avoid-these-patterns-until-you-are-confident"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.7.3</span> Avoid These Patterns Until You Are Confident</h3>
+<ul>
+<li><code>rm -rf</code> — deletes files and folders without asking and cannot be undone</li>
+<li>Commands that include <code>/dev/</code> — these affect hardware devices directly</li>
+<li>Commands that include <code>chmod 777</code> — this gives everyone full access to a file, which is rarely correct</li>
+</ul>
+<hr/>
+<h2 id="next-steps"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.8</span> Next Steps</h2>
+<p>Now that you understand the structure of commands, options, and arguments, and you know how to get help with <code>--help</code> and <code>man</code>, you are ready to learn specific commands. The pages in this site introduce commands in context — installing software, checking system information, managing files — so you learn them as you need them rather than memorising a long list.</p>
+<p>If you ever get stuck, ask the command itself for help first. It is the fastest way to find the right option.</p>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Interfaces — GUI and Command Line" class="md-footer__link md-footer__link--prev" href="../gui-cli/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                Interfaces — GUI and Command Line
+              </div>
+</div>
+</a>
+<a aria-label="Next: Managing Software and Hardware" class="md-footer__link md-footer__link--next" href="../managing-software-hardware/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Managing Software and Hardware
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>

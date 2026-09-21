@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../what-is-data/" rel="prev"/>
+<link href="../excel-transformation-techniques/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
+<title>Raw Data - Data Handling</title>
+<link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../extra/style.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#understanding-raw-data">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Data Handling" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Data Handling
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Raw Data
+            
+          </span>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Data Handling" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Data Handling">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Data Handling
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://bki-di-portal.netlify.app/">
+<span class="md-ellipsis">
+    
+  
+    Return to Portal
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    
+  
+    Menu
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Menu
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Resources
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    
+  
+    What is Data?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    
+  
+    Raw Data
+  
+
+    
+  </span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#introduction">
+<span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-raw-data">
+<span class="md-ellipsis">
+      
+        What is Raw Data?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#types-of-data">
+<span class="md-ellipsis">
+      
+        Types of Data
+      
+    </span>
+</a>
+<nav aria-label="Types of Data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structured-data">
+<span class="md-ellipsis">
+      
+        Structured Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#semi-structured-data">
+<span class="md-ellipsis">
+      
+        Semi-Structured Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unstructured-data">
+<span class="md-ellipsis">
+      
+        Unstructured Data
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-understanding-data-matters">
+<span class="md-ellipsis">
+      
+        Why Understanding Data Matters
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-profiling">
+<span class="md-ellipsis">
+      
+        Data Profiling
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#questions-to-ask">
+<span class="md-ellipsis">
+      
+        Questions to Ask
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profiling-example">
+<span class="md-ellipsis">
+      
+        Profiling Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-columns">
+<span class="md-ellipsis">
+      
+        Understanding Columns
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#understanding-rows">
+<span class="md-ellipsis">
+      
+        Understanding Rows
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-types">
+<span class="md-ellipsis">
+      
+        Data Types
+      
+    </span>
+</a>
+<nav aria-label="Data Types" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#text">
+<span class="md-ellipsis">
+      
+        Text
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#numbers">
+<span class="md-ellipsis">
+      
+        Numbers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dates">
+<span class="md-ellipsis">
+      
+        Dates
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#boolean-values">
+<span class="md-ellipsis">
+      
+        Boolean Values
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-checks-on-data">
+<span class="md-ellipsis">
+      
+        Common Checks on Data
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-spreadsheet-warning-signs">
+<span class="md-ellipsis">
+      
+        Common Spreadsheet Warning Signs
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#activity-profile-a-dataset">
+<span class="md-ellipsis">
+      
+        Activity: Profile a Dataset
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#discussion-questions">
+<span class="md-ellipsis">
+      
+        Discussion Questions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-takeaways">
+<span class="md-ellipsis">
+      
+        Key Takeaways
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../excel-transformation-techniques/">
+<span class="md-ellipsis">
+    
+  
+    Transformation Techniques using Excel
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Fundamentals
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../power-query-transformations/">
+<span class="md-ellipsis">
+    
+  
+    Power Query Transformations
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../multiple-sources/">
+<span class="md-ellipsis">
+    
+  
+    Multiple Data Sources
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../common-transform-patterns/">
+<span class="md-ellipsis">
+    
+  
+    Common Transformation Patterns
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../unstructured-data/">
+<span class="md-ellipsis">
+    
+  
+    Unstructured Data
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<nav aria-label="Navigation" class="md-path">
+<ol class="md-path__list">
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Menu
+  </span>
+</a>
+</li>
+<li class="md-path__item">
+<a class="md-path__link" href="../what-is-data/">
+<span class="md-ellipsis">
+    Resources
+  </span>
+</a>
+</li>
+</ol>
+</nav>
+<article class="md-content__inner md-typeset">
+<h1 id="understanding-raw-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.</span> Understanding Raw Data</h1>
+<h2 id="introduction"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.1</span> Introduction</h2>
+<p>Before we can clean or transform data, we first need to understand what we are working with.</p>
+<p>In real projects, data rarely arrives in a perfect format.</p>
+<p>A common mistake is to start cleaning data immediately without first examining:</p>
+<ul>
+<li>The structure of the data</li>
+<li>Missing values</li>
+<li>Duplicates</li>
+<li>Data types</li>
+<li>Inconsistencies</li>
+</ul>
+<p>Understanding the data comes before transforming the data.</p>
+<hr/>
+<h2 id="what-is-raw-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.2</span> What is Raw Data?</h2>
+<p>Raw data is data in its original state before it has been cleaned, standardised, or transformed.</p>
+<p>Examples include:</p>
+<ul>
+<li>Survey responses</li>
+<li>Excel exports</li>
+<li>CSV files</li>
+<li>Transaction records</li>
+<li>Sensor readings</li>
+<li>Customer databases</li>
+</ul>
+<p>Raw data often contains errors and inconsistencies.</p>
+<hr/>
+<h2 id="types-of-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3</span> Types of Data</h2>
+<p>Not all data looks the same.</p>
+<p>Understanding the type of data helps us decide how it should be handled.</p>
+<hr/>
+<h3 id="structured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3.1</span> Structured Data</h3>
+<p>Structured data is organised into rows and columns.</p>
+<p><strong>Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>Name</th>
+<th>Course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>Sarah Lee</td>
+<td>Cyber</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>David Tran</td>
+<td>Programming</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>Priya Sharma</td>
+<td>Networking</td>
+</tr>
+</tbody>
+</table>
+<p>Structured data is easy to analyse and is commonly stored in databases.</p>
+<hr/>
+<h3 id="semi-structured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3.2</span> Semi-Structured Data</h3>
+<p>Semi-structured data contains some organisation but is not perfectly arranged in rows and columns.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>Youth Survey Results
+
+Collected March 2026
+
+Student Information
+
+Name      Age      Suburb
+Sarah     15       Broadmeadows
+David     16       Glenroy
+</code></pre></div></td></tr></table></div>
+<p>Common characteristics:</p>
+<ul>
+<li>Multiple header rows</li>
+<li>Blank rows</li>
+<li>Notes mixed into data</li>
+<li>Report layouts</li>
+<li>Merged cells</li>
+</ul>
+<hr/>
+<h3 id="unstructured-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.3.3</span> Unstructured Data</h3>
+<p>Unstructured data has little or no predefined structure.</p>
+<p>Examples:</p>
+<ul>
+<li>Survey comments</li>
+<li>Emails</li>
+<li>Support tickets</li>
+<li>Reports</li>
+<li>Social media posts</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>I would like more buses available after youth activities.
+</code></pre></div></td></tr></table></div>
+<p>Although useful, this data is much harder for computers to analyse.</p>
+<hr/>
+<h2 id="why-understanding-data-matters"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.4</span> Why Understanding Data Matters</h2>
+<p>Poor understanding often leads to:</p>
+<ul>
+<li>Incorrect transformations</li>
+<li>Data loss</li>
+<li>Incorrect reporting</li>
+<li>Misleading dashboards</li>
+</ul>
+<p>Before making changes we should understand:</p>
+<ul>
+<li>What the data represents</li>
+<li>How it was collected</li>
+<li>What quality issues exist</li>
+</ul>
+<hr/>
+<h2 id="data-profiling"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.5</span> Data Profiling</h2>
+<p>Data profiling is the process of examining a dataset to understand its content, structure, and quality.</p>
+<p>Think of profiling as investigating the data before attempting to fix it.</p>
+<hr/>
+<h2 id="questions-to-ask"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.6</span> Questions to Ask</h2>
+<p>When reviewing a dataset ask:</p>
+<ul>
+<li>What does each column mean?</li>
+<li>Are there blank values?</li>
+<li>Are there duplicate records?</li>
+<li>Are the values consistent?</li>
+<li>Are there invalid values?</li>
+<li>Do all rows represent the same thing?</li>
+</ul>
+<hr/>
+<h2 id="profiling-example"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.7</span> Profiling Example</h2>
+<p>Consider the following data:</p>
+<table>
+<thead>
+<tr>
+<th>CustomerID</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>VIC</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Victoria</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>vic</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>VIC</td>
+</tr>
+</tbody>
+</table>
+<p>Questions:</p>
+<ul>
+<li>How many unique values exist?</li>
+<li>Are all values referring to the same state?</li>
+<li>Should they be standardised?</li>
+</ul>
+<hr/>
+<h2 id="understanding-columns"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.8</span> Understanding Columns</h2>
+<p>Every column should have a clear meaning.</p>
+<p><strong>Good Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Suburb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Each column stores a single type of information.</p>
+<hr/>
+<p><strong>Poor Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Student Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah, 15, Broadmeadows</td>
+</tr>
+</tbody>
+</table>
+<p>Multiple pieces of information are combined into a single column.</p>
+<p>This makes analysis more difficult.</p>
+<hr/>
+<h2 id="understanding-rows"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.9</span> Understanding Rows</h2>
+<p>Each row should represent a single observation.</p>
+<p><strong>Good Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>ResponseID</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Each row represents one survey response.</p>
+<p><strong>Poor Example</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>Student Information
+
+Sarah
+David
+Priya
+
+Survey Responses
+
+...
+</code></pre></div></td></tr></table></div>
+<p>Multiple data structures are mixed together.</p>
+<hr/>
+<h2 id="data-types"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.10</span> Data Types</h2>
+<p>Data often falls into several categories.</p>
+<hr/>
+<h3 id="text"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.10.1</span> Text</h3>
+<p>Examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Sarah
+Broadmeadows
+Programming
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h3 id="numbers"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.10.2</span> Numbers</h3>
+<p>Examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>12
+45
+1050
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h3 id="dates"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.10.3</span> Dates</h3>
+<p>Examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>2026-03-01
+2026-04-15
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h3 id="boolean-values"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.10.4</span> Boolean Values</h3>
+<p>Values with only two possible outcomes.</p>
+<p>Examples:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>Yes / No
+True / False
+Y / N
+</code></pre></div></td></tr></table></div>
+<hr/>
+<h2 id="common-checks-on-data"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.11</span> Common Checks on Data</h2>
+<p><strong>Missing Values</strong>: Missing values are one of the most common data quality issues.</p>
+<p><strong>Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sarah</td>
+<td>sarah@email.com</td>
+</tr>
+<tr>
+<td>David</td>
+<td></td>
+</tr>
+<tr>
+<td>Minh</td>
+<td>minh@email.com</td>
+</tr>
+</tbody>
+</table>
+<p>Questions:</p>
+<ul>
+<li>How many values are missing?</li>
+<li>Can the missing information be recovered?</li>
+<li>Should records be removed?</li>
+</ul>
+<hr/>
+<p><strong>Duplicate Records</strong>: Duplicate records can create incorrect reports and statistics.</p>
+<p><strong>Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1001</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>Sarah</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>David</td>
+</tr>
+</tbody>
+</table>
+<p>Questions:</p>
+<ul>
+<li>Are these accidental duplicates?</li>
+<li>Are they valid multiple records?</li>
+<li>Should they be merged or removed?</li>
+</ul>
+<hr/>
+<p><strong>Inconsistent Values</strong>: Different values may represent the same thing.</p>
+<p><strong>Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIC</td>
+</tr>
+<tr>
+<td>Victoria</td>
+</tr>
+<tr>
+<td>vic</td>
+</tr>
+<tr>
+<td>V.I.C</td>
+</tr>
+</tbody>
+</table>
+<p>Humans understand these are the same.</p>
+<p>Computers often see them as different values.</p>
+<hr/>
+<p><strong>Invalid Values</strong>: Data may contain values that are impossible or unlikely.</p>
+<p><strong>Example</strong></p>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15</td>
+</tr>
+<tr>
+<td>17</td>
+</tr>
+<tr>
+<td>250</td>
+</tr>
+</tbody>
+</table>
+<p>Questions:</p>
+<ul>
+<li>Is the value realistic?</li>
+<li>Is it a data entry error?</li>
+<li>Does it meet business rules?</li>
+</ul>
+<hr/>
+<h2 id="common-spreadsheet-warning-signs"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.12</span> Common Spreadsheet Warning Signs</h2>
+<p>Be cautious when you see:</p>
+<ul>
+<li>Blank rows</li>
+<li>Blank columns</li>
+<li>Merged cells</li>
+<li>Multiple tables on one sheet</li>
+<li>Totals inside datasets</li>
+<li>Notes mixed with records</li>
+<li>Different date formats</li>
+<li>Inconsistent naming conventions</li>
+</ul>
+<p>These often indicate additional transformation work will be required.</p>
+<hr/>
+<h2 id="activity-profile-a-dataset"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.13</span> Activity: Profile a Dataset</h2>
+<p>Review the supplied workbook.</p>
+<p>For each worksheet identify:</p>
+<ul>
+<li>Missing values</li>
+<li>Duplicate records</li>
+<li>Inconsistent values</li>
+<li>Invalid values</li>
+<li>Mixed data types</li>
+<li>Blank rows</li>
+<li>Merged cells</li>
+<li>Unstructured data</li>
+</ul>
+<p>Record findings in the Issue Log worksheet.</p>
+<hr/>
+<h2 id="discussion-questions"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.14</span> Discussion Questions</h2>
+<ol>
+<li>Which issues would prevent successful analysis?</li>
+<li>Which issues would prevent a Power Query import?</li>
+<li>Which issues could be fixed automatically?</li>
+<li>Which issues require human review?</li>
+<li>Which issues present the highest risk?</li>
+</ol>
+<hr/>
+<h2 id="key-takeaways"><span class="enumerate-headings-plugin enumerate-heading-plugin">2.15</span> Key Takeaways</h2>
+<p>Before transforming data, we should understand:</p>
+<ul>
+<li>The structure of the dataset</li>
+<li>The meaning of each row</li>
+<li>The meaning of each column</li>
+<li>The quality issues present</li>
+<li>The types of data stored</li>
+</ul>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: What is Data?" class="md-footer__link md-footer__link--prev" href="../what-is-data/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Previous
+              </span>
+<div class="md-ellipsis">
+                What is Data?
+              </div>
+</div>
+</a>
+<a aria-label="Next: Transformation Techniques using Excel" class="md-footer__link md-footer__link--next" href="../excel-transformation-techniques/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Next
+              </span>
+<div class="md-ellipsis">
+                Transformation Techniques using Excel
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Digital Initiatives - Bendigo Kangan Institute
+    </div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "navigation.sections", "navigation.path", "navigation.footer", "header.hide", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+</body>
+</html>
