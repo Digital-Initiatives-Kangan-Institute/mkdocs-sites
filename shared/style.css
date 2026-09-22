@@ -19,6 +19,16 @@
   --shared-state-active: color-mix(in srgb, var(--md-primary-fg-color) 14%, transparent);
 }
 
+/* Override default iframe size so it is not squished on some sites.
+    Also adds some styling so it does not look flat and boring. */
+iframe, embed {
+  width: 100%;
+  min-height: 480px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
 /* Hide the redundant sidebar title on desktop only — on mobile these labels
    are the Back buttons for nested menus (label for=__nav_X), so keep them. */
 @media screen and (min-width: 76.25em) {
