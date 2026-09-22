@@ -1,7 +1,6 @@
-site_name: Python Edison
+INHERIT: ../../shared/.mkdocs-base.yml
 
-# This text shows in the footer.
-copyright: Digital Initiatives - Bendigo Kangan Institute
+site_name: Python Edison
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
@@ -29,39 +28,18 @@ nav:
       - Task 8 - For Loops: python/tasks/task-8-for-loops.md
       - Task 9 - Lists: python/tasks/task-9-lists.md
 
-# Do not touch anything below this line unless you knwo what you are doing.
+# Do not touch anything below this line unless you know what you are doing.
 theme:
-  name: material
-  custom_dir: ../../shared
   palette:
     primary: deep orange
-  features:
-    - toc.integrate 
-    - navigation.sections
-    - navigation.path
-    - navigation.footer
-    - header.hide
-    - content.code.copy
-    - content.code.annotate
-
-# This is relative to the theme/base (based on custom_dir above)
-extra_css:
-  - style.css
-
-# This is here to watch the style.css file above to trigger hot-reload,
-# therefor if the custom_dir is changed it should be changed here too.
-watch:
-  - ../../shared/style.css
 
 plugins:
   - enumerate-headings:
       increment_across_pages: true
-      restart_increment_after: 
+      restart_increment_after:
         - python/tasks/task-1-intro-to-edison.md
 
-extra:
-  generator: false
-
+# Overrides the shared markdown_extensions (this site does not use pymdownx.blocks.caption).
 markdown_extensions:
   - pymdownx.highlight:
       linenums: true
