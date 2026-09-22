@@ -20,7 +20,6 @@ syntax), and the branching + pull request workflow.
   - [Basic Markdown Syntax](#basic-markdown-syntax)
   - [MkDocs Material Syntax](#mkdocs-material-syntax)
 - [8. Committing & Opening Pull Requests](#8-committing--opening-pull-requests)
-- [Quick Checklist](#quick-checklist)
 
 ---
 
