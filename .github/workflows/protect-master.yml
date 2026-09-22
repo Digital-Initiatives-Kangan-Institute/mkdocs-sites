@@ -5,11 +5,11 @@ on:
       - master
 
 jobs:
-  check-branch:
+  require-dev-to-master:
     runs-on: ubuntu-latest
     steps:
       - name: Check source branch
         if: github.head_ref != 'dev' # Allowed source branch
         run: |
-          echo "Error: Only 'development' branch can merge into 'master'."
+          echo "Error: Only 'dev' branch can merge into 'master'."
           exit 1   
