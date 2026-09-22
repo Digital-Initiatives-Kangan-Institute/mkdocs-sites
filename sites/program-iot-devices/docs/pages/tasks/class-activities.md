@@ -14,6 +14,7 @@
     **Open this Wokwi simulation to create variable:** [https://wokwi.com/projects/470564412054187009](https://wokwi.com/projects/470564412054187009)
 
     **Check yourself:**
+
     - Program compiles and uploads
     - Serial Monitor is set to `115200` baud and shows your message
     - The name in the message comes from the variable, not typed directly into the print
@@ -36,6 +37,7 @@
     Types to choose from: `int`, `float`, `double`, `String`, `bool`, `char`, `byte`, `long`
 
 ??? hint "Answer key — Click to expand"
+
     - `25` → `int`
     - `22.5` → `float`
     - `"sensor"` → `String`
@@ -62,6 +64,7 @@
     6. Current value from `analogRead()`
 
 ??? hint "Answer key — Click to expand"
+
     - **Constant:** pin number, reference voltage, max PWM speed — these are fixed values that should never change once set.
     - **Variable:** temperature reading, button press count, `analogRead()` value — these change while the program runs.
 
@@ -77,10 +80,13 @@
     Work through these steps on your own, pausing to self-check after each one before moving to the next:
 
     1. Declare `ledPin` (set to `13`) and `deviceName`.
+
         - *Self-check: did you use a variable for the pin instead of typing `13` directly wherever it's needed?*
     2. Write `setup()` — start Serial, set pin mode, print a start-up message.
+
         - *Self-check: does your message print your `deviceName` variable, not typed text?*
     3. Write `loop()` — blink the LED with Serial prints for `"LED: ON"` / `"LED: OFF"`.
+
         - *Self-check: does the Serial Monitor output match the LED blinking in real time?*
     4. Upload and open the Serial Monitor to confirm it all works.
 

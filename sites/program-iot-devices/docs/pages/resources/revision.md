@@ -132,7 +132,7 @@ switch (mode) {
 
 `&&` (AND), `||` (OR), and `!` (NOT) combine multiple conditions into one decision. `&&` is true only when **both** sides are true (`if (motionDetected && armed)` — alarm only if motion is seen *and* the system is armed); `||` is true when **either** side is (`if (doorOpen || windowOpen)` — alert if any entry point is open); `!` inverts a single condition (`if (!locked)` reads as "if not locked"). A truth table makes the difference concrete:
 
-| A | B | `A && B` | `A \|\| B` |
+| A | B | `A && B` | `A || B` |
 |---|---|---|---|
 | true | true | true | true |
 | true | false | false | true |
@@ -273,7 +273,7 @@ The hardest part of an integration build isn't any single concept — it's recog
 |---|---|
 | "…without duplicating this code for every LED/sensor" | A parameterised function |
 | "…one physical press should count once" | Debouncing |
-| "…only when both/either condition is true" | Boolean logic (`&&`/`\|\|`/`!`) |
+| "…only when both/either condition is true" | Boolean logic (`&&`/`||`/`!`) |
 | "…pick one of several known values/modes for a single variable" | `switch`/`case` (Select Case) |
 | "…while everything else keeps working" / "…without freezing other inputs" | Non-blocking `millis()` timing, not `delay()` |
 | "…the smallest/largest/average of several readings" | Single-pass array scan |
@@ -1014,7 +1014,7 @@ void loop() {
 | `switch` / Select Case | A multi-branch statement comparing one variable against a list of specific values (`case`s) — an alternative to an `if`/`else if` chain when checking a single variable for equality. |
 | `break` | Inside a `switch`, stops execution from "falling through" into the next `case` once the current one has run. |
 | `default` | The optional `case` in a `switch` that runs when the variable matched none of the listed values — equivalent to a chain's final `else`. |
-| Boolean operator | `&&` (AND), `\|\|` (OR), `!` (NOT) — combine or invert conditions. |
+| Boolean operator | `&&` (AND), `||` (OR), `!` (NOT) — combine or invert conditions. |
 | Non-blocking timing | Comparing elapsed `millis()` time on every pass instead of pausing with `delay()`, so other inputs stay responsive. |
 | Array | A fixed-size, indexed collection of same-typed values. |
 | Parallel arrays | Two or more arrays that must always be updated together to describe one thing — the bug class structs remove. |
