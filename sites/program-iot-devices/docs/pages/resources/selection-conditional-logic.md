@@ -87,7 +87,7 @@ Before writing your first `if`, it helps to know how conditions are written. `==
 
 ---
 
-## 1. The `if` Statement
+## The `if` Statement
 
 It checks one condition — if that condition is `true`, the code inside the `{ }` runs. If it's `false`, the code is skipped entirely and the program carries on after it. There is no "else" — nothing happens on false.
 
@@ -135,7 +135,7 @@ void loop() {
 
 ---
 
-## 2. `if / else`
+## `if / else`
 
 Adds a second block that runs when the condition is `false`. Now the program always does *something* — one path or the other, never both, never neither.
 
@@ -190,7 +190,7 @@ void loop() {
 
 ---
 
-## 3. `if / else if / else`
+## `if / else if / else`
 
 Used when there are more than two possible outcomes. Conditions are checked **in order, top to bottom**. As soon as one is `true`, its block runs and the rest are skipped — even if a later condition would also have matched. `else` at the end is optional and catches anything not matched above it.
 
@@ -271,7 +271,7 @@ void loop() {
 
 ---
 
-## 4. Nested `if` Statements
+## Nested `if` Statements
 
 An `if` statement can contain another `if` statement inside its block — this is called **nesting**. It's useful when a decision only makes sense after an earlier decision has already been made: first check the outer condition, and only if that's true, go on to check something else. The inner `if` is completely skipped whenever the outer condition is `false`.
 
@@ -418,9 +418,9 @@ Because `else if` conditions are checked in sequence and the first match wins, t
 | `if` statement | Checks one condition; if `true`, runs the code inside its block, otherwise skips it entirely. |
 | `if / else` | An `if` statement with a second block that runs when the condition is `false`, so exactly one of the two paths always runs. |
 | `else if` | An additional condition checked only if the preceding condition(s) were `false`; allows more than two possible outcomes. |
-| Boolean logic | The combination of multiple conditions using `&&` (AND), `\|\|` (OR), and `!` (NOT). |
+| Boolean logic | The combination of multiple conditions using `&&` (AND), `||` (OR), and `!` (NOT). |
 | `&&` (AND) | A boolean operator that is `true` only when both combined conditions are `true`. |
-| `\|\|` (OR) | A boolean operator that is `true` when at least one of the combined conditions is `true`. |
+| `||` (OR) | A boolean operator that is `true` when at least one of the combined conditions is `true`. |
 | `!` (NOT) | A boolean operator that inverts a condition's value. |
 | Nesting | Placing an `if` statement inside the block of another `if` statement, so the inner condition is only checked when the outer condition is `true`. |
 | Debounce | A short delay added after detecting a button press to avoid reacting to electrical bounce/noise as multiple presses. |
