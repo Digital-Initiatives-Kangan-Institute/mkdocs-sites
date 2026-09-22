@@ -20,7 +20,6 @@ syntax), and the branching + pull request workflow.
   - [Basic Markdown Syntax](#basic-markdown-syntax)
   - [MkDocs Material Syntax](#mkdocs-material-syntax)
 - [8. Committing & Opening Pull Requests](#8-committing--opening-pull-requests)
-- [Quick Checklist](#quick-checklist)
 
 ---
 
@@ -528,15 +527,3 @@ When `dev` has been tested and is stable:
 4. Merge the pull request into `master`.
 
 > A GitHub Actions workflow enforces that only `dev` can merge into `master`.
-
----
-
-## Quick Checklist
-
-- [ ] Clone the repository (`git clone https://github.com/Digital-Initiatives-Kangan-Institute/mkdocs-sites.git`)
-- [ ] Run `./setup.sh` to create `.venv` and install dependencies
-- [ ] Create a feature branch from `dev` (`git checkout dev` → `git pull origin dev` → `git checkout -b feature/<name>`)
-- [ ] Make changes and push (`git push -u origin feature/<name>`)
-- [ ] Open a pull request (`feature/<name>` → `dev`) and wait for review
-
-> No fork needed — approved contributors push branches directly to the shared repository.
