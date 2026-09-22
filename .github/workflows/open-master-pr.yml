@@ -5,6 +5,10 @@ on:
     branches:
       - dev
 
+concurrency:
+  group: create-master-pr
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pull-requests: write
@@ -14,6 +18,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
       - name: Check for existing PR
         id: check-pr
         env:
