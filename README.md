@@ -11,3 +11,5 @@ This repository contains a collection of MkDocs sites hosting training material 
 ## Getting Started
 For full setup, authoring, Markdown, and branching instructions, read the [GUIDE.md](./GUIDE.md) guide.
 You can also look at the [DEPLOYMENT.md](./DEPLOYMENT.md) for a guide on how the Cloudflare production and testing environments work.
+
+Please read the above documents before interacting with the repository in any way. It's especially important to understand our branching strategy outlined in [DEPLOYMENT.md](./DEPLOYMENT.md).
