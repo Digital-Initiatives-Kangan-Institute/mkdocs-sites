@@ -145,11 +145,7 @@ rm -f "${MKDOCS_DEST}.bak"
 
 print_success "Created: mkdocs.yml  (tokens substituted)"
 
-# 6. Copy style.css ────────────────────────────
-cp "$STYLE_SOURCE" "$SITE_PATH/docs/extra/style.css"
-print_success "Copied:  docs/extra/style.css"
-
-# 7. Copy index.md ─────────────────────────────
+# 6. Copy index.md ─────────────────────────────
 cp "$INDEX_SOURCE" "$SITE_PATH/docs/index.md"
 print_success "Copied:  docs/index.md"
 
@@ -168,7 +164,6 @@ echo -e "
   └── docs/
       ├── index.md
       └── extra/
-          └── style.css
 
   ${CYAN}To start your site, run:${RESET}
     ./serve.sh
