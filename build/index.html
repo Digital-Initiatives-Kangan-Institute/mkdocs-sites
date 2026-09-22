@@ -81,7 +81,19 @@
             margin: 0;
         }
 
-        /* Sticky filter bar: pills + search stay reachable while scrolling */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Sticky filter bar: course menu + search stay reachable while scrolling */
         #filter-bar {
             position: sticky;
             top: 0.75rem;
@@ -104,40 +116,103 @@
             flex-wrap: wrap;
         }
 
-        #course-pills {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
+        .course-switcher {
+            position: relative;
+            flex: none;
         }
 
-        .pill {
-            font: inherit;
-            font-size: 0.82rem;
-            font-weight: 700;
-            padding: 0.4rem 0.95rem;
-            border-radius: 9999px;
+        #course-menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            border-radius: 6px;
             cursor: pointer;
 
-            color: var(--portal-muted);
-            background-color: var(--portal-bg);
+            color: rgba(255, 255, 255, 0.6);
+            background-color: transparent;
+            border: 1px solid transparent;
+
+            transition: color 0.15s ease, background-color 0.15s ease;
+        }
+
+        #course-menu-button:hover,
+        #course-menu-button[aria-expanded="true"] {
+            color: rgba(255, 255, 255, 0.95);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        #course-menu-button svg {
+            display: block;
+            flex: none;
+        }
+
+        #course-menu {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            z-index: 10;
+            min-width: 240px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+
+            background-color: var(--portal-surface);
             border: 1px solid var(--portal-outline);
+            border-radius: var(--portal-radius-md);
+            box-shadow: var(--portal-shadow-hover);
+            padding: 0.4rem;
 
-            transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+            animation: portal-fade-up 0.15s ease both;
         }
 
-        .pill:hover {
+        #course-menu[hidden] {
+            display: none;
+        }
+
+        .course-menu-heading {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+
+            color: var(--portal-muted);
+            padding: 0.5rem 0.75rem 0.35rem;
+        }
+
+        .course-menu-item {
+            display: block;
+            width: 100%;
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 0.55rem 0.75rem;
+            border-radius: var(--portal-radius-sm);
+            cursor: pointer;
+
             color: var(--portal-text);
-            border-color: #c9c9ce;
+            background-color: transparent;
+            border: none;
+
+            transition: background-color 0.15s ease, color 0.15s ease;
         }
 
-        .pill[aria-pressed="true"] {
-            color: var(--portal-brand);
-            background-color: var(--portal-dark);
-            border-color: var(--portal-dark);
+        .course-menu-item:hover {
+            background-color: var(--portal-bg);
+        }
+
+        .course-menu-item[aria-current="true"] {
+            color: var(--portal-brand-ink);
+            background-color: var(--portal-bg);
         }
 
         .search-wrap {
-            margin-left: auto;
+            flex: 1;
+            max-width: 320px;
         }
 
         #site-search {
@@ -483,6 +558,17 @@
     <header>
         <img class="brand-mark" src="./_assets/favicon.png" alt="Digital Initiatives logo" width="28" height="28">
         <h1>Digital Initiatives - Portal</h1>
+        <div class="course-switcher">
+            <button id="course-menu-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="course-menu">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span id="course-menu-label" class="sr-only">Filter by course</span>
+            </button>
+            <div id="course-menu" role="menu" aria-label="Filter by course" hidden></div>
+        </div>
     </header>
 
     <main>
@@ -497,7 +583,6 @@
 
         <div id="filter-bar">
             <div class="filter-inner">
-                <div id="course-pills" role="group" aria-label="Filter by course"></div>
                 <div class="search-wrap">
                     <input id="site-search" type="search" placeholder="Search sites&hellip;" aria-label="Search sites" autocomplete="off">
                 </div>
@@ -522,7 +607,9 @@
 
     <script>
         (function () {
-            var pillsWrap = document.getElementById('course-pills');
+            var menuButton = document.getElementById('course-menu-button');
+            var menuLabel = document.getElementById('course-menu-label');
+            var menu = document.getElementById('course-menu');
             var searchInput = document.getElementById('site-search');
             var grid = document.getElementById('sites-grid');
             var emptyState = document.getElementById('empty-state');
@@ -560,27 +647,69 @@
                 }).length;
             }
 
-            function renderPills(courses) {
+            function renderCourseMenu(courses) {
+                var heading = document.createElement('div');
+                heading.className = 'course-menu-heading';
+                heading.textContent = 'Courses';
+                menu.appendChild(heading);
+
                 courses.forEach(function (c) {
                     var b = document.createElement('button');
                     b.type = 'button';
-                    b.className = 'pill';
+                    b.className = 'course-menu-item';
                     b.dataset.id = c.id;
-                    b.setAttribute('aria-pressed', 'false');
+                    b.setAttribute('role', 'menuitemradio');
+                    b.setAttribute('aria-current', 'false');
                     b.textContent = c.label + ' (' + countFor(c.id) + ')';
                     b.addEventListener('click', function () {
                         history.replaceState(null, '', '#' + c.id);
                         routeFromHash();
+                        closeMenu();
                     });
-                    pillsWrap.appendChild(b);
+                    menu.appendChild(b);
                 });
             }
 
-            function syncPills() {
-                pillsWrap.querySelectorAll('.pill').forEach(function (p) {
-                    p.setAttribute('aria-pressed', p.dataset.id === state.course ? 'true' : 'false');
+            function syncMenu() {
+                menu.querySelectorAll('.course-menu-item').forEach(function (p) {
+                    var isCurrent = p.dataset.id === state.course;
+                    p.setAttribute('aria-current', isCurrent ? 'true' : 'false');
+                    if (isCurrent) {
+                        menuLabel.textContent = coursesById[state.course].label;
+                    }
                 });
             }
+
+            function openMenu() {
+                menu.hidden = false;
+                menuButton.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMenu() {
+                menu.hidden = true;
+                menuButton.setAttribute('aria-expanded', 'false');
+            }
+
+            menuButton.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (menu.hidden) {
+                    openMenu();
+                } else {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!menu.hidden && !menu.contains(e.target) && e.target !== menuButton) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMenu();
+                }
+            });
 
             function applyFilters() {
                 var q = state.query.trim().toLowerCase();
@@ -621,7 +750,7 @@
             function routeFromHash() {
                 var hash = window.location.hash.replace('#', '');
                 state.course = courseIds.indexOf(hash) !== -1 ? hash : DEFAULT_COURSE;
-                syncPills();
+                syncMenu();
                 applyFilters();
             }
 
@@ -646,7 +775,7 @@
                 data.sites = data.sites.filter(function (site) { return !site.disabled; });
                 courseIds = data.courses.map(function (c) { return c.id; });
                 data.courses.forEach(function (c) { coursesById[c.id] = c; });
-                renderPills(data.courses);
+                renderCourseMenu(data.courses);
 
                 data.sites.forEach(function (site) {
                     var card = renderCard(site);
