@@ -110,7 +110,7 @@ If the LED blinks in Step 1, the wiring is fine — the bug is in your `if` logi
 
 Follow these rules to write comments that are actually **helpful**, not just clutter:
 
-### Explain WHY, not WHAT
+### 1. Explain WHY, not WHAT
 
 The code already shows *what* it does. Your comment should explain *why* it does it:
 
@@ -130,7 +130,7 @@ delay(2000);  // delay 2000 milliseconds
 delay(2000);  // wait for sensor to stabilise after power-on
 ```
 
-### Comment complex formulas
+### 2. Comment complex formulas
 
 If someone can't understand a line just by reading it, add a comment:
 
@@ -142,7 +142,7 @@ float celsius = (voltage - 0.5) * 100;  // TMP36 sensor formula: C = (V - 0.5) *
 int distance = duration * 0.034 / 2;  // speed of sound = 0.034 cm/μs, divide by 2 for round trip
 ```
 
-### Label pin assignments at the top
+### 3. Label pin assignments at the top
 
 Group all pin definitions together with comments describing the physical wiring:
 
@@ -155,7 +155,7 @@ const int BUZZER    = 8;   // Piezo buzzer — positive leg
 const int TEMP_SENSOR = A0; // TMP36 — middle pin (Vout)
 ```
 
-### Use section dividers for long sketches
+### 4. Use section dividers for long sketches
 
 Organise your code into labeled sections so it's easy to navigate:
 
@@ -179,7 +179,7 @@ void blinkLED() { ... }
 void readSensor() { ... }
 ```
 
-### Don't over-comment obvious code
+### 5. Don't over-comment obvious code
 
 Too many comments are just as bad as no comments — they create clutter and make code harder to read:
 
@@ -195,7 +195,7 @@ pinMode(BUZZER_PIN, OUTPUT);
 delay(1000);                       // allow sensor warm-up time
 ```
 
-### Keep comments up to date
+### 6. Keep comments up to date
 
 When you change code, update the comments too. Wrong comments are worse than no comments:
 
@@ -207,7 +207,7 @@ int ledPin = 9;  // LED connected to pin 13
 int ledPin = 9;  // LED connected to pin 9
 ```
 
-### Use TODO comments for unfinished work
+### 7. Use TODO comments for unfinished work
 
 Mark things you plan to fix or add later so you don't forget:
 
