@@ -4,16 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/_assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,800&display=fallback" rel="stylesheet">
     <title>Digital Initiatives - Portal</title>
 
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --portal-bg: #f4f4f5;
+            --portal-surface: #ffffff;
+            --portal-outline: #e4e4e4;
+            --portal-text: #18181b;
+            --portal-muted: #5b5b62;
+            --portal-brand: #edab0c;
+            --portal-brand-ink: #8a6100;
+            --portal-dark: #111111;
+            --portal-radius-sm: 4px;
+            --portal-radius-md: 8px;
+            --portal-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        @keyframes portal-fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
         body {
             display: flex;
             flex-direction: column;
 
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: var(--portal-text);
 
-            background-color: rgb(245, 245, 245);
+            background-color: var(--portal-bg);
 
             margin: 0;
             min-height: 100vh;
@@ -22,109 +56,193 @@
         header {
             display: flex;
             align-items: center;
-            color: #edab0c;
+            gap: 0.75rem;
+            color: var(--portal-brand);
 
-            background-color: black;
-            padding: 0 2rem;
+            background-color: var(--portal-dark);
+            padding: 0.85rem 2rem;
 
-            box-shadow: rgba(0, 0, 0, 0.25) 0 2px 5px;
+            border-bottom: 1px solid rgb(40, 40, 40);
+        }
+
+        .brand-mark {
+            display: block;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            flex: none;
         }
 
         header h1 {
             flex: 1;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            margin: 0;
         }
 
-        header select {
-            padding: 0.375rem 2rem 0.375rem 0.75rem;
-            border: 1px solid rgb(80, 80, 80);
-            border-radius: 6px;
-            background-color: rgb(30, 30, 30);
-            color: #edab0c;
-            font-size: 0.85rem;
+        /* Sticky filter bar: pills + search stay reachable while scrolling */
+        #filter-bar {
+            position: sticky;
+            top: 0.75rem;
+            z-index: 9;
+
+            background-color: var(--portal-surface);
+            border: 1px solid var(--portal-outline);
+            border-radius: var(--portal-radius-md);
+            padding: 0.75rem 1rem;
+        }
+
+        .filter-inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        #course-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            font: inherit;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 0.4rem 0.95rem;
+            border-radius: 9999px;
             cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23edab0c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+
+            color: var(--portal-muted);
+            background-color: var(--portal-bg);
+            border: 1px solid var(--portal-outline);
+
+            transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+        }
+
+        .pill:hover {
+            color: var(--portal-text);
+            border-color: #c9c9ce;
+        }
+
+        .pill[aria-pressed="true"] {
+            color: var(--portal-brand);
+            background-color: var(--portal-dark);
+            border-color: var(--portal-dark);
+        }
+
+        .search-wrap {
+            margin-left: auto;
+        }
+
+        #site-search {
+            font: inherit;
+            font-size: 0.85rem;
+            color: var(--portal-text);
+
+            width: 220px;
+            padding: 0.45rem 0.9rem 0.45rem 2.1rem;
+            border-radius: 9999px;
+            border: 1px solid var(--portal-outline);
+            background-color: var(--portal-bg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23888888' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 0.5rem center;
-            transition: border-color 0.15s, background-color 0.15s;
+            background-position: left 0.7rem center;
+
+            transition: border-color 0.15s ease;
         }
 
-        header select:hover {
-            border-color: #edab0c;
+        #site-search::placeholder {
+            color: var(--portal-muted);
         }
 
-        header select:focus {
+        #site-search:focus {
             outline: none;
-            border-color: #edab0c;
-            background-color: black;
+            border-color: var(--portal-brand);
         }
 
         main {
             flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
 
             display: flex;
             flex-direction: column;
 
-            gap: 1rem;
+            gap: 1.5rem;
 
-            padding: 2rem 15rem;
+            padding: 2rem 1.5rem;
         }
 
         footer {
-            padding: 1rem;
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            font-size: 0.8rem;
 
             color: rgb(170, 170, 170);
-            background-color: black;
+            background-color: var(--portal-dark);
 
-            box-shadow: rgba(0, 0, 0, 0.25) 0 -2px 5px;
+            border-top: 1px solid rgb(40, 40, 40);
         }
 
         a {
             text-decoration: none;
+            color: inherit;
         }
 
-        h1 {
-            font-size: 1.5rem;
+        :focus-visible {
+            outline: 2px solid var(--portal-brand);
+            outline-offset: 2px;
+            border-radius: var(--portal-radius-sm);
         }
 
-        h2 {
-            font-weight: normal;
-            color: rgb(60, 60, 60);
+        section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--portal-text);
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--portal-outline);
             transition: opacity 0.15s ease;
         }
 
         #banner {
-            display: flex;
-            flex-direction: column;
-
-            gap: 1rem;
-
-            background-color: white;
+            background-color: var(--portal-surface);
             padding: 1.5rem;
 
-            border: 1px solid rgb(198, 198, 198);
-            border-radius: 10px;
+            border: 1px solid var(--portal-outline);
+            border-left: 4px solid var(--portal-brand);
+            border-radius: var(--portal-radius-md);
 
-            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+            font-size: 1rem;
 
-            font-size: 1.1rem;
+            animation: portal-fade-up 0.35s ease both;
         }
 
         #banner p {
             margin: 0;
         }
 
+        #banner p + p {
+            margin-top: 0.5rem;
+        }
+
         #noscript {
             display: flex;
             justify-content: center;
 
-            background-color: white;
+            background-color: var(--portal-surface);
             padding: 2rem;
 
-            border: 1px solid rgb(198, 198, 198);
-            border-radius: 10px;
-
-            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
+            border: 1px solid var(--portal-outline);
+            border-radius: var(--portal-radius-md);
 
             font-size: 1.1rem;
         }
@@ -135,31 +253,41 @@
         .grid-layout {
             display: grid;
 
-            flex-wrap: wrap;
-
-            gap: 1rem;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         }
 
         .grid-item {
             display: flex;
             flex-direction: column;
-            
+
             position: relative;
+            overflow: hidden;
 
-            border: 1px solid rgb(198, 198, 198);
-            border-radius: 10px;
+            color: var(--portal-text);
+            background-color: var(--portal-surface);
+            border: 1px solid var(--portal-outline);
+            border-radius: var(--portal-radius-md);
 
-            box-shadow: rgba(0, 0, 0, 0.214) 0 2px 2px;
-
-            transition: transform 0.25s ease, opacity 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+            animation: portal-fade-up 0.4s ease both;
         }
+        .grid-item:nth-child(2) { animation-delay: 0.05s; }
+        .grid-item:nth-child(3) { animation-delay: 0.1s; }
+        .grid-item:nth-child(4) { animation-delay: 0.15s; }
+        .grid-item:nth-child(5) { animation-delay: 0.2s; }
+        .grid-item:nth-child(6) { animation-delay: 0.25s; }
+        .grid-item:nth-child(7) { animation-delay: 0.3s; }
+        .grid-item:nth-child(8) { animation-delay: 0.35s; }
+        .grid-item:nth-child(n+9) { animation-delay: 0.4s; }
         .grid-item:hover {
-            transform: scale(102%);
+            transform: translateY(-4px);
+            box-shadow: var(--portal-shadow-hover);
+            border-color: #d4d4d8;
         }
         .grid-item.animating-out {
             opacity: 0;
-            transform: scale(0.95);
+            transform: translateY(8px);
             pointer-events: none;
         }
 
@@ -171,7 +299,7 @@
             width: 100%;
             height: 100%;
 
-            border-radius: 10px;
+            border-radius: var(--portal-radius-md);
 
             opacity: 0.25;
 
@@ -197,31 +325,38 @@
 
             text-shadow: black 1px 1px 1px;
             font-size: 1.25rem;
+            font-weight: 700;
 
             color: white;
 
             background-color: rgba(0, 0, 0, 0.75);
         }
 
-        .grid-item img {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        .grid-item .thumbnail {
+            overflow: hidden;
+        }
 
-            max-height: 100px;
+        .grid-item img {
+            display: block;
+
+            height: 140px;
             width: 100%;
 
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.05);
         }
 
         .grid-item .details {
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
 
-            color: black;
-            background-color: white;
-            padding: 1rem;
-
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+            padding: 1rem 1.1rem 1.1rem;
         }
 
         .grid-item.hidden {
@@ -229,44 +364,125 @@
         }
 
         .grid-item .details h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
             margin: 0;
+            padding: 0;
+            border: none;
         }
 
-        @media screen and (max-width: 1200px) {
-            .grid-layout {
-                grid-template-columns: 1fr 1fr 1fr;
+        .grid-item .details p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--portal-muted);
+            flex: 1;
+        }
+
+        .grid-item .details::after {
+            content: 'Open site \2192';
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--portal-brand-ink);
+            transition: transform 0.2s ease;
+        }
+
+        .grid-item:hover .details::after {
+            transform: translateX(3px);
+        }
+
+        #empty-state {
+            text-align: center;
+
+            background-color: var(--portal-surface);
+            border: 1px solid var(--portal-outline);
+            border-radius: var(--portal-radius-md);
+            padding: 2.5rem 1.5rem;
+        }
+
+        #empty-state[hidden] {
+            display: none;
+        }
+
+        #empty-state p {
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+
+        #clear-filters {
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            cursor: pointer;
+
+            color: var(--portal-brand);
+            background-color: var(--portal-dark);
+            border: 1px solid var(--portal-dark);
+
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #clear-filters:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--portal-shadow-hover);
+        }
+
+        @media screen and (max-width: 640px) {
+            header {
+                padding: 0.85rem 1rem;
+            }
+
+            header h1 {
+                font-size: 1rem;
+            }
+
+            #filter-bar {
+                padding: 0.75rem 1rem;
+            }
+
+            .search-wrap {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            #site-search {
+                width: 100%;
             }
 
             main {
-                padding: 2rem 10rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .grid-item img {
+                height: 120px;
             }
         }
 
-        @media screen and (max-width: 1000px) {
-            .grid-layout {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            main {
-                padding: 2rem 5rem;
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
             }
         }
 
-        @media screen and (max-width: 800px) {
-            .grid-layout {
-                grid-template-columns: 1fr;
-            }
-
-            main {
-                padding: 2rem 2rem;
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
             }
         }
     </style>
 </head>
 <body>
     <header>
+        <img class="brand-mark" src="./_assets/favicon.png" alt="Digital Initiatives logo" width="28" height="28">
         <h1>Digital Initiatives - Portal</h1>
-        <select id="course-select"></select>
     </header>
 
     <main>
@@ -276,12 +492,25 @@
 
         <div id="banner">
             <p>Welcome to the <b>Digital Initiatives</b> learning portal.</p>
-            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access to these pages.</p>
+            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access.</p>
+        </div>
+
+        <div id="filter-bar">
+            <div class="filter-inner">
+                <div id="course-pills" role="group" aria-label="Filter by course"></div>
+                <div class="search-wrap">
+                    <input id="site-search" type="search" placeholder="Search sites&hellip;" aria-label="Search sites" autocomplete="off">
+                </div>
+            </div>
         </div>
 
         <section>
             <h2>Sites</h2>
             <div class="grid-layout" id="sites-grid"></div>
+            <div id="empty-state" hidden>
+                <p>No sites match your filters.</p>
+                <button id="clear-filters" type="button">Clear filters</button>
+            </div>
         </section>
     </main>
 
@@ -293,55 +522,97 @@
 
     <script>
         (function () {
-            var select = document.getElementById('course-select');
+            var pillsWrap = document.getElementById('course-pills');
+            var searchInput = document.getElementById('site-search');
             var grid = document.getElementById('sites-grid');
+            var emptyState = document.getElementById('empty-state');
+            var clearBtn = document.getElementById('clear-filters');
+            var heading = document.querySelector('section h2');
             var cards = [];
             var courseIds = [];
+            var coursesById = {};
+            var DEFAULT_COURSE = 'cert3-in-it';
+            var state = { course: DEFAULT_COURSE, query: '' };
+
+            function esc(s) {
+                return String(s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;');
+            }
 
             function renderCard(site) {
                 var a = document.createElement('a');
                 a.className = 'grid-item';
                 a.href = site.href;
                 a.setAttribute('data-courses', site.courses.join(' '));
+                a.setAttribute('data-search', (site.title + ' ' + site.description).toLowerCase());
                 a.innerHTML =
-                    '<div class="thumbnail"><img src="' + site.img + '" /></div>' +
-                    '<div class="details"><h2>' + site.title + '</h2><p>' + site.description + '</p></div>';
+                    '<div class="thumbnail"><img src="' + site.img + '" alt="' + esc(site.title) + '" loading="lazy"></div>' +
+                    '<div class="details"><h2>' + esc(site.title) + '</h2><p>' + esc(site.description) + '</p></div>';
                 return a;
             }
 
-            var heading = document.querySelector('section h2');
-            var coursesById = {};
+            function countFor(id) {
+                return window.SITES_DATA.sites.filter(function (s) {
+                    return s.courses.indexOf(id) !== -1;
+                }).length;
+            }
 
-            function renderSelect(courses) {
+            function renderPills(courses) {
                 courses.forEach(function (c) {
-                    coursesById[c.id] = c;
-                    var opt = document.createElement('option');
-                    opt.value = c.id;
-                    opt.textContent = c.label;
-                    select.appendChild(opt);
+                    var b = document.createElement('button');
+                    b.type = 'button';
+                    b.className = 'pill';
+                    b.dataset.id = c.id;
+                    b.setAttribute('aria-pressed', 'false');
+                    b.textContent = c.label + ' (' + countFor(c.id) + ')';
+                    b.addEventListener('click', function () {
+                        history.replaceState(null, '', '#' + c.id);
+                        routeFromHash();
+                    });
+                    pillsWrap.appendChild(b);
                 });
             }
 
-            function applyFilter(filter) {
+            function syncPills() {
+                pillsWrap.querySelectorAll('.pill').forEach(function (p) {
+                    p.setAttribute('aria-pressed', p.dataset.id === state.course ? 'true' : 'false');
+                });
+            }
+
+            function applyFilters() {
+                var q = state.query.trim().toLowerCase();
+                var visible = 0;
                 cards.forEach(function (card) {
-                    var shouldHide = card.getAttribute('data-courses').split(' ').indexOf(filter) === -1;
-                    if (shouldHide) {
-                        card.classList.add('hidden');
-                        card.classList.remove('animating-out');
-                    } else {
+                    var inCourse = card.getAttribute('data-courses').split(' ').indexOf(state.course) !== -1;
+                    var matchesQuery = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+                    if (inCourse && matchesQuery) {
+                        visible++;
                         if (card.classList.contains('hidden')) {
                             card.classList.remove('hidden');
                             card.classList.add('animating-out');
                             void card.offsetWidth;
                             card.classList.remove('animating-out');
                         }
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('animating-out');
                     }
                 });
-                var course = coursesById[filter];
-                if (course && heading.textContent !== course.fullname) {
+                emptyState.hidden = visible !== 0;
+
+                var text;
+                if (q) {
+                    text = visible + ' result' + (visible === 1 ? '' : 's') + ' for \u201c' + state.query.trim() + '\u201d';
+                } else {
+                    text = coursesById[state.course].fullname;
+                }
+                if (heading.textContent !== text) {
                     heading.style.opacity = '0';
                     setTimeout(function () {
-                        heading.textContent = course.fullname;
+                        heading.textContent = text;
                         heading.style.opacity = '1';
                     }, 150);
                 }
@@ -349,13 +620,20 @@
 
             function routeFromHash() {
                 var hash = window.location.hash.replace('#', '');
-                var filter = courseIds.indexOf(hash) !== -1 ? hash : courseIds[0];
-                select.value = filter;
-                applyFilter(filter);
+                state.course = courseIds.indexOf(hash) !== -1 ? hash : DEFAULT_COURSE;
+                syncPills();
+                applyFilters();
             }
 
-            select.addEventListener('change', function () {
-                history.replaceState(null, '', '#' + select.value);
+            searchInput.addEventListener('input', function () {
+                state.query = searchInput.value;
+                applyFilters();
+            });
+
+            clearBtn.addEventListener('click', function () {
+                searchInput.value = '';
+                state.query = '';
+                history.replaceState(null, '', '#' + DEFAULT_COURSE);
                 routeFromHash();
             });
 
@@ -364,10 +642,11 @@
 
             (function init() {
                 var data = window.SITES_DATA;
+                // Sites can be hidden without deleting them: "disabled": true
+                data.sites = data.sites.filter(function (site) { return !site.disabled; });
                 courseIds = data.courses.map(function (c) { return c.id; });
-                renderSelect(data.courses);
-
-                heading.textContent = data.courses[0].fullname;
+                data.courses.forEach(function (c) { coursesById[c.id] = c; });
+                renderPills(data.courses);
 
                 data.sites.forEach(function (site) {
                     var card = renderCard(site);

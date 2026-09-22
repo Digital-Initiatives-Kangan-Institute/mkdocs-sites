@@ -17,6 +17,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471515514429761537](https://wokwi.com/projects/471515514429761537)
 
     **Check yourself:**
+
     - `beep()` is reused for both short and long beeps — no duplicated `digitalWrite`/`delay` blocks
     - The SOS pattern is clearly recognisable (short-short-short, long-long-long, short-short-short)
     - There is a 2-second pause between each full SOS sequence
@@ -44,6 +45,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471515878453487617](https://wokwi.com/projects/471515878453487617)
 
     **Check yourself:**
+
     - `showColor()` is used for all three colours instead of writing `digitalWrite`/`delay` three separate times
     - Only one colour is on at a time during the colour cycle
 
@@ -69,6 +71,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471516108090616833](https://wokwi.com/projects/471516108090616833)
 
     **Check yourself:**
+
     - `controlLED()` returns a `bool`, not `void`
     - The Serial Monitor prints `1` when the LED is on and `0` when it is off
     - The same function handles both turning the LED on and off
@@ -85,6 +88,7 @@
     **Components:** ESP32-S3, at least 4 × ordinary LEDs, 220 Ω resistors, jumper wires, breadboard. Connect the LEDs to GPIOs 4, 5, 6, and 7 (each with its own 220 Ω resistor).
 
     **Program requirements:**
+
     - Use at least four LEDs.
     - Turn on only one LED at a time.
     - Use a function with parameters to control an LED: `void lightLED(int ledPin, int delayTime)`
@@ -95,6 +99,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471516524377458689](https://wokwi.com/projects/471516524377458689)
 
     **Check yourself:**
+
     - At least four LEDs are wired and controlled
     - Only one LED is lit at a time
     - `lightLED()` is reused for every LED — no repeated `digitalWrite`/`delay` blocks in `loop()`
@@ -277,6 +282,7 @@ void loop() {
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471514510742063105](https://wokwi.com/projects/471514510742063105)
 
     **Check yourself:**
+
     - All three functions exist and match the required kind (no parameters / with parameters / with a return value)
     - `setTrafficLight()` is reused for all three colours — no repeated `digitalWrite`/`delay` blocks
     - `warnChange()` runs every time the light changes colour
@@ -324,6 +330,7 @@ void loop() {
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471518431484812289](https://wokwi.com/projects/471518431484812289)
 
     **Check yourself:**
+
     - All three functions exist and match the required kind (no parameters / with parameters / with a return value)
     - `playNote()` is reused for every note — no repeated `tone()`/`digitalWrite`/`delay` blocks
     - `getNoteDuration()` returns an `int` and that value is used both to play the note and to update the OLED/LCD

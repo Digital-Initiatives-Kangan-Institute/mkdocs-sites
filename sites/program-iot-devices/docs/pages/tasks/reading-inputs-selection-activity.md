@@ -31,6 +31,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/472093176967560193](https://wokwi.com/projects/472093176967560193)
 
     **Check yourself:**
+
     - The button is configured with `INPUT_PULLUP`, not an external resistor
     - The LED is on only while the button is held down
     - Pressed reads `LOW` and this is reflected correctly in the condition
@@ -64,6 +65,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/472093662810633217](https://wokwi.com/projects/472093662810633217)
 
     **Check yourself:**
+
     - The button is configured with `INPUT_PULLDOWN`
     - Pressed reads `HIGH` (opposite of Task 1) and the condition matches
     - A single `if / else` replaces the two separate `if` statements from Task 1
@@ -92,6 +94,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/472093910048097281](https://wokwi.com/projects/472093910048097281)
 
     **Check yourself:**
+
     - The buzzer only sounds when motion **and** `afterHours` are both true
     - Changing `afterHours` to `false` in code stops the buzzer even with motion present
 
@@ -131,6 +134,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/472094438850270209](https://wokwi.com/projects/472094438850270209)
 
     **Check yourself:**
+
     - The dimmable LED's brightness changes smoothly as the knob turns
     - `map()` correctly converts the 0–4095 reading into the 0–255 PWM range
     - The warning LED turns on only when brightness is below the threshold
@@ -160,6 +164,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471760934303645697](https://wokwi.com/projects/471760934303645697)
 
     **Check yourself:**
+
     - A failed sensor read is detected with `isnan()` before the temperature is classified
     - Exactly one of the three labels prints per reading, never more than one
     - Conditions are ordered so a later, broader condition can't accidentally catch a case meant for an earlier one
@@ -192,6 +197,7 @@
     **Open this Wokwi simulation:** [https://wokwi.com/projects/471661119539001345](https://wokwi.com/projects/471661119539001345)
 
     **Check yourself:**
+
     - One press toggles the armed state once — holding the button doesn't rapidly toggle it
     - The PIR sensor is only checked when `systemArmed` is `true` (nested inside that condition)
     - The buzzer stops immediately when the system is disarmed, even mid-alarm
@@ -375,6 +381,7 @@ void loop() {
     3. Independently of the armed state: read the DHT22, check for a failed read, then classify and print the temperature band and humidity.
 
     **Check yourself:**
+
     - The arm button toggles `systemArmed` once per physical press, not repeatedly while held
     - The PIR sensor and buzzer logic only run when `systemArmed` is `true` (nested correctly)
     - The buzzer only activates when motion **and** `afterHours` are both true

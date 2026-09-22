@@ -10,6 +10,22 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
+      - Reading Resources:
+        - Introduction to IoT & Microcontroller Fundamentals: pages/resources/study-guide/01-introduction.md
+        - Language Used to Program IoT Devices: pages/resources/study-guide/02-programming-languages.md
+        - Electricity and Energy Fundamentals: pages/resources/study-guide/03-electricity-energy.md
+        - Laboratory Test Equipment: pages/resources/study-guide/04-lab-equipment.md
+        - Schematic Symbols and Documentation: pages/resources/study-guide/05-schematic-symbols.md
+        - Sensors and Wireless Communication: pages/resources/study-guide/06-sensors-wireless.md
+        - Microprocessors vs. Microcontrollers, and Common Features: pages/resources/study-guide/07-microprocessors-vs-microcontrollers.md
+        - Microcontroller Families: pages/resources/study-guide/08-microcontroller-families.md
+        - Soldering and Manufacturing Processes: pages/resources/study-guide/09-soldering.md
+        - Mathematics, Signal Processing, and Statistics: pages/resources/study-guide/10-math-signal-processing.md
+        - Safety Checks for Power and Test Instruments: pages/resources/study-guide/11-safety-checks.md
+        - Deployment Environments and Their Impact on IoT Devices: pages/resources/study-guide/12-deployment-environments.md
+        - Workplace Electrical Equipment Standards: pages/resources/study-guide/13-workplace-standards.md
+        - Testing and Troubleshooting: pages/resources/study-guide/14-testing-troubleshooting.md
+        - Glossary: pages/resources/study-guide/15-glossary.md
       - Getting Started:
         - Introduction to IoT: pages/resources/introduction-to-iot.md
         - IoT Programming Introduction: pages/resources/iot-programming-introduction.md
@@ -48,6 +64,7 @@ nav:
 # Do not touch anything below this line unless you know what you are doing.
 theme:
   name: material
+  custom_dir: ../../shared
   palette:
     primary: purple
   features:
@@ -59,10 +76,26 @@ theme:
     - content.code.copy
     - content.code.annotate
 
+# This is relative to the theme/base (based on custom_dir above)
+extra_css:
+  - style.css
+
+# MathJax support for the $$ ... $$ formula blocks in the Reading Resources
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# This is here to watch the style.css file above to trigger hot-reload,
+# therefor if the custom_dir is changed it should be changed here too.
+watch:
+  - ../../shared/style.css
+
 plugins:
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after:
+        - pages/resources/study-guide/01-introduction.md
+        - pages/resources/introduction-to-iot.md
         - pages/tasks/iot-programming-activity.md
         - pages/tasks/class-activities.md
         - pages/tasks/practice-1.md
@@ -72,6 +105,10 @@ extra:
   generator: false
 
 markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+      block_syntax: ['dollar']
+      inline_syntax: ['ignore']
   - pymdownx.highlight:
       linenums: true
   - pymdownx.superfences:
@@ -84,6 +121,3 @@ markdown_extensions:
   - pymdownx.details
   - attr_list
   - md_in_html
-
-extra_css:
-  - extra/style.css
