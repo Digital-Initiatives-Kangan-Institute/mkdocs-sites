@@ -124,7 +124,7 @@ iframe, embed {
 
 /* Mobile drawer: render as a left-aligned nav row so it sits naturally
    among the menu links instead of a floating centred pill. */
-@media screen and (max-width: 76.1875em) {
+@media screen and (max-width: 30em) {
   .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
     justify-content: flex-start;
     border-radius: var(--shared-radius-sm);
