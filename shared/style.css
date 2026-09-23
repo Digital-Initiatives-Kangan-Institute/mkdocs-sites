@@ -31,7 +31,7 @@ iframe, embed {
 
 /* Hide the redundant sidebar title on desktop only — on mobile these labels
    are the Back buttons for nested menus (label for=__nav_X), so keep them. */
-@media screen and (min-width: 76.25em) {
+@media screen and (min-width: 48em) {
   .md-sidebar--primary .md-nav__title {
     display: none;
   }
@@ -124,7 +124,7 @@ iframe, embed {
 
 /* Mobile drawer: render as a left-aligned nav row so it sits naturally
    among the menu links instead of a floating centred pill. */
-@media screen and (max-width: 30em) {
+@media screen and (max-width: 47.984375em) {
   .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item:first-child > .md-nav__link {
     justify-content: flex-start;
     border-radius: var(--shared-radius-sm);
@@ -138,6 +138,33 @@ iframe, embed {
     transform: none;
     box-shadow: none;
   }
+
+  /* Skip the "Menu" drill-down step: show its Resources / Tasks groups
+     directly in the top-level drawer panel instead of behind an extra tap. */
+  .md-nav--primary > .md-nav__list > .md-nav__item--section {
+    border-top: 0;
+  }
+
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav__link,
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav > .md-nav__title {
+    display: none;
+  }
+
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav {
+    position: static;
+    display: block;
+    height: auto;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    background-color: transparent;
+  }
+
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-nav > .md-nav__list {
+    overflow: visible;
+    box-shadow: none;
+    background-color: transparent;
+  }
 }
 
 /* Breathing room between the menu and the sidebar scrollbar */
@@ -146,9 +173,163 @@ iframe, embed {
 }
 
 /* Slightly wider menu on desktop (page content narrows to compensate) */
-@media screen and (min-width: 76.25em) {
+@media screen and (min-width: 48em) {
   .md-sidebar--primary {
     width: 13.5rem;
+  }
+}
+
+/* Material only shows the fixed sidebar from 76.25em (1220px) and uses the
+   slide-out drawer below that, which kicks in too early on small laptops.
+   Between 48em (768px) and 76.25em, undo the drawer styles so the sidebar
+   stays docked like it does on desktop. Below 48em the drawer is unchanged. */
+@media screen and (min-width: 48em) and (max-width: 76.234375em) {
+  /* Hide the hamburger + overlay: the menu is always visible here */
+  .md-header__button[for=__drawer],
+  .md-overlay {
+    display: none;
+  }
+
+  .md-header__button.md-logo {
+    display: inline-block;
+  }
+
+  /* Dock the sidebar in the page flow instead of a fixed off-screen drawer */
+  [dir=ltr] .md-sidebar--primary {
+    left: auto;
+  }
+
+  .md-sidebar--primary,
+  [data-md-toggle=drawer]:checked ~ .md-container .md-sidebar--primary {
+    position: sticky;
+    top: 2.4rem;
+    height: auto;
+    max-height: calc(100vh - 2.4rem);
+    background-color: transparent;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    z-index: auto;
+  }
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    position: static;
+    max-height: calc(100vh - 4.8rem);
+    margin: 0 0.2rem;
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+
+  [dir=ltr] .md-sidebar--primary:not([hidden]) ~ .md-content > .md-content__inner {
+    margin-left: 1.2rem;
+  }
+
+  /* Nav panels: plain stacked lists rather than absolutely-positioned slides */
+  .md-nav--primary,
+  .md-nav--primary .md-nav {
+    position: static;
+    display: block;
+    height: auto;
+    background-color: transparent;
+    z-index: auto;
+  }
+
+  .md-nav--primary .md-nav__item,
+  .md-nav--primary .md-nav__title {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .md-nav--primary .md-nav__item {
+    border-top: 0;
+  }
+
+  .md-nav--primary .md-nav__title ~ .md-nav__list {
+    background-color: transparent;
+    box-shadow: none;
+    overflow-y: visible;
+    scroll-snap-type: none;
+  }
+
+  [dir=ltr] .md-nav--primary .md-nav__list {
+    padding-left: 0.6rem;
+  }
+
+  .md-nav--primary .md-nav__list {
+    padding-bottom: 0.4rem;
+  }
+
+  .md-nav--primary .md-nav__item--active:not(.md-nav__item--section) > .md-nav__link:not(.md-nav__link--active) {
+    color: inherit;
+  }
+
+  .md-nav--primary .md-nav__item--section > .md-nav__link {
+    color: var(--md-default-fg-color--light);
+  }
+
+  .md-nav--primary .md-nav__link {
+    margin-top: 0.625em;
+  }
+
+  /* Sections (e.g. "Menu") are always expanded headings, as on desktop */
+  .md-nav__item--section {
+    display: block;
+    margin: 1.25em 0;
+  }
+
+  .md-nav__item--section > .md-nav__link:not(.md-nav__container) {
+    pointer-events: none;
+  }
+
+  .md-nav__item--section > .md-nav__link > [for] {
+    display: none;
+  }
+
+  [dir=ltr] .md-nav__item--section > .md-nav {
+    margin-left: -0.6rem;
+  }
+
+  /* Collapsible groups (Resources / Tasks) expand in place instead of sliding */
+  .md-nav__toggle ~ .md-nav {
+    display: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .md-nav__item--section > .md-nav,
+  .md-nav__toggle:checked ~ .md-nav,
+  .md-nav__toggle.md-toggle--indeterminate ~ .md-nav {
+    display: block;
+  }
+
+  .md-nav__item--nested > .md-nav > .md-nav__title {
+    display: none;
+  }
+
+  /* Integrated page TOC: show the real page link + an always-open heading
+     list (Material swaps in a "toggle TOC" label at this width) */
+  .md-nav--integrated .md-nav__link[for=__toc] {
+    display: none;
+  }
+
+  .md-nav--integrated .md-nav__link[for=__toc] + .md-nav__link {
+    display: flex;
+  }
+
+  .md-nav--integrated > .md-nav__list > .md-nav__item--active .md-nav--secondary {
+    display: block;
+    margin-bottom: 1.25em;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  [dir=ltr] .md-nav--integrated > .md-nav__list > .md-nav__item--active .md-nav--secondary {
+    border-left: 0.05rem solid var(--md-primary-fg-color);
+  }
+
+  .md-nav--integrated > .md-nav__list > .md-nav__item--active .md-nav--secondary > .md-nav__title {
+    display: none;
   }
 }
 
