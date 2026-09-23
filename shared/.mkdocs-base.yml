@@ -1,0 +1,45 @@
+# Shared MkDocs config inherited by every site via `INHERIT: ../../shared/.mkdocs-base.yml`.
+#
+# Holds the settings that should be identical across all sites. Anything that
+# varies per site (site_name, nav, theme.palette.primary, plugins) stays in
+# the site's own mkdocs.yml and is merged on top of this file.
+#
+# Do not add site-specific values here — this file is shared by every site.
+
+# This text shows in the footer.
+copyright: Digital Initiatives - Bendigo Kangan Institute
+
+theme:
+  name: material
+  custom_dir: ../../shared
+  features:
+    - toc.integrate
+    - navigation.sections
+    - navigation.path
+    - navigation.footer
+    - header.hide
+    - content.code.copy
+    - content.code.annotate
+
+# This is relative to the theme/base (based on custom_dir above)
+extra_css:
+  - style.css
+
+# This is here to watch the style.css file above to trigger hot-reload,
+# therefor if the custom_dir is changed it should be changed here too.
+watch:
+  - ../../shared/style.css
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html

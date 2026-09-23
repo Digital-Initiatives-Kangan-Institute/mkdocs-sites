@@ -1,7 +1,6 @@
-site_name: Program IoT Devices
+INHERIT: ../../shared/.mkdocs-base.yml
 
-# This text shows in the footer.
-copyright: Digital Initiatives - Bendigo Kangan Institute
+site_name: Program IoT Devices
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
@@ -63,32 +62,13 @@ nav:
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
-  name: material
-  custom_dir: ../../shared
   palette:
     primary: purple
-  features:
-    - toc.integrate
-    - navigation.sections
-    - navigation.path
-    - navigation.footer
-    - header.hide
-    - content.code.copy
-    - content.code.annotate
-
-# This is relative to the theme/base (based on custom_dir above)
-extra_css:
-  - style.css
 
 # MathJax support for the $$ ... $$ formula blocks in the Reading Resources
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
-# This is here to watch the style.css file above to trigger hot-reload,
-# therefor if the custom_dir is changed it should be changed here too.
-watch:
-  - ../../shared/style.css
 
 plugins:
   - enumerate-headings:
@@ -101,9 +81,7 @@ plugins:
         - pages/tasks/practice-1.md
         - pages/tasks/practice-2.md
 
-extra:
-  generator: false
-
+# Overrides the shared markdown_extensions to add MathJax and Mermaid diagram support.
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
