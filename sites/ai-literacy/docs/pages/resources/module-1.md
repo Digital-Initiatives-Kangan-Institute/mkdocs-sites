@@ -98,12 +98,12 @@ While Generative AI is a powerful tool, it exhibits clear boundaries that requir
 > **Human Oversight Rule**: AI tools are powerful assistants, but they require critical human judgment to verify factual outputs, apply contextual understanding, and make final decisions.
 
 
-### 1.4 Creative Problem-Solving & Prompt Ideation (The SCAMPER Framework)
+## Creative Problem-Solving & Prompt Ideation (The SCAMPER Framework)
 
-*   **1.4.1 Overview & Origin**
+### Overview & Origin
     *   Definition of SCAMPER (Bob Eberle, 1971; Alex Osborn, 1953).
     *   Role of structured lateral thinking in overcoming AI prompt monotony and unblocking creative brainstorming.
-*   **1.4.2 The 7 SCAMPER Dimensions Applied to AI Prompting**
+###   1.4.2 The 7 SCAMPER Dimensions Applied to AI Prompting
     *   Detailed definitions and before-and-after prompt examples for each letter (Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, Reverse).
-*   **1.4.3 SCAMPER Prompt Ideation Matrix**
+### 1.4.3 SCAMPER Prompt Ideation Matrix
     *   A student-facing quick reference table mapping each SCAMPER strategy directly to actionable prompt formulas and exercise scenarios.
