@@ -60,6 +60,7 @@ nav:
     - Practice:
       - Warehouse Loading Dock Station: pages/tasks/practice-1.md
       - Chemical Storage Access & Tamper Monitor: pages/tasks/practice-2.md
+      - Museum Display Case Night Guard: pages/tasks/practice-3.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -100,6 +101,7 @@ plugins:
         - pages/tasks/class-activities.md
         - pages/tasks/practice-1.md
         - pages/tasks/practice-2.md
+        - pages/tasks/practice-3.md
 
 extra:
   generator: false
