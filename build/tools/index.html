@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/_assets/favicon.png">
+    <link rel="icon" type="image/png" href="../_assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,800&display=fallback" rel="stylesheet">
-    <title>Digital Initiatives - Portal</title>
+    <title>Digital Initiatives - Tools</title>
 
     <style>
         *,
@@ -73,7 +73,15 @@
             flex: none;
         }
 
-        .tools-link {
+        header h1 {
+            flex: 1;
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+
+        .portal-back {
             flex: none;
             font-size: 0.85rem;
             font-weight: 700;
@@ -87,17 +95,9 @@
             transition: background-color 0.15s ease, color 0.15s ease;
         }
 
-        .tools-link:hover {
+        .portal-back:hover {
             color: #ffffff;
             background-color: rgba(255, 255, 255, 0.08);
-        }
-
-        header h1 {
-            flex: 1;
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: -0.01em;
-            margin: 0;
         }
 
         .sr-only {
@@ -112,7 +112,7 @@
             border: 0;
         }
 
-        /* Sticky filter bar: course menu + search stay reachable while scrolling */
+        /* Sticky filter bar: search stays reachable while scrolling */
         #filter-bar {
             position: sticky;
             top: 0.75rem;
@@ -135,106 +135,12 @@
             flex-wrap: wrap;
         }
 
-        .course-switcher {
-            position: relative;
-            flex: none;
-        }
-
-        #course-menu-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            padding: 0;
-            border-radius: 6px;
-            cursor: pointer;
-
-            color: rgba(255, 255, 255, 0.6);
-            background-color: transparent;
-            border: 1px solid transparent;
-
-            transition: color 0.15s ease, background-color 0.15s ease;
-        }
-
-        #course-menu-button:hover,
-        #course-menu-button[aria-expanded="true"] {
-            color: rgba(255, 255, 255, 0.95);
-            background-color: rgba(255, 255, 255, 0.08);
-        }
-
-        #course-menu-button svg {
-            display: block;
-            flex: none;
-        }
-
-        #course-menu {
-            position: absolute;
-            top: calc(100% + 0.5rem);
-            right: 0;
-            z-index: 10;
-            min-width: 240px;
-
-            display: flex;
-            flex-direction: column;
-            gap: 0.15rem;
-
-            background-color: var(--portal-surface);
-            border: 1px solid var(--portal-outline);
-            border-radius: var(--portal-radius-md);
-            box-shadow: var(--portal-shadow-hover);
-            padding: 0.4rem;
-
-            animation: portal-fade-up 0.15s ease both;
-        }
-
-        #course-menu[hidden] {
-            display: none;
-        }
-
-        .course-menu-heading {
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-
-            color: var(--portal-muted);
-            padding: 0.5rem 0.75rem 0.35rem;
-        }
-
-        .course-menu-item {
-            display: block;
-            width: 100%;
-            font: inherit;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-align: left;
-            padding: 0.55rem 0.75rem;
-            border-radius: var(--portal-radius-sm);
-            cursor: pointer;
-
-            color: var(--portal-text);
-            background-color: transparent;
-            border: none;
-
-            transition: background-color 0.15s ease, color 0.15s ease;
-        }
-
-        .course-menu-item:hover {
-            background-color: var(--portal-bg);
-        }
-
-        .course-menu-item[aria-current="true"] {
-            color: var(--portal-brand-ink);
-            background-color: var(--portal-bg);
-        }
-
         .search-wrap {
             flex: 1;
             max-width: 320px;
         }
 
-        #site-search {
+        #tool-search {
             font: inherit;
             font-size: 0.85rem;
             color: var(--portal-text);
@@ -251,11 +157,11 @@
             transition: border-color 0.15s ease;
         }
 
-        #site-search::placeholder {
+        #tool-search::placeholder {
             color: var(--portal-muted);
         }
 
-        #site-search:focus {
+        #tool-search:focus {
             outline: none;
             border-color: var(--portal-brand);
         }
@@ -385,47 +291,6 @@
             pointer-events: none;
         }
 
-        .construction::before {
-            position: absolute;
-
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-            border-radius: var(--portal-radius-md);
-
-            opacity: 0.25;
-
-            content: '';
-
-            background: repeating-linear-gradient(
-                45deg,
-                rgb(255, 166, 0),
-                rgb(255, 166, 0) 10px,
-                black 10px,
-                black 20px
-            );
-        }
-        .construction::after {
-            position: absolute;
-
-            top: 50%;
-            left: 0;
-            width: 100%;
-
-            content: 'Under Construction';
-            text-align: center;
-
-            text-shadow: black 1px 1px 1px;
-            font-size: 1.25rem;
-            font-weight: 700;
-
-            color: white;
-
-            background-color: rgba(0, 0, 0, 0.75);
-        }
-
         .grid-item .thumbnail {
             overflow: hidden;
         }
@@ -474,7 +339,7 @@
         }
 
         .grid-item .details::after {
-            content: 'Open site \2192';
+            content: 'Open tool \2192';
             display: inline-block;
             margin-top: 0.5rem;
             font-size: 0.8rem;
@@ -543,7 +408,7 @@
                 width: 100%;
             }
 
-            #site-search {
+            #tool-search {
                 width: 100%;
             }
 
@@ -575,20 +440,9 @@
 </head>
 <body>
     <header>
-        <img class="brand-mark" src="./_assets/favicon.png" alt="Digital Initiatives logo" width="28" height="28">
-        <h1>Digital Initiatives - Portal</h1>
-        <a class="tools-link" href="./tools/">Tools</a>
-        <div class="course-switcher">
-            <button id="course-menu-button" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="course-menu">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-                <span id="course-menu-label" class="sr-only">Filter by course</span>
-            </button>
-            <div id="course-menu" role="menu" aria-label="Filter by course" hidden></div>
-        </div>
+        <img class="brand-mark" src="../_assets/favicon.png" alt="Digital Initiatives logo" width="28" height="28">
+        <h1>Digital Initiatives - Tools</h1>
+        <a class="portal-back" href="../">Return to Portal</a>
     </header>
 
     <main>
@@ -597,24 +451,24 @@
         </noscript>
 
         <div id="banner">
-            <p>Welcome to the <b>Digital Initiatives</b> learning portal.</p>
-            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access.</p>
+            <p>Welcome to the <b>Digital Initiatives</b> tools page.</p>
+            <p><b>Click</b> on any of the cards below to open a tool, and <b>bookmark</b> this page for easy access.</p>
         </div>
 
         <div id="filter-bar">
             <div class="filter-inner">
                 <div class="search-wrap">
-                    <input id="site-search" type="search" placeholder="Search sites&hellip;" aria-label="Search sites" autocomplete="off">
+                    <input id="tool-search" type="search" placeholder="Search tools&hellip;" aria-label="Search tools" autocomplete="off">
                 </div>
             </div>
         </div>
 
         <section>
-            <h2>Sites</h2>
-            <div class="grid-layout" id="sites-grid"></div>
+            <h2>Tools</h2>
+            <div class="grid-layout" id="tools-grid"></div>
             <div id="empty-state" hidden>
-                <p>No sites match your filters.</p>
-                <button id="clear-filters" type="button">Clear filters</button>
+                <p>No tools match your search.</p>
+                <button id="clear-filters" type="button">Clear search</button>
             </div>
         </section>
     </main>
@@ -623,23 +477,17 @@
         Digital Initiatives - Bendigo Kangan Institute
     </footer>
 
-    <script src="sites.js"></script>
+    <script src="tools.js"></script>
 
     <script>
         (function () {
-            var menuButton = document.getElementById('course-menu-button');
-            var menuLabel = document.getElementById('course-menu-label');
-            var menu = document.getElementById('course-menu');
-            var searchInput = document.getElementById('site-search');
-            var grid = document.getElementById('sites-grid');
+            var searchInput = document.getElementById('tool-search');
+            var grid = document.getElementById('tools-grid');
             var emptyState = document.getElementById('empty-state');
             var clearBtn = document.getElementById('clear-filters');
             var heading = document.querySelector('section h2');
             var cards = [];
-            var courseIds = [];
-            var coursesById = {};
-            var DEFAULT_COURSE = 'cert3-in-it';
-            var state = { course: DEFAULT_COURSE, query: '' };
+            var state = { query: '' };
 
             function esc(s) {
                 return String(s)
@@ -649,95 +497,26 @@
                     .replace(/"/g, '&quot;');
             }
 
-            function renderCard(site) {
+            function renderCard(tool) {
                 var a = document.createElement('a');
                 a.className = 'grid-item';
-                a.href = site.href;
-                a.setAttribute('data-courses', site.courses.join(' '));
-                a.setAttribute('data-search', (site.title + ' ' + site.description).toLowerCase());
-                a.innerHTML =
-                    '<div class="thumbnail"><img src="' + site.img + '" alt="' + esc(site.title) + '" loading="lazy"></div>' +
-                    '<div class="details"><h2>' + esc(site.title) + '</h2><p>' + esc(site.description) + '</p></div>';
+                a.href = tool.href;
+                a.setAttribute('data-search', (tool.title + ' ' + tool.description).toLowerCase());
+                var html = '';
+                if (tool.img) {
+                    html += '<div class="thumbnail"><img src="' + tool.img + '" alt="' + esc(tool.title) + '" loading="lazy"></div>';
+                }
+                html += '<div class="details"><h2>' + esc(tool.title) + '</h2><p>' + esc(tool.description) + '</p></div>';
+                a.innerHTML = html;
                 return a;
             }
-
-            function countFor(id) {
-                return window.SITES_DATA.sites.filter(function (s) {
-                    return s.courses.indexOf(id) !== -1;
-                }).length;
-            }
-
-            function renderCourseMenu(courses) {
-                var heading = document.createElement('div');
-                heading.className = 'course-menu-heading';
-                heading.textContent = 'Courses';
-                menu.appendChild(heading);
-
-                courses.forEach(function (c) {
-                    var b = document.createElement('button');
-                    b.type = 'button';
-                    b.className = 'course-menu-item';
-                    b.dataset.id = c.id;
-                    b.setAttribute('role', 'menuitemradio');
-                    b.setAttribute('aria-current', 'false');
-                    b.textContent = c.label + ' (' + countFor(c.id) + ')';
-                    b.addEventListener('click', function () {
-                        history.replaceState(null, '', '#' + c.id);
-                        routeFromHash();
-                        closeMenu();
-                    });
-                    menu.appendChild(b);
-                });
-            }
-
-            function syncMenu() {
-                menu.querySelectorAll('.course-menu-item').forEach(function (p) {
-                    var isCurrent = p.dataset.id === state.course;
-                    p.setAttribute('aria-current', isCurrent ? 'true' : 'false');
-                    if (isCurrent) {
-                        menuLabel.textContent = coursesById[state.course].label;
-                    }
-                });
-            }
-
-            function openMenu() {
-                menu.hidden = false;
-                menuButton.setAttribute('aria-expanded', 'true');
-            }
-
-            function closeMenu() {
-                menu.hidden = true;
-                menuButton.setAttribute('aria-expanded', 'false');
-            }
-
-            menuButton.addEventListener('click', function (e) {
-                e.stopPropagation();
-                if (menu.hidden) {
-                    openMenu();
-                } else {
-                    closeMenu();
-                }
-            });
-
-            document.addEventListener('click', function (e) {
-                if (!menu.hidden && !menu.contains(e.target) && e.target !== menuButton) {
-                    closeMenu();
-                }
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    closeMenu();
-                }
-            });
 
             function applyFilters() {
                 var q = state.query.trim().toLowerCase();
                 var visible = 0;
                 cards.forEach(function (card) {
-                    var inCourse = card.getAttribute('data-courses').split(' ').indexOf(state.course) !== -1;
                     var matchesQuery = !q || card.getAttribute('data-search').indexOf(q) !== -1;
-                    if (inCourse && matchesQuery) {
+                    if (matchesQuery) {
                         visible++;
                         if (card.classList.contains('hidden')) {
                             card.classList.remove('hidden');
@@ -756,7 +535,7 @@
                 if (q) {
                     text = visible + ' result' + (visible === 1 ? '' : 's') + ' for \u201c' + state.query.trim() + '\u201d';
                 } else {
-                    text = coursesById[state.course].fullname;
+                    text = 'Tools';
                 }
                 if (heading.textContent !== text) {
                     heading.style.opacity = '0';
@@ -767,13 +546,6 @@
                 }
             }
 
-            function routeFromHash() {
-                var hash = window.location.hash.replace('#', '');
-                state.course = courseIds.indexOf(hash) !== -1 ? hash : DEFAULT_COURSE;
-                syncMenu();
-                applyFilters();
-            }
-
             searchInput.addEventListener('input', function () {
                 state.query = searchInput.value;
                 applyFilters();
@@ -782,28 +554,19 @@
             clearBtn.addEventListener('click', function () {
                 searchInput.value = '';
                 state.query = '';
-                history.replaceState(null, '', '#' + DEFAULT_COURSE);
-                routeFromHash();
+                applyFilters();
             });
 
-            window.addEventListener('popstate', routeFromHash);
-            window.addEventListener('hashchange', routeFromHash);
-
             (function init() {
-                var data = window.SITES_DATA;
-                // Sites can be hidden without deleting them: "disabled": true
-                data.sites = data.sites.filter(function (site) { return !site.disabled; });
-                courseIds = data.courses.map(function (c) { return c.id; });
-                data.courses.forEach(function (c) { coursesById[c.id] = c; });
-                renderCourseMenu(data.courses);
-
-                data.sites.forEach(function (site) {
-                    var card = renderCard(site);
+                var data = window.TOOLS_DATA;
+                // Tools can be hidden without deleting them: "disabled": true
+                data.tools = data.tools.filter(function (tool) { return !tool.disabled; });
+                data.tools.forEach(function (tool) {
+                    var card = renderCard(tool);
                     grid.appendChild(card);
                     cards.push(card);
                 });
-
-                routeFromHash();
+                applyFilters();
             })();
         })();
     </script>

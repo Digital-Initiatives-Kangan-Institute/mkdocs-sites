@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+:root {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --panel-2: #f1f3f9;
+  --border: #e4e6ed;
+  --border-2: #d6d9e4;
+  --text: #0f172a;
+  --muted: #64748b;
+  --accent: #7c5cff;
+  --accent-2: #4f46e5;
+  --accent-glow: rgba(124,92,255,0.15);
+  --success: #16a34a;
+  --grid: #e8eaf1;
+  --canvas: #fcfdff;
+  --node-process: #e0e7ff;
+  --node-decision: #fef9c3;
+  --node-terminal: #dcfce7;
+  --node-io: #ede9fe;
+}
+html, body { margin:0; padding:0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; overflow: hidden; height:100%; }
+button { font-family: inherit; }
+/* prevent accidental text selection on canvas */
+svg, svg text, .canvas-area, .canvas-area * {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+/* keep inputs/selectable areas selectable */
+input, textarea, [contenteditable] {
+  user-select: text;
+  -webkit-user-select: text;
+}
+::-webkit-scrollbar { width:6px; height:6px }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 999px }

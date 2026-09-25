@@ -92,6 +92,12 @@ SITE_PATH="$SITES_DIR/$SITE_FOLDER"
 
 echo -e "  Folder name: ${YELLOW}${SITE_FOLDER}${RESET}\n"
 
+# 'tools' is reserved for the build/tools/ static tools system — see build-tools.sh.
+if [[ "$SITE_FOLDER" == "tools" ]]; then
+  print_error "'tools' is a reserved name (used for built tools at build/tools/). Please choose another site name."
+  exit 1
+fi
+
 if [[ -d "$SITE_PATH" ]]; then
   print_error "A site named '${SITE_FOLDER}' already exists at: $SITE_PATH"
   exit 1

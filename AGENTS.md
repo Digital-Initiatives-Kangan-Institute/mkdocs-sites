@@ -249,3 +249,37 @@ Never leave temporary build artifacts in the project directory.
 ### Portal Pattern
 
 The portal (`build/index.html`) loads `build/sites.js` and renders cards for each site. Filtering is done via URL hash (`#cert3-in-it` or `#diploma-of-it`). Each site card links to its `href` (e.g., `/htmlcss`), which resolves to the subdirectory under `build/`.
+
+---
+
+## Tools
+
+Static web tools (e.g. the Code editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (e.g. Learn Terminal) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. Note `tools/learn-terminal` uses `?v=N` cache-busting on local file references — ask the user before bumping those versions. They are listed on the tools portal at `build/tools/index.html`, which reads its cards from `build/tools/tools.js`. The main portal links to it via a "Tools" pill in the header of `build/index.html`. Never create a site called `tools` — `create.sh` blocks that reserved name.
+
+### Tool Thumbnails
+
+Create a thumbnail in `build/tools/thumbs/` and reference it from the tool's entry in `build/tools/tools.js` (`"img": "./thumbs/<id>.svg"`). Thumbnails are committed (see the `!build/tools/thumbs` exception in `.gitignore`); built tool output under `build/tools/<id>/` stays ignored.
+
+**Location:** `build/tools/thumbs/<id>.svg` (or `.webp`/`.png` if you must, but SVG is preferred).
+
+**Rules — strict:**
+
+1. **Size:** `640 × 400` (`viewBox="0 0 640 400"`, `rx="18"` on outer rect). Card displays at `aspect-ratio: 16/10`.
+2. **No text:** Never use `<text>` elements. No labels, no titles, no "drop here" copy. Use **blocks only** — `rect`, `circle`, `line` to suggest UI.
+3. **Simple:** 4–8 blocks max. Abstract the tool's UI into blocks (e.g. Code → left editor tabs + code lines + right preview blocks).
+4. **Dark theme only (outer chrome):** Outer frame and card shell stay dark (`#0e0e11`, `#131316`, `#141418`, `#1e1e24`, borders `#232328` / `#2a2a32`, accent `#ff3d00` sparingly). Interior blocks may deviate to match the tool's real light/dark palette — see rule 7.
+5. **Chrome:** Include the fake window chrome (top bar `36px` high, 3 dots `6px` radius, colors `#ff5f57`/`#febc2e`/`#28c840` at `x=56,76,96 y=46`), inner card `x=28 y=28 width=584 height=344 rx=16`.
+6. **No em dashes, no real screenshots.** Keep it abstract so all cards feel cohesive.
+7. **Match the tool's real color scheme:** Before drawing, extract the palette from the tool's source in `tools/<id>/` — e.g. `grep -o "#[0-9a-fA-F]\{3,8\}" tools/<id>/src/*` and check `:root` vars, `background`, `color`, `border`, and accent colors. Use those real colors for interior blocks so the card feels like the tool. Keep outer chrome dark (`#0e0e11` / `#131316` + `#232328` stroke).
+8. **Verify:** After creating, run `grep -n "<text" build/tools/thumbs/*.svg` — should return nothing.
+
+Example skeleton:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img">
+  <rect width="640" height="400" rx="18" fill="#0e0e11"/>
+  <rect x="1" y="1" width="638" height="398" rx="17" fill="none" stroke="#232328" stroke-width="1.5"/>
+  <rect x="28" y="28" width="584" height="344" rx="16" fill="#131316" stroke="#232328"/>
+  <!-- ... blocks only ... -->
+</svg>
+```

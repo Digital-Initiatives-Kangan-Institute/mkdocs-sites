@@ -3,6 +3,14 @@ build/*
 !build/_assets
 !build/index.html
 !build/sites.js
+!build/tools
+build/tools/*
+!build/tools/index.html
+!build/tools/tools.js
+!build/tools/thumbs
 .DS_Store
 tmp/
 dmp/
+# Tool sources (each tool also carries its own framework .gitignore)
+tools/*/node_modules
+tools/*/dist
