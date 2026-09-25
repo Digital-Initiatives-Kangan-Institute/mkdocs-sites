@@ -1,10 +1,10 @@
-/* Full unit tests — run with: node test-all.js */
-/* Tests the actual production code in lib/commands.js, lib/vfs.js, and lib/utils.js */
+/* Full unit tests — run with: node tests/test-all.ts */
+/* Tests the actual production code in src/lib/commands.ts, src/lib/vfs.ts, and src/lib/utils.ts */
 
-const { VFS, normPath, getNode, resolvePath, makeNode, serializeNode, deserializeNode, HOME } = require('../lib/vfs');
-const { tokenize, parseFlags, nonFlags } = require('../lib/utils');
-const commands = require('../lib/commands');
-const { createTestRunner, setupFS, addFile, addDir } = require('../lib/test');
+import { VFS, normPath, getNode, resolvePath, makeNode, serializeNode, deserializeNode, HOME } from '../src/lib/vfs.ts';
+import { tokenize, parseFlags, nonFlags } from '../src/lib/utils.ts';
+import * as commands from '../src/lib/commands.ts';
+import { createTestRunner, setupFS, addFile, addDir } from './runner.ts';
 var { assert, section, printSummary, wasSuccess } = createTestRunner();
 
 // Helper — extract text lines from cat's structured output

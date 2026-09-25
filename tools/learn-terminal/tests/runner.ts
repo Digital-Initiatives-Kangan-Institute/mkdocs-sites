@@ -1,14 +1,16 @@
-/* lib/test.js — shared test-runner library for Node.js test suites */
+/* tests/runner.ts — shared test-runner library for the Node.js test suites */
 
-const { VFS, normPath, getNode, resolvePath, makeNode, HOME } = require('./vfs');
+import { VFS, normPath, getNode, makeNode, HOME, type DirNode } from '../src/lib/vfs.ts';
 
 // ── Test-runner factory ──────────────────────────────────────────
 
-function createTestRunner() {
-  let pass = 0, fail = 0;
-  const sections = [];
+type TestCase = [label: string, got: unknown, want: unknown];
 
-  function assert(label, got, want) {
+export function createTestRunner() {
+  let pass = 0, fail = 0;
+  const sections: { name: string; pass: number; fail: number }[] = [];
+
+  function assert(label: string, got: unknown, want: unknown) {
     const g = JSON.stringify(got), w = JSON.stringify(want);
     if (g === w) {
       pass++;
@@ -21,23 +23,23 @@ function createTestRunner() {
     }
   }
 
-  function section(name, tests) {
-    sections.push({ name: name, pass: 0, fail: 0 });
+  function section(name: string, tests: TestCase[]) {
+    sections.push({ name, pass: 0, fail: 0 });
     console.log('\n  \x1b[36m\x1b[1m' + name + '\x1b[0m');
-    tests.forEach(function (t) {
+    tests.forEach(t => {
       const got = typeof t[1] === 'function' ? t[1]() : t[1];
       assert(name + ': ' + t[0], got, t[2]);
     });
   }
 
   function printSummary() {
-    var tp = 0, tf = 0;
+    let tp = 0, tf = 0;
     console.log('');
     console.log('  \x1b[1mTest Summary\x1b[0m');
     console.log('  \x1b[2m───────────────────────────────────────────────\x1b[0m');
-    sections.forEach(function (s) {
-      var mark = s.fail === 0 ? '\x1b[32m✓\x1b[0m' : '\x1b[31m✗\x1b[0m';
-      var counts = '  \x1b[32m' + s.pass + ' passed\x1b[0m' + (s.fail > 0 ? '  \x1b[31m' + s.fail + ' failed\x1b[0m' : '');
+    sections.forEach(s => {
+      const mark = s.fail === 0 ? '\x1b[32m✓\x1b[0m' : '\x1b[31m✗\x1b[0m';
+      const counts = '  \x1b[32m' + s.pass + ' passed\x1b[0m' + (s.fail > 0 ? '  \x1b[31m' + s.fail + ' failed\x1b[0m' : '');
       console.log('  ' + mark + ' \x1b[1m' + s.name + '\x1b[0m' + counts);
       tp += s.pass; tf += s.fail;
     });
@@ -54,29 +56,25 @@ function createTestRunner() {
 
 // ── VFS test helpers ─────────────────────────────────────────────
 
-function setupFS() {
+export function setupFS() {
   for (const k of Object.keys(VFS)) delete VFS[k];
   VFS['/'] = makeNode('dir');
   VFS['/'].children['home'] = makeNode('dir');
-  VFS['/'].children['home'].children['user'] = makeNode('dir');
+  (VFS['/'].children['home'] as DirNode).children['user'] = makeNode('dir');
   return HOME;
 }
 
-function addFile(path, content) {
-  content = content || '';
+function parentOf(path: string) {
   const parentPath = normPath(path + '/..');
-  const name = path.split('/').pop();
   const parent = getNode(parentPath);
   if (!parent || parent.type !== 'dir') throw new Error('Parent not found: ' + parentPath);
-  parent.children[name] = makeNode('file', content);
+  return parent;
 }
 
-function addDir(path) {
-  const parentPath = normPath(path + '/..');
-  const name = path.split('/').pop();
-  const parent = getNode(parentPath);
-  if (!parent || parent.type !== 'dir') throw new Error('Parent not found: ' + parentPath);
-  parent.children[name] = makeNode('dir');
+export function addFile(path: string, content?: string) {
+  parentOf(path).children[path.split('/').pop()!] = makeNode('file', content || '');
 }
 
-module.exports = { createTestRunner, setupFS, addFile, addDir };
+export function addDir(path: string) {
+  parentOf(path).children[path.split('/').pop()!] = makeNode('dir');
+}

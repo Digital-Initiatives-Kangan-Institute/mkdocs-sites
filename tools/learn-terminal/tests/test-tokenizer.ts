@@ -1,7 +1,8 @@
-/* Tokenizer unit tests — run with: node test-tokenizer.js */
+/* Tokenizer unit tests — run with: node tests/test-tokenizer.ts */
 
-const { tokenize } = require('../lib/utils');
-const { assert, section, printSummary, wasSuccess } = require('../lib/test').createTestRunner();
+import { tokenize } from '../src/lib/utils.ts';
+import { createTestRunner } from './runner.ts';
+const { assert, section, printSummary, wasSuccess } = createTestRunner();
 
 // ═══════════════════════════════════════════════════════════════════
 //  BASIC

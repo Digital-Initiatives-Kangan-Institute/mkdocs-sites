@@ -1,21 +1,26 @@
 #!/usr/bin/env bash
 cd "$(dirname "$0")"
 
+if [ ! -x node_modules/.bin/tsx ]; then
+  echo "tsx not found — run npm install first." >&2
+  exit 1
+fi
+
 results=()
 failures=0
 
 run_test() {
   local name=$1 file=$2
-  node "$file"
+  ./node_modules/.bin/tsx "$file"
   local code=$?
   results+=("$name:$code")
   if [ "$code" -ne 0 ]; then ((failures++)); fi
   return $code
 }
 
-run_test "Tokenizer" "tests/test-tokenizer.js"
-run_test "mv / cp"   "tests/test-mv-cp.js"
-run_test "All"       "tests/test-all.js"
+run_test "Tokenizer" "tests/test-tokenizer.ts"
+run_test "mv / cp"   "tests/test-mv-cp.ts"
+run_test "All"       "tests/test-all.ts"
 
 echo ""
 echo -e "  \033[1mCombined Test Summary\033[0m"
@@ -36,5 +41,4 @@ else
   echo -e "  \033[31m\033[1m$failures test suite(s) failed.\033[0m"
 fi
 echo ""
-exit "$failures"
 exit "$failures"

@@ -1,9 +1,9 @@
-/* Unit tests for mv and cp — run with: node test-mv-cp.js */
+/* Unit tests for mv and cp — run with: node tests/test-mv-cp.ts */
 /* Tests the actual production code in lib/commands.js */
 
-const { getNode } = require('../lib/vfs');
-const commands = require('../lib/commands');
-const { createTestRunner, setupFS, addFile, addDir } = require('../lib/test');
+import { getNode } from '../src/lib/vfs.ts';
+import * as commands from '../src/lib/commands.ts';
+import { createTestRunner, setupFS, addFile, addDir } from './runner.ts';
 var { assert, section, printSummary, wasSuccess } = createTestRunner();
 
 // ═══════════════════════════════════════════════════════════════════
