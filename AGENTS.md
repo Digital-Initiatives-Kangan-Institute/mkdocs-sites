@@ -244,7 +244,7 @@ Never leave temporary build artifacts in the project directory.
 | `./setup.sh` | Creates `.venv` and installs dependencies |
 | `./create.sh` | Interactive wizard for new sites (uses `base/` template) |
 | `./serve.sh` | Serves one site locally with livereload (for previewing content during authoring) |
-| `./build.sh` | Builds ALL sites into `build/` (run on the Cloudflare Worker, not locally)
+| `./build.sh` | Builds ALL sites into `build/` then calls `./build-tools.sh` (run on the Cloudflare Worker, not locally)
 
 ### Portal Pattern
 
