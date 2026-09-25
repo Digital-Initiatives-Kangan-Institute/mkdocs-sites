@@ -3,7 +3,7 @@ window.TOOLS_DATA = {
         {
             "href": "./code",
             "img": "./thumbs/code.svg",
-            "title": "Code",
+            "title": "CodePad",
             "description": "In-browser HTML, CSS, and JavaScript editor with live preview, share links, and ZIP export."
         },
         {

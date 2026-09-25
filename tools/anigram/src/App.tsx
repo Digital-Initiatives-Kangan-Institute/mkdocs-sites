@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 // @ts-ignore
 import { GIFEncoder, quantize, applyPalette } from 'gifenc'
 import { ICON_DEFS } from './iconDefs'
+import { ToolShell } from '../../shared/ToolShell'
 
 type NodeType = 'process' | 'decision' | 'terminal' | 'io' | 'image' | 'text' | 'icon'
 type TextBorder = 'none' | 'solid' | 'dashed' | 'dotted'
@@ -2648,7 +2649,8 @@ export default function App(){
   const selectedEdgeObj = selectedEdge? edges.find(e=>e.id===selectedEdge) : null
 
   return (
-    <div style={{display:'flex', flexDirection:'column', height:'100vh', background:'var(--bg)'}}>
+    <ToolShell title="Anigram">
+    <div style={{display:'flex', flexDirection:'column', height:'100%', background:'var(--bg)'}}>
       {/* HEADER */}
       <header style={{height:56, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 16px', borderBottom:'1px solid var(--border)', background:'var(--panel)', position:'sticky', top:0, zIndex:10}}>
         <div style={{display:'flex', alignItems:'center', gap:14}}>
@@ -4069,6 +4071,7 @@ export default function App(){
         </div>
       )}
     </div>
+    </ToolShell>
   )
 }
 

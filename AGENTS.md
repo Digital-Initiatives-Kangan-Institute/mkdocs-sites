@@ -254,7 +254,29 @@ The portal (`build/index.html`) loads `build/sites.js` and renders cards for eac
 
 ## Tools
 
-Static web tools (e.g. the Code editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the tools portal at `build/tools/index.html`, which reads its cards from `build/tools/tools.js`. The main portal links to it via a "Tools" pill in the header of `build/index.html`. Never create a site called `tools` — `create.sh` blocks that reserved name.
+Static web tools (e.g. the CodePad editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the tools portal at `build/tools/index.html`, which reads its cards from `build/tools/tools.js`. The main portal links to it via a "Tools" pill in the header of `build/index.html`. Never create a site called `tools` — `create.sh` blocks that reserved name.
+
+### Common shell (`tools/shared/`)
+
+Every React tool is wrapped in the common shell — a slim dark bar with a **Tools** back button (→ the tools portal) above the tool UI. The shell lives in `tools/shared/` (`ToolShell.tsx` + `tool-shell.css`, see `tools/shared/README.md`) and is imported by each app as:
+
+```tsx
+import { ToolShell } from '../../shared/ToolShell'
+
+return (
+  <ToolShell title="My Tool">
+    {/* app root must fill its parent (height: 100%), not 100vh */}
+  </ToolShell>
+)
+```
+
+**Rules — strict:**
+
+1. One shared shell only — never restyle the bar per tool and never create per-tool copies of these files. All selectors in `tool-shell.css` stay scoped under `.tool-shell`. The bar uses `z-index: 1100` so it stays visible above full-viewport overlays (login/boot screens, modal backdrops) — never lower it.
+2. The app root inside the shell must use `height: 100%`, never `100vh` (the shell already owns the viewport height).
+3. Embed/share modes (e.g. anigram's `#viewer=`) must NOT use the shell.
+4. `tools/shared/` is not a tool — `./build-tools.sh` skips it, so never add a `package.json` with a `build` script there.
+5. New tools that import from `../../shared` must copy the wiring from an existing tool: `server.fs.allow: ['..']` plus a `resolve.alias` mapping `react` to the tool's own `node_modules/react` in `vite.config.*` (Vite cannot resolve `react`/`react/jsx-runtime` from outside the app root), and a matching `paths` entry for `react`, `react/jsx-runtime`, and `react/jsx-dev-runtime` in `tsconfig.app.json` (only for `tsc -b` builds — plain `vite build` tools don't need it).
 
 ### Tool Thumbnails
 
@@ -266,20 +288,29 @@ Create a thumbnail in `build/tools/thumbs/` and reference it from the tool's ent
 
 1. **Size:** `640 × 400` (`viewBox="0 0 640 400"`, `rx="18"` on outer rect). Card displays at `aspect-ratio: 16/10`.
 2. **No text:** Never use `<text>` elements. No labels, no titles, no "drop here" copy. Use **blocks only** — `rect`, `circle`, `line` to suggest UI.
-3. **Simple:** 4–8 blocks max. Abstract the tool's UI into blocks (e.g. Code → left editor tabs + code lines + right preview blocks).
-4. **Dark theme only (outer chrome):** Outer frame and card shell stay dark (`#0e0e11`, `#131316`, `#141418`, `#1e1e24`, borders `#232328` / `#2a2a32`, accent `#ff3d00` sparingly). Interior blocks may deviate to match the tool's real light/dark palette — see rule 7.
-5. **Chrome:** Include the fake window chrome (top bar `36px` high, 3 dots `6px` radius, colors `#ff5f57`/`#febc2e`/`#28c840` at `x=56,76,96 y=46`), inner card `x=28 y=28 width=584 height=344 rx=16`.
-6. **No em dashes, no real screenshots.** Keep it abstract so all cards feel cohesive.
-7. **Match the tool's real color scheme:** Before drawing, extract the palette from the tool's source in `tools/<id>/` — e.g. `grep -o "#[0-9a-fA-F]\{3,8\}" tools/<id>/src/*` and check `:root` vars, `background`, `color`, `border`, and accent colors. Use those real colors for interior blocks so the card feels like the tool. Keep outer chrome dark (`#0e0e11` / `#131316` + `#232328` stroke).
-8. **Verify:** After creating, run `grep -n "<text" build/tools/thumbs/*.svg` — should return nothing.
+3. **Rich but abstract:** a thumbnail must read as a miniature of the real tool, not a logo. Target roughly 15–25 shapes composed of 2–4 signature UI zones (e.g. CodePad → tabbed editor + code lines + console strip beside a live-preview page; Learn Terminal → terminal window + files window + taskbar; Anigram → shape toolbar + node flow + inspector panel). A single centered widget on an empty card is not enough.
+4. **Compose zone by zone:** (a) pick the tool's 2–4 most recognisable regions (main surface, side panel/toolbar, status/output strip); (b) fill the content area edge to edge (`x=44` to `x=596`, `y=80` to `y=320`) — no lopsided empty margins; (c) give every panel a header row (tabs, titlebar dots, pill) so each zone reads as real UI; (d) end each zone with a grounding strip (console, taskbar, status bar) rather than floating content.
+5. **Layer and finish:** use one subtle gradient per surface (top sheen, panel fade, desktop backdrop), `1px` borders on every panel (`stroke` slightly lighter than the fill), and `clipPath`s so inner strips never spill past rounded corners. Add exactly one focal accent per card — a selection glow (translucent outer stroke), a cursor block, or a highlighted node — plus small status dots/badges to break up rows of bars. Vary row widths and use `opacity: 0.55–0.85` on secondary rows for depth.
+6. **Dark theme only (outer chrome):** Outer frame and card shell stay dark (`#0e0e11`, `#131316`, `#141418`, `#1e1e24`, borders `#232328` / `#2a2a32`, accent `#ff3d00` sparingly). Interior blocks may deviate to match the tool's real light/dark palette — see rule 9.
+7. **Chrome:** Include the fake window chrome (top bar `36px` high, 3 dots `6px` radius, colors `#ff5f57`/`#febc2e`/`#28c840` at `x=56,76,96 y=46`), inner card `x=28 y=28 width=584 height=344 rx=16`.
+8. **No em dashes, no real screenshots.** Keep it abstract so all cards feel cohesive.
+9. **Match the tool's real color scheme:** Before drawing, extract the palette from the tool's source in `tools/<id>/` — e.g. `grep -o "#[0-9a-fA-F]\{3,8\}" tools/<id>/src/*` and check `:root` vars, `background`, `color`, `border`, and accent colors. Use those real colors for interior blocks so the card feels like the tool. Keep outer chrome dark (`#0e0e11` / `#131316` + `#232328` stroke).
+10. **Verify:** After creating, run `grep -n "<text" build/tools/thumbs/*.svg` (must return nothing), parse each file as XML, and confirm content spans the full card (`x=44–596`, `y=80–320`) with nothing overflowing the inner card except the chrome itself.
 
 Example skeleton:
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img">
+  <defs>
+    <clipPath id="<id>-panel"><rect x="44" y="80" width="..." height="240" rx="10"/></clipPath>
+    <linearGradient id="<id>-sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.06"/><stop offset="0.25" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  </defs>
   <rect width="640" height="400" rx="18" fill="#0e0e11"/>
   <rect x="1" y="1" width="638" height="398" rx="17" fill="none" stroke="#232328" stroke-width="1.5"/>
   <rect x="28" y="28" width="584" height="344" rx="16" fill="#131316" stroke="#232328"/>
-  <!-- ... blocks only ... -->
+  <!-- chrome dots + divider line -->
+  <!-- zone 1: main surface (header row, content rows, grounding strip, all clipped) -->
+  <!-- zone 2: side panel / toolbar -->
+  <!-- focal accent: selection glow, cursor, or highlighted node -->
 </svg>
 ```

@@ -4,6 +4,7 @@ import { html } from '@codemirror/lang-html'
 import { css } from '@codemirror/lang-css'
 import { javascript } from '@codemirror/lang-javascript'
 import { dracula } from '@uiw/codemirror-theme-dracula'
+import { ToolShell } from '../../shared/ToolShell'
 import './App.css'
 
 const STORAGE_KEY = 'codepad:autosave:v1'
@@ -1219,6 +1220,7 @@ export default function App() {
   }
 
   return (
+    <ToolShell title="CodePad">
     <div className={`app${isDragging ? ' is-dragging-' + layout : ''}`}>
       {showClear && <ClearDialog tab={activeTab} onConfirm={handleClearConfirm} onClose={() => setShowClear(false)} />}
       {showDownloadDialog && <DownloadDialog optBoilerplate={optBoilerplate} optLinkCss={optLinkCss} optLinkJs={optLinkJs} setOptBoilerplate={setOptBoilerplate} setOptLinkCss={setOptLinkCss} setOptLinkJs={setOptLinkJs} onConfirm={performDownloadExport} onClose={() => setShowDownloadDialog(false)} isExporting={isExporting} /> }
@@ -1387,5 +1389,6 @@ export default function App() {
         </div>
       </div>
     </div>
+    </ToolShell>
   )
 }

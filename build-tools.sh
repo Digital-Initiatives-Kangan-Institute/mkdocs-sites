@@ -46,6 +46,11 @@ for tool_path in "$TOOLS_DIR"/*/; do
   [[ -d "$tool_path" ]] || continue
   tool_name="$(basename "$tool_path")"
 
+  # Shared source (imported by tools, not a tool itself): never build or copy.
+  if [[ "$tool_name" == "shared" ]]; then
+    continue
+  fi
+
   if [[ -n "$filter" && "$tool_name" != "$filter" ]]; then
     continue
   fi

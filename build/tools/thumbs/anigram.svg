@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img">
+  <defs>
+    <pattern id="ag-grid" width="36" height="36" patternUnits="userSpaceOnUse" x="60" y="80">
+      <rect width="36" height="36" fill="#fcfdff"/>
+      <path d="M36 0H0V36" fill="none" stroke="#e8eaf1" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="ag-panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f1f3f9"/></linearGradient>
+  </defs>
   <rect width="640" height="400" rx="18" fill="#0e0e11"/>
   <rect x="1" y="1" width="638" height="398" rx="17" fill="none" stroke="#232328" stroke-width="1.5"/>
   <rect x="28" y="28" width="584" height="344" rx="16" fill="#131316" stroke="#232328"/>
@@ -6,12 +13,51 @@
   <circle cx="56" cy="46" r="6" fill="#ff5f57"/>
   <circle cx="76" cy="46" r="6" fill="#febc2e"/>
   <circle cx="96" cy="46" r="6" fill="#28c840"/>
-  <rect x="48" y="84" width="544" height="268" rx="10" fill="#eef1f7"/>
-  <rect x="80" y="110" width="120" height="64" rx="12" fill="#ffffff" stroke="#7c5cff" stroke-width="2"/>
-  <rect x="280" y="110" width="120" height="64" rx="12" fill="#ddd6fe"/>
-  <rect x="280" y="210" width="120" height="64" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
-  <line x1="200" y1="142" x2="280" y2="142" stroke="#7c5cff" stroke-width="3" stroke-linecap="round"/>
-  <line x1="340" y1="174" x2="340" y2="210" stroke="#7c5cff" stroke-width="3" stroke-linecap="round"/>
-  <rect x="80" y="300" width="440" height="16" rx="8" fill="#ddd6fe"/>
-  <circle cx="180" cy="308" r="10" fill="#7c5cff"/>
+  <!-- canvas -->
+  <rect x="44" y="80" width="552" height="240" rx="10" fill="#ffffff"/>
+  <rect x="44" y="80" width="552" height="240" rx="10" fill="url(#ag-grid)"/>
+  <!-- left toolbar -->
+  <rect x="56" y="100" width="48" height="168" rx="10" fill="url(#ag-panel)" stroke="#e4e6ed"/>
+  <rect x="66" y="112" width="28" height="16" rx="5" fill="#e0e7ff" stroke="#a5b4fc"/>
+  <rect x="66" y="136" width="28" height="18" rx="9" fill="#dcfce7" stroke="#6ee7b7"/>
+  <rect x="71" y="160" width="18" height="18" rx="3" fill="#fef9c3" stroke="#fde68a" transform="rotate(45 80 169)"/>
+  <line x1="66" y1="196" x2="94" y2="196" stroke="#7c5cff" stroke-width="3" stroke-dasharray="5 4" stroke-linecap="round"/>
+  <circle cx="66" cy="196" r="3.5" fill="#7c5cff"/>
+  <circle cx="94" cy="196" r="3.5" fill="#7c5cff"/>
+  <rect x="66" y="210" width="28" height="22" rx="4" fill="#f5f3ff" stroke="#c4b5fd"/>
+  <rect x="66" y="240" width="28" height="16" rx="4" fill="#f1f3f9" stroke="#d6d9e4"/>
+  <!-- flow: terminal pill -->
+  <rect x="208" y="96" width="128" height="36" rx="18" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <rect x="248" y="108" width="48" height="10" rx="5" fill="#16a34a" opacity="0.55"/>
+  <circle cx="196" cy="114" r="11" fill="#7c5cff" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- edge -->
+  <line x1="272" y1="132" x2="272" y2="162" stroke="#7c5cff" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+  <circle cx="272" cy="147" r="5" fill="#a78bfa" stroke="#7c5cff"/>
+  <!-- flow: process rect (selected) -->
+  <rect x="202" y="162" width="140" height="58" rx="12" fill="none" stroke="#c4b5fd" stroke-width="5" opacity="0.6"/>
+  <rect x="202" y="162" width="140" height="58" rx="12" fill="#ffffff" stroke="#7c5cff" stroke-width="2.5"/>
+  <rect x="222" y="178" width="100" height="10" rx="5" fill="#0f172a" opacity="0.8"/>
+  <rect x="222" y="196" width="64" height="8" rx="4" fill="#94a3b8"/>
+  <circle cx="354" cy="191" r="11" fill="#7c5cff" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- branching edges -->
+  <line x1="238" y1="220" x2="238" y2="246" stroke="#7c5cff" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+  <line x1="306" y1="220" x2="306" y2="246" stroke="#9ca3af" stroke-width="3" stroke-linecap="round"/>
+  <!-- decision diamond -->
+  <rect x="244" y="246" width="56" height="56" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5" transform="rotate(45 272 274)"/>
+  <rect x="258" y="262" width="28" height="9" rx="4.5" fill="#b45309" opacity="0.55"/>
+  <!-- right inspector panel -->
+  <rect x="462" y="100" width="122" height="200" rx="12" fill="url(#ag-panel)" stroke="#e4e6ed"/>
+  <rect x="474" y="114" width="98" height="12" rx="6" fill="#e4e6ed"/>
+  <circle cx="482" cy="146" r="7" fill="#22c55e"/>
+  <rect x="496" y="142" width="64" height="9" rx="4.5" fill="#d6d9e4"/>
+  <circle cx="482" cy="170" r="7" fill="#7c5cff"/>
+  <rect x="496" y="166" width="64" height="9" rx="4.5" fill="#d6d9e4"/>
+  <circle cx="482" cy="194" r="7" fill="#f59e0b"/>
+  <rect x="496" y="190" width="48" height="9" rx="4.5" fill="#d6d9e4"/>
+  <rect x="474" y="216" width="98" height="12" rx="6" fill="#e4e6ed"/>
+  <rect x="474" y="238" width="98" height="8" rx="4" fill="#e4e6ed"/>
+  <circle cx="512" cy="242" r="9" fill="#7c5cff" stroke="#ffffff" stroke-width="2"/>
+  <rect x="474" y="260" width="98" height="26" rx="13" fill="#7c5cff"/>
+  <rect x="486" y="268" width="74" height="9" rx="4.5" fill="#ffffff" opacity="0.9"/>
+  <rect x="44" y="80" width="552" height="240" rx="10" fill="none" stroke="#2a2a32"/>
 </svg>
