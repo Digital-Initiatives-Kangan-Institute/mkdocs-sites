@@ -20,6 +20,7 @@ theme:
     primary: green
 
 plugins:
+  - search
   - enumerate-headings:
       increment_across_pages: true
       restart_increment_after:

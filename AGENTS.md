@@ -75,6 +75,7 @@ nav:
 ```
 
 - `theme.palette.primary`: Your chosen colour
+- `plugins`: Every site enables `search` (above `enumerate-headings`) for the header search bar
 - `plugins.enumerate-headings.restart_increment_after`: Set to the first task page path to reset heading numbering
 - Do not touch `theme.custom_dir`, `extra_css`, or `watch` — these already point at the shared stylesheet (`../../shared/style.css`). Styling is palette-aware, so setting `primary` is enough to theme buttons/nav per site.
 - The rest (features, markdown_extensions) should match existing sites exactly
