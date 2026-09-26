@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, useCallback } from 'react'
 // @ts-ignore
 import { GIFEncoder, quantize, applyPalette } from 'gifenc'
 import { ICON_DEFS } from './iconDefs'
@@ -596,6 +596,27 @@ export default function App(){
   const imageCacheRef = useRef<Map<string, HTMLImageElement>>(new Map())
   const [activeMenu, setActiveMenu] = useState<null | 'file' | 'edit' | 'samples'>(null)
   const menuBarRef = useRef<HTMLDivElement>(null)
+  const openMenuRef = useRef<HTMLDivElement>(null)
+  const [menuNudge, setMenuNudge] = useState(0)
+
+  // Keep the open shell dropdown inside the viewport: panels are
+  // right-aligned (open toward the left), and this nudges the panel on
+  // open/resize if either edge still overflows (very narrow screens).
+  useLayoutEffect(()=>{
+    if(!activeMenu){ setMenuNudge(0); return }
+    const measure = ()=>{
+      const el = openMenuRef.current
+      if(!el) return
+      const r = el.getBoundingClientRect()
+      const m = 8
+      if(r.right > window.innerWidth - m) setMenuNudge((window.innerWidth - m) - r.right)
+      else if(r.left < m) setMenuNudge(m - r.left)
+      else setMenuNudge(0)
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return ()=> window.removeEventListener('resize', measure)
+  },[activeMenu])
   const [exportModal, setExportModal] = useState<null|'json'|'gif'|'webm'>(null)
   const [jsonSettings, setJsonSettings] = useState({ includeViewport:true, pretty:true, fileName:'anigram' })
   const [isRightPanelCollapsed, setIsRightPanelCollapsed] = useState(false)
@@ -2648,161 +2669,159 @@ export default function App(){
   const selectedNode = selectedIds.length===1 ? getNode(selectedIds[0]) : null
   const selectedEdgeObj = selectedEdge? edges.find(e=>e.id===selectedEdge) : null
 
+  // Shell bar: brand lockup (title) + File/Edit/Samples menus (actions).
+  // Trigger buttons use the dark shell style; dropdown panels keep the
+  // light app styling. Hidden file inputs live here too (display:none).
+  const shellTitle = (
+    <span className="tool-shell__brand">
+      <span className="tool-shell__logo" style={{background:'linear-gradient(135deg,#7c5cff,#4f46e5)', display:'grid', placeItems:'center'}}>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.4"><path d="M12 2 L22 8.5 L12 15 L2 8.5 Z"/><path d="M2 12 L12 18.5 L22 12"/><path d="M2 15.5 L12 22 L22 15.5"/></svg>
+      </span>
+      <span className="tool-shell__name">Anigram</span>
+    </span>
+  )
+
+  const shellActions = (
+    <>
+      <div ref={menuBarRef} style={{display:'flex', alignItems:'center', gap:4}}>
+        {/* File */}
+        <div style={{position:'relative'}}>
+          <button className="tool-shell__btn" style={{fontWeight:700, fontSize:'0.8rem'}} aria-expanded={activeMenu==='file'} aria-haspopup="menu" onClick={()=> setActiveMenu(a=> a==='file' ? null : 'file')}>
+            File
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{transform: activeMenu==='file' ? 'rotate(180deg)' : 'none', transition:'0.18s', opacity:0.7}}><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          {activeMenu==='file' && (
+            <div ref={openMenuRef} style={{position:'absolute', top:'calc(100% + 8px)', right:0, width:220, background:'var(--panel)', border:'1px solid var(--border)', borderRadius:14, boxShadow:'0 16px 40px rgba(15,23,42,0.14), 0 4px 12px rgba(15,23,42,0.06)', padding:6, zIndex:30, maxHeight:'calc(100vh - 56px)', overflowY:'auto', transform:`translateX(${menuNudge}px)`}}>
+              <button onClick={()=>{ setActiveMenu(null); fileInputRef.current?.click() }} style={menuItemStyle}>
+                <span style={menuIconStyle}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Import JSON</span>
+                <span style={{fontSize:10, color:'var(--muted)', border:'1px solid var(--border)', borderRadius:4, padding:'1px 5px'}}>⌘O</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); setExportModal('json') }} style={menuItemStyle}>
+                <span style={menuIconStyle}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Export JSON</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>diagram.json</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); setExportModal('gif')}} disabled={!!exporting} style={{...menuItemStyle, opacity: exporting?0.5:1}}>
+                <span style={{...menuIconStyle, background:'#f5f3ff', borderColor:'#ddd6fe', color:'#7c5cff'}}>GIF</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Export GIF</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>256 colors</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); setExportModal('webm')}} disabled={!!exporting} style={{...menuItemStyle, opacity: exporting?0.5:1}}>
+                <span style={{...menuIconStyle, background:'#0f172a', borderColor:'#0f172a', color:'white'}}>WEBM</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Export WebM</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>VP9</span>
+              </button>
+              <div style={{height:1, background:'var(--border)', margin:'6px 4px'}}/>
+              <button onClick={()=>{
+                setActiveMenu(null)
+                const payload:any={version:1, app:'anigram', nodes, edges, groups}
+                const json=JSON.stringify(payload)
+                let hash:string
+                try{
+                  const b64 = btoa(unescape(encodeURIComponent(json)))
+                  const urlSafe = b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
+                  const enc = encodeURIComponent(json)
+                  hash = urlSafe.length < enc.length ? urlSafe : enc
+                }catch{ hash = encodeURIComponent(json) }
+                const url = window.location.origin + window.location.pathname + '#viewer=' + hash
+                if(navigator.clipboard?.writeText) navigator.clipboard.writeText(url).then(()=>{ setToast('Viewer link copied — embed via <iframe src="'+url.slice(0,60)+'...">'); setTimeout(()=>setToast(null),3000) }).catch(()=>{ prompt('Copy viewer link:', url); setToast('Viewer link ready'); setTimeout(()=>setToast(null),2500) })
+                else { prompt('Copy viewer link:', url) }
+              }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#f5f3ff', borderColor:'#ddd6fe', color:'#7c5cff'}}>⊙</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Copy Viewer Link</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>#viewer</span>
+              </button>
+              <button onClick={()=>{
+                setActiveMenu(null)
+                const payload:any={version:1, app:'anigram', nodes, edges, groups}
+                const json=JSON.stringify(payload)
+                let hash:string
+                try{
+                  const b64 = btoa(unescape(encodeURIComponent(json)))
+                  const urlSafe = b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
+                  const enc = encodeURIComponent(json)
+                  hash = urlSafe.length < enc.length ? urlSafe : enc
+                }catch{ hash = encodeURIComponent(json) }
+                const url = window.location.origin + window.location.pathname + '#editor=' + hash
+                if(navigator.clipboard?.writeText) navigator.clipboard.writeText(url).then(()=>{ setToast('Editor link copied — opens editable'); setTimeout(()=>setToast(null),3000) }).catch(()=>{ prompt('Copy editor link:', url); setToast('Editor link ready'); setTimeout(()=>setToast(null),2500) })
+                else { prompt('Copy editor link:', url) }
+              }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#ecfdf5', borderColor:'#bbf7d0', color:'#15803d'}}>✎</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Copy Editor Link</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>#editor</span>
+              </button>
+              <div style={{fontSize:10, color:'var(--muted)', padding:'4px 8px 2px', lineHeight:1.4}}>Share via <code style={{background:'var(--panel-2)', border:'1px solid var(--border)', padding:'0 3px', borderRadius:3}}>#viewer=JSON</code> read-only or <code style={{background:'var(--panel-2)', border:'1px solid var(--border)', padding:'0 3px', borderRadius:3}}>#editor=JSON</code> editable — JSON or base64</div>
+            </div>
+          )}
+        </div>
+        {/* Edit */}
+        <div style={{position:'relative'}}>
+          <button className="tool-shell__btn" style={{fontWeight:700, fontSize:'0.8rem'}} aria-expanded={activeMenu==='edit'} aria-haspopup="menu" onClick={()=> setActiveMenu(a=> a==='edit' ? null : 'edit')}>
+            Edit
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{transform: activeMenu==='edit' ? 'rotate(180deg)' : 'none', transition:'0.18s', opacity:0.7}}><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          {activeMenu==='edit' && (
+            <div ref={openMenuRef} style={{position:'absolute', top:'calc(100% + 8px)', right:0, width:220, background:'var(--panel)', border:'1px solid var(--border)', borderRadius:14, boxShadow:'0 16px 40px rgba(15,23,42,0.14), 0 4px 12px rgba(15,23,42,0.06)', padding:6, zIndex:30, maxHeight:'calc(100vh - 56px)', overflowY:'auto', transform:`translateX(${menuNudge}px)`}}>
+              <button onClick={()=>{ setActiveMenu(null); setNodes(INITIAL_NODES); setEdges(INITIAL_EDGES); setGroups([]); setSelectedIds(['n2']); setSelectedGroupIds([]); setSelectedEdge(null); setToast('Demo restored'); setTimeout(()=>setToast(null),2000)}} style={menuItemStyle}>
+                <span style={menuIconStyle}>↺</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Reset Demo</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>{nodes.length} nodes</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); if(confirm('Clear all nodes and connections?')){ setNodes([]); setEdges([]); setGroups([]); setSelectedIds([]); setSelectedGroupIds([]); setSelectedEdge(null); setToast('Canvas cleared'); setTimeout(()=>setToast(null),2000)}}} style={{...menuItemStyle, color:'#ef4444'}}>
+                <span style={{...menuIconStyle, background:'#fef2f2', borderColor:'#fecaca', color:'#ef4444'}}>⌫</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Clear</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>empty</span>
+              </button>
+            </div>
+          )}
+        </div>
+        {/* Samples */}
+        <div style={{position:'relative'}}>
+          <button className="tool-shell__btn" style={{fontWeight:700, fontSize:'0.8rem'}} aria-expanded={activeMenu==='samples'} aria-haspopup="menu" onClick={()=> setActiveMenu(a=> a==='samples' ? null : 'samples')}>
+            Samples
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{transform: activeMenu==='samples' ? 'rotate(180deg)' : 'none', transition:'0.18s', opacity:0.7}}><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          {activeMenu==='samples' && (
+            <div ref={openMenuRef} style={{position:'absolute', top:'calc(100% + 8px)', right:0, width:250, background:'var(--panel)', border:'1px solid var(--border)', borderRadius:14, boxShadow:'0 16px 40px rgba(15,23,42,0.14), 0 4px 12px rgba(15,23,42,0.06)', padding:6, zIndex:30, maxHeight:'calc(100vh - 56px)', overflowY:'auto', transform:`translateX(${menuNudge}px)`}}>
+              <div style={{padding:'6px 10px 4px', fontSize:10, fontWeight:800, letterSpacing:1, color:'var(--muted)'}}>CHOOSE SAMPLE</div>
+              <button onClick={()=>{ setActiveMenu(null); loadSample('01-onboarding-flow.json') }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#ecfdf5', borderColor:'#bbf7d0', color:'#15803d'}}>01</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Onboarding Flow</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>6 nodes</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); loadSample('02-ecommerce-checkout.json') }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#f5f3ff', borderColor:'#ddd6fe', color:'#7c5cff'}}>02</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>E-commerce Checkout</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>9 nodes</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); loadSample('03-ci-pipeline.json') }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#fffbeb', borderColor:'#fde68a', color:'#b45309'}}>03</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>CI Pipeline</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>10 nodes</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); loadSample('04-http-static-site.json') }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#e0f2fe', borderColor:'#bae6fd', color:'#0369a1'}}>04</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>HTTP Static Site</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>8 nodes</span>
+              </button>
+              <button onClick={()=>{ setActiveMenu(null); loadSample('05-group-demo.json') }} style={menuItemStyle}>
+                <span style={{...menuIconStyle, background:'#f1f5f9', borderColor:'#cbd5e1', color:'#475569'}}>05</span>
+                <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Group Demo</span>
+                <span style={{fontSize:10, color:'var(--muted)'}}>6+1 group</span>
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+      <input ref={fileInputRef} type="file" accept=".json,application/json" onChange={handleImportJson} style={{display:'none'}}/>
+      <input ref={imageInputRef} type="file" accept="image/*" multiple onChange={handleImageUpload} style={{display:'none'}}/>
+    </>
+  )
+
   return (
-    <ToolShell title="Anigram">
+    <ToolShell title={shellTitle} actions={shellActions}>
     <div style={{display:'flex', flexDirection:'column', height:'100%', background:'var(--bg)'}}>
-      {/* HEADER */}
-      <header style={{height:56, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'0 16px', borderBottom:'1px solid var(--border)', background:'var(--panel)', position:'sticky', top:0, zIndex:10}}>
-        <div style={{display:'flex', alignItems:'center', gap:14}}>
-          <div style={{width:32,height:32, borderRadius:9, background:'linear-gradient(135deg,#7c5cff,#4f46e5)', display:'grid', placeItems:'center', boxShadow:'0 4px 16px var(--accent-glow)'}}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M12 2 L22 8.5 L12 15 L2 8.5 Z"/><path d="M2 12 L12 18.5 L22 12"/><path d="M2 15.5 L12 22 L22 15.5"/></svg>
-          </div>
-          <div>
-            <div style={{fontWeight:700, letterSpacing:'-0.02em', fontSize:16, lineHeight:1}}>Anigram</div>
-            <div style={{fontSize:11, color:'var(--muted)', marginTop:-2}}>Animated Flowchart Studio</div>
-          </div>
-          <div style={{height:24, width:1, background:'var(--border)', marginLeft:8}}/>
-          <div ref={menuBarRef} style={{display:'flex', alignItems:'center', gap:6}}>
-            {/* File */}
-            <div style={{position:'relative'}}>
-              <button onClick={()=> setActiveMenu(a=> a==='file' ? null : 'file')} style={{...btnGhost, background: activeMenu==='file' ? 'var(--panel-2)' : 'var(--panel)', border:'1px solid var(--border)', padding:'7px 12px 7px 10px', fontWeight:700, display:'flex', alignItems:'center', gap:6, color:'var(--text)', boxShadow: activeMenu==='file' ? '0 2px 10px rgba(15,23,42,0.08)' : 'none'}}>
-                File
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{transform: activeMenu==='file' ? 'rotate(180deg)' : 'none', transition:'0.18s', opacity:0.7}}><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              {activeMenu==='file' && (
-                <div style={{position:'absolute', top:'calc(100% + 8px)', left:0, width:220, background:'var(--panel)', border:'1px solid var(--border)', borderRadius:14, boxShadow:'0 16px 40px rgba(15,23,42,0.14), 0 4px 12px rgba(15,23,42,0.06)', padding:6, zIndex:30}}>
-                  <button onClick={()=>{ setActiveMenu(null); fileInputRef.current?.click() }} style={menuItemStyle}>
-                    <span style={menuIconStyle}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Import JSON</span>
-                    <span style={{fontSize:10, color:'var(--muted)', border:'1px solid var(--border)', borderRadius:4, padding:'1px 5px'}}>⌘O</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); setExportModal('json') }} style={menuItemStyle}>
-                    <span style={menuIconStyle}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Export JSON</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>diagram.json</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); setExportModal('gif')}} disabled={!!exporting} style={{...menuItemStyle, opacity: exporting?0.5:1}}>
-                    <span style={{...menuIconStyle, background:'#f5f3ff', borderColor:'#ddd6fe', color:'#7c5cff'}}>GIF</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Export GIF</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>256 colors</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); setExportModal('webm')}} disabled={!!exporting} style={{...menuItemStyle, opacity: exporting?0.5:1}}>
-                    <span style={{...menuIconStyle, background:'#0f172a', borderColor:'#0f172a', color:'white'}}>WEBM</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Export WebM</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>VP9</span>
-                  </button>
-                  <div style={{height:1, background:'var(--border)', margin:'6px 4px'}}/>
-                  <button onClick={()=>{
-                    setActiveMenu(null)
-                    const payload:any={version:1, app:'anigram', nodes, edges, groups}
-                    // viewport intentionally omitted — recipient auto-fits to content bounds
-                    const json=JSON.stringify(payload)
-                    let hash:string
-                    try{
-                      const b64 = btoa(unescape(encodeURIComponent(json)))
-                      const urlSafe = b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
-                      const enc = encodeURIComponent(json)
-                      hash = urlSafe.length < enc.length ? urlSafe : enc
-                    }catch{ hash = encodeURIComponent(json) }
-                    const url = window.location.origin + window.location.pathname + '#viewer=' + hash
-                    if(navigator.clipboard?.writeText) navigator.clipboard.writeText(url).then(()=>{ setToast('Viewer link copied — embed via <iframe src="'+url.slice(0,60)+'...">'); setTimeout(()=>setToast(null),3000) }).catch(()=>{ prompt('Copy viewer link:', url); setToast('Viewer link ready'); setTimeout(()=>setToast(null),2500) })
-                    else { prompt('Copy viewer link:', url) }
-                  }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#f5f3ff', borderColor:'#ddd6fe', color:'#7c5cff'}}>⊙</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Copy Viewer Link</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>#viewer</span>
-                  </button>
-                  <button onClick={()=>{
-                    setActiveMenu(null)
-                    const payload:any={version:1, app:'anigram', nodes, edges, groups}
-                    // viewport omitted — recipient auto-fits
-                    const json=JSON.stringify(payload)
-                    let hash:string
-                    try{
-                      const b64 = btoa(unescape(encodeURIComponent(json)))
-                      const urlSafe = b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')
-                      const enc = encodeURIComponent(json)
-                      hash = urlSafe.length < enc.length ? urlSafe : enc
-                    }catch{ hash = encodeURIComponent(json) }
-                    const url = window.location.origin + window.location.pathname + '#editor=' + hash
-                    if(navigator.clipboard?.writeText) navigator.clipboard.writeText(url).then(()=>{ setToast('Editor link copied — opens editable'); setTimeout(()=>setToast(null),3000) }).catch(()=>{ prompt('Copy editor link:', url); setToast('Editor link ready'); setTimeout(()=>setToast(null),2500) })
-                    else { prompt('Copy editor link:', url) }
-                  }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#ecfdf5', borderColor:'#bbf7d0', color:'#15803d'}}>✎</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Copy Editor Link</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>#editor</span>
-                  </button>
-                  <div style={{fontSize:10, color:'var(--muted)', padding:'4px 8px 2px', lineHeight:1.4}}>Share via <code style={{background:'var(--panel-2)', border:'1px solid var(--border)', padding:'0 3px', borderRadius:3}}>#viewer=JSON</code> read-only or <code style={{background:'var(--panel-2)', border:'1px solid var(--border)', padding:'0 3px', borderRadius:3}}>#editor=JSON</code> editable — JSON or base64</div>
-                </div>
-              )}
-            </div>
-            {/* Edit */}
-            <div style={{position:'relative'}}>
-              <button onClick={()=> setActiveMenu(a=> a==='edit' ? null : 'edit')} style={{...btnGhost, background: activeMenu==='edit' ? 'var(--panel-2)' : 'var(--panel)', border:'1px solid var(--border)', padding:'7px 12px 7px 10px', fontWeight:700, display:'flex', alignItems:'center', gap:6, color:'var(--text)', boxShadow: activeMenu==='edit' ? '0 2px 10px rgba(15,23,42,0.08)' : 'none'}}>
-                Edit
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{transform: activeMenu==='edit' ? 'rotate(180deg)' : 'none', transition:'0.18s', opacity:0.7}}><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              {activeMenu==='edit' && (
-                <div style={{position:'absolute', top:'calc(100% + 8px)', left:0, width:220, background:'var(--panel)', border:'1px solid var(--border)', borderRadius:14, boxShadow:'0 16px 40px rgba(15,23,42,0.14), 0 4px 12px rgba(15,23,42,0.06)', padding:6, zIndex:30}}>
-                  <button onClick={()=>{ setActiveMenu(null); setNodes(INITIAL_NODES); setEdges(INITIAL_EDGES); setGroups([]); setSelectedIds(['n2']); setSelectedGroupIds([]); setSelectedEdge(null); setToast('Demo restored'); setTimeout(()=>setToast(null),2000)}} style={menuItemStyle}>
-                    <span style={menuIconStyle}>↺</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Reset Demo</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>{nodes.length} nodes</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); if(confirm('Clear all nodes and connections?')){ setNodes([]); setEdges([]); setGroups([]); setSelectedIds([]); setSelectedGroupIds([]); setSelectedEdge(null); setToast('Canvas cleared'); setTimeout(()=>setToast(null),2000)}}} style={{...menuItemStyle, color:'#ef4444'}}>
-                    <span style={{...menuIconStyle, background:'#fef2f2', borderColor:'#fecaca', color:'#ef4444'}}>⌫</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Clear</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>empty</span>
-                  </button>
-                </div>
-              )}
-            </div>
-            {/* Samples */}
-            <div style={{position:'relative'}}>
-              <button onClick={()=> setActiveMenu(a=> a==='samples' ? null : 'samples')} style={{...btnGhost, background: activeMenu==='samples' ? 'var(--panel-2)' : 'var(--panel)', border:'1px solid var(--border)', padding:'7px 12px 7px 10px', fontWeight:700, display:'flex', alignItems:'center', gap:6, color:'var(--text)', boxShadow: activeMenu==='samples' ? '0 2px 10px rgba(15,23,42,0.08)' : 'none'}}>
-                Samples
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{transform: activeMenu==='samples' ? 'rotate(180deg)' : 'none', transition:'0.18s', opacity:0.7}}><polyline points="6 9 12 15 18 9"/></svg>
-              </button>
-              {activeMenu==='samples' && (
-                <div style={{position:'absolute', top:'calc(100% + 8px)', left:0, width:250, background:'var(--panel)', border:'1px solid var(--border)', borderRadius:14, boxShadow:'0 16px 40px rgba(15,23,42,0.14), 0 4px 12px rgba(15,23,42,0.06)', padding:6, zIndex:30}}>
-                  <div style={{padding:'6px 10px 4px', fontSize:10, fontWeight:800, letterSpacing:1, color:'var(--muted)'}}>CHOOSE SAMPLE</div>
-                  <button onClick={()=>{ setActiveMenu(null); loadSample('01-onboarding-flow.json') }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#ecfdf5', borderColor:'#bbf7d0', color:'#15803d'}}>01</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Onboarding Flow</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>6 nodes</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); loadSample('02-ecommerce-checkout.json') }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#f5f3ff', borderColor:'#ddd6fe', color:'#7c5cff'}}>02</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>E-commerce Checkout</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>9 nodes</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); loadSample('03-ci-pipeline.json') }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#fffbeb', borderColor:'#fde68a', color:'#b45309'}}>03</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>CI Pipeline</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>10 nodes</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); loadSample('04-http-static-site.json') }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#e0f2fe', borderColor:'#bae6fd', color:'#0369a1'}}>04</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>HTTP Static Site</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>8 nodes</span>
-                  </button>
-                  <button onClick={()=>{ setActiveMenu(null); loadSample('05-group-demo.json') }} style={menuItemStyle}>
-                    <span style={{...menuIconStyle, background:'#f1f5f9', borderColor:'#cbd5e1', color:'#475569'}}>05</span>
-                    <span style={{flex:1, textAlign:'left', fontWeight:600, fontSize:13}}>Group Demo</span>
-                    <span style={{fontSize:10, color:'var(--muted)'}}>6+1 group</span>
-                  </button>
-                </div>
-              )}
-            </div>
-
-          </div>
-        </div>
-
-        <div style={{display:'flex', alignItems:'center', gap:10}}>
-          <input ref={fileInputRef} type="file" accept=".json,application/json" onChange={handleImportJson} style={{display:'none'}}/>
-          <input ref={imageInputRef} type="file" accept="image/*" multiple onChange={handleImageUpload} style={{display:'none'}}/>
-        </div>
-      </header>
 
       <div style={{flex:1, display:'flex', minHeight:0}}>
         {/* LEFT TOOLBAR */}

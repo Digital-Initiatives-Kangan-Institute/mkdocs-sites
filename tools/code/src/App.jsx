@@ -1219,8 +1219,61 @@ export default function App() {
     setSrcdoc(buildSrcdoc(code, activePageRef.current, allowed, nonce))
   }
 
+  const shellTitle = (
+    <span className="tool-shell__brand">
+      <img src="./favicon.png" alt="" className="tool-shell__logo" />
+      <span className="tool-shell__title-input-sizer" data-value={title}>
+        <input
+          className="tool-shell__title-input"
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          onKeyDown={e => e.key === 'Enter' && e.target.blur()}
+          spellCheck={false}
+          aria-label="Project title"
+        />
+      </span>
+    </span>
+  )
+
+  const shellActions = (
+    <>
+      <button className="tool-shell__btn" onClick={handleDownload} disabled={isExporting} title="Download" aria-label="Download project as ZIP">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 1v8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M4 7l4 4 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="2" y="13" width="12" height="2" rx="0.5" fill="currentColor"/>
+        </svg>
+      </button>
+      <button className="tool-shell__btn" onClick={handleShare} title="Share" aria-label="Share project via link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <circle cx="13" cy="3"  r="1.75" stroke="currentColor" strokeWidth="1.4"/>
+          <circle cx="3"  cy="8"  r="1.75" stroke="currentColor" strokeWidth="1.4"/>
+          <circle cx="13" cy="13" r="1.75" stroke="currentColor" strokeWidth="1.4"/>
+          <line x1="4.7" y1="7.1" x2="11.3" y2="4"  stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="4.7" y1="8.9" x2="11.3" y2="12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        </svg>
+      </button>
+      <button className="tool-shell__btn" onClick={() => setLayout(l => l === 'row' ? 'column' : 'row')}
+        title={layout === 'row' ? 'Switch to vertical split' : 'Switch to horizontal split'}
+        aria-label={layout === 'row' ? 'Switch to vertical split' : 'Switch to horizontal split'}>
+        {layout === 'row'
+          ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="14" height="6" rx="1.5" fill="currentColor" opacity="0.5"/><rect x="1" y="9" width="14" height="6" rx="1.5" fill="currentColor"/></svg>
+          : <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="1" y="1" width="6" height="14" rx="1.5" fill="currentColor" opacity="0.5"/><rect x="9" y="1" width="6" height="14" rx="1.5" fill="currentColor"/></svg>
+        }
+      </button>
+      <button className="tool-shell__btn" onClick={() => { setShowHelp(true); setHelpView('main') }} title="Help" aria-label="Help">
+        {/* <!-- License: MIT. Made by iconoir: https://iconoir.com/ --> */}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M9 9C9 5.49997 14.5 5.5 14.5 9C14.5 11.5 12 10.9999 12 13.9999" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M12 18.01L12.01 17.9989" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+    </>
+  )
+
   return (
-    <ToolShell title="CodePad">
+    <ToolShell title={shellTitle} actions={shellActions}>
     <div className={`app${isDragging ? ' is-dragging-' + layout : ''}`}>
       {showClear && <ClearDialog tab={activeTab} onConfirm={handleClearConfirm} onClose={() => setShowClear(false)} />}
       {showDownloadDialog && <DownloadDialog optBoilerplate={optBoilerplate} optLinkCss={optLinkCss} optLinkJs={optLinkJs} setOptBoilerplate={setOptBoilerplate} setOptLinkCss={setOptLinkCss} setOptLinkJs={setOptLinkJs} onConfirm={performDownloadExport} onClose={() => setShowDownloadDialog(false)} isExporting={isExporting} /> }
@@ -1228,56 +1281,6 @@ export default function App() {
       {showAddPage && <AddPageDialog existingNames={code.pages.map(p => p.name)} onAdd={handleAddPage} onClose={() => setShowAddPage(false)} />}
       {showHelp && helpView === 'main' && <HelpDialog onClose={() => setShowHelp(false)} onOpenGuide={(g) => setHelpView(g)} />}
       {showHelp && helpView !== 'main' && <GuideDialog guide={helpView} onBack={() => setHelpView('main')} onClose={() => setShowHelp(false)} />}
-
-      <div className="header">
-        <img src="./favicon.png" alt="CodePad" className="header-logo" />
-        <div className="header-title-wrap">
-          <div className="header-title-sizer" data-value={title}>
-            <input
-              className="header-title"
-              value={title}
-              onChange={e => setTitle(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && e.target.blur()}
-              spellCheck={false}
-              aria-label="Project title"
-            />
-          </div>
-        </div>
-        <div className="header-actions">
-          <button className="layout-btn" onClick={handleDownload} disabled={isExporting} title="Download">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M8 1v8" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M4 7l4 4 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-              <rect x="2" y="13" width="12" height="2" rx="0.5" fill="currentColor"/>
-            </svg>
-          </button>
-
-          <button className="layout-btn" onClick={handleShare} title="Share">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <circle cx="13" cy="3"  r="1.75" stroke="currentColor" strokeWidth="1.4"/>
-              <circle cx="3"  cy="8"  r="1.75" stroke="currentColor" strokeWidth="1.4"/>
-              <circle cx="13" cy="13" r="1.75" stroke="currentColor" strokeWidth="1.4"/>
-              <line x1="4.7" y1="7.1" x2="11.3" y2="4"  stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-              <line x1="4.7" y1="8.9" x2="11.3" y2="12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
-            </svg>
-          </button>
-          <button className="layout-btn" onClick={() => setLayout(l => l === 'row' ? 'column' : 'row')}
-            title={layout === 'row' ? 'Switch to vertical split' : 'Switch to horizontal split'}>
-            {layout === 'row'
-              ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="14" height="6" rx="1.5" fill="currentColor" opacity="0.5"/><rect x="1" y="9" width="14" height="6" rx="1.5" fill="currentColor"/></svg>
-              : <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="14" rx="1.5" fill="currentColor" opacity="0.5"/><rect x="9" y="1" width="6" height="14" rx="1.5" fill="currentColor"/></svg>
-            }
-          </button>
-          <button className="layout-btn" onClick={() => { setShowHelp(true); setHelpView('main') }} title="Help">
-            {/* <!-- License: MIT. Made by iconoir: https://iconoir.com/ --> */}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M9 9C9 5.49997 14.5 5.5 14.5 9C14.5 11.5 12 10.9999 12 13.9999" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M12 18.01L12.01 17.9989" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-        </div>
-      </div>
 
       <div className="topbar" style={layout === 'row' ? { padding: 0, gap: 0 } : {}}>
         <div className="topbar-tabs" style={layout === 'row' ? { width: `${splitSize}%`, flexShrink: 0, padding: '0 12px' } : {}}>

@@ -55,6 +55,7 @@
 
 .tool-shell__title {
   flex: 1;
+  min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -63,6 +64,133 @@
   letter-spacing: -0.01em;
   color: #ffffff;
   margin: 0;
+}
+
+/* Right-aligned global actions (Share, Export, Help, …). Tools may render
+   any elements here, but icon buttons should use `tool-shell__btn` for a
+   consistent look with the bar. */
+.tool-shell__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  margin-left: auto;
+}
+
+.tool-shell__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #ccc;
+  cursor: pointer;
+  font: inherit;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.tool-shell__btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tool-shell__btn:focus-visible {
+  outline: 2px solid #edab0c;
+  outline-offset: 1px;
+}
+
+.tool-shell__btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.tool-shell__btn[aria-expanded="true"] {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Custom title content: brand lockup (logo + name) or editable doc title.
+   Keeps plain-string titles working untouched — these classes are opt-in. */
+.tool-shell__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tool-shell__logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  flex: none;
+}
+
+img.tool-shell__logo {
+  object-fit: contain;
+}
+
+.tool-shell__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+/* Editable document title (e.g. CodePad project name). Grid-mirror trick:
+   ::after echoes data-value so the input auto-sizes to its content. */
+.tool-shell__title-input-sizer {
+  display: inline-grid;
+  min-width: 2ch;
+  max-width: 100%;
+  align-items: center;
+}
+
+.tool-shell__title-input-sizer::after {
+  content: attr(data-value) ' ';
+  grid-area: 1 / 1;
+  visibility: hidden;
+  white-space: pre;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 2px 6px;
+  pointer-events: none;
+}
+
+.tool-shell__title-input {
+  grid-area: 1 / 1;
+  width: 0;
+  min-width: 100%;
+  max-width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 2px 6px;
+  margin: 0;
+  outline: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tool-shell__title-input:hover {
+  border-color: rgb(60, 60, 60);
+}
+
+.tool-shell__title-input:focus {
+  border-color: #edab0c;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .tool-shell__body {
