@@ -9,3 +9,7 @@ As you will see, W3C is not just responsible for the HTML, CSS, and Web Content 
 
 - [HTML Specification](https://www.w3.org/TR/html/)
 - [CSS Specification](https://www.w3.org/TR/CSS2/)
+
+### Activity - Validation
+
+[Attempt Activity 7 - Validation](../tasks/task-7-validation.md){.md-button}
