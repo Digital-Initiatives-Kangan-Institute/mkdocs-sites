@@ -112,16 +112,10 @@ echo -e "\n  Selected: ${YELLOW}${SELECTED_PALETTE}${RESET}\n"
 print_step "Checking base assets"
 
 MKDOCS_TEMPLATE="$BASE_DIR/mkdocs.yml"
-STYLE_SOURCE="$BASE_DIR/extra/style.css"
 INDEX_SOURCE="$BASE_DIR/docs/index.md"
 
 if [[ ! -f "$MKDOCS_TEMPLATE" ]]; then
   print_error "Missing base template: $MKDOCS_TEMPLATE"
-  exit 1
-fi
-
-if [[ ! -f "$STYLE_SOURCE" ]]; then
-  print_error "Missing base stylesheet: $STYLE_SOURCE"
   exit 1
 fi
 
@@ -135,8 +129,8 @@ print_success "Base assets found"
 # 4. Build directory structure ─────────────────
 print_step "Creating site structure"
 
-mkdir -p "$SITE_PATH/docs/extra"
-print_success "Created: $SITE_PATH/docs/extra/"
+mkdir -p "$SITE_PATH/docs"
+print_success "Created: $SITE_PATH/docs/"
 
 # 5. Copy & populate mkdocs.yml ────────────────
 MKDOCS_DEST="$SITE_PATH/mkdocs.yml"
@@ -168,8 +162,7 @@ echo -e "
   ${SITE_FOLDER}/
   ├── mkdocs.yml
   └── docs/
-      ├── index.md
-      └── extra/
+      └── index.md
 
   ${CYAN}To start your site, run:${RESET}
     ./serve.sh
