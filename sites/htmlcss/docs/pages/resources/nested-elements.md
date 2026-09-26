@@ -19,7 +19,7 @@ An **unordered list** is used to group related items together when the order doe
 
 For example:
 
-<embed src="https://code.cyberbilby.com/#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8dWw+XG4gICAgPGxpPktleWJvYXJkPC9saT5cbiAgICA8bGk+TW91c2U8L2xpPlxuICAgIDxsaT5Nb25pdG9yPC9saT5cbjwvdWw+In1dLCJjc3MiOiIiLCJqcyI6IiIsImFjdGl2ZVRhYiI6Imh0bWwiLCJhY3RpdmVQYWdlIjoiaW5kZXguaHRtbCJ9"></embed>
+<embed src="/tools/code#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8dWw+XG4gICAgPGxpPktleWJvYXJkPC9saT5cbiAgICA8bGk+TW91c2U8L2xpPlxuICAgIDxsaT5Nb25pdG9yPC9saT5cbjwvdWw+In1dLCJjc3MiOiIiLCJqcyI6IiIsImFjdGl2ZVRhYiI6Imh0bWwiLCJhY3RpdmVQYWdlIjoiaW5kZXguaHRtbCJ9"></embed>
 
 This creates a bulleted list of items.
 
@@ -35,7 +35,7 @@ You can also nest lists inside other lists to create subcategories or grouped in
 
 For example:
 
-<embed src="https://code.cyberbilby.com/#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8dWw+XG4gICAgPGxpPldlYiBUZWNobm9sb2dpZXNcbiAgICAgICAgPHVsPlxuICAgICAgICAgICAgPGxpPkhUTUw8L2xpPlxuICAgICAgICAgICAgPGxpPkNTUzwvbGk+XG4gICAgICAgIDwvdWw+XG4gICAgPC9saT5cblxuICAgIDxsaT5Ub29sczwvbGk+XG48L3VsPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
+<embed src="/tools/code#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8dWw+XG4gICAgPGxpPldlYiBUZWNobm9sb2dpZXNcbiAgICAgICAgPHVsPlxuICAgICAgICAgICAgPGxpPkhUTUw8L2xpPlxuICAgICAgICAgICAgPGxpPkNTUzwvbGk+XG4gICAgICAgIDwvdWw+XG4gICAgPC9saT5cblxuICAgIDxsaT5Ub29sczwvbGk+XG48L3VsPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
 
 In this example:
 

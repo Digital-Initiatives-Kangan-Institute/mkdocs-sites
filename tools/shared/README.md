@@ -43,6 +43,11 @@ Rules:
   per-tool copies of these files.
 - The app root inside the shell must use `height: 100%`, never `100vh`.
 - Embed/share modes (e.g. anigram's `#viewer=`) must NOT use the shell.
+- The **Tools** back button auto-hides when the tool renders inside an
+  `<iframe>`, `<embed>`, or `<object>` (e.g. embedded in a site page),
+  or with `?embed` / `?embedded` / `?chrome=none` in the URL — so embedded
+  tools need no per-tool changes. Pass `hideBackButton={false}` to force
+  it visible, or `hideBackButton` to force it hidden.
 - New tools that import from `../../shared` need
   `server: { fs: { allow: ['..'] } }` in their `vite.config.*` so the Vite
   dev server can serve the shared files (production builds are unaffected).
