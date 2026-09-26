@@ -170,7 +170,7 @@ The wizard scaffolds the site but there are a couple of manual steps to fully
 wire it up:
 
 1. **Register the site on the portal** — add an entry to the `sites` array in
-   `build/sites.js` under the correct course (`cert3-in-it` and/or
+   `build/portal.js` under the correct course (`cert3-in-it` and/or
    `diploma-of-it`).
 2. **Update `AGENTS.md`** — add the new site to the "Existing Sites" table.
 3. **Match the button colour** — `style.css` is copied from the template with a

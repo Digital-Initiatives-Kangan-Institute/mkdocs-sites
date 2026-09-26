@@ -2,11 +2,10 @@
 build/*
 !build/_assets
 !build/index.html
-!build/sites.js
+!build/portal.js
 !build/tools
 build/tools/*
 !build/tools/index.html
-!build/tools/tools.js
 !build/tools/thumbs
 .DS_Store
 tmp/

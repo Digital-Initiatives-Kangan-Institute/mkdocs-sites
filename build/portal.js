@@ -1,3 +1,4 @@
+// Portal data: site + tool cards rendered by build/index.html.
 window.SITES_DATA = {
     "courses": [
         { "id": "cert3-in-it", "label": "Cert 3 in IT", "fullname": "Certificate III in Information Technology" },
@@ -82,6 +83,30 @@ window.SITES_DATA = {
             "title": "Program IoT Devices",
             "description": "Introduction to IoT concepts and Arduino programming through structured activities and hands-on exercises.",
             "courses": ["diploma-of-it"]
+        }
+    ]
+};
+
+// Tools live in the same file so the portal needs only one data script.
+window.TOOLS_DATA = {
+    "tools": [
+        {
+            "href": "./code",
+            "img": "./thumbs/code.svg",
+            "title": "CodePad",
+            "description": "In-browser HTML, CSS, and JavaScript editor with live preview, share links, and ZIP export."
+        },
+        {
+            "href": "./learn-terminal",
+            "img": "./thumbs/learn-terminal.svg",
+            "title": "Learn Terminal",
+            "description": "Learn Linux commands in a guided in-browser terminal emulator."
+        },
+        {
+            "href": "./anigram",
+            "img": "./thumbs/anigram.svg",
+            "title": "Anigram",
+            "description": "Design, animate, and export flowcharts directly in your browser."
         }
     ]
 };

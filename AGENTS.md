@@ -6,33 +6,26 @@ This file contains instructions for AI agents (Claude Code, Copilot, Codex, etc.
 
 ## Project Overview
 
-This is a collection of **MkDocs Material** sites deployed to **Cloudflare**. Each site lives in `sites/<slug>/`, gets built into `build/<slug>/`, and the portal at `build/index.html` links them all together via `build/sites.js`.
+This is a collection of **MkDocs Material** sites deployed to **Cloudflare**. Each site lives in `sites/<slug>/`, gets built into `build/<slug>/`, and the portal at `build/index.html` links them all together via `build/portal.js`.
 
 All sites share a single stylesheet at `shared/style.css` (wired up via `theme.custom_dir: ../../shared` in each `mkdocs.yml`). Any site style / stylesheet modifications must be done in this file and this file only — never create per-site `style.css` files.
 
 ### Existing Sites
 
-| Slug | Site Name | Palette | Course |
-|---|---|---|---|
-| `microbit` | microbit | purple | cert3-in-it |
-| `htmlcss` | Build Simple Webpages | teal | cert3-in-it |
-| `design` | Design Thinking | light blue | cert3-in-it |
-| `python-edison` | Python Edison | deep orange | cert3-in-it |
-| `nextjs` | NextJS | black | — |
-| `test-site` | Test Site | green | — |
-| `version-control` | Version Control | blue | cert3-in-it, diploma-of-it |
-| `ai-tools` | AI-Assisted Development | cyan | diploma-of-it |
-| `hardware-os` | Hardware & OS | red | cert3-in-it |
-| `build-advanced-interfaces` | Build Advanced Interfaces | indigo | diploma-of-it |
-| `program-iot-devices` | Program IoT Devices | purple | cert3-in-it |
+Do not maintain a site list here — it goes stale. `sites/` is the source of truth. To see what sites exist and their details, inspect the folder directly:
+
+```bash
+ls sites/                                        # all slugs
+grep -H "site_name:" sites/*/mkdocs.yml          # display names
+grep -H "primary:" sites/*/mkdocs.yml            # palettes in use
+```
 
 ---
 
 ## Creating a New Site
 
-**When creating a new site, also update the following existing files:**
-- `build/sites.js` — add the new site to the `sites` array under the correct course
-- `AGENTS.md` — add the new site to the Existing Sites table and increment the count below
+**When creating a new site, also update the following existing file:**
+- `build/portal.js` — add the new site to the `sites` array under the correct course
 
 ### 1. Choose a slug and palette
 
@@ -102,7 +95,7 @@ All sites use the single shared stylesheet at `shared/style.css` (loaded via `th
 
 ### 5. Register the site on the portal
 
-Edit `build/sites.js` and add an entry to the `sites` array:
+Edit `build/portal.js` and add an entry to the `sites` array:
 
 ```json
 {
@@ -217,7 +210,7 @@ Tasks are exercises for students to solve. Do not give away the answer:
 
 ### Important: Do Not Build Locally
 
-The `build/` directory contains **only portal files** (`index.html`, `sites.js`, `_assets/`). Do **not** run mkdocs build targeting `build/` — the individual sites are built automatically on the Cloudflare Worker at deploy time. Never create site subdirectories under `build/`.
+The `build/` directory contains **only portal files** (`index.html`, `portal.js`, `_assets/`). Do **not** run mkdocs build targeting `build/` — the individual sites are built automatically on the Cloudflare Worker at deploy time. Never create site subdirectories under `build/`.
 
 ### Build and Verify (for AI Agents)
 
@@ -249,13 +242,13 @@ Never leave temporary build artifacts in the project directory.
 
 ### Portal Pattern
 
-The portal (`build/index.html`) loads `build/sites.js` and renders cards for each site. Filtering is done via URL hash (`#cert3-in-it` or `#diploma-of-it`). Each site card links to its `href` (e.g., `/htmlcss`), which resolves to the subdirectory under `build/`.
+The portal (`build/index.html`) loads `build/portal.js` (sites + tools data) and renders cards for each site and tool behind a Sites/Tools tab bar above the grids. The course dropdown in the header only filters sites; navigation state lives in the URL hash (`#cert3-in-it` / `#diploma-of-it` for sites, `#tools` for the Tools tab). Each site card links to its `href` (e.g., `/htmlcss`), which resolves to the subdirectory under `build/`. `build/tools/index.html` is a redirect to `../#tools` so old Tools bookmarks keep working.
 
 ---
 
 ## Tools
 
-Static web tools (e.g. the CodePad editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the tools portal at `build/tools/index.html`, which reads its cards from `build/tools/tools.js`. The main portal links to it via a "Tools" pill in the header of `build/index.html`. Never create a site called `tools` — `create.sh` blocks that reserved name.
+Static web tools (e.g. the CodePad editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the Tools tab of the main portal (`build/index.html`), which reads its cards from `build/portal.js`. `build/tools/index.html` redirects there. Never create a site called `tools` — `create.sh` blocks that reserved name.
 
 ### Common shell (`tools/shared/`)
 
@@ -281,7 +274,7 @@ return (
 
 ### Tool Thumbnails
 
-Create a thumbnail in `build/tools/thumbs/` and reference it from the tool's entry in `build/tools/tools.js` (`"img": "./thumbs/<id>.svg"`). Thumbnails are committed (see the `!build/tools/thumbs` exception in `.gitignore`); built tool output under `build/tools/<id>/` stays ignored.
+Create a thumbnail in `build/tools/thumbs/` and reference it from the tool's entry in `build/portal.js` (`"img": "./thumbs/<id>.svg"`). Thumbnails are committed (see the `!build/tools/thumbs` exception in `.gitignore`); built tool output under `build/tools/<id>/` stays ignored.
 
 **Location:** `build/tools/thumbs/<id>.svg` (or `.webp`/`.png` if you must, but SVG is preferred).
 
