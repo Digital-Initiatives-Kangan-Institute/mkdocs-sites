@@ -707,19 +707,14 @@
                 return a;
             }
 
-            function toolUrl(url) {
-                // Tool paths are relative to build/tools/; rebase them onto the portal root.
-                return url.indexOf('./') === 0 ? './tools/' + url.slice(2) : url;
-            }
-
             function renderToolCard(tool) {
                 var a = document.createElement('a');
                 a.className = 'grid-item';
-                a.href = toolUrl(tool.href);
+                a.href = tool.href;
                 a.setAttribute('data-search', (tool.title + ' ' + tool.description).toLowerCase());
                 var html = '';
                 if (tool.img) {
-                    html += '<div class="thumbnail"><img src="' + toolUrl(tool.img) + '" alt="' + esc(tool.title) + '" loading="lazy"></div>';
+                    html += '<div class="thumbnail"><img src="' + tool.img + '" alt="' + esc(tool.title) + '" loading="lazy"></div>';
                 }
                 html += '<div class="details"><h2>' + esc(tool.title) + '</h2><p>' + esc(tool.description) + '</p></div>';
                 a.innerHTML = html;

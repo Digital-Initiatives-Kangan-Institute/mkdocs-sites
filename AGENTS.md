@@ -100,7 +100,7 @@ Edit `build/portal.js` and add an entry to the `sites` array:
 ```json
 {
   "href": "/<slug>",
-  "img": "./_assets/<image-filename>",
+  "img": "./_assets/sites/<image-filename>",
   "title": "<Site Name>",
   "description": "<One-line description>",
   "courses": ["cert3-in-it"]   // or ["diploma-of-it"], or both
@@ -242,13 +242,13 @@ Never leave temporary build artifacts in the project directory.
 
 ### Portal Pattern
 
-The portal (`build/index.html`) loads `build/portal.js` (sites + tools data) and renders cards for each site and tool behind a Sites/Tools tab bar above the grids. The course dropdown in the header only filters sites; navigation state lives in the URL hash (`#cert3-in-it` / `#diploma-of-it` for sites, `#tools` for the Tools tab). Each site card links to its `href` (e.g., `/htmlcss`), which resolves to the subdirectory under `build/`. `build/tools/index.html` is a redirect to `../#tools` so old Tools bookmarks keep working.
+The portal (`build/index.html`) loads `build/portal.js` (sites + tools data) and renders cards for each site and tool behind a Sites/Tools tab bar above the grids. The course dropdown in the header only filters sites; navigation state lives in the URL hash (`#cert3-in-it` / `#diploma-of-it` for sites, `#tools` for the Tools tab). Each site card links to its `href` (e.g., `/htmlcss`), which resolves to the subdirectory under `build/`.
 
 ---
 
 ## Tools
 
-Static web tools (e.g. the CodePad editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the Tools tab of the main portal (`build/index.html`), which reads its cards from `build/portal.js`. `build/tools/index.html` redirects there. Never create a site called `tools` — `create.sh` blocks that reserved name.
+Static web tools (e.g. the CodePad editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the Tools tab of the main portal (`build/index.html`), which reads its cards from `build/portal.js`. Never create a site called `tools` — `create.sh` blocks that reserved name.
 
 ### Common shell (`tools/shared/`)
 
@@ -274,9 +274,9 @@ return (
 
 ### Tool Thumbnails
 
-Create a thumbnail in `build/tools/thumbs/` and reference it from the tool's entry in `build/portal.js` (`"img": "./thumbs/<id>.svg"`). Thumbnails are committed (see the `!build/tools/thumbs` exception in `.gitignore`); built tool output under `build/tools/<id>/` stays ignored.
+Create a thumbnail in `build/_assets/tools/` and reference it from the tool's entry in `build/portal.js` (`"img": "./_assets/tools/<id>.svg"`). Thumbnails are committed (under the `!build/_assets` exception in `.gitignore`); built tool output under `build/tools/<id>/` stays ignored.
 
-**Location:** `build/tools/thumbs/<id>.svg` (or `.webp`/`.png` if you must, but SVG is preferred).
+**Location:** `build/_assets/tools/<id>.svg` (or `.webp`/`.png` if you must, but SVG is preferred).
 
 **Rules — strict:**
 
@@ -289,7 +289,7 @@ Create a thumbnail in `build/tools/thumbs/` and reference it from the tool's ent
 7. **Chrome:** Include the fake window chrome (top bar `36px` high, 3 dots `6px` radius, colors `#ff5f57`/`#febc2e`/`#28c840` at `x=56,76,96 y=46`), inner card `x=28 y=28 width=584 height=344 rx=16`.
 8. **No em dashes, no real screenshots.** Keep it abstract so all cards feel cohesive.
 9. **Match the tool's real color scheme:** Before drawing, extract the palette from the tool's source in `tools/<id>/` — e.g. `grep -o "#[0-9a-fA-F]\{3,8\}" tools/<id>/src/*` and check `:root` vars, `background`, `color`, `border`, and accent colors. Use those real colors for interior blocks so the card feels like the tool. Keep outer chrome dark (`#0e0e11` / `#131316` + `#232328` stroke).
-10. **Verify:** After creating, run `grep -n "<text" build/tools/thumbs/*.svg` (must return nothing), parse each file as XML, and confirm content spans the full card (`x=44–596`, `y=80–320`) with nothing overflowing the inner card except the chrome itself.
+10. **Verify:** After creating, run `grep -n "<text" build/_assets/tools/*.svg` (must return nothing), parse each file as XML, and confirm content spans the full card (`x=44–596`, `y=80–320`) with nothing overflowing the inner card except the chrome itself.
 
 Example skeleton:
 
