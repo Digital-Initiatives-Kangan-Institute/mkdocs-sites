@@ -15,7 +15,7 @@ Tables are created using the `<table>` element. Inside the table:
 * `<td>` creates a standard data cell
 
 For example:
-<embed src="https://code.cyberbilby.com/#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8dGFibGU+XG4gICAgPHRyPlxuICAgICAgICA8dGg+TmFtZTwvdGg+XG4gICAgICAgIDx0aD5Sb2xlPC90aD5cbiAgICA8L3RyPlxuXG4gICAgPHRyPlxuICAgICAgICA8dGQ+QWxleDwvdGQ+XG4gICAgICAgIDx0ZD5EZXNpZ25lcjwvdGQ+XG4gICAgPC90cj5cblxuICAgIDx0cj5cbiAgICAgICAgPHRkPkpvcmRhbjwvdGQ+XG4gICAgICAgIDx0ZD5EZXZlbG9wZXI8L3RkPlxuICAgIDwvdHI+XG48L3RhYmxlPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
+<embed src="/tools/code#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8dGFibGU+XG4gICAgPHRyPlxuICAgICAgICA8dGg+TmFtZTwvdGg+XG4gICAgICAgIDx0aD5Sb2xlPC90aD5cbiAgICA8L3RyPlxuXG4gICAgPHRyPlxuICAgICAgICA8dGQ+QWxleDwvdGQ+XG4gICAgICAgIDx0ZD5EZXNpZ25lcjwvdGQ+XG4gICAgPC90cj5cblxuICAgIDx0cj5cbiAgICAgICAgPHRkPkpvcmRhbjwvdGQ+XG4gICAgICAgIDx0ZD5EZXZlbG9wZXI8L3RkPlxuICAgIDwvdHI+XG48L3RhYmxlPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
 
 In this example:
 
@@ -111,3 +111,7 @@ Example:
 ```
 
 This creates a clearer structure and makes forms easier to style later using CSS.
+
+### Activity - Tables and Forms
+
+[Attempt Activity 4 - Tables and Forms](../tasks/task-4-tables-forms.md){.md-button}

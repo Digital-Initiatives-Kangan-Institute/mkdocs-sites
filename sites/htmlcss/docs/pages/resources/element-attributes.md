@@ -26,7 +26,7 @@ You can also use file names as the `href` value to link between pages on the sam
 
 For example, `index.html` could link to `about.html`, allowing the user to move between pages on the site.
 
-<embed src="https://code.cyberbilby.com/#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8YSBocmVmPVwiYWJvdXQuaHRtbFwiPkdvIHRvIEFib3V0IHBhZ2U8L2E+In0seyJuYW1lIjoiYWJvdXQuaHRtbCIsImh0bWwiOiI8YSBocmVmPVwiaW5kZXguaHRtbFwiPkdvIGJhY2sgdG8gSG9tZSBwYWdlPC9hPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
+<embed src="/tools/code#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8YSBocmVmPVwiYWJvdXQuaHRtbFwiPkdvIHRvIEFib3V0IHBhZ2U8L2E+In0seyJuYW1lIjoiYWJvdXQuaHRtbCIsImh0bWwiOiI8YSBocmVmPVwiaW5kZXguaHRtbFwiPkdvIGJhY2sgdG8gSG9tZSBwYWdlPC9hPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
 
 # Image Tags
 
@@ -35,7 +35,7 @@ Images are added to a webpage using the `<img>` tag.
 Unlike most HTML elements, the `<img>` tag does not wrap around content. Instead, it uses attributes to tell the browser which image to display and information about that image.
 
 For example:
-<embed src="https://code.cyberbilby.com/#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8aW1nIHNyYz1cImh0dHBzOi8vY3liZXJiaWxieS5jb20vY2FweWJhcmEuanBnXCIgXG4gIGFsdD1cIkEgY2FweWJhcmFcIiBcbiAgd2lkdGg9XCIyMDBweFwiPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
+<embed src="/tools/code#eyJ0aXRsZSI6IkVkaXRvciIsInBhZ2VzIjpbeyJuYW1lIjoiaW5kZXguaHRtbCIsImh0bWwiOiI8aW1nIHNyYz1cImh0dHBzOi8vY3liZXJiaWxieS5jb20vY2FweWJhcmEuanBnXCIgXG4gIGFsdD1cIkEgY2FweWJhcmFcIiBcbiAgd2lkdGg9XCIyMDBweFwiPiJ9XSwiY3NzIjoiIiwianMiOiIiLCJhY3RpdmVUYWIiOiJodG1sIiwiYWN0aXZlUGFnZSI6ImluZGV4Lmh0bWwifQ=="></embed>
 
 In this example:
 

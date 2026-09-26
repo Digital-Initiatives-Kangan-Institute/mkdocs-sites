@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "createdAt": "2025-08-31T12:00:00.000Z",
+  "app": "anigram",
+  "viewport": {
+    "zoom": 1,
+    "pan": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "groups": [
+    {
+      "id": "g1",
+      "x": 40,
+      "y": 30,
+      "w": 340,
+      "h": 290,
+      "label": "Frontend Feature",
+      "color": "#f8fafc"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 80,
+      "y": 70,
+      "w": 160,
+      "h": 64,
+      "type": "terminal",
+      "label": "User Action",
+      "color": "#ecfdf5",
+      "step": "1",
+      "subtext": "click",
+      "groupId": "g1"
+    },
+    {
+      "id": "n2",
+      "x": 80,
+      "y": 150,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "Validate Input",
+      "color": "#ffffff",
+      "step": "2",
+      "groupId": "g1"
+    },
+    {
+      "id": "n3",
+      "x": 80,
+      "y": 240,
+      "w": 160,
+      "h": 110,
+      "type": "decision",
+      "label": "Valid ?",
+      "color": "#fffbeb",
+      "step": "3",
+      "groupId": "g1"
+    },
+    {
+      "id": "n4",
+      "x": 460,
+      "y": 100,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "API Request",
+      "color": "#ffffff",
+      "step": "4",
+      "subtext": "fetch /api"
+    },
+    {
+      "id": "n5",
+      "x": 460,
+      "y": 220,
+      "w": 160,
+      "h": 72,
+      "type": "io",
+      "label": "DB Query",
+      "color": "#f5f3ff",
+      "step": "5"
+    },
+    {
+      "id": "n6",
+      "x": 460,
+      "y": 340,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "Render UI",
+      "color": "#ffffff",
+      "step": "6",
+      "subtext": "update DOM"
+    },
+    {
+      "id": "n7",
+      "x": 190,
+      "y": 420,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Done",
+      "color": "#ecfdf5",
+      "step": "7"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.1,
+      "label": ""
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "yes",
+      "labelAlign": "right",
+      "labelSize": 10
+    },
+    {
+      "id": "e4",
+      "from": "g1",
+      "to": "n4",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "calls",
+      "labelAlign": "top",
+      "labelSize": 9
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n5",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.2,
+      "label": "query",
+      "labelAlign": "right",
+      "labelSize": 9
+    },
+    {
+      "id": "e6",
+      "from": "n5",
+      "to": "n6",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e7",
+      "from": "n6",
+      "to": "n7",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e8",
+      "from": "n3",
+      "to": "n7",
+      "style": "dashed",
+      "animated": false,
+      "speed": 1,
+      "label": "no",
+      "labelAlign": "left",
+      "labelSize": 10
+    }
+  ]
+}

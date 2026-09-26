@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "createdAt": "2025-08-31T12:00:00.000Z",
+  "app": "anigram",
+  "viewport": {
+    "zoom": 0.95,
+    "pan": {
+      "x": -20,
+      "y": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 160,
+      "y": 30,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Browse Store",
+      "color": "#ecfdf5",
+      "step": "1",
+      "subtext": "landing"
+    },
+    {
+      "id": "n2",
+      "x": 160,
+      "y": 140,
+      "w": 180,
+      "h": 120,
+      "type": "image",
+      "label": "Sneakers",
+      "color": "#ffffff",
+      "image": "https://picsum.photos/seed/anigram-sneakers/180/120",
+      "imageFit": "cover",
+      "step": "2",
+      "subtext": "$129 • 4.8★"
+    },
+    {
+      "id": "n3",
+      "x": 160,
+      "y": 310,
+      "w": 180,
+      "h": 72,
+      "type": "process",
+      "label": "Add to Cart",
+      "color": "#ffffff",
+      "step": "3"
+    },
+    {
+      "id": "n4",
+      "x": 140,
+      "y": 430,
+      "w": 200,
+      "h": 110,
+      "type": "decision",
+      "label": "In Stock ?",
+      "color": "#fffbeb",
+      "step": "4"
+    },
+    {
+      "id": "n5",
+      "x": 20,
+      "y": 600,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "Show Out of Stock",
+      "color": "#ffffff",
+      "step": "5",
+      "subtext": "notify"
+    },
+    {
+      "id": "n6",
+      "x": 280,
+      "y": 600,
+      "w": 160,
+      "h": 72,
+      "type": "io",
+      "label": "Checkout",
+      "color": "#f5f3ff",
+      "step": "6",
+      "subtext": "3 steps"
+    },
+    {
+      "id": "n7",
+      "x": 260,
+      "y": 730,
+      "w": 200,
+      "h": 110,
+      "type": "decision",
+      "label": "Payment OK ?",
+      "color": "#fffbeb",
+      "step": "7"
+    },
+    {
+      "id": "n8",
+      "x": 140,
+      "y": 880,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Order Complete",
+      "color": "#ecfdf5",
+      "step": "8",
+      "subtext": "confetti"
+    },
+    {
+      "id": "n9",
+      "x": 380,
+      "y": 730,
+      "w": 140,
+      "h": 72,
+      "type": "process",
+      "label": "Show Error",
+      "color": "#ffffff",
+      "step": "9",
+      "subtext": "retry"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.1,
+      "label": "tap",
+      "labelAlign": "right",
+      "labelSize": 10
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n6",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "yes",
+      "labelAlign": "right",
+      "labelSize": 11
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n5",
+      "style": "dashed",
+      "animated": false,
+      "speed": 1,
+      "label": "no",
+      "labelAlign": "left",
+      "labelSize": 10
+    },
+    {
+      "id": "e6",
+      "from": "n6",
+      "to": "n7",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.2,
+      "label": "pay",
+      "labelAlign": "right",
+      "labelSize": 10
+    },
+    {
+      "id": "e7",
+      "from": "n7",
+      "to": "n8",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "yes",
+      "labelAlign": "top",
+      "labelSize": 11
+    },
+    {
+      "id": "e8",
+      "from": "n7",
+      "to": "n9",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "no",
+      "labelAlign": "top",
+      "labelSize": 10
+    },
+    {
+      "id": "e9",
+      "from": "n9",
+      "to": "n6",
+      "style": "dashed",
+      "animated": false,
+      "speed": 1,
+      "label": "retry",
+      "labelAlign": "bottom",
+      "labelSize": 9
+    }
+  ]
+}

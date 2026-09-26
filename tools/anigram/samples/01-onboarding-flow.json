@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "createdAt": "2025-08-31T12:00:00.000Z",
+  "app": "anigram",
+  "viewport": {
+    "zoom": 1,
+    "pan": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 140,
+      "y": 40,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Start",
+      "color": "#ecfdf5",
+      "step": "1",
+      "subtext": "entry"
+    },
+    {
+      "id": "n2",
+      "x": 140,
+      "y": 160,
+      "w": 180,
+      "h": 72,
+      "type": "process",
+      "label": "Create Account",
+      "color": "#ffffff",
+      "step": "2",
+      "subtext": "1 min"
+    },
+    {
+      "id": "n3",
+      "x": 120,
+      "y": 300,
+      "w": 200,
+      "h": 110,
+      "type": "decision",
+      "label": "Email Verified ?",
+      "color": "#fffbeb",
+      "step": "3"
+    },
+    {
+      "id": "n4",
+      "x": 20,
+      "y": 480,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "Send Activation",
+      "color": "#ffffff",
+      "step": "4",
+      "subtext": "auto email"
+    },
+    {
+      "id": "n5",
+      "x": 280,
+      "y": 480,
+      "w": 160,
+      "h": 72,
+      "type": "io",
+      "label": "Show Dashboard",
+      "color": "#f5f3ff",
+      "step": "5",
+      "subtext": "welcome"
+    },
+    {
+      "id": "n6",
+      "x": 280,
+      "y": 620,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Done",
+      "color": "#ecfdf5",
+      "step": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.2,
+      "label": "submit",
+      "labelAlign": "right",
+      "labelSize": 10
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "no",
+      "labelAlign": "left",
+      "labelSize": 10
+    },
+    {
+      "id": "e4",
+      "from": "n3",
+      "to": "n5",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "yes",
+      "labelAlign": "right",
+      "labelSize": 12
+    },
+    {
+      "id": "e5",
+      "from": "n5",
+      "to": "n6",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e6",
+      "from": "n4",
+      "to": "n6",
+      "style": "dashed",
+      "animated": false,
+      "speed": 1,
+      "label": "later",
+      "labelAlign": "bottom",
+      "labelSize": 9
+    }
+  ]
+}

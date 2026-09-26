@@ -95,6 +95,7 @@ theme:
     primary: indigo
 
 plugins:
+  - search
   - enumerate-headings:
       increment_across_pages: true
       # Uncomment below if you would like to reset the table of contents numbering

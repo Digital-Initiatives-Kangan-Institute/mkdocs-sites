@@ -21,8 +21,10 @@ nav:
       - Task 2 - Nested Elements: pages/tasks/task-2-nested-elements.md
       - Task 3 - Attributes: pages/tasks/task-3-attributes.md
       - Task 4 - Tables and Forms: pages/tasks/task-4-tables-forms.md
-      # - Task 5 - Links and Pages: pages/tasks/task-5-links-pages.md
-      - Task 6 - Cafe Site: pages/tasks/task-6-cafe.md
+      - Task 5 - Links and Pages: pages/tasks/task-5-links-pages.md
+      - Task 6 - Page Structure: pages/tasks/task-6-page-structure.md
+      - Task 7 - Validation: pages/tasks/task-7-validation.md
+      - Task 8 - Publish Your Website: pages/tasks/task-8-publish-website.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -30,6 +32,7 @@ theme:
     primary: teal
 
 plugins:
+  - search
   - enumerate-headings:
       increment_across_pages: true
       # Uncomment below if you would like to reset the table of contents numbering

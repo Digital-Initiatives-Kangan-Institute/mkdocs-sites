@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "createdAt": "2025-08-31T12:00:00.000Z",
+  "app": "anigram",
+  "viewport": {
+    "zoom": 1,
+    "pan": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 190,
+      "y": 30,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Browser Request",
+      "color": "#ecfdf5",
+      "step": "1",
+      "subtext": "GET /index.html"
+    },
+    {
+      "id": "n2",
+      "x": 190,
+      "y": 130,
+      "w": 180,
+      "h": 72,
+      "type": "process",
+      "label": "DNS Lookup",
+      "color": "#ffffff",
+      "step": "2",
+      "subtext": " → CDN IP"
+    },
+    {
+      "id": "n3",
+      "x": 190,
+      "y": 240,
+      "w": 180,
+      "h": 72,
+      "type": "process",
+      "label": "CDN Edge POP",
+      "color": "#ffffff",
+      "step": "3",
+      "subtext": "CloudFront"
+    },
+    {
+      "id": "n4",
+      "x": 160,
+      "y": 350,
+      "w": 220,
+      "h": 110,
+      "type": "decision",
+      "label": "Cache Hit ?",
+      "color": "#fffbeb",
+      "step": "4"
+    },
+    {
+      "id": "n5",
+      "x": 350,
+      "y": 510,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "Serve Cached",
+      "color": "#ffffff",
+      "step": "5",
+      "subtext": "HIT • ~10ms"
+    },
+    {
+      "id": "n6",
+      "x": 30,
+      "y": 510,
+      "w": 160,
+      "h": 72,
+      "type": "process",
+      "label": "Fetch Origin",
+      "color": "#ffffff",
+      "step": "6",
+      "subtext": "S3 Bucket"
+    },
+    {
+      "id": "n7",
+      "x": 30,
+      "y": 620,
+      "w": 160,
+      "h": 72,
+      "type": "io",
+      "label": "Cache & Store",
+      "color": "#f5f3ff",
+      "step": "7",
+      "subtext": "populate edge"
+    },
+    {
+      "id": "n8",
+      "x": 190,
+      "y": 740,
+      "w": 180,
+      "h": 64,
+      "type": "terminal",
+      "label": "Browser Renders",
+      "color": "#ecfdf5",
+      "step": "8",
+      "subtext": "200 OK • HTML"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "style": "animated",
+      "animated": true,
+      "speed": 1.1,
+      "label": ""
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.2,
+      "label": "443 TLS",
+      "labelAlign": "right",
+      "labelSize": 9
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n4",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e4",
+      "from": "n4",
+      "to": "n5",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "yes HIT",
+      "labelAlign": "right",
+      "labelSize": 10
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n6",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": "no MISS",
+      "labelAlign": "left",
+      "labelSize": 10
+    },
+    {
+      "id": "e6",
+      "from": "n5",
+      "to": "n8",
+      "style": "animated",
+      "animated": true,
+      "speed": 1,
+      "label": ""
+    },
+    {
+      "id": "e7",
+      "from": "n6",
+      "to": "n7",
+      "style": "flow",
+      "animated": true,
+      "speed": 1.3,
+      "label": "origin fetch",
+      "labelAlign": "left",
+      "labelSize": 9
+    },
+    {
+      "id": "e8",
+      "from": "n7",
+      "to": "n8",
+      "style": "animated",
+      "animated": true,
+      "speed": 1.1,
+      "label": ""
+    }
+  ]
+}
