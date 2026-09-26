@@ -167,3 +167,7 @@ Make sure you have a `html` file in your repository named `index.html`. If you d
 
 Remember: Web browser look for the `index.html` file by default when you do not specify a page in the address bar.
 
+## Activity - Publish Your Website {.notice-me}
+
+[Attempt Activity 8 - Publish Your Website](../tasks/task-8-publish-website.md){.md-button}
+

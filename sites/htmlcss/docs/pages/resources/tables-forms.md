@@ -111,3 +111,7 @@ Example:
 ```
 
 This creates a clearer structure and makes forms easier to style later using CSS.
+
+### Activity - Tables and Forms
+
+[Attempt Activity 4 - Tables and Forms](../tasks/task-4-tables-forms.md){.md-button}
