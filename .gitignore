@@ -2,7 +2,10 @@
 build/*
 !build/_assets
 !build/index.html
-!build/sites.js
+!build/portal.js
 .DS_Store
 tmp/
 dmp/
+# Tool sources (each tool also carries its own framework .gitignore)
+tools/*/node_modules
+tools/*/dist

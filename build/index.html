@@ -73,6 +73,48 @@
             flex: none;
         }
 
+        /* Content tabs: switch the grids below between sites and tools.
+           The course dropdown stays in the header and only filters sites. */
+        .tab-bar {
+            display: flex;
+            gap: 0.25rem;
+            flex: none;
+            align-self: center;
+
+            background-color: var(--portal-surface);
+            border: 1px solid var(--portal-outline);
+            border-radius: 9999px;
+            padding: 0.25rem;
+        }
+
+        .tab-bar button {
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.45rem 1.5rem;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+
+            color: var(--portal-muted);
+            background-color: transparent;
+
+            transition: background-color 0.15s ease, color 0.15s ease;
+        }
+
+        .tab-bar button:hover {
+            color: var(--portal-text);
+        }
+
+        .tab-bar button[aria-selected="true"] {
+            color: var(--portal-brand);
+            background-color: var(--portal-dark);
+        }
+
+        .tab-panel[hidden] {
+            display: none;
+        }
+
         header h1 {
             flex: 1;
             font-size: 1.1rem;
@@ -213,6 +255,7 @@
         .search-wrap {
             flex: 1;
             max-width: 320px;
+            margin-left: auto;
         }
 
         #site-search {
@@ -220,7 +263,7 @@
             font-size: 0.85rem;
             color: var(--portal-text);
 
-            width: 220px;
+            width: 100%;
             padding: 0.45rem 0.9rem 0.45rem 2.1rem;
             border-radius: 9999px;
             border: 1px solid var(--portal-outline);
@@ -578,23 +621,36 @@
 
         <div id="banner">
             <p>Welcome to the <b>Digital Initiatives</b> learning portal.</p>
-            <p><b>Click</b> on any of the cards below to open a site, and <b>bookmark</b> this page for easy access.</p>
+            <p><b>Click</b> on any of the cards below to open a site or tool, and <b>bookmark</b> this page for easy access.</p>
         </div>
 
         <div id="filter-bar">
             <div class="filter-inner">
+                <div class="tab-bar" role="tablist" aria-label="Choose portal content">
+                    <button id="tab-sites" type="button" role="tab" aria-selected="true" aria-controls="sites-panel">Sites</button>
+                    <button id="tab-tools" type="button" role="tab" aria-selected="false" aria-controls="tools-panel" tabindex="-1">Tools</button>
+                </div>
                 <div class="search-wrap">
-                    <input id="site-search" type="search" placeholder="Search sites&hellip;" aria-label="Search sites" autocomplete="off">
+                    <input id="site-search" type="search" placeholder="Search&hellip;" aria-label="Search sites and tools" autocomplete="off">
                 </div>
             </div>
         </div>
 
-        <section>
-            <h2>Sites</h2>
+        <section id="sites-panel" class="tab-panel" role="tabpanel" aria-labelledby="tab-sites">
+            <h2 id="sites-heading">Sites</h2>
             <div class="grid-layout" id="sites-grid"></div>
-            <div id="empty-state" hidden>
+            <div id="sites-empty-state" hidden>
                 <p>No sites match your filters.</p>
-                <button id="clear-filters" type="button">Clear filters</button>
+                <button id="sites-clear-filters" type="button">Clear filters</button>
+            </div>
+        </section>
+
+        <section id="tools-panel" class="tab-panel" role="tabpanel" aria-labelledby="tab-tools" hidden>
+            <h2 id="tools-heading">Tools</h2>
+            <div class="grid-layout" id="tools-grid"></div>
+            <div id="tools-empty-state" hidden>
+                <p>No tools match your search.</p>
+                <button id="tools-clear-filters" type="button">Clear search</button>
             </div>
         </section>
     </main>
@@ -603,7 +659,7 @@
         Digital Initiatives - Bendigo Kangan Institute
     </footer>
 
-    <script src="sites.js"></script>
+    <script src="portal.js"></script>
 
     <script>
         (function () {
@@ -611,15 +667,25 @@
             var menuLabel = document.getElementById('course-menu-label');
             var menu = document.getElementById('course-menu');
             var searchInput = document.getElementById('site-search');
-            var grid = document.getElementById('sites-grid');
-            var emptyState = document.getElementById('empty-state');
-            var clearBtn = document.getElementById('clear-filters');
-            var heading = document.querySelector('section h2');
-            var cards = [];
+            var sitesGrid = document.getElementById('sites-grid');
+            var sitesEmptyState = document.getElementById('sites-empty-state');
+            var sitesClearBtn = document.getElementById('sites-clear-filters');
+            var sitesHeading = document.getElementById('sites-heading');
+            var toolsGrid = document.getElementById('tools-grid');
+            var toolsEmptyState = document.getElementById('tools-empty-state');
+            var toolsClearBtn = document.getElementById('tools-clear-filters');
+            var toolsHeading = document.getElementById('tools-heading');
+            var sitesTabBtn = document.getElementById('tab-sites');
+            var toolsTabBtn = document.getElementById('tab-tools');
+            var sitesPanel = document.getElementById('sites-panel');
+            var toolsPanel = document.getElementById('tools-panel');
+            var siteCards = [];
+            var toolCards = [];
             var courseIds = [];
             var coursesById = {};
             var DEFAULT_COURSE = 'cert3-in-it';
-            var state = { course: DEFAULT_COURSE, query: '' };
+            var TOOLS_HASH = 'tools';
+            var state = { course: DEFAULT_COURSE, query: '', tab: 'sites' };
 
             function esc(s) {
                 return String(s)
@@ -629,7 +695,7 @@
                     .replace(/"/g, '&quot;');
             }
 
-            function renderCard(site) {
+            function renderSiteCard(site) {
                 var a = document.createElement('a');
                 a.className = 'grid-item';
                 a.href = site.href;
@@ -638,6 +704,20 @@
                 a.innerHTML =
                     '<div class="thumbnail"><img src="' + site.img + '" alt="' + esc(site.title) + '" loading="lazy"></div>' +
                     '<div class="details"><h2>' + esc(site.title) + '</h2><p>' + esc(site.description) + '</p></div>';
+                return a;
+            }
+
+            function renderToolCard(tool) {
+                var a = document.createElement('a');
+                a.className = 'grid-item';
+                a.href = tool.href;
+                a.setAttribute('data-search', (tool.title + ' ' + tool.description).toLowerCase());
+                var html = '';
+                if (tool.img) {
+                    html += '<div class="thumbnail"><img src="' + tool.img + '" alt="' + esc(tool.title) + '" loading="lazy"></div>';
+                }
+                html += '<div class="details"><h2>' + esc(tool.title) + '</h2><p>' + esc(tool.description) + '</p></div>';
+                a.innerHTML = html;
                 return a;
             }
 
@@ -711,33 +791,21 @@
                 }
             });
 
-            function applyFilters() {
-                var q = state.query.trim().toLowerCase();
-                var visible = 0;
-                cards.forEach(function (card) {
-                    var inCourse = card.getAttribute('data-courses').split(' ').indexOf(state.course) !== -1;
-                    var matchesQuery = !q || card.getAttribute('data-search').indexOf(q) !== -1;
-                    if (inCourse && matchesQuery) {
-                        visible++;
-                        if (card.classList.contains('hidden')) {
-                            card.classList.remove('hidden');
-                            card.classList.add('animating-out');
-                            void card.offsetWidth;
-                            card.classList.remove('animating-out');
-                        }
-                    } else {
-                        card.classList.add('hidden');
-                        card.classList.remove('animating-out');
-                    }
-                });
-                emptyState.hidden = visible !== 0;
-
-                var text;
-                if (q) {
-                    text = visible + ' result' + (visible === 1 ? '' : 's') + ' for \u201c' + state.query.trim() + '\u201d';
-                } else {
-                    text = coursesById[state.course].fullname;
+            function revealCard(card) {
+                if (card.classList.contains('hidden')) {
+                    card.classList.remove('hidden');
+                    card.classList.add('animating-out');
+                    void card.offsetWidth;
+                    card.classList.remove('animating-out');
                 }
+            }
+
+            function concealCard(card) {
+                card.classList.add('hidden');
+                card.classList.remove('animating-out');
+            }
+
+            function setHeading(heading, text) {
                 if (heading.textContent !== text) {
                     heading.style.opacity = '0';
                     setTimeout(function () {
@@ -747,11 +815,88 @@
                 }
             }
 
+            function applySiteFilters() {
+                var q = state.query.trim().toLowerCase();
+                var visible = 0;
+                siteCards.forEach(function (card) {
+                    var inCourse = card.getAttribute('data-courses').split(' ').indexOf(state.course) !== -1;
+                    var matchesQuery = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+                    if (inCourse && matchesQuery) {
+                        visible++;
+                        revealCard(card);
+                    } else {
+                        concealCard(card);
+                    }
+                });
+                sitesEmptyState.hidden = visible !== 0;
+
+                var text;
+                if (q) {
+                    text = visible + ' result' + (visible === 1 ? '' : 's') + ' for \u201c' + state.query.trim() + '\u201d';
+                } else {
+                    text = coursesById[state.course].fullname;
+                }
+                setHeading(sitesHeading, text);
+            }
+
+            function applyToolFilters() {
+                var q = state.query.trim().toLowerCase();
+                var visible = 0;
+                toolCards.forEach(function (card) {
+                    var matchesQuery = !q || card.getAttribute('data-search').indexOf(q) !== -1;
+                    if (matchesQuery) {
+                        visible++;
+                        revealCard(card);
+                    } else {
+                        concealCard(card);
+                    }
+                });
+                toolsEmptyState.hidden = visible !== 0;
+
+                var text;
+                if (q) {
+                    text = visible + ' result' + (visible === 1 ? '' : 's') + ' for \u201c' + state.query.trim() + '\u201d';
+                } else {
+                    text = 'Tools';
+                }
+                setHeading(toolsHeading, text);
+            }
+
+            function applyFilters() {
+                if (state.tab === 'tools') {
+                    applyToolFilters();
+                } else {
+                    applySiteFilters();
+                }
+            }
+
+            function setTab(tab, updateHash) {
+                state.tab = tab === 'tools' ? 'tools' : 'sites';
+                var onSites = state.tab === 'sites';
+                sitesTabBtn.setAttribute('aria-selected', onSites ? 'true' : 'false');
+                toolsTabBtn.setAttribute('aria-selected', onSites ? 'false' : 'true');
+                sitesTabBtn.tabIndex = onSites ? 0 : -1;
+                toolsTabBtn.tabIndex = onSites ? -1 : 0;
+                sitesPanel.hidden = !onSites;
+                toolsPanel.hidden = onSites;
+                searchInput.placeholder = onSites ? 'Search sites\u2026' : 'Search tools\u2026';
+                searchInput.setAttribute('aria-label', onSites ? 'Search sites' : 'Search tools');
+                if (updateHash) {
+                    history.replaceState(null, '', '#' + (onSites ? state.course : TOOLS_HASH));
+                }
+                applyFilters();
+            }
+
             function routeFromHash() {
                 var hash = window.location.hash.replace('#', '');
+                if (hash === TOOLS_HASH) {
+                    syncMenu();
+                    setTab('tools', false);
+                    return;
+                }
                 state.course = courseIds.indexOf(hash) !== -1 ? hash : DEFAULT_COURSE;
                 syncMenu();
-                applyFilters();
+                setTab('sites', false);
             }
 
             searchInput.addEventListener('input', function () {
@@ -759,11 +904,40 @@
                 applyFilters();
             });
 
-            clearBtn.addEventListener('click', function () {
+            sitesClearBtn.addEventListener('click', function () {
                 searchInput.value = '';
                 state.query = '';
                 history.replaceState(null, '', '#' + DEFAULT_COURSE);
                 routeFromHash();
+            });
+
+            toolsClearBtn.addEventListener('click', function () {
+                searchInput.value = '';
+                state.query = '';
+                applyFilters();
+                searchInput.focus();
+            });
+
+            sitesTabBtn.addEventListener('click', function () {
+                setTab('sites', true);
+            });
+
+            toolsTabBtn.addEventListener('click', function () {
+                setTab('tools', true);
+            });
+
+            document.querySelector('.tab-bar').addEventListener('keydown', function (e) {
+                if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
+                    return;
+                }
+                e.preventDefault();
+                if (state.tab === 'sites') {
+                    toolsTabBtn.focus();
+                    setTab('tools', true);
+                } else {
+                    sitesTabBtn.focus();
+                    setTab('sites', true);
+                }
             });
 
             window.addEventListener('popstate', routeFromHash);
@@ -778,9 +952,17 @@
                 renderCourseMenu(data.courses);
 
                 data.sites.forEach(function (site) {
-                    var card = renderCard(site);
-                    grid.appendChild(card);
-                    cards.push(card);
+                    var card = renderSiteCard(site);
+                    sitesGrid.appendChild(card);
+                    siteCards.push(card);
+                });
+
+                var tools = window.TOOLS_DATA ? window.TOOLS_DATA.tools : [];
+                // Tools can be hidden without deleting them: "disabled": true
+                tools.filter(function (tool) { return !tool.disabled; }).forEach(function (tool) {
+                    var card = renderToolCard(tool);
+                    toolsGrid.appendChild(card);
+                    toolCards.push(card);
                 });
 
                 routeFromHash();

@@ -159,9 +159,7 @@ The script creates `sites/<slug>/` with the following structure:
 sites/<slug>/
 ├── mkdocs.yml
 └── docs/
-    ├── index.md
-    └── extra/
-        └── style.css
+    └── index.md
 ```
 
 ### After running `create.sh`
@@ -170,13 +168,11 @@ The wizard scaffolds the site but there are a couple of manual steps to fully
 wire it up:
 
 1. **Register the site on the portal** — add an entry to the `sites` array in
-   `build/sites.js` under the correct course (`cert3-in-it` and/or
+   `build/portal.js` under the correct course (`cert3-in-it` and/or
    `diploma-of-it`).
-2. **Update `AGENTS.md`** — add the new site to the "Existing Sites" table.
-3. **Match the button colour** — `style.css` is copied from the template with a
-   default (purple) button colour. Update the `.md-sidebar__inner ... .md-nav__link`
-   background colour in `sites/<slug>/docs/extra/style.css` to match your chosen
-   palette (see the palette hex table in `AGENTS.md`).
+2. **No per-site styling needed** — colours come from the `primary` palette in
+   the site's `mkdocs.yml` via the shared `shared/style.css`. Never create a
+   per-site stylesheet (see `AGENTS.md`).
 
 ---
 
