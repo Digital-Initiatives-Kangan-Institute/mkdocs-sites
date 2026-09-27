@@ -9,22 +9,37 @@ nav:
   - Menu:
     - Resources:
       - Intro to HTML: pages/resources/intro-to-html.md
+      - How the Web Works: pages/resources/how-the-web-works.md
+      - Development Environment: pages/resources/development-environment.md
       - Elements: pages/resources/elements.md
       - Nested Elements: pages/resources/nested-elements.md
       - Attributes: pages/resources/element-attributes.md
+      - Page Structure: pages/resources/page-structure.md
+      - Links and Navigation: pages/resources/links-navigation.md
       - Tables and Forms: pages/resources/tables-forms.md
+      - Styling with CSS: pages/resources/css.md
+      - Planning a Website: pages/resources/planning-a-website.md
       - W3C: pages/resources/w3c.md
+      - Accessibility: pages/resources/accessibility.md
+      - Legislation and Procedures: pages/resources/legislation.md
+      - Testing a Website: pages/resources/testing.md
+      - Publishing a Website: pages/resources/publishing.md
       - Deploying to GitHub Pages: pages/resources/deployment-github.md
       - Additional Resources: pages/resources/additional-resources.md
     - Tasks:
-      - Task 1 - Elements: pages/tasks/task-1-elements.md
-      - Task 2 - Nested Elements: pages/tasks/task-2-nested-elements.md
-      - Task 3 - Attributes: pages/tasks/task-3-attributes.md
-      - Task 4 - Tables and Forms: pages/tasks/task-4-tables-forms.md
-      - Task 5 - Links and Pages: pages/tasks/task-5-links-pages.md
-      - Task 6 - Page Structure: pages/tasks/task-6-page-structure.md
-      - Task 7 - Validation: pages/tasks/task-7-validation.md
-      - Task 8 - Publish Your Website: pages/tasks/task-8-publish-website.md
+      - Task 1 - Development Environment: pages/tasks/task-1-development-environment.md
+      - Task 2 - Elements: pages/tasks/task-2-elements.md
+      - Task 3 - Nested Elements: pages/tasks/task-3-nested-elements.md
+      - Task 4 - Attributes: pages/tasks/task-4-attributes.md
+      - Task 5 - Page Structure: pages/tasks/task-5-page-structure.md
+      - Task 6 - Links and Navigation: pages/tasks/task-6-links-navigation.md
+      - Task 7 - Tables and Forms: pages/tasks/task-7-tables-forms.md
+      - Task 8 - Styling with CSS: pages/tasks/task-8-css.md
+      - Task 9 - Planning a Website: pages/tasks/task-9-planning.md
+      - Task 10 - Build a Website: pages/tasks/task-10-build-website.md
+      - Task 11 - Testing and Validation: pages/tasks/task-11-testing.md
+      - Task 12 - Publish Your Website: pages/tasks/task-12-publish-website.md
+      - Task 13 - Knowledge Review: pages/tasks/task-13-knowledge-review.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -38,4 +53,4 @@ plugins:
       # Uncomment below if you would like to reset the table of contents numbering
       # after a certain page:
       restart_increment_after:
-        - pages/tasks/task-1-elements.md
+        - pages/tasks/task-1-development-environment.md

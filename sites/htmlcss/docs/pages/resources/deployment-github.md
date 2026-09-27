@@ -46,7 +46,14 @@ The following instructions will show you how to create a GitHub repository, to p
         ![Select New Repository Button](../../assets/deploy-github/create-repo-option.png)
 
 4. Fill in the repository form
-You need to give your repository a name and enable the `Add README` option.
+You need to give your repository a **name**, an optional **description**, set the visibility to **Public**, and enable the `Add README` option.
+
+    | Field | What to enter |
+    |---|---|
+    | **Repository name** | A short name using lowercase letters and hyphens, for example `my-first-website`. This becomes part of your site's address. |
+    | **Description** | A short sentence describing the project (optional) |
+    | **Visibility** | `Public`. GitHub Pages is only available for public repositories on free accounts. |
+    | **Add README** | `On` |
 
     !!! warning
         It is important that you enable the `Add README` option, otherwise you will not be able to upload files.
@@ -78,8 +85,10 @@ You need to give your repository a name and enable the `Add README` option.
         ![Choose files link](../../assets/deploy-github/choose-files-link.png)
 
 4. Select the website files you have created in a previous activity
-Select any `index.html` and other `html` files you created in a previous activity and click the `open` button.
-!!! This probably needs a screenshot !!!
+Select your `index.html`, other `.html` files and your `style.css` file, then click the `Open` button.
+
+    !!! warning "Uploading folders"
+        The file picker only selects files, not folders. If your website has an `images` folder, **drag and drop** the whole folder from File Explorer onto the upload area instead. This keeps the folder structure, so paths like `images/logo.png` still work once the site is published.
 
 5. Click the `Commit changes` button to upload the files
 
@@ -167,7 +176,19 @@ Make sure you have a `html` file in your repository named `index.html`. If you d
 
 Remember: Web browser look for the `index.html` file by default when you do not specify a page in the address bar.
 
+**My pages load but the images are broken**
+Check that the `images` folder was uploaded and appears in your repository. Then check that the file names in your `src` attributes exactly match the file names in the repository, **including capital letters**. `Logo.png` and `logo.png` are different files on a web server.
+
+**My page has no styling**
+Check that `style.css` was uploaded, and that the `href` in each page's `<link rel="stylesheet">` matches its file name exactly.
+
+**I made changes but the live site has not updated**
+Upload the changed files again and commit them. Then check the `Actions` tab and wait for the new deployment to turn green. You may need to refresh the page with `Ctrl + F5` to clear the old version from your browser.
+
+**The site address**
+Your site's address follows the pattern `https://username.github.io/repository-name/`. You can also find it under `Settings` then `Pages` in your repository.
+
 ## Activity - Publish Your Website {.notice-me}
 
-[Attempt Activity 8 - Publish Your Website](../tasks/task-8-publish-website.md){.md-button}
+[Attempt Activity 12 - Publish Your Website](../tasks/task-12-publish-website.md){.md-button}
 
