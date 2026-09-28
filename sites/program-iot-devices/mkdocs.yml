@@ -65,6 +65,8 @@ nav:
       - "Challenge 1: Push-Your-Luck Dice Game with Melodies": pages/tasks/challenge-1.md
       - "Challenge 2: Whack-a-Mole Reaction Game": pages/tasks/challenge-2.md
       - "Challenge 3: Bomb Pass: A Four-Player Party Game": pages/tasks/challenge-3.md
+      - "Challenge 4: Fern the Plant-Care Pet": pages/tasks/challenge-4.md
+      - "Challenge 5: Luna the Smart Nightlight": pages/tasks/challenge-5.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
