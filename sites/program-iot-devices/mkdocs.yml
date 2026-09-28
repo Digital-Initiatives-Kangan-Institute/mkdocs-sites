@@ -61,6 +61,10 @@ nav:
       - Warehouse Loading Dock Station: pages/tasks/practice-1.md
       - Chemical Storage Access & Tamper Monitor: pages/tasks/practice-2.md
       - Museum Display Case Night Guard: pages/tasks/practice-3.md
+    - Challenges:
+      - "Challenge 1: Push-Your-Luck Dice Game with Melodies": pages/tasks/challenge-1.md
+      - "Challenge 2: Whack-a-Mole Reaction Game": pages/tasks/challenge-2.md
+      - "Challenge 3: Bomb Pass: A Four-Player Party Game": pages/tasks/challenge-3.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -102,6 +106,7 @@ plugins:
         - pages/tasks/practice-1.md
         - pages/tasks/practice-2.md
         - pages/tasks/practice-3.md
+        - pages/tasks/challenge-1.md
 
 extra:
   generator: false
