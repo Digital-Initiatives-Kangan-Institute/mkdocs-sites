@@ -12,6 +12,7 @@ Links are what turn separate webpages into a **website**. This page covers the d
 | **Internal link** | Another page on the same website | `about.html` |
 | **Email link** | Opens the visitor's email program | `mailto:hello@example.com` |
 | **Phone link** | Starts a phone call on a mobile device | `tel:0390001234` |
+| **Page anchor** | A section on the same page | `#opening-hours` |
 
 External links must include the full address, including `https://`. Without it, the browser thinks you are linking to a file on your own site.
 
@@ -30,6 +31,36 @@ The `target="_blank"` attribute opens a link in a new browser tab. It is sometim
 ```
 
 Use it sparingly, and tell the visitor the link opens a new tab. Unexpected new tabs can be confusing, particularly for screen reader users.
+
+***
+
+## Page Anchors
+
+A **page anchor** is a link that jumps to a particular **section on the same page** instead of opening a different page. Page anchors are useful on long pages, for example a list of links at the top of the page that jumps to each section, or a **Back to top** link at the end of each section.
+
+A page anchor has two parts:
+
+1. Give the section you want to jump to an `id` (see [Attributes](element-attributes.md#identifying-elements-with-class-and-id))
+2. Create a link whose `href` is a `#` followed by that `id`
+
+```html
+<a href="#opening-hours">Opening Hours</a>   <!-- the link -->
+
+<section id="opening-hours">                 <!-- where the link jumps to -->
+  <h2>Opening Hours</h2>
+</section>
+```
+
+Click the links in the preview to jump between the sections.
+
+<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8bmF2PlxuICA8YSBocmVmPVwiI3NlcnZpY2VzXCI+U2VydmljZXM8L2E+IHxcbiAgPGEgaHJlZj1cIiNvcGVuaW5nLWhvdXJzXCI+T3BlbmluZyBIb3VyczwvYT4gfFxuICA8YSBocmVmPVwiI2NvbnRhY3RcIj5Db250YWN0PC9hPlxuPC9uYXY+XG5cbjxoMSBpZD1cInRvcFwiPkJyaWdodCBTbWlsZSBEZW50YWw8L2gxPlxuXG48c2VjdGlvbiBpZD1cInNlcnZpY2VzXCI+XG4gIDxoMj5TZXJ2aWNlczwvaDI+XG4gIDxwPkNoZWNrLXVwcywgY2xlYW5pbmcgYW5kIHdoaXRlbmluZy48L3A+XG4gIDxwPjxhIGhyZWY9XCIjdG9wXCI+QmFjayB0byB0b3A8L2E+PC9wPlxuPC9zZWN0aW9uPlxuXG48c2VjdGlvbiBpZD1cIm9wZW5pbmctaG91cnNcIj5cbiAgPGgyPk9wZW5pbmcgSG91cnM8L2gyPlxuICA8cD5Nb25kYXkgdG8gRnJpZGF5LCA4OjAwYW0gdG8gNTowMHBtLjwvcD5cbiAgPHA+PGEgaHJlZj1cIiN0b3BcIj5CYWNrIHRvIHRvcDwvYT48L3A+XG48L3NlY3Rpb24+XG5cbjxzZWN0aW9uIGlkPVwiY29udGFjdFwiPlxuICA8aDI+Q29udGFjdDwvaDI+XG4gIDxwPlBob25lIDAzIDkwMDAgMTIzNC48L3A+XG4gIDxwPjxhIGhyZWY9XCIjdG9wXCI+QmFjayB0byB0b3A8L2E+PC9wPlxuPC9zZWN0aW9uPiJ9XSwgImNzcyI6ICJzZWN0aW9uIHtcbiAgbWluLWhlaWdodDogMzAwcHg7XG4gIGJvcmRlci10b3A6IDJweCBzb2xpZCAjMWU1Zjc0O1xufSIsICJqcyI6ICIiLCAiYWN0aXZlVGFiIjogImh0bWwiLCAiYWN0aXZlUGFnZSI6ICJpbmRleC5odG1sIn0="></embed>
+The `id` in the `href` must match the element's `id` exactly, including capital letters, and each `id` can only be used **once** on a page.
+
+You can also jump to a section on **another page** by adding the `#` and `id` to the end of the file name:
+
+```html
+<a href="about.html#our-team">Meet our team</a>
+```
 
 ***
 
@@ -115,6 +146,7 @@ Before building the navigation, decide which pages the site needs and how they c
 ## Summary
 
 - External links use a full address; internal links use a relative file path
+- Page anchors use `href="#id"` to jump to the element with that `id` on the same page
 - Link text should describe where the link goes, never just "click here"
 - Navigation menus are a `ul` of links inside a `nav` element
 - Keep the navigation identical on every page, and highlight the current page with a class such as `active`
