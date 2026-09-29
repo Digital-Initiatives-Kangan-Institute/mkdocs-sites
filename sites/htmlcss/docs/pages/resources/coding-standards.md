@@ -235,3 +235,7 @@ header {
 - Use short comments to label the main sections of each page, and never put private information in them
 - Keep all styling in an external CSS stylesheet rather than inline `style` attributes
 - Obsolete tags such as `<font>` and `<center>` were removed from HTML and replaced by CSS; never use them
+
+### Activity - Coding Standards
+
+[Attempt Activity 9 - Coding Standards](../tasks/task-9-coding-standards.md){.md-button}

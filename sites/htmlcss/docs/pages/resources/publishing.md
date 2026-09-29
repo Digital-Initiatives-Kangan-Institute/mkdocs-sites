@@ -135,4 +135,4 @@ In short: **GitHub Pages** is free, secure by default, and tracks every version,
 
 ### Activity - Publish Your Website
 
-[Attempt Activity 12 - Publish Your Website](../tasks/task-12-publish-website.md){.md-button}
+[Attempt Activity 13 - Publish Your Website](../tasks/task-13-publish-website.md){.md-button}

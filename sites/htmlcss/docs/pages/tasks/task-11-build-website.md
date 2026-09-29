@@ -1,6 +1,6 @@
-# Task 10 - Build a Website
+# Task 11 - Build a Website
 
-In this task you will build the **Paws and Claws Pet Grooming** website that you planned in Task 9, one step at a time. Then you will build the **Riverside Bike Repairs** website on your own, repeating the same process.
+In this task you will build the **Paws and Claws Pet Grooming** website that you planned in Task 10, one step at a time. Then you will build the **Riverside Bike Repairs** website on your own, repeating the same process.
 
 ## Gather the Assets
 
@@ -172,7 +172,7 @@ In this task you will build the **Paws and Claws Pet Grooming** website that you
 ## Check Against the Requirements
 
 !!! abstract "Instructions"
-    **Using your requirements list from Task 9**, check the finished website against every requirement, one line at a time. Mark each one as met or not met.
+    **Using your requirements list from Task 10**, check the finished website against every requirement, one line at a time. Mark each one as met or not met.
 
     Fix anything that is not met, then check again.
 
@@ -182,7 +182,7 @@ In this task you will build the **Paws and Claws Pet Grooming** website that you
 ## Build a Second Website
 
 !!! abstract "Instructions"
-    **Using VS Code**, build the **Riverside Bike Repairs** website from the brief and plan you made in Task 9, on your own.
+    **Using VS Code**, build the **Riverside Bike Repairs** website from the brief and plan you made in Task 10, on your own.
 
     Repeat the same process as the Paws and Claws website:
 

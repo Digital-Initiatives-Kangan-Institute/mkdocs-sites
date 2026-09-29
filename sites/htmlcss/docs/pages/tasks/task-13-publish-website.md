@@ -1,4 +1,4 @@
-# Task 12 - Publish Your Website
+# Task 13 - Publish Your Website
 
 ## Create a Repository
 
@@ -60,7 +60,7 @@
 ## Update the Live Site
 
 !!! abstract "Instructions"
-    **Using VS Code and GitHub**, make one improvement to your Paws and Claws website, such as a change from your amendment record in Task 11.
+    **Using VS Code and GitHub**, make one improvement to your Paws and Claws website, such as a change from your amendment record in Task 12.
 
     - make the change in VS Code and test it with Live Preview
     - upload the changed file to your repository and commit it

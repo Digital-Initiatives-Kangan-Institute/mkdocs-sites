@@ -36,11 +36,12 @@ nav:
       - Task 6 - Links and Navigation: pages/tasks/task-6-links-navigation.md
       - Task 7 - Tables and Forms: pages/tasks/task-7-tables-forms.md
       - Task 8 - Styling with CSS: pages/tasks/task-8-css.md
-      - Task 9 - Planning a Website: pages/tasks/task-9-planning.md
-      - Task 10 - Build a Website: pages/tasks/task-10-build-website.md
-      - Task 11 - Testing and Validation: pages/tasks/task-11-testing.md
-      - Task 12 - Publish Your Website: pages/tasks/task-12-publish-website.md
-      - Task 13 - Knowledge Review: pages/tasks/task-13-knowledge-review.md
+      - Task 9 - Coding Standards: pages/tasks/task-9-coding-standards.md
+      - Task 10 - Planning a Website: pages/tasks/task-10-planning.md
+      - Task 11 - Build a Website: pages/tasks/task-11-build-website.md
+      - Task 12 - Testing and Validation: pages/tasks/task-12-testing.md
+      - Task 13 - Publish Your Website: pages/tasks/task-13-publish-website.md
+      - Task 14 - Knowledge Review: pages/tasks/task-14-knowledge-review.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
