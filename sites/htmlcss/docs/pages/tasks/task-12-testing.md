@@ -1,9 +1,9 @@
-# Task 11 - Testing and Validation
+# Task 12 - Testing and Validation
 
 ## Validate a Page
 
 !!! abstract "Instructions"
-    **Using the W3C validator**, check the home page of your Paws and Claws website from Task 10 for errors.
+    **Using the W3C validator**, check the home page of your Paws and Claws website from Task 11 for errors.
 
     - Go to `https://validator.w3.org/`
     - Validate your page by direct input (paste in the full contents of the file)
@@ -110,7 +110,7 @@
 
     - record the name and version of each browser
     - write at least `10` test cases, covering navigation, page content, accessibility and security
-    - make sure every requirement from your Task 9 requirements list has at least one test case
+    - make sure every requirement from your Task 10 requirements list has at least one test case
     - record **Pass** or **Fail** for each test case in each browser, with a descriptive comment for every failure
 
 ??? question "Hint"
