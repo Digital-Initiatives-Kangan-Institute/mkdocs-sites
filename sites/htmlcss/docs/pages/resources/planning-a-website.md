@@ -158,3 +158,7 @@ In a workplace, this confirmation is often recorded as a **sign-off**: the clien
 ### Activity - Planning a Website
 
 [Attempt Activity 10 - Planning a Website](../tasks/task-10-planning.md){.md-button}
+
+### Activity - Build a Website
+
+[Attempt Activity 11 - Build a Website](../tasks/task-11-build-website.md){.md-button}
