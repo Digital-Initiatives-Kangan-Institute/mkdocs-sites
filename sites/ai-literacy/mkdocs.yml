@@ -20,5 +20,6 @@ theme:
     primary: amber
 
 plugins:
+  - search
   - enumerate-headings:
       increment_across_pages: true

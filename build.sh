@@ -52,6 +52,16 @@ for site_path in "$SITES_DIR"/*/; do
     }
 done
 
+# ── Tools ─────────────────────────────────────────────────────────────────────
+# Build the web tools in tools/ into build/tools/ (tools/shared/ is skipped).
+echo -e "\n🧰 Building tools...\n"
+if "$SCRIPT_DIR/build-tools.sh"; then
+  echo -e "${GREEN}✔  tools → build/tools${NC}"
+else
+  echo -e "${RED}✖  tools build failed${NC}"
+  (( fail++ )) || true
+fi
+
 # ── Summary ───────────────────────────────────────────────────────────────────
 echo -e "\n─────────────────────────────────"
 echo -e "  Built:   ${GREEN}$pass${NC}"

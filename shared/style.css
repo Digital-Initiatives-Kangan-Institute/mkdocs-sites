@@ -100,8 +100,8 @@ iframe, embed {
   width: 1em;
   height: 1em;
   background-color: currentColor;
-  -webkit-mask: url("/_assets/icons/back.svg") center / contain no-repeat;
-  mask: url("/_assets/icons/back.svg") center / contain no-repeat;
+  -webkit-mask: url("_assets/icons/back.svg") center / contain no-repeat;
+  mask: url("_assets/icons/back.svg") center / contain no-repeat;
   transition: transform 0.2s ease;
 }
 
@@ -400,14 +400,14 @@ iframe, embed {
   width: 1.1em;
   height: 1.1em;
   background-color: currentColor;
-  -webkit-mask: url("/_assets/icons/plus.svg") center / contain no-repeat;
-  mask: url("/_assets/icons/plus.svg") center / contain no-repeat;
+  -webkit-mask: url("_assets/icons/plus.svg") center / contain no-repeat;
+  mask: url("_assets/icons/plus.svg") center / contain no-repeat;
   opacity: 0.7;
 }
 
 .md-nav--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav__link::before {
-  -webkit-mask-image: url("/_assets/icons/minus.svg");
-  mask-image: url("/_assets/icons/minus.svg");
+  -webkit-mask-image: url("_assets/icons/minus.svg");
+  mask-image: url("_assets/icons/minus.svg");
 }
 
 /* Pages (leaf links sit one level deep; the top-level Portal button is excluded,
@@ -424,8 +424,8 @@ iframe, embed {
   width: 1em;
   height: 1em;
   background-color: currentColor;
-  -webkit-mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
-  mask: url("/_assets/icons/doc.svg") center / contain no-repeat;
+  -webkit-mask: url("_assets/icons/doc.svg") center / contain no-repeat;
+  mask: url("_assets/icons/doc.svg") center / contain no-repeat;
   opacity: 0.55;
 }
 
@@ -436,8 +436,8 @@ iframe, embed {
   width: 1em;
   height: 1em;
   background-color: currentColor;
-  -webkit-mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
-  mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  -webkit-mask: url("_assets/icons/hash.svg") center / contain no-repeat;
+  mask: url("_assets/icons/hash.svg") center / contain no-repeat;
   opacity: 0.5;
 }
 
@@ -458,8 +458,8 @@ iframe, embed {
   width: 1em;
   height: 1em;
   background-color: currentColor;
-  -webkit-mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
-  mask: url("/_assets/icons/hash.svg") center / contain no-repeat;
+  -webkit-mask: url("_assets/icons/hash.svg") center / contain no-repeat;
+  mask: url("_assets/icons/hash.svg") center / contain no-repeat;
   opacity: 0.5;
 }
 

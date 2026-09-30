@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="Anigram logo">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="9" fill="url(#g)"/>
+  <g fill="none" stroke="white" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" transform="translate(7 7)">
+    <path d="M9 1 L17 6.5 L9 12 L1 6.5 Z"/>
+    <path d="M1 9.5 L9 14.5 L17 9.5"/>
+    <path d="M1 12.5 L9 17.5 L17 12.5"/>
+  </g>
+</svg>

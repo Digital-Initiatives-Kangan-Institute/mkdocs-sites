@@ -1,0 +1,215 @@
+/* Common shell around every tool in tools/. All selectors are scoped under
+   .tool-shell so they never leak into tool UIs. The bar intentionally
+   mirrors the tools portal header (dark #111111 + brand #edab0c). */
+
+.tool-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.tool-shell__bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: none;
+  /* Stay above full-viewport overlays (login/boot screens, modal
+     backdrops) so the back button is visible on every screen. */
+  position: relative;
+  z-index: 1100;
+  height: 40px;
+  padding: 0 12px;
+  background-color: #111111;
+  border-bottom: 1px solid rgb(40, 40, 40);
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial,
+    Helvetica, sans-serif;
+}
+
+.tool-shell__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #edab0c;
+  border: 1px solid rgb(60, 60, 60);
+  border-radius: 9999px;
+  padding: 0.35rem 0.8rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tool-shell__back:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tool-shell__back-arrow {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.tool-shell__title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Right-aligned global actions (Share, Export, Help, …). Tools may render
+   any elements here, but icon buttons should use `tool-shell__btn` for a
+   consistent look with the bar. */
+.tool-shell__actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  margin-left: auto;
+}
+
+.tool-shell__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #ccc;
+  cursor: pointer;
+  font: inherit;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.tool-shell__btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.tool-shell__btn:focus-visible {
+  outline: 2px solid #edab0c;
+  outline-offset: 1px;
+}
+
+.tool-shell__btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.tool-shell__btn[aria-expanded="true"] {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Custom title content: brand lockup (logo + name) or editable doc title.
+   Keeps plain-string titles working untouched — these classes are opt-in. */
+.tool-shell__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tool-shell__logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  flex: none;
+}
+
+img.tool-shell__logo {
+  object-fit: contain;
+}
+
+.tool-shell__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+/* Editable document title (e.g. CodePad project name). Grid-mirror trick:
+   ::after echoes data-value so the input auto-sizes to its content. */
+.tool-shell__title-input-sizer {
+  display: inline-grid;
+  min-width: 2ch;
+  max-width: 100%;
+  align-items: center;
+}
+
+.tool-shell__title-input-sizer::after {
+  content: attr(data-value) ' ';
+  grid-area: 1 / 1;
+  visibility: hidden;
+  white-space: pre;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 2px 6px;
+  pointer-events: none;
+}
+
+.tool-shell__title-input {
+  grid-area: 1 / 1;
+  width: 0;
+  min-width: 100%;
+  max-width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  padding: 2px 6px;
+  margin: 0;
+  outline: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tool-shell__title-input:hover {
+  border-color: rgb(60, 60, 60);
+}
+
+.tool-shell__title-input:focus {
+  border-color: #edab0c;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.tool-shell__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* App roots must fill the shell body, not the viewport. */
+.tool-shell__body > * {
+  min-height: 0;
+  min-width: 0;
+}
+
+/* learn-terminal's desktop root uses 100vh standalone; fill the shell instead. */
+.tool-shell__body #app {
+  width: 100%;
+  height: 100%;
+}
