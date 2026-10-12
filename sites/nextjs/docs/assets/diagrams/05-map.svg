@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 290" width="820" height="290" role="img" aria-labelledby="title">
+  <title id="title">map runs your arrow function once for each product and collects the returned list items into a new array</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 14px; }
+      .h { font-size: 15px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .bl { fill: #0969da; } .g { fill: #1a7f37; } .p { fill: #8250df; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="818" height="288" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <text class="h bl" x="135" y="34" text-anchor="middle">products (the data)</text>
+  <text class="h p" x="410" y="34" text-anchor="middle">your arrow function</text>
+  <text class="mut" x="410" y="52" text-anchor="middle">runs once for each item</text>
+  <text class="h g" x="690" y="34" text-anchor="middle">the result (JSX)</text>
+
+  <rect x="20" y="62" width="230" height="200" rx="10" fill="#ddf4ff" stroke="#0969da"/>
+  <rect x="580" y="62" width="220" height="200" rx="10" fill="#dafbe1" stroke="#1a7f37"/>
+
+  <!-- Row 1 -->
+  <text class="m" x="32" y="105" font-size="13">{ id: 1, name: "Hoodie" }</text>
+  <line x1="252" y1="100" x2="300" y2="100" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="302" y="82" width="216" height="36" rx="18" fill="#fbefff" stroke="#8250df"/>
+  <text class="m" x="410" y="105" text-anchor="middle">(product) =&gt; &lt;li&gt;…&lt;/li&gt;</text>
+  <line x1="518" y1="100" x2="578" y2="100" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="m" x="600" y="105">&lt;li&gt;Hoodie&lt;/li&gt;</text>
+
+  <!-- Row 2 -->
+  <text class="m" x="32" y="167" font-size="13">{ id: 2, name: "Cap" }</text>
+  <line x1="252" y1="162" x2="300" y2="162" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="302" y="144" width="216" height="36" rx="18" fill="#fbefff" stroke="#8250df"/>
+  <text class="m" x="410" y="167" text-anchor="middle">(product) =&gt; &lt;li&gt;…&lt;/li&gt;</text>
+  <line x1="518" y1="162" x2="578" y2="162" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="m" x="600" y="167">&lt;li&gt;Cap&lt;/li&gt;</text>
+
+  <!-- Row 3 -->
+  <text class="m" x="32" y="229" font-size="13">{ id: 3, name: "Mug" }</text>
+  <line x1="252" y1="224" x2="300" y2="224" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="302" y="206" width="216" height="36" rx="18" fill="#fbefff" stroke="#8250df"/>
+  <text class="m" x="410" y="229" text-anchor="middle">(product) =&gt; &lt;li&gt;…&lt;/li&gt;</text>
+  <line x1="518" y1="224" x2="578" y2="224" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="m" x="600" y="229">&lt;li&gt;Mug&lt;/li&gt;</text>
+</svg>

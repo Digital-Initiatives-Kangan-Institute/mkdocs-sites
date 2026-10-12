@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" role="img" aria-labelledby="title">
+  <title id="title">The URL /books/2 matches the folder app/books/[id]; useParams gives { id: "2" }; Number turns it into 2; find returns the book or undefined; a ternary shows the details or not found</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 18px; }
+      .s { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 15px; }
+      .lbl { font-size: 13px; font-weight: 700; fill: #57606a; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .bl { fill: #0969da; } .p { fill: #8250df; } .g { fill: #1a7f37; } .r { fill: #cf222e; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="758" height="518" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- URL row -->
+  <text class="lbl" x="30" y="50">URL</text>
+  <text class="m" x="300" y="50" text-anchor="end">localhost:3000/</text>
+  <text class="m bl" x="340" y="50" text-anchor="middle" font-weight="700">books</text>
+  <text class="m" x="384" y="50" text-anchor="middle">/</text>
+  <text class="m p" x="420" y="50" text-anchor="middle" font-weight="700">2</text>
+
+  <line x1="340" y1="60" x2="340" y2="90" stroke="#0969da" stroke-width="2" stroke-dasharray="4 3"/>
+  <line x1="420" y1="60" x2="420" y2="90" stroke="#8250df" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- Folder row -->
+  <text class="lbl" x="30" y="112">Folders</text>
+  <text class="m" x="300" y="112" text-anchor="end">app/</text>
+  <text class="m bl" x="340" y="112" text-anchor="middle" font-weight="700">books</text>
+  <text class="m" x="384" y="112" text-anchor="middle">/</text>
+  <text class="m p" x="420" y="112" text-anchor="middle" font-weight="700">[id]</text>
+  <text class="m" x="448" y="112">/page.tsx</text>
+
+  <line x1="420" y1="122" x2="420" y2="152" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- useParams -->
+  <text class="lbl" x="30" y="182">useParams()</text>
+  <rect x="320" y="155" width="200" height="40" rx="8" fill="#fbefff" stroke="#8250df"/>
+  <text class="m" x="420" y="182" text-anchor="middle">{ <tspan class="p" font-weight="700">id</tspan>: "2" }</text>
+  <text class="mut" x="540" y="172">the folder name becomes the key</text>
+  <text class="mut" x="540" y="190">the value is always a string</text>
+
+  <line x1="420" y1="195" x2="420" y2="225" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Number -->
+  <text class="lbl" x="30" y="255">Number(params.id)</text>
+  <rect x="360" y="228" width="120" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="420" y="255" text-anchor="middle">2</text>
+  <text class="mut" x="500" y="253">now a number, so it can match b.id</text>
+
+  <line x1="420" y1="268" x2="420" y2="298" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- find -->
+  <text class="lbl" x="30" y="328">books.find(…)</text>
+  <rect x="200" y="301" width="440" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="s" x="420" y="327" text-anchor="middle">books.find((b) =&gt; b.id === 2)</text>
+
+  <line x1="330" y1="341" x2="230" y2="391" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="510" y1="341" x2="590" y2="391" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="g" x="262" y="370" text-anchor="end" font-size="13" font-weight="700">found it</text>
+  <text class="r" x="568" y="370" font-size="13" font-weight="700">no match</text>
+
+  <rect x="80" y="394" width="300" height="40" rx="8" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="s" x="230" y="420" text-anchor="middle">{ id: 2, title: "Dune", … }</text>
+  <rect x="490" y="394" width="200" height="40" rx="8" fill="#ffebe9" stroke="#cf222e"/>
+  <text class="s" x="590" y="420" text-anchor="middle">undefined</text>
+
+  <!-- ternary -->
+  <path d="M230,434 v20 h360 v-20" fill="none" stroke="#57606a" stroke-width="2"/>
+  <line x1="410" y1="454" x2="410" y2="468" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="180" y="470" width="460" height="36" rx="18" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="s" x="410" y="494" text-anchor="middle">book <tspan font-weight="700">?</tspan> &lt;details /&gt; <tspan font-weight="700">:</tspan> "not found"</text>
+</svg>

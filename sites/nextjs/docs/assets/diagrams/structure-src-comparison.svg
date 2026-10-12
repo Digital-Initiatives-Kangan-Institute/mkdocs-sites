@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 256" width="504" height="256" role="img" aria-labelledby="title">
+  <title id="title">Without a src folder, app sits at the project root; with a src folder, app moves inside src</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 16px; }
+      .h { font-size: 15px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .bl { fill: #0969da; } .p { fill: #8250df; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="502" height="254" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text class="h" x="32" y="42">No src/</text>
+  <path d="M40,80.0 V105.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,114.0 V139.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,114.0 V173.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M32,65.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="56" y="76.5">my-first-app/</text>
+  <path d="M58,99.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="82" y="110.5">app/</text>
+  <path d="M85,131.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,131.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="102" y="126.0" width="89" height="26" rx="6" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m" x="108" y="144.5">page.tsx</text>
+  <path d="M85,165.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,165.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="108" y="178.5">layout.tsx</text>
+  <text class="h" x="274.0" y="42">With src/</text>
+  <path d="M282.0,80.0 V105.0 H296.0" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M308.0,114.0 V139.0 H322.0" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M334.0,148.0 V173.0 H348.0" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M334.0,148.0 V207.0 H348.0" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M274.0,65.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="298.0" y="76.5">my-blog/</text>
+  <path d="M300.0,99.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="324.0" y="110.5">src/</text>
+  <path d="M326.0,133.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="350.0" y="144.5">app/</text>
+  <path d="M353.0,165.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M362.0,165.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="370.0" y="160.0" width="89" height="26" rx="6" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m" x="376.0" y="178.5">page.tsx</text>
+  <path d="M353.0,199.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M362.0,199.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="376.0" y="212.5">layout.tsx</text>
+</svg>

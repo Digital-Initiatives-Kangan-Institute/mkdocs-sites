@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 658 362" width="658" height="362" role="img" aria-labelledby="title">
+  <title id="title">A new Next.js project: the app folder holds layout.tsx, page.tsx and globals.css; next to it are public, .env.local, package.json and tsconfig.json</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 16px; }
+      .h { font-size: 15px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .bl { fill: #0969da; } .p { fill: #8250df; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="656" height="360" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <path d="M40,50.0 V75.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,84.0 V109.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,84.0 V143.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,84.0 V177.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M40,50.0 V211.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M40,50.0 V245.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M40,50.0 V279.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M40,50.0 V313.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M32,35.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="56" y="46.5">my-project/</text>
+  <path d="M58,69.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="82" y="80.5">app/</text>
+  <path d="M85,101.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,101.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="108" y="114.5">layout.tsx</text>
+  <text class="mut" x="242" y="113.5">shared layout (wraps all pages)</text>
+  <path d="M85,135.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,135.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="102" y="130.0" width="89" height="26" rx="6" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m" x="108" y="148.5">page.tsx</text>
+  <text class="mut" x="242" y="147.5">home page</text>
+  <path d="M85,169.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,169.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="108" y="182.5">globals.css</text>
+  <text class="mut" x="242" y="181.5">global styles</text>
+  <path d="M58,205.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="82" y="216.5">public/</text>
+  <text class="mut" x="242" y="215.5">static files (images, etc.)</text>
+  <path d="M59,237.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M68,237.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="82" y="250.5">.env.local</text>
+  <text class="mut" x="242" y="249.5">secret settings (you create this; not committed to git)</text>
+  <path d="M59,271.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M68,271.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="82" y="284.5">package.json</text>
+  <text class="mut" x="242" y="283.5">project config and dependencies</text>
+  <path d="M59,305.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M68,305.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="82" y="318.5">tsconfig.json</text>
+  <text class="mut" x="242" y="317.5">TypeScript config</text>
+</svg>
