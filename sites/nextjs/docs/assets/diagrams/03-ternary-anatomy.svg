@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-labelledby="title">
+  <title id="title">The three parts of a ternary: the question, the answer if true, and the answer if false</title>
+  <defs>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 21px; font-weight: 700; }
+      .op { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 30px; font-weight: 700; fill: #57606a; }
+      .h { font-size: 16px; font-weight: 700; }
+      .mut { fill: #57606a; }
+      .bl { fill: #0969da; } .g { fill: #1a7f37; } .r { fill: #cf222e; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="798" height="198" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <rect x="25" y="30" width="170" height="56" rx="10" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="110" y="66" text-anchor="middle">isLoggedIn</text>
+
+  <text class="op" x="222" y="68" text-anchor="middle">?</text>
+
+  <rect x="250" y="30" width="240" height="56" rx="10" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="m g" x="370" y="66" text-anchor="middle">"Welcome back!"</text>
+
+  <text class="op" x="517" y="68" text-anchor="middle">:</text>
+
+  <rect x="545" y="30" width="230" height="56" rx="10" fill="#ffebe9" stroke="#cf222e"/>
+  <text class="m r" x="660" y="66" text-anchor="middle">"Please log in"</text>
+
+  <path d="M35,100 v10 h150 v-10 M110,110 v12" fill="none" stroke="#0969da" stroke-width="2"/>
+  <text class="h bl" x="110" y="146" text-anchor="middle">1. The question</text>
+  <text class="mut" x="110" y="168" text-anchor="middle">true or false?</text>
+
+  <path d="M260,100 v10 h220 v-10 M370,110 v12" fill="none" stroke="#1a7f37" stroke-width="2"/>
+  <text class="h g" x="370" y="146" text-anchor="middle">2. Used if TRUE</text>
+  <text class="mut" x="370" y="168" text-anchor="middle">comes after the ?</text>
+
+  <path d="M555,100 v10 h210 v-10 M660,110 v12" fill="none" stroke="#cf222e" stroke-width="2"/>
+  <text class="h r" x="660" y="146" text-anchor="middle">3. Used if FALSE</text>
+  <text class="mut" x="660" y="168" text-anchor="middle">comes after the :</text>
+</svg>

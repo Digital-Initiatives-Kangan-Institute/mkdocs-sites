@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 330" width="860" height="330" role="img" aria-labelledby="title">
+  <title id="title">toggleTodo(2) maps over every todo: todos that are not id 2 are returned unchanged, todo 2 is copied with done flipped, and the new array goes into setTodos</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 14px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 14px; }
+      .h { font-size: 15px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .g { fill: #1a7f37; } .r { fill: #cf222e; } .bl { fill: #0969da; } .a { fill: #9a6700; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="858" height="328" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <rect x="20" y="16" width="160" height="34" rx="17" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="100" y="38" text-anchor="middle" font-weight="700">toggleTodo(2)</text>
+  <text class="mut" x="195" y="38">You clicked the todo with id 2</text>
+
+  <text class="h" x="130" y="78" text-anchor="middle">old array</text>
+  <text class="h" x="380" y="78" text-anchor="middle">todo.id === 2 ?</text>
+  <text class="h" x="710" y="78" text-anchor="middle">new array</text>
+
+  <!-- Row 1 -->
+  <rect x="20" y="92" width="220" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="130" y="117" text-anchor="middle">{ id: 1, done: true }</text>
+  <line x1="240" y1="112" x2="288" y2="112" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="117"><tspan class="r" font-weight="700">no</tspan>: give it back as it is</text>
+  <line x1="530" y1="112" x2="588" y2="112" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="590" y="92" width="240" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="710" y="117" text-anchor="middle">{ id: 1, done: true }</text>
+
+  <!-- Row 2 -->
+  <rect x="20" y="148" width="220" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="130" y="173" text-anchor="middle">{ id: 2, done: false }</text>
+  <line x1="240" y1="168" x2="288" y2="168" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="173"><tspan class="g" font-weight="700">YES</tspan>: copy it and flip done</text>
+  <line x1="530" y1="168" x2="588" y2="168" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="590" y="148" width="240" height="40" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text class="m" x="710" y="173" text-anchor="middle">{ id: 2, done: <tspan class="g" font-weight="700">true</tspan> }</text>
+  <text class="g" x="710" y="204" text-anchor="middle" font-size="12" font-weight="700">a brand new object</text>
+
+  <!-- Row 3 -->
+  <rect x="20" y="216" width="220" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="130" y="241" text-anchor="middle">{ id: 3, done: false }</text>
+  <line x1="240" y1="236" x2="288" y2="236" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="300" y="241"><tspan class="r" font-weight="700">no</tspan>: give it back as it is</text>
+  <line x1="530" y1="236" x2="588" y2="236" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="590" y="216" width="240" height="40" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="710" y="241" text-anchor="middle">{ id: 3, done: false }</text>
+
+  <!-- Footer -->
+  <path d="M590,272 v10 h240 v-10 M710,282 v12" fill="none" stroke="#57606a" stroke-width="2"/>
+  <text x="710" y="314" text-anchor="middle">the new array goes into <tspan class="m" font-weight="700">setTodos</tspan></text>
+</svg>

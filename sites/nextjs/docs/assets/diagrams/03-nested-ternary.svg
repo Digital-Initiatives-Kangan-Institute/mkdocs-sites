@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" role="img" aria-labelledby="title">
+  <title id="title">A nested ternary asks questions in order and stops at the first yes: num greater than 100 gives Huge, greater than 10 gives Medium, otherwise Tiny</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 18px; font-weight: 700; }
+      .lbl { font-size: 14px; font-weight: 700; }
+      .g { fill: #1a7f37; } .r { fill: #cf222e; } .bl { fill: #0969da; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="638" height="328" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- Question 1 -->
+  <rect x="40" y="30" width="220" height="54" rx="27" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="150" y="63" text-anchor="middle">num &gt; 100 ?</text>
+  <line x1="260" y1="57" x2="418" y2="57" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="lbl g" x="339" y="48" text-anchor="middle">yes</text>
+  <rect x="420" y="32" width="170" height="50" rx="10" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="m" x="505" y="63" text-anchor="middle">"Huge"</text>
+
+  <line x1="150" y1="84" x2="150" y2="138" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="lbl r" x="162" y="116">no</text>
+
+  <!-- Question 2 -->
+  <rect x="40" y="140" width="220" height="54" rx="27" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="150" y="173" text-anchor="middle">num &gt; 10 ?</text>
+  <line x1="260" y1="167" x2="418" y2="167" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="lbl g" x="339" y="158" text-anchor="middle">yes</text>
+  <rect x="420" y="142" width="170" height="50" rx="10" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="m" x="505" y="173" text-anchor="middle">"Medium"</text>
+
+  <line x1="150" y1="194" x2="150" y2="248" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="lbl r" x="162" y="226">no</text>
+
+  <!-- Fallback -->
+  <rect x="65" y="250" width="170" height="50" rx="10" fill="#f6f8fa" stroke="#57606a"/>
+  <text class="m" x="150" y="281" text-anchor="middle">"Tiny"</text>
+  <text x="260" y="281" fill="#57606a">nothing matched, so use the last value</text>
+</svg>

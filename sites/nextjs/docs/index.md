@@ -1,2 +1,1 @@
-# Under Construction
-This site is under construction, check back later.
+Select a resource or task in the menu to begin.
