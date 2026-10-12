@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 549 532" width="549" height="532" role="img" aria-labelledby="title">
+  <title id="title">The finished Pet Adoption Board: .env.local at the root; app holds globals.css, layout.tsx, lib/supabase.ts, components/PetCard.tsx, and pets with the list page and a [id] folder containing loading.tsx and the detail page</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 16px; }
+      .h { font-size: 15px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .bl { fill: #0969da; } .p { fill: #8250df; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="547" height="530" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <path d="M40,50.0 V75.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M40,50.0 V109.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,118.0 V143.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,118.0 V177.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,118.0 V211.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M92,220.0 V245.0 H106" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,118.0 V279.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M92,288.0 V313.0 H106" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,118.0 V347.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M92,356.0 V381.0 H106" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M92,356.0 V415.0 H106" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M118,424.0 V449.0 H132" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M118,424.0 V483.0 H132" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M32,35.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="56" y="46.5">pet-adoption/</text>
+  <path d="M59,67.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M68,67.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="82" y="80.5">.env.local</text>
+  <text class="mut" x="294" y="79.5">Supabase URL and publishable key</text>
+  <path d="M58,103.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="82" y="114.5">app/</text>
+  <path d="M85,135.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,135.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="108" y="148.5">globals.css</text>
+  <path d="M85,169.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M94,169.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="108" y="182.5">layout.tsx</text>
+  <path d="M84,205.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="108" y="216.5">lib/</text>
+  <path d="M111,237.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M120,237.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="134" y="250.5">supabase.ts</text>
+  <text class="mut" x="294" y="249.5">URL, headers and the Pet type</text>
+  <path d="M84,273.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="108" y="284.5">components/</text>
+  <path d="M111,305.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M120,305.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <text class="m" x="134" y="318.5">PetCard.tsx</text>
+  <text class="mut" x="294" y="317.5">one card in the list</text>
+  <path d="M84,341.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="108" y="352.5">pets/</text>
+  <path d="M111,373.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M120,373.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="128" y="368.0" width="89" height="26" rx="6" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m" x="134" y="386.5">page.tsx</text>
+  <text class="mut" x="294" y="385.5">the list</text>
+  <path d="M110,409.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <rect x="128" y="402.0" width="60" height="26" rx="6" fill="#fbefff" stroke="#8250df"/>
+  <text class="m" x="134" y="420.5">[id]/</text>
+  <path d="M137,441.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M146,441.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="154" y="436.0" width="118" height="26" rx="6" fill="#fff8c5" stroke="#9a6700"/>
+  <text class="m" x="160" y="454.5">loading.tsx</text>
+  <text class="mut" x="294" y="453.5">needed for useParams</text>
+  <path d="M137,475.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M146,475.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="154" y="470.0" width="89" height="26" rx="6" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m" x="160" y="488.5">page.tsx</text>
+  <text class="mut" x="294" y="487.5">one pet</text>
+</svg>

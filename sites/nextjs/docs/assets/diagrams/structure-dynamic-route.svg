@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609 222" width="609" height="222" role="img" aria-labelledby="title">
+  <title id="title">app/products/[id]/page.tsx handles /products/1, /products/42, /products/abc and any other value</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 16px; }
+      .h { font-size: 15px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .bl { fill: #0969da; } .p { fill: #8250df; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="607" height="220" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text class="h" x="32" y="42">Folders in your project</text>
+  <text class="h" x="280.8" y="42">URLs in the browser</text>
+  <path d="M40,80.0 V105.0 H54" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M66,114.0 V139.0 H80" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M92,148.0 V173.0 H106" fill="none" stroke="#d0d7de" stroke-width="1.5"/>
+  <path d="M32,65.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="56" y="76.5">app/</text>
+  <path d="M58,99.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <text class="m" x="82" y="110.5">products/</text>
+  <path d="M84,133.0 h6 l2,2 h8 v10 h-16 z" fill="#54aeff" stroke="#0969da" stroke-width="1"/>
+  <rect x="102" y="126.0" width="60" height="26" rx="6" fill="#fbefff" stroke="#8250df"/>
+  <text class="m" x="108" y="144.5">[id]/</text>
+  <path d="M111,165.0 h9 l4,4 v12 h-13 z" fill="#ffffff" stroke="#57606a" stroke-width="1.2"/><path d="M120,165.0 v4 h4" fill="none" stroke="#57606a" stroke-width="1.2"/>
+  <rect x="128" y="160.0" width="89" height="26" rx="6" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m" x="134" y="178.5">page.tsx</text>
+  <line x1="221" y1="173.0" x2="277" y2="173.0" stroke="#57606a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="281" y="159.0" width="297" height="28" rx="14" fill="#fbefff" stroke="#8250df"/>
+  <text class="m p" x="429" y="178.5" text-anchor="middle">/products/1, /products/42, …</text>
+</svg>

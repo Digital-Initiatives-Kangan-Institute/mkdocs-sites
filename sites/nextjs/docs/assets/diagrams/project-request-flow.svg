@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 430" width="840" height="430" role="img" aria-labelledby="title">
+  <title id="title">The Next.js page calls fetch inside useEffect with the apikey header; Supabase's REST API reads the pets table and sends back a JSON array; the page stores it with setPets and re-renders</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 14px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 13px; }
+      .h { font-size: 16px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .num { font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .g { fill: #1a7f37; } .bl { fill: #0969da; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="838" height="428" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- Browser -->
+  <rect x="20" y="20" width="390" height="330" rx="12" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="h bl" x="40" y="48">Your Next.js page (in the browser)</text>
+
+  <circle cx="52" cy="86" r="12" fill="#0969da"/><text class="num" x="52" y="91" text-anchor="middle">1</text>
+  <rect x="74" y="66" width="320" height="64" rx="8" fill="#ffffff" stroke="#0969da"/>
+  <text class="m" x="86" y="88">useEffect(() =&gt; {</text>
+  <text class="m" x="86" y="106">  fetch(`…/rest/v1/pets`, { headers })</text>
+  <text class="m" x="86" y="124">}, []);</text>
+
+  <circle cx="52" cy="232" r="12" fill="#0969da"/><text class="num" x="52" y="237" text-anchor="middle">3</text>
+  <rect x="74" y="214" width="320" height="38" rx="8" fill="#ffffff" stroke="#0969da"/>
+  <text class="m" x="86" y="238">.then((data) =&gt; setPets(data))</text>
+
+  <line x1="234" y1="252" x2="234" y2="280" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <circle cx="52" cy="304" r="12" fill="#0969da"/><text class="num" x="52" y="309" text-anchor="middle">4</text>
+  <rect x="74" y="282" width="320" height="50" rx="8" fill="#ffffff" stroke="#0969da"/>
+  <text x="86" y="303">Re-render: ternaries pick</text>
+  <text x="86" y="322">loading / error / empty / list</text>
+
+  <!-- Supabase -->
+  <rect x="560" y="20" width="260" height="330" rx="12" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="h g" x="580" y="48">Supabase</text>
+
+  <rect x="580" y="66" width="220" height="80" rx="8" fill="#ffffff" stroke="#1a7f37"/>
+  <text x="592" y="88" font-weight="700">REST API</text>
+  <text class="mut" x="592" y="108">checks the apikey header</text>
+  <text class="mut" x="592" y="128">RLS is off, so no row rules</text>
+
+  <line x1="690" y1="146" x2="690" y2="186" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="580" y="188" width="220" height="64" rx="8" fill="#ffffff" stroke="#1a7f37"/>
+  <text x="592" y="212" font-weight="700">pets table</text>
+  <text class="mut" x="592" y="232">(a Postgres database)</text>
+
+  <!-- Arrows between -->
+  <line x1="394" y1="98" x2="576" y2="98" stroke="#57606a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="485" y="88" text-anchor="middle" font-weight="700">GET request</text>
+  <text class="mut" x="485" y="118" text-anchor="middle">with apikey</text>
+
+  <circle cx="665" cy="166" r="12" fill="#0969da"/><text class="num" x="665" y="171" text-anchor="middle">2</text>
+  <line x1="580" y1="232" x2="398" y2="232" stroke="#57606a" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="489" y="222" text-anchor="middle" font-weight="700">JSON array</text>
+  <text class="m" x="489" y="252" text-anchor="middle">[ {…}, {…} ]</text>
+
+  <!-- Footer -->
+  <rect x="20" y="368" width="800" height="44" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="420" y="395" text-anchor="middle"><tspan font-weight="700">PATCH</tspan> (Part 6) is the same trip, but you send data in the body and Supabase sends back the updated row.</text>
+</svg>

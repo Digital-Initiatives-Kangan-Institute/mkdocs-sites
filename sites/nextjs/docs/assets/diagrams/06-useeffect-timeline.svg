@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 640" width="820" height="640" role="img" aria-labelledby="title">
+  <title id="title">Loading data with useEffect: the first render shows Loading, the effect starts the request, the promise finishes and sets state, then a re-render picks loading, error, empty or the list</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 14px; }
+      .h { font-size: 16px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .num { font-size: 15px; font-weight: 700; fill: #ffffff; }
+      .g { fill: #1a7f37; } .r { fill: #cf222e; } .bl { fill: #0969da; } .a { fill: #9a6700; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="818" height="638" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <!-- Step 1 -->
+  <circle cx="45" cy="47" r="15" fill="#0969da"/><text class="num" x="45" y="52" text-anchor="middle">1</text>
+  <rect x="75" y="20" width="720" height="56" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="h" x="92" y="44">First render</text>
+  <text class="m" x="92" y="66">loading = true, error = null, pets = []</text>
+  <text class="mut" x="780" y="44" text-anchor="end">the ternary shows</text>
+  <text class="a" x="780" y="66" text-anchor="end" font-weight="700">"Loading…"</text>
+
+  <line x1="45" y1="64" x2="45" y2="98" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <circle cx="45" cy="127" r="15" fill="#0969da"/><text class="num" x="45" y="132" text-anchor="middle">2</text>
+  <rect x="75" y="100" width="720" height="56" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="h" x="92" y="124">useEffect runs its arrow function</text>
+  <text class="mut" x="92" y="146">it starts the request; the page is already on screen</text>
+  <text class="m" x="780" y="135" text-anchor="end">getPets()</text>
+
+  <line x1="45" y1="144" x2="45" y2="200" stroke="#57606a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text class="mut" x="62" y="180">waiting for the data… (1.5 seconds)</text>
+
+  <!-- Step 3 -->
+  <circle cx="45" cy="229" r="15" fill="#0969da"/><text class="num" x="45" y="234" text-anchor="middle">3</text>
+  <rect x="75" y="202" width="720" height="128" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="h" x="92" y="226">The promise finishes, and one of your arrow functions runs</text>
+  <rect x="92" y="240" width="330" height="36" rx="8" fill="#dafbe1" stroke="#1a7f37"/>
+  <text x="104" y="263"><tspan class="g" font-weight="700">worked</tspan>  <tspan class="m">.then((data) =&gt; setPets(data))</tspan></text>
+  <rect x="440" y="240" width="340" height="36" rx="8" fill="#ffebe9" stroke="#cf222e"/>
+  <text x="452" y="263"><tspan class="r" font-weight="700">failed</tspan>  <tspan class="m">.catch((err) =&gt; setError(…))</tspan></text>
+  <text x="92" y="312">either way, then <tspan class="m">.finally(() =&gt; setLoading(false))</tspan></text>
+
+  <line x1="45" y1="246" x2="45" y2="370" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="mut" x="62" y="358">setting state causes a new render</text>
+
+  <!-- Step 4 -->
+  <circle cx="45" cy="399" r="15" fill="#0969da"/><text class="num" x="45" y="404" text-anchor="middle">4</text>
+  <text class="h" x="75" y="404">Re-render: the ternary picks ONE branch, checking in this order</text>
+
+  <rect x="95" y="425" width="190" height="44" rx="22" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="190" y="452" text-anchor="middle" font-weight="700">loading ?</text>
+  <line x1="285" y1="447" x2="368" y2="447" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="g" x="326" y="440" text-anchor="middle" font-size="12" font-weight="700">yes</text>
+  <rect x="370" y="427" width="220" height="40" rx="8" fill="#fff8c5" stroke="#9a6700"/>
+  <text x="480" y="452" text-anchor="middle">"Loading…"</text>
+  <line x1="190" y1="469" x2="190" y2="489" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="r" x="200" y="484" font-size="12" font-weight="700">no</text>
+  <rect x="95" y="491" width="190" height="44" rx="22" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="190" y="518" text-anchor="middle" font-weight="700">error ?</text>
+  <line x1="285" y1="513" x2="368" y2="513" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="g" x="326" y="506" text-anchor="middle" font-size="12" font-weight="700">yes</text>
+  <rect x="370" y="493" width="220" height="40" rx="8" fill="#ffebe9" stroke="#cf222e"/>
+  <text x="480" y="518" text-anchor="middle">the error message</text>
+  <line x1="190" y1="535" x2="190" y2="555" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="r" x="200" y="550" font-size="12" font-weight="700">no</text>
+  <rect x="95" y="557" width="190" height="44" rx="22" fill="#ddf4ff" stroke="#0969da"/>
+  <text class="m bl" x="190" y="584" text-anchor="middle" font-weight="700">pets empty ?</text>
+  <line x1="285" y1="579" x2="368" y2="579" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="g" x="326" y="572" text-anchor="middle" font-size="12" font-weight="700">yes</text>
+  <rect x="370" y="559" width="220" height="40" rx="8" fill="#f6f8fa" stroke="#57606a"/>
+  <text x="480" y="584" text-anchor="middle">"No pets right now…"</text>
+  <line x1="190" y1="601" x2="190" y2="612" stroke="none"/>
+  <path d="M590,579 h40" fill="none"/>
+  <rect x="640" y="491" width="150" height="40" rx="8" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="g" x="715" y="516" text-anchor="middle" font-weight="700">the list</text>
+  <path d="M190,601 v18 h525 V533" fill="none" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="r" x="452" y="613" text-anchor="middle" font-size="12" font-weight="700">no to everything: show the list</text>
+</svg>

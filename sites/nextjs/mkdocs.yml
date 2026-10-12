@@ -1,15 +1,82 @@
 INHERIT: ../../shared/.mkdocs-base.yml
 
-site_name: NextJS
+site_name: Next.js
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
-  - Return to Portal: https://bki-di-portal.netlify.app/
+  - Return to Portal: /
 
   # Add additional navigation below this point:
-  - NextJS:
+  - Menu:
     - Resources:
-      - NextJS Introduction: pages/resources/nextjs-introduction.md
+      - Getting Started:
+        - What is Next.js: pages/resources/nextjs/what-is-nextjs.md
+        - What is React: pages/resources/nextjs/what-is-react.md
+        - Project Structure and TypeScript: pages/resources/nextjs/project-structure.md
+        - npm Packages: pages/resources/nextjs/npm-packages.md
+      - React Fundamentals:
+        - Components and Layouts: pages/resources/nextjs/components-layouts.md
+        - Arrow Functions: pages/resources/nextjs/arrow-functions.md
+        - Events and State: pages/resources/nextjs/events-and-state.md
+        - Conditional Rendering: pages/resources/nextjs/conditional-rendering.md
+        - Lists with map and filter: pages/resources/nextjs/lists-map-filter.md
+        - Choosing Arrows, Ternaries and if: pages/resources/nextjs/choosing-syntax.md
+      - Next.js Features:
+        - Client and Server Components: pages/resources/nextjs/client-server-components.md
+        - Routing: pages/resources/nextjs/routing.md
+        - Dynamic Routes and useParams: pages/resources/nextjs/dynamic-routes.md
+        - Special Files: pages/resources/nextjs/special-files.md
+      - Working with Data:
+        - Fetching Data: pages/resources/nextjs/fetching-data.md
+        - useState and useEffect: pages/resources/nextjs/usestate-useeffect.md
+        - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
+        - TypeScript Types for Data: pages/resources/nextjs/typescript-types.md
+        - Saving Data in the Browser: pages/resources/nextjs/browser-storage.md
+      - Supabase:
+        - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
+        - Supabase REST API with fetch: pages/resources/supabase/supabase-rest-api.md
+        - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md
+      - Styling and Libraries:
+        - Tailwind CSS: pages/resources/tailwind/tailwind.md
+        - Mantine UI: pages/resources/mantine/mantine.md
+      - Deployment:
+        - Deploying Your Project: pages/resources/deployment/deploying.md
+
+    - Tasks:
+      - Getting Started:
+        - Creating a Next.js App: pages/tasks/create-nextjs-app.md
+        - Components: pages/tasks/components-props.md
+        - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
+      - Arrow Functions and State:
+        - Arrow Function Basics: pages/tasks/arrow-function-basics.md
+        - Interactive Component: pages/tasks/interactive-component.md
+        - Arrow Functions, Events and State: pages/tasks/arrow-functions-events-state.md
+        - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
+      - Ternaries and Lists:
+        - Ternary Basics: pages/tasks/ternary-basics.md
+        - Ternaries for Attributes and Components: pages/tasks/ternary-attributes-components.md
+        - Arrays with map and filter: pages/tasks/arrays-map-filter.md
+      - Fetching Data:
+        - Fetching Data with State: pages/tasks/fetching-data-with-state.md
+        - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
+        - useEffect and Loading States: pages/tasks/useeffect-loading-states.md
+        - Arrow Functions in useEffect and fetch: pages/tasks/useeffect-fetch-arrows.md
+      - Dynamic Routes:
+        - Dynamic Routes with useParams: pages/tasks/dynamic-routes-useparams.md
+        - User Directory App: pages/tasks/user-directory.md
+      - Going Further:
+        - TypeScript Types for Data: pages/tasks/typescript-types.md
+        - Saving to localStorage: pages/tasks/local-storage.md
+        - Special Files: pages/tasks/special-files.md
+      - Libraries:
+        - Tailwind CSS: pages/tasks/tailwind.md
+        - Mantine Component Library: pages/tasks/mantine-components.md
+        - React Confetti: pages/tasks/react-confetti.md
+      - Projects:
+        - Supabase as a CMS: pages/tasks/supabase-cms.md
+        - Pet Adoption Board: pages/tasks/pet-adoption-board.md
+        - Deploy Your App: pages/tasks/deploy-your-app.md
+        - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -22,5 +89,5 @@ plugins:
       increment_across_pages: true
       # Uncomment below if you would like to reset the table of contents numbering
       # after a certain page:
-      # restart_increment_after:
-      #  - path/to/page.md
+      restart_increment_after:
+        - pages/tasks/create-nextjs-app.md

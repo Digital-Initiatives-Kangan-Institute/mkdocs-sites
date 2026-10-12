@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" role="img" aria-labelledby="title">
+  <title id="title">Calling setCount(count + 1) twice adds 1 because count is a snapshot; calling setCount(prev => prev + 1) twice adds 2</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 15px; }
+      .m { font-family: Consolas, Menlo, "DejaVu Sans Mono", "Courier New", monospace; font-size: 13px; }
+      .h { font-size: 17px; font-weight: 700; }
+      .mut { fill: #57606a; font-size: 13px; }
+      .g { fill: #1a7f37; } .r { fill: #cf222e; }
+      .big { font-size: 22px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="758" height="448" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <rect x="230" y="18" width="300" height="36" rx="18" fill="#ddf4ff" stroke="#0969da"/>
+  <text x="380" y="42" text-anchor="middle">count is <tspan font-weight="700">0</tspan> when the button is clicked</text>
+
+  <!-- Left: broken -->
+  <text class="h r" x="195" y="88" text-anchor="middle">Broken +2</text>
+  <rect x="35" y="100" width="320" height="76" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="55" y="128">setCount(count + 1)</text>
+  <text class="mut" x="335" y="128" text-anchor="end">"set it to 1"</text>
+  <text class="m" x="55" y="158">setCount(count + 1)</text>
+  <text class="mut" x="335" y="158" text-anchor="end">"set it to 1"</text>
+  <line x1="195" y1="178" x2="195" y2="208" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="mut" x="205" y="198">React runs the queue</text>
+
+  <rect x="85" y="212" width="220" height="38" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="195" y="236" text-anchor="middle">set to 1</text>
+  <line x1="195" y1="250" x2="195" y2="270" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="85" y="272" width="220" height="38" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="195" y="296" text-anchor="middle">set to 1 (again)</text>
+  <line x1="195" y1="310" x2="195" y2="330" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="115" y="332" width="160" height="46" rx="10" fill="#ffebe9" stroke="#cf222e"/>
+  <text class="big r" x="195" y="363" text-anchor="middle">count = 1</text>
+
+  <line x1="380" y1="76" x2="380" y2="385" stroke="#d0d7de" stroke-dasharray="4 4"/>
+
+  <!-- Right: updater -->
+  <text class="h g" x="565" y="88" text-anchor="middle">Updater +2</text>
+  <rect x="405" y="100" width="320" height="76" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text class="m" x="420" y="128">setCount((prev) =&gt; prev + 1)</text>
+  <text class="mut" x="710" y="128" text-anchor="end">"add 1"</text>
+  <text class="m" x="420" y="158">setCount((prev) =&gt; prev + 1)</text>
+  <text class="mut" x="710" y="158" text-anchor="end">"add 1"</text>
+  <line x1="565" y1="178" x2="565" y2="208" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="mut" x="575" y="198">React runs the queue</text>
+
+  <rect x="455" y="212" width="220" height="38" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="565" y="236" text-anchor="middle">prev is 0, so 0 + 1 = 1</text>
+  <line x1="565" y1="250" x2="565" y2="270" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="455" y="272" width="220" height="38" rx="8" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="565" y="296" text-anchor="middle">prev is 1, so 1 + 1 = 2</text>
+  <line x1="565" y1="310" x2="565" y2="330" stroke="#57606a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="485" y="332" width="160" height="46" rx="10" fill="#dafbe1" stroke="#1a7f37"/>
+  <text class="big g" x="565" y="363" text-anchor="middle">count = 2</text>
+
+  <text x="380" y="416" text-anchor="middle"><tspan font-weight="700">count</tspan> is a snapshot: it stays the same until the next render.</text>
+  <text x="380" y="436" text-anchor="middle"><tspan font-weight="700">prev</tspan> is always the newest value.</text>
+</svg>

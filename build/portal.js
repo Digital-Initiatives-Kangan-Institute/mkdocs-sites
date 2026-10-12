@@ -43,6 +43,13 @@ window.SITES_DATA = {
             "courses": ["diploma-of-it"]
         },
         {
+            "href": "/nextjs",
+            "img": "./_assets/sites/nextjs.png",
+            "title": "Next.js",
+            "description": "Build React web apps with Next.js: components, state, routing, data fetching, and Supabase.",
+            "courses": ["diploma-of-it"]
+        },
+        {
             "href": "/hardware-os",
             "img": "./_assets/sites/hardware-os.png",
             "title": "Hardware & OS",
