@@ -231,3 +231,11 @@ The arrow function is assigned to a `const`, making it clear that `handleSubmit`
 - Components can be arrow functions; destructure props with `({ name }: { name: string })`
 - Wrap handlers in an arrow function when you need to pass arguments: `onClick={() => remove(id)}`
 - Arrow functions are the standard callback for `.map()`, `.filter()`, and `.reduce()`
+
+### Activity - Arrow Function Basics
+
+[Attempt Activity - Arrow Function Basics](../../tasks/arrow-function-basics.md){.md-button}
+
+### Activity - Refactor with Arrow Functions
+
+[Attempt Activity - Refactor with Arrow Functions](../../tasks/refactor-arrow-functions.md){.md-button}

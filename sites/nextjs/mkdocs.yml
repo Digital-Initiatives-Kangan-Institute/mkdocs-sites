@@ -16,6 +16,7 @@ nav:
         - npm Packages: pages/resources/nextjs/npm-packages.md
       - React Fundamentals:
         - Components and Layouts: pages/resources/nextjs/components-layouts.md
+        - Component Props: pages/resources/nextjs/component-props.md
         - Arrow Functions: pages/resources/nextjs/arrow-functions.md
         - Events and State: pages/resources/nextjs/events-and-state.md
         - Conditional Rendering: pages/resources/nextjs/conditional-rendering.md
@@ -56,6 +57,7 @@ nav:
         - Ternary Basics: pages/tasks/ternary-basics.md
         - Ternaries for Attributes and Components: pages/tasks/ternary-attributes-components.md
         - Arrays with map and filter: pages/tasks/arrays-map-filter.md
+        - Building Reusable Client Components: pages/tasks/reusable-client-components.md
       - Fetching Data:
         - Fetching Data with State: pages/tasks/fetching-data-with-state.md
         - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md

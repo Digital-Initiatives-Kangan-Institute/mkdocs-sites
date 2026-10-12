@@ -247,3 +247,11 @@ const [light, setLight] = useState<"red" | "yellow" | "green">("red");
 - Pass handlers to `onClick` without calling them; wrap them in an arrow function to pass arguments
 - Use an updater function (`prev => prev + 1`) when the new value depends on the old one
 - Controlled inputs read from state with `value` and write to it with `onChange`
+
+### Activity - Interactive Component
+
+[Attempt Activity - Interactive Component](../../tasks/interactive-component.md){.md-button}
+
+### Activity - Arrow Functions, Events and State
+
+[Attempt Activity - Arrow Functions, Events and State](../../tasks/arrow-functions-events-state.md){.md-button}

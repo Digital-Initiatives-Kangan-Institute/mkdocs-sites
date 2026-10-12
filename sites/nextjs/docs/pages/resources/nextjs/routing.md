@@ -133,3 +133,7 @@ export default function Nav() {
 - Dynamic routes: use `[param]` folder names, read them with `await params` (server) or `useParams` (client)
 - Use `<Link>` for navigating between pages
 - The file system determines the URL structure
+
+### Activity - Next.js App with Routing
+
+[Attempt Activity - Next.js App with Routing](../../tasks/nextjs-routing-app.md){.md-button}

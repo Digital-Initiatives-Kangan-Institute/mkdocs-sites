@@ -161,3 +161,7 @@ type Species = "dog" | "cat" | "rabbit";
 - Use interfaces to describe the shape of objects and props
 - `npm run dev` starts the development server at `localhost:3000`
 - Only `page.tsx` files create routes; `@/` imports from the project root
+
+### Activity - Creating a Next.js App
+
+[Attempt Activity - Creating a Next.js App](../../tasks/create-nextjs-app.md){.md-button}

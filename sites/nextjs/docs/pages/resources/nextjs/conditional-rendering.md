@@ -234,3 +234,11 @@ See [Choosing Arrows, Ternaries and if](choosing-syntax.md) for more on picking 
 - Use `&&` (or `? ... : null`) to show something or nothing, with a true/false value on the left
 - Wrap several elements in a fragment `<> </>` when one side of a ternary needs them
 - Nested ternaries stop at the first true condition; switch to `if` statements past three options
+
+### Activity - Ternary Basics
+
+[Attempt Activity - Ternary Basics](../../tasks/ternary-basics.md){.md-button}
+
+### Activity - Ternaries for Attributes and Components
+
+[Attempt Activity - Ternaries for Attributes and Components](../../tasks/ternary-attributes-components.md){.md-button}

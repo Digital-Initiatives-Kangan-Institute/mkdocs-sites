@@ -209,8 +209,6 @@ This removes it from `node_modules/`, `package.json`, and `package-lock.json`.
 - Use `--save-dev` for build tools, linters, and type definitions
 - `npm uninstall <package>` removes a dependency completely
 
----
+### Activity - React Confetti
 
-## Activity
-
-[Try it: React Confetti Activity](../../tasks/react-confetti.md){ .md-button }
+[Attempt Activity - React Confetti](../../tasks/react-confetti.md){.md-button}

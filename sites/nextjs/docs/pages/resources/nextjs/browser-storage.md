@@ -150,3 +150,7 @@ export default TodosPage;
 - Next.js renders client components on the server first, where `localStorage` doesn't exist
 - Put `localStorage` code in its own component and load it with `dynamic(..., { ssr: false })`
 - Read with a `useState(() => …)` initialiser; save in a `useEffect` that depends on the data
+
+### Activity - Saving to localStorage
+
+[Attempt Activity - Saving to localStorage](../../tasks/local-storage.md){.md-button}

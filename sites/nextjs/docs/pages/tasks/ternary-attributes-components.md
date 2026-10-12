@@ -48,7 +48,7 @@ A prop can be a function. That lets a child component run code that lives in its
 <LoginButton onLogin={() => setIsLoggedIn(true)} />
 ```
 
-Here the arrow function is the prop. `LoginButton` doesn't know what it does. It just calls it when the button is clicked. In TypeScript, `() => void` means "a function that takes nothing and returns nothing".
+Here the arrow function is the prop. `LoginButton` doesn't know what it does. It just calls it when the button is clicked. In TypeScript, `() => void` means "a function that takes nothing and returns nothing". See [Component Props](../resources/nextjs/component-props.md) for more on function props.
 
 ## Like Button
 

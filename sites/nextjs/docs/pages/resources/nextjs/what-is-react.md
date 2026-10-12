@@ -142,3 +142,7 @@ This is a valid React component that works inside a Next.js app. Understanding t
 - Props let you pass data into components
 - JSX uses `className` instead of `class` and curly braces `{}` for JavaScript
 - React handles the UI layer — Next.js adds routing, data fetching, and more
+
+### Activity - Components
+
+[Attempt Activity - Components](../../tasks/components-props.md){.md-button}

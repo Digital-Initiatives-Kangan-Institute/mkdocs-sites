@@ -111,3 +111,11 @@ Start with a Server Component (the default). Only add `"use client"` when the co
 - Client Components run in the browser and add `"use client"` at the top
 - Hooks, event handlers, and browser APIs require a Client Component
 - Start with a Server Component and opt in to client behaviour only when needed
+
+### Activity - Interactive Component
+
+[Attempt Activity - Interactive Component](../../tasks/interactive-component.md){.md-button}
+
+### Activity - Building Reusable Client Components
+
+[Attempt Activity - Building Reusable Client Components](../../tasks/reusable-client-components.md){.md-button}

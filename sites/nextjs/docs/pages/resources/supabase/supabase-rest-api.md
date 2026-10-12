@@ -205,3 +205,11 @@ To see the full details of any request, open DevTools (F12), go to the **Network
 - Filter and sort with URL parameters such as `id=eq.3` and `order=name.asc`
 - Supabase always returns an array, even for one row
 - Use `PATCH`, `POST` and `DELETE` with a JSON body to change data
+
+### Activity - Pet Adoption Board
+
+[Attempt Activity - Pet Adoption Board](../../tasks/pet-adoption-board.md){.md-button}
+
+### Activity - Build Your Own Webapp
+
+[Attempt Activity - Build Your Own Webapp](../../tasks/build-your-own-webapp.md){.md-button}

@@ -281,3 +281,11 @@ export default function ProductPage() {
 - Use page-load fetch for initial data, button fetch for user-triggered requests
 - Only call setters inside `.then()`, `.catch()`, `.finally()` or event handlers, not directly in the effect
 - Return a cleanup arrow function to ignore stale responses when dependencies change
+
+### Activity - useEffect and Automatic Fetch
+
+[Attempt Activity - useEffect and Automatic Fetch](../../tasks/useeffect-fetch.md){.md-button}
+
+### Activity - useEffect and Loading States
+
+[Attempt Activity - useEffect and Loading States](../../tasks/useeffect-loading-states.md){.md-button}
