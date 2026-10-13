@@ -106,3 +106,7 @@ The general pattern:
 - Forms in your app enable custom create/update workflows
 - Plan your content model (tables and fields) before building
 - Front-end changes are driven by database content, not code deploys
+
+### Activity - Supabase as a CMS
+
+[Attempt Activity - Supabase as a CMS](../../tasks/supabase-cms.md){.md-button}

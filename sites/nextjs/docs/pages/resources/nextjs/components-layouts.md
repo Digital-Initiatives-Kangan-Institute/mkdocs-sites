@@ -106,3 +106,13 @@ Both help you follow the **DRY** principle: Don't Repeat Yourself.
 - Place components in a `components/` folder
 - Layouts in `layout.tsx` provide shared structure for all pages
 - The `children` prop in layouts represents the current page content
+
+For props on interactive components (default values, `children` in your own components, and function props like `onChange`), see [Component Props](component-props.md).
+
+### Activity - Components
+
+[Attempt Activity - Components](../../tasks/components-props.md){.md-button}
+
+### Activity - Next.js App with Routing
+
+[Attempt Activity - Next.js App with Routing](../../tasks/nextjs-routing-app.md){.md-button}

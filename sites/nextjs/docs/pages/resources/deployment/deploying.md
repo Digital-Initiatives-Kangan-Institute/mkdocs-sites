@@ -187,3 +187,7 @@ When you deploy, document what changed. A short release note includes:
 - On Cloudflare, use OpenNext and Wrangler for full Next.js apps, or a static export on Cloudflare Pages
 - Test thoroughly on the live URL after deploying
 - Document your release with a short note and live link
+
+### Activity - Deploy Your App
+
+[Attempt Activity - Deploy Your App](../../tasks/deploy-your-app.md){.md-button}

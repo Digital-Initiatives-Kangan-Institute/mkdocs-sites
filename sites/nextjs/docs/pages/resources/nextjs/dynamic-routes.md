@@ -183,3 +183,11 @@ Use the `params` prop for simple server pages, and `useParams` when the page is 
 - Add a `loading.tsx` next to every `[id]/page.tsx` that uses `useParams`
 - Use `.find()` to get the matching item and a ternary to handle "not found"
 - In server components, read the `params` prop with `await`
+
+### Activity - Dynamic Routes with useParams
+
+[Attempt Activity - Dynamic Routes with useParams](../../tasks/dynamic-routes-useparams.md){.md-button}
+
+### Activity - User Directory App
+
+[Attempt Activity - User Directory App](../../tasks/user-directory.md){.md-button}

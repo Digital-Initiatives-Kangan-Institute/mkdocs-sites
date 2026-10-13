@@ -291,3 +291,7 @@ Open the browser console (F12) to see detailed error messages.
 - Use the browser console to debug fetch errors
 - Write the four states as a nested ternary, an `if` helper function, or a separate component with early returns
 - Test every state on purpose: slow network, broken URL, empty data, unknown id
+
+### Activity - useEffect and Loading States
+
+[Attempt Activity - useEffect and Loading States](../../tasks/useeffect-loading-states.md){.md-button}

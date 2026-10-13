@@ -185,3 +185,7 @@ To give a client page a title, put the `metadata` in a `layout.tsx` for its fold
 - `error.tsx` must be a client component and receives `error` and `reset`
 - `error.tsx` catches render errors only; fetch and event-handler errors are handled in your own code
 - Export `metadata` from a server page or layout to set the tab title
+
+### Activity - Special Files
+
+[Attempt Activity - Special Files](../../tasks/special-files.md){.md-button}

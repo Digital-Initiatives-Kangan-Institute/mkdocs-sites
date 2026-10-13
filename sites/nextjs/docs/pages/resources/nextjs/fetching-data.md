@@ -224,3 +224,11 @@ Both styles do exactly the same thing. TypeScript doesn't know the type of `err`
 - Files in `public/` can be fetched by name, e.g. `/pets.json`
 - Describe the shape of your data with a TypeScript `type`
 - `async` / `await` with `try` / `catch` / `finally` is an alternative to `.then()` chains
+
+### Activity - Fetching Data with State
+
+[Attempt Activity - Fetching Data with State](../../tasks/fetching-data-with-state.md){.md-button}
+
+### Activity - Arrow Functions in useEffect and fetch
+
+[Attempt Activity - Arrow Functions in useEffect and fetch](../../tasks/useeffect-fetch-arrows.md){.md-button}

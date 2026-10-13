@@ -110,3 +110,7 @@ See [Supabase REST API with fetch](supabase-rest-api.md) for the full guide.
 - Use the client library to connect your front end
 - Use the publishable (anon) key in your app and keep the secret (service role) key private
 - Enable Row Level Security on tables
+
+### Activity - Supabase as a CMS
+
+[Attempt Activity - Supabase as a CMS](../../tasks/supabase-cms.md){.md-button}
