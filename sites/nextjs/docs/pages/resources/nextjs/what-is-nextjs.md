@@ -129,3 +129,7 @@ Save the file and look at the browser. The page updates straight away.
 - Create a new app with `npx create-next-app@latest my-app` and accept the recommended defaults
 - Start the dev server with `npm run dev` and visit `http://localhost:3000`
 - `app/page.tsx` is the home page of your app
+
+### Activity - Creating a Next.js App
+
+[Attempt Activity - Creating a Next.js App](../../tasks/create-nextjs-app.md){.md-button}

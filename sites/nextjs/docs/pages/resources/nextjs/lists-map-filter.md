@@ -233,3 +233,7 @@ The update line reads: *"for each todo, if it's the one we clicked, give back a 
 - Every item rendered by `.map()` needs a unique `key`, usually its `id`
 - Chain `.filter()` calls to combine several filters, and show a message when nothing matches
 - Never change arrays in state directly: add with spread, remove with `.filter()`, update with `.map()`
+
+### Activity - Arrays with map and filter
+
+[Attempt Activity - Arrays with map and filter](../../tasks/arrays-map-filter.md){.md-button}

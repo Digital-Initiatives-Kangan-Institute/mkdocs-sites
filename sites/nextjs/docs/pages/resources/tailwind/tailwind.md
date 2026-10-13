@@ -133,3 +133,7 @@ Line by line:
 - Colours use `name-shade` (e.g. `bg-indigo-500`)
 - `hover:` and `sm:`/`md:`/`lg:` prefixes add states and responsiveness
 - Compose classes to build up a complete style, e.g. `bg-white p-6 rounded-lg shadow`
+
+### Activity - Tailwind CSS
+
+[Attempt Activity - Tailwind CSS](../../tasks/tailwind.md){.md-button}

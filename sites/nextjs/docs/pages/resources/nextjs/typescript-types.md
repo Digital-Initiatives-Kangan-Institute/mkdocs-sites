@@ -265,3 +265,7 @@ Read the **last** part of a long error first; it usually names the exact propert
 - Type props (including function props) and any state that starts empty or `null`
 - Handle missing values with `if`, a ternary, `?.` or `??`
 - Avoid `any`; read the end of an error message first
+
+### Activity - TypeScript Types for Data
+
+[Attempt Activity - TypeScript Types for Data](../../tasks/typescript-types.md){.md-button}

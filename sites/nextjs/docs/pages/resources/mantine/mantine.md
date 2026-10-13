@@ -140,3 +140,7 @@ import { Button, Card, Text, Title } from "@mantine/core";
 - Import components from `@mantine/core` and use props like `variant` to customise
 - Provides buttons, cards, forms, modals, tables, notifications, and more
 - Components give you a good starting point but design decisions are still yours
+
+### Activity - Mantine Component Library
+
+[Attempt Activity - Mantine Component Library](../../tasks/mantine-components.md){.md-button}

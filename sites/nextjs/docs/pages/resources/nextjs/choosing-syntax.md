@@ -155,3 +155,7 @@ Both work exactly the same. Pick one style and use it consistently within a proj
 - `&&` shows something or nothing
 - `if` handles four or more options, early exits, throwing errors, and whole-page swaps
 - Arrow components and `function` components behave the same; be consistent
+
+### Activity - Pet Adoption Board
+
+[Attempt Activity - Pet Adoption Board](../../tasks/pet-adoption-board.md){.md-button}

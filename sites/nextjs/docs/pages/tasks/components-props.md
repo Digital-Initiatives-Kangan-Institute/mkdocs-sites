@@ -192,3 +192,5 @@ Write it from memory before checking the hint.
 - Props make each use different: `<Greeting name="Alice" />`
 - Type props with an interface: `{ name }: GreetingProps`
 - The pattern is always: define → type props → reuse with different values
+
+When you've learned state and ternaries, the [Building Reusable Client Components](reusable-client-components.md) task takes props further with interactive components.
