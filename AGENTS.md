@@ -250,6 +250,8 @@ The portal (`build/index.html`) loads `build/portal.js` (sites + tools data) and
 
 Static web tools (e.g. the CodePad editor) live in `tools/<id>/` as source and are built to `build/tools/<id>/` via `./build-tools.sh` (see `tools/code/vite.config.js` for the `outDir` pattern). **React + Vite is the preferred stack for new tools** — scaffold with `npm create vite@latest`, then set `base: './'` and `build.outDir` to `../../build/tools/<id>` so the tool builds straight into its deploy folder. Tools with no build step (a folder without a `build` script in `package.json`) are copied as-is by the same script. Build tools must use relative asset paths (`base: './'`) and relative fetching (e.g. `import.meta.env.BASE_URL`) so they work when served from `/tools/<id>/`. They are listed on the Tools tab of the main portal (`build/index.html`), which reads its cards from `build/portal.js`. Never create a site called `tools` — `create.sh` blocks that reserved name.
 
+**External tools** (hosted elsewhere, e.g. Circuit Studio) have no `tools/<id>/` folder: add an entry to `TOOLS_DATA.tools` in `build/portal.js` with the absolute URL as `href` and `"external": true`, which makes the card open in a new tab. They still need a thumbnail.
+
 ### Common shell (`tools/shared/`)
 
 Every React tool is wrapped in the common shell — a slim dark bar with a **Tools** back button (→ the tools portal) above the tool UI. The shell lives in `tools/shared/` (`ToolShell.tsx` + `tool-shell.css`, see `tools/shared/README.md`) and is imported by each app as:
