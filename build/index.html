@@ -711,6 +711,10 @@
                 var a = document.createElement('a');
                 a.className = 'grid-item';
                 a.href = tool.href;
+                if (tool.external) {
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                }
                 a.setAttribute('data-search', (tool.title + ' ' + tool.description).toLowerCase());
                 var html = '';
                 if (tool.img) {
