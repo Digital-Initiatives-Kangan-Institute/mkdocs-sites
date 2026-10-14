@@ -114,6 +114,13 @@ window.TOOLS_DATA = {
             "img": "./_assets/tools/anigram.svg",
             "title": "Anigram",
             "description": "Design, animate, and export flowcharts directly in your browser."
+        },
+        {
+            "href": "https://circuit-studio.pages.dev/",
+            "img": "./_assets/tools/circuit-studio.svg",
+            "title": "Circuit Studio",
+            "description": "Design, wire, inspect, and save electronic schematics in your browser.",
+            "external": true
         }
     ]
 };
