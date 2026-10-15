@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-labelledby="t">
+  <title id="t">A visual sitemap: Home at the top links to Services, About Us and Contact; Services has two sub-pages, Pricing and Bookings</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="760" height="360" fill="#ffffff"/>
+  <path d="M380.0,90 V120 H150 V150" stroke="#00897b" stroke-width="2" fill="none"/>
+  <path d="M380.0,120 H610 V150" stroke="#00897b" stroke-width="2" fill="none"/>
+  <path d="M380.0,120 V150" stroke="#00897b" stroke-width="2" fill="none"/>
+  <path d="M150,210 V240 H80 V276" stroke="#00897b" stroke-width="2" fill="none"/>
+  <path d="M150,240 H225 V276" stroke="#00897b" stroke-width="2" fill="none"/>
+  <rect x="305.0" y="30" width="150" height="60" rx="10" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="380.0" y="56" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#263238" font-weight="700" text-anchor="middle">Home</text>
+  <text x="380.0" y="78" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle" textLength="78.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">index.html</text>
+  <rect x="75.0" y="150" width="150" height="60" rx="10" fill="#ffffff" stroke="#00897b" stroke-width="2"/>
+  <text x="150" y="176" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#263238" font-weight="700" text-anchor="middle">Services</text>
+  <text x="150" y="198" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle" textLength="101.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">services.html</text>
+  <rect x="305.0" y="150" width="150" height="60" rx="10" fill="#ffffff" stroke="#00897b" stroke-width="2"/>
+  <text x="380.0" y="176" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#263238" font-weight="700" text-anchor="middle">About Us</text>
+  <text x="380.0" y="198" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle" textLength="78.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">about.html</text>
+  <rect x="535.0" y="150" width="150" height="60" rx="10" fill="#ffffff" stroke="#00897b" stroke-width="2"/>
+  <text x="610" y="176" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#263238" font-weight="700" text-anchor="middle">Contact</text>
+  <text x="610" y="198" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle" textLength="93.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">contact.html</text>
+  <rect x="18" y="276" width="124" height="48" rx="10" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="80" y="306" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#263238" font-weight="600" text-anchor="middle">Pricing</text>
+  <rect x="163" y="276" width="124" height="48" rx="10" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="225" y="306" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#263238" font-weight="600" text-anchor="middle">Bookings</text>
+  <text x="720" y="300" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="end">main pages link from Home</text>
+  <text x="720" y="320" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="end">sub-pages link from their parent</text>
+</svg>

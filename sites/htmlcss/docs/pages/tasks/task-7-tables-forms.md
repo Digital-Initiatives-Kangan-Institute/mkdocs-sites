@@ -1,9 +1,12 @@
 # Task 7 - Tables and Forms
 
+!!! note "Working in VS Code"
+    Every exercise in this task is done in **VS Code**. For each exercise, create a new folder, open it in VS Code with `File` then `Open Folder...`, and create an `index.html` file (plus any other files named in the starter code). Check your work with **Live Preview**.
+
 ## Basic Table
 
 !!! abstract "Instructions"
-    **Using the editor below**, create a table with:
+    **Using VS Code**, create a table with:
 
     - 2 column headings
     - 2 rows of data
@@ -15,16 +18,43 @@
     | Alex | IT |
     | Sam | Design |
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 ??? question "Hint"
     A table uses `table` for the whole table, `tr` for each row, `th` for heading cells and `td` for data cells. The heading row is the first row.
 
 ## Fix the Table
 
 !!! abstract "Instructions"
-    **Using the editor below**, fix the table so that every row has the correct number of cells and the columns line up. The heading row should use heading cells.
+    **Using VS Code**, fix the table so that every row has the correct number of cells and the columns line up. The heading row should use heading cells.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8dGFibGU+XG4gIDx0cj5cbiAgICA8dGQ+U2VydmljZTwvdGQ+XG4gICAgPHRkPlByaWNlPC90ZD5cbiAgPC90cj5cbiAgPHRyPlxuICAgIDx0ZD5TbWFsbCBkb2cgd2FzaDwvdGQ+XG4gICAgPHRkPiQ0MDwvdGQ+XG4gIDwvdHI+XG4gIDx0cj5cbiAgICA8dGQ+TGFyZ2UgZG9nIHdhc2g8L3RkPlxuICA8L3RyPlxuICA8dGQ+TmFpbCB0cmltPC90ZD5cbiAgPHRkPiQxNTwvdGQ+XG48L3RhYmxlPiJ9XSwgImNzcyI6ICJ0aCwgdGQgeyBib3JkZXI6IDFweCBzb2xpZCAjOTk5OyBwYWRkaW5nOiA2cHggMTBweDsgfSIsICJqcyI6ICIiLCAiYWN0aXZlVGFiIjogImh0bWwiLCAiYWN0aXZlUGFnZSI6ICJpbmRleC5odG1sIn0="></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <link rel="stylesheet" href="style.css">
+
+    <table>
+      <tr>
+        <td>Service</td>
+        <td>Price</td>
+      </tr>
+      <tr>
+        <td>Small dog wash</td>
+        <td>$40</td>
+      </tr>
+      <tr>
+        <td>Large dog wash</td>
+      </tr>
+      <td>Nail trim</td>
+      <td>$15</td>
+    </table>
+    ```
+
+    `style.css`
+
+    ```css
+    th, td { border: 1px solid #999; padding: 6px 10px; }
+    ```
+
 ??? question "Hint"
     Count the cells in each row. Every cell must be inside a `tr`. The price for the large dog wash is `$55`. Which element makes a heading cell instead of a data cell?
 
@@ -42,7 +72,7 @@
 ## Opening Hours Table
 
 !!! abstract "Instructions"
-    **Using the editor below**, create a table of opening hours for **Riverside Bike Repairs**. The table must:
+    **Using VS Code**, create a table of opening hours for **Riverside Bike Repairs**. The table must:
 
     - have two columns: `Day` and `Hours`
     - have a row for **every** day of the week
@@ -50,7 +80,23 @@
 
     Use these hours: Monday to Friday `8:00am - 5:30pm`, Saturday `9:00am - 1:00pm`, Sunday `Closed`.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aDI+T3BlbmluZyBIb3VyczwvaDI+In1dLCAiY3NzIjogInRhYmxlIHsgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsgfVxudGgsIHRkIHsgYm9yZGVyOiAxcHggc29saWQgIzk5OTsgcGFkZGluZzogNnB4IDEycHg7IHRleHQtYWxpZ246IGxlZnQ7IH1cbnRoIHsgYmFja2dyb3VuZC1jb2xvcjogI2VlZTsgfSIsICJqcyI6ICIiLCAiYWN0aXZlVGFiIjogImh0bWwiLCAiYWN0aXZlUGFnZSI6ICJpbmRleC5odG1sIn0="></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <link rel="stylesheet" href="style.css">
+
+    <h2>Opening Hours</h2>
+    ```
+
+    `style.css`
+
+    ```css
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #999; padding: 6px 12px; text-align: left; }
+    th { background-color: #eee; }
+    ```
+
 ??? question "Hint"
     The table needs eight rows in total: one heading row and seven day rows. `thead` wraps around the heading row only, and `tbody` wraps around all the others. Each row has two cells.
 
@@ -70,24 +116,36 @@
 ## Simple Login Form
 
 !!! abstract "Instructions"
-    **Using the editor below**, create a form containing:
+    **Using VS Code**, create a form containing:
 
     - an email input
     - a password input
     - a login button
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 ??? question "Hint"
     Use the `type` attribute to change the behaviour of each `<input>` element. The form's contents all sit inside a single `form` element.
 
 ## Connect the Labels
 
 !!! abstract "Instructions"
-    **Using the editor below**, connect each label to its input so that clicking the label text moves the cursor into the box.
+    **Using VS Code**, connect each label to its input so that clicking the label text moves the cursor into the box.
 
-    Test it by clicking each label in the preview.
+    Test it by clicking each label in Live Preview.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8Zm9ybT5cbiAgPGxhYmVsPkZpcnN0IG5hbWU8L2xhYmVsPlxuICA8aW5wdXQgdHlwZT1cInRleHRcIj5cblxuICA8bGFiZWw+UGhvbmU8L2xhYmVsPlxuICA8aW5wdXQgdHlwZT1cInRlbFwiPlxuXG4gIDxsYWJlbD5FbWFpbDwvbGFiZWw+XG4gIDxpbnB1dCB0eXBlPVwiZW1haWxcIj5cbjwvZm9ybT4ifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+??? code "click to expand"
+    ```html
+    <form>
+      <label>First name</label>
+      <input type="text">
+
+      <label>Phone</label>
+      <input type="tel">
+
+      <label>Email</label>
+      <input type="email">
+    </form>
+    ```
+
 ??? question "Hint"
     Each input needs an `id`, and each label needs a `for` attribute with the **same value** as its input's `id`. Every `id` on the page must be different.
 
@@ -108,7 +166,7 @@
 ## Contact Form
 
 !!! abstract "Instructions"
-    **Using the editor below**, build a contact form for **Green Thumb Gardening**. The form must include:
+    **Using VS Code**, build a contact form for **Green Thumb Gardening**. The form must include:
 
     - a `Name` field
     - an `Email` field that uses the email input type
@@ -121,7 +179,12 @@
 
     Test the form by pressing the button with the fields empty.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aDI+Q29udGFjdCBVczwvaDI+XG48cD5IYXZlIGEgcXVlc3Rpb24gYWJvdXQgeW91ciBnYXJkZW4/IFNlbmQgdXMgYSBtZXNzYWdlLjwvcD4ifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+??? code "click to expand"
+    ```html
+    <h2>Contact Us</h2>
+    <p>Have a question about your garden? Send us a message.</p>
+    ```
+
 ??? question "Hint"
     This repeats the Feedback Form with extra attributes. `required` is added to the opening tag with no value. `rows` sets the height of a `textarea`. Setting the form's `action` to a hash symbol keeps it on the page. The button's text goes between its opening and closing tags.
 
@@ -140,7 +203,7 @@
 ## Choice Form
 
 !!! abstract "Instructions"
-    **Using the editor below**, create a form that asks the user to pick one option from a group.
+    **Using VS Code**, create a form that asks the user to pick one option from a group.
 
     Your form must contain:
 
@@ -150,7 +213,6 @@
 
     Test that only one option can be selected at a time.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 ??? question "Hint"
     Radio inputs use `<input type="radio">`. To make the options behave as a single group where only one can be selected, each input in the group shares the same `name` attribute value, but each has a different `id`.
 

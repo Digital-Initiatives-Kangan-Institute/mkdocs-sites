@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="520" viewBox="0 0 720 520" role="img" aria-labelledby="t">
+  <title id="t">A page laid out with semantic elements: header at the top, nav below it, main containing two sections, and footer at the bottom</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="720" height="520" fill="#ffffff"/>
+  <rect x="40" y="30" width="640" height="460" rx="12" fill="#ffffff" stroke="#b0bec5" stroke-width="2"/>
+  <path d="M52,30 H668 a12,12 0 0 1 12,12 V62 H40 V42 a12,12 0 0 1 12,-12 z" stroke="none" stroke-width="0" fill="#eceff1"/>
+  <line x1="40" y1="62" x2="680" y2="62" stroke="#b0bec5" stroke-width="2"/>
+  <circle cx="60" cy="46" r="5" fill="#ef5350"/>
+  <circle cx="76" cy="46" r="5" fill="#ffca28"/>
+  <circle cx="92" cy="46" r="5" fill="#66bb6a"/>
+  <text x="120" y="51" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start" textLength="46.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;body&gt;</text>
+  <rect x="60" y="80" width="600" height="60" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="74" y="106" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17" fill="#00695c" font-weight="700" text-anchor="start" textLength="81.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;header&gt;</text>
+  <text x="167.6" y="106" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start">logo and site name</text>
+  <rect x="596" y="90" width="40" height="40" rx="6" fill="#b2dfdb" stroke="#00695c" stroke-width="1.5"/>
+  <rect x="74" y="118" width="180" height="12" rx="3" fill="#b2dfdb" stroke="none" stroke-width="1.5"/>
+  <rect x="60" y="152" width="600" height="46" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="74" y="178" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17" fill="#ef6c00" font-weight="700" text-anchor="start" textLength="51.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;nav&gt;</text>
+  <text x="137.0" y="178" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start">main navigation links</text>
+  <rect x="364.56" y="163.6" width="50.88" height="22.799999999999997" rx="11.399999999999999" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="390" y="179.32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ef6c00" font-weight="600" text-anchor="middle">Home</text>
+  <rect x="443.12" y="163.6" width="77.76" height="22.799999999999997" rx="11.399999999999999" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="482" y="179.32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ef6c00" font-weight="600" text-anchor="middle">Services</text>
+  <rect x="538.48" y="163.6" width="71.04" height="22.799999999999997" rx="11.399999999999999" fill="#ffffff" stroke="none" stroke-width="1.5"/>
+  <text x="574" y="179.32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ef6c00" font-weight="600" text-anchor="middle">Contact</text>
+  <rect x="60" y="210" width="600" height="196" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
+  <text x="74" y="236" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17" fill="#1e88e5" font-weight="700" text-anchor="start" textLength="61.2" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;main&gt;</text>
+  <text x="147.2" y="236" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start">the content of this page (only one per page)</text>
+  <rect x="76.0" y="252" width="276.0" height="140" rx="8" fill="#ffffff" stroke="#7e57c2" stroke-width="2"/>
+  <text x="90.0" y="278" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17" fill="#7e57c2" font-weight="700" text-anchor="start" textLength="91.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;section&gt;</text>
+  <text x="193.8" y="278" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start"></text>
+  <rect x="90.0" y="292" width="110" height="14" rx="3" fill="#b39ddb" stroke="none" stroke-width="1.5"/>
+  <rect x="90.0" y="318" width="236.0" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="90.0" y="332" width="216.0" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="90.0" y="346" width="226.0" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="90.0" y="360" width="186.0" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="368.0" y="252" width="276.0" height="140" rx="8" fill="#ffffff" stroke="#7e57c2" stroke-width="2"/>
+  <text x="382.0" y="278" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17" fill="#7e57c2" font-weight="700" text-anchor="start" textLength="91.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;section&gt;</text>
+  <text x="485.8" y="278" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start"></text>
+  <rect x="382.0" y="292" width="110" height="14" rx="3" fill="#b39ddb" stroke="none" stroke-width="1.5"/>
+  <rect x="382.0" y="318" width="236.0" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="382.0" y="332" width="216.0" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="382.0" y="348" width="156.0" height="34" rx="4" fill="#fafafa" stroke="#90a4ae" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="390.0" y="370" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="12" fill="#546e7a" font-weight="normal" text-anchor="start" textLength="64.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;address&gt;</text>
+  <rect x="60" y="418" width="600" height="54" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="74" y="444" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="17" fill="#00695c" font-weight="700" text-anchor="start" textLength="81.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;footer&gt;</text>
+  <text x="167.6" y="444" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start">copyright and contact details</text>
+</svg>

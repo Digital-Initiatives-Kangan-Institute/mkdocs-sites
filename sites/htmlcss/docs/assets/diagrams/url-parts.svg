@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="184" viewBox="0 0 800 184" role="img" aria-labelledby="t">
+  <title id="t">The parts of a URL: https:// is the protocol, www.example.com is the domain name, /about.html is the path</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="800" height="184" fill="#ffffff"/>
+  <rect x="28.0" y="34" width="704" height="60" rx="30" fill="#fafafa" stroke="#cfd8dc" stroke-width="1.5"/>
+  <path d="M52.0,64 v-5 a6,6 0 0 1 12,0 v5" stroke="#546e7a" stroke-width="2.5" fill="none"/>
+  <rect x="48.0" y="63" width="20" height="15" rx="3" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <text x="94.0" y="74" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="30" fill="#00695c" font-weight="600" text-anchor="start" textLength="144.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">https://</text>
+  <path d="M99.0,96 L99.0,106 L233.0,106 L233.0,96" stroke="#00695c" stroke-width="2" fill="none"/>
+  <line x1="166.0" y1="106" x2="166.0" y2="118" stroke="#00695c" stroke-width="2"/>
+  <text x="166.0" y="140" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#00695c" font-weight="700" text-anchor="middle">protocol</text>
+  <text x="166.0" y="162" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle">how the page is sent</text>
+  <text x="238.0" y="74" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="30" fill="#ef6c00" font-weight="600" text-anchor="start" textLength="270.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">www.example.com</text>
+  <path d="M243.0,96 L243.0,106 L503.0,106 L503.0,96" stroke="#ef6c00" stroke-width="2" fill="none"/>
+  <line x1="373.0" y1="106" x2="373.0" y2="118" stroke="#ef6c00" stroke-width="2"/>
+  <text x="373.0" y="140" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#ef6c00" font-weight="700" text-anchor="middle">domain name</text>
+  <text x="373.0" y="162" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle">which web server</text>
+  <text x="508.0" y="74" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="30" fill="#1e88e5" font-weight="600" text-anchor="start" textLength="198.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">/about.html</text>
+  <path d="M513.0,96 L513.0,106 L701.0,106 L701.0,96" stroke="#1e88e5" stroke-width="2" fill="none"/>
+  <line x1="607.0" y1="106" x2="607.0" y2="118" stroke="#1e88e5" stroke-width="2"/>
+  <text x="607.0" y="140" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" fill="#1e88e5" font-weight="700" text-anchor="middle">path</text>
+  <text x="607.0" y="162" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle">which file on the server</text>
+</svg>

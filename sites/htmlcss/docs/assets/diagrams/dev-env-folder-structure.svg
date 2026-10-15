@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="352" viewBox="0 0 660 352" role="img" aria-labelledby="t">
+  <title id="t">A typical website folder: index.html, about.html, contact.html, style.css and an images folder</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="660" height="352" fill="#ffffff"/>
+  <path d="M43,44 V72 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V110 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V148 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V186 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V224 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M73,234 V262 H88" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M73,234 V300 H88" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M32,27 q0,-3 3,-3 h6 l3,3 h9 q3,0 3,3 v11 q0,3 -3,3 h-18 q-3,0 -3,-3 z" stroke="#f9a825" stroke-width="1.5" fill="#ffe082"/>
+  <text x="66" y="39" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="600" text-anchor="start" textLength="105.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">my-website/</text>
+  <path d="M64,60 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#ef6c00" stroke-width="1.5" fill="#fff3e0"/>
+  <path d="M75,60 v6 h6" stroke="#ef6c00" stroke-width="1.5" fill="none"/>
+  <text x="96" y="77" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="96.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">index.html</text>
+  <line x1="202.0" y1="72" x2="300.4" y2="72" stroke="#90a4ae" stroke-width="1.5" marker-start="url(#arrow-grey)"/>
+  <text x="308.4" y="77" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#546e7a" font-weight="normal" text-anchor="start">home page (must be named index.html)</text>
+  <path d="M64,98 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#ef6c00" stroke-width="1.5" fill="#fff3e0"/>
+  <path d="M75,98 v6 h6" stroke="#ef6c00" stroke-width="1.5" fill="none"/>
+  <text x="96" y="115" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="96.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">about.html</text>
+  <path d="M64,136 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#ef6c00" stroke-width="1.5" fill="#fff3e0"/>
+  <path d="M75,136 v6 h6" stroke="#ef6c00" stroke-width="1.5" fill="none"/>
+  <text x="96" y="153" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="115.2" lengthAdjust="spacingAndGlyphs" xml:space="preserve">contact.html</text>
+  <path d="M64,174 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#1e88e5" stroke-width="1.5" fill="#e3f2fd"/>
+  <path d="M75,174 v6 h6" stroke="#1e88e5" stroke-width="1.5" fill="none"/>
+  <text x="96" y="191" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="86.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">style.css</text>
+  <line x1="192.39999999999998" y1="186" x2="300.4" y2="186" stroke="#90a4ae" stroke-width="1.5" marker-start="url(#arrow-grey)"/>
+  <text x="308.4" y="191" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#546e7a" font-weight="normal" text-anchor="start">one stylesheet shared by every page</text>
+  <path d="M62,217 q0,-3 3,-3 h6 l3,3 h9 q3,0 3,3 v11 q0,3 -3,3 h-18 q-3,0 -3,-3 z" stroke="#f9a825" stroke-width="1.5" fill="#ffe082"/>
+  <text x="96" y="229" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="600" text-anchor="start" textLength="67.2" lengthAdjust="spacingAndGlyphs" xml:space="preserve">images/</text>
+  <line x1="173.2" y1="224" x2="300.4" y2="224" stroke="#90a4ae" stroke-width="1.5" marker-start="url(#arrow-grey)"/>
+  <text x="308.4" y="229" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#546e7a" font-weight="normal" text-anchor="start">all images kept together</text>
+  <path d="M94,250 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#7e57c2" stroke-width="1.5" fill="#ede7f6"/>
+  <path d="M105,250 v6 h6" stroke="#7e57c2" stroke-width="1.5" fill="none"/>
+  <text x="126" y="267" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="76.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">logo.png</text>
+  <path d="M94,288 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#7e57c2" stroke-width="1.5" fill="#ede7f6"/>
+  <path d="M105,288 v6 h6" stroke="#7e57c2" stroke-width="1.5" fill="none"/>
+  <text x="126" y="305" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="134.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">team-photo.jpg</text>
+</svg>

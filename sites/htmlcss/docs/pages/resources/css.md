@@ -132,6 +132,8 @@ Every element on a page is a rectangular **box**. The box model describes the sp
 | **Border** | `border` | A line around the padding |
 | **Margin** | `margin` | Space **outside** the border, pushing other elements away |
 
+![The box model: content surrounded by padding, then border, then margin](../../assets/diagrams/box-model.svg)
+
 <embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8ZGl2IGNsYXNzPVwiYm94XCI+VGhpcyBib3ggaGFzIHBhZGRpbmcsIGEgYm9yZGVyIGFuZCBhIG1hcmdpbi48L2Rpdj5cbjxkaXYgY2xhc3M9XCJib3hcIj5TbyBkb2VzIHRoaXMgb25lLjwvZGl2PiJ9XSwgImNzcyI6ICIuYm94IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogbGlnaHR5ZWxsb3c7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIGJvcmRlcjogM3B4IHNvbGlkIG9yYW5nZTtcbiAgbWFyZ2luOiAxNXB4O1xuICBib3JkZXItcmFkaXVzOiA4cHg7XG59IiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 Try changing the `padding` and `margin` values to see the difference between them.
 
@@ -190,6 +192,8 @@ Keyboard users do not use a mouse, so any style given to `:hover` should also be
 ## Simple Layouts
 
 By default, block elements such as headings, paragraphs and `div`s stack on top of each other. Two CSS tools can place them side by side.
+
+![Flexbox places children in one row; Grid arranges children into columns that wrap onto new rows](../../assets/diagrams/flex-grid.svg)
 
 ### Flexbox
 

@@ -17,6 +17,8 @@ Attributes come in **name-value pairs**, where the name is the attribute and the
 | Attribute **name** | `href` |
 | Attribute **value** | `"https://example.com"` |
 
+![The href attribute name and value inside the opening tag of a link](../../assets/diagrams/attribute-anatomy.svg)
+
 Rules for writing attributes:
 
 - Attributes always go inside the **opening tag**, never the closing tag
@@ -99,14 +101,7 @@ Just like **internal links**, you can use a local file name in the `src` attribu
 
 Given this directory structure:
 
-```
-my-website/
-├── index.html
-├── about.html
-└── images/
-    ├── logo.png
-    └── mountain.jpg
-```
+![Folder tree of my-website showing the file path from index.html to about.html, images/logo.png and images/mountain.jpg](../../assets/diagrams/attributes-file-paths.svg)
 
 | From `index.html`, to... | File path |
 |---|---|

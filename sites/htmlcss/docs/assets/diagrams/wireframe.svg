@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="560" viewBox="0 0 760 560" role="img" aria-labelledby="t">
+  <title id="t">A home page wireframe for a surf school: header with logo and site name, navigation bar, large hero image, heading and welcome text, three lesson cards and a footer. Images are boxes with a cross, text is wavy lines</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="760" height="560" fill="#ffffff"/>
+  <rect x="150" y="24" width="460" height="512" rx="4" fill="#ffffff" stroke="#616161" stroke-width="2"/>
+  <rect x="170" y="42" width="420" height="64" rx="2" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="182" y="52" width="44" height="44" rx="2" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="182" y1="52" x2="226" y2="96" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="226" y1="52" x2="182" y2="96" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="240" y="66" width="160" height="16" rx="2" fill="#9e9e9e" stroke="none" stroke-width="1.5"/>
+  <rect x="170" y="118" width="420" height="34" rx="2" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="186" y="130" width="64" height="10" rx="2" fill="#9e9e9e" stroke="none" stroke-width="1.5"/>
+  <rect x="276" y="130" width="64" height="10" rx="2" fill="#9e9e9e" stroke="none" stroke-width="1.5"/>
+  <rect x="366" y="130" width="64" height="10" rx="2" fill="#9e9e9e" stroke="none" stroke-width="1.5"/>
+  <rect x="456" y="130" width="64" height="10" rx="2" fill="#9e9e9e" stroke="none" stroke-width="1.5"/>
+  <rect x="170" y="166" width="420" height="120" rx="2" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="170" y1="166" x2="590" y2="286" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="590" y1="166" x2="170" y2="286" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="170" y="304" width="200" height="16" rx="2" fill="#616161" stroke="none" stroke-width="1.5"/>
+  <path d="M170,338 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0" stroke="#9e9e9e" stroke-width="1.5" fill="none"/>
+  <path d="M170,356 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0" stroke="#9e9e9e" stroke-width="1.5" fill="none"/>
+  <rect x="170.0" y="376" width="129.33333333333334" height="92" rx="2" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="180.0" y="386" width="109.33333333333334" height="40" rx="2" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="180.0" y1="386" x2="289.33333333333337" y2="426" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="289.33333333333337" y1="386" x2="180.0" y2="426" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="180.0" y="436" width="79.33333333333334" height="10" rx="2" fill="#616161" stroke="none" stroke-width="1.5"/>
+  <path d="M180.0,458 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0" stroke="#9e9e9e" stroke-width="1.5" fill="none"/>
+  <rect x="315.33333333333337" y="376" width="129.33333333333334" height="92" rx="2" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="325.33333333333337" y="386" width="109.33333333333334" height="40" rx="2" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="325.33333333333337" y1="386" x2="434.66666666666674" y2="426" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="434.66666666666674" y1="386" x2="325.33333333333337" y2="426" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="325.33333333333337" y="436" width="79.33333333333334" height="10" rx="2" fill="#616161" stroke="none" stroke-width="1.5"/>
+  <path d="M325.33333333333337,458 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0" stroke="#9e9e9e" stroke-width="1.5" fill="none"/>
+  <rect x="460.6666666666667" y="376" width="129.33333333333334" height="92" rx="2" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="470.6666666666667" y="386" width="109.33333333333334" height="40" rx="2" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="470.6666666666667" y1="386" x2="580.0" y2="426" stroke="#9e9e9e" stroke-width="1.5"/>
+  <line x1="580.0" y1="386" x2="470.6666666666667" y2="426" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="470.6666666666667" y="436" width="79.33333333333334" height="10" rx="2" fill="#616161" stroke="none" stroke-width="1.5"/>
+  <path d="M470.6666666666667,458 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0 q4,-5 8,0 t8,0" stroke="#9e9e9e" stroke-width="1.5" fill="none"/>
+  <rect x="170" y="482" width="420" height="36" rx="2" fill="none" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="184" y="495" width="180" height="10" rx="2" fill="#9e9e9e" stroke="none" stroke-width="1.5"/>
+  <line x1="136" y1="74" x2="178" y2="74" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="128" y="79" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="end">logo</text>
+  <line x1="624" y1="74" x2="404" y2="74" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="632" y="79" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="start">site name</text>
+  <line x1="136" y1="135" x2="166" y2="135" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="128" y="140" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="end">navigation</text>
+  <line x1="624" y1="226" x2="594" y2="226" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="632" y="231" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="start">hero image</text>
+  <line x1="136" y1="312" x2="166" y2="312" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="128" y="317" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="end">heading</text>
+  <line x1="624" y1="347" x2="594" y2="347" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="632" y="352" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="start">welcome text</text>
+  <line x1="136" y1="422" x2="166" y2="422" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="128" y="427" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="end">lessons</text>
+  <line x1="624" y1="500" x2="594" y2="500" stroke="#00897b" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="632" y="505" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="start">footer</text>
+</svg>

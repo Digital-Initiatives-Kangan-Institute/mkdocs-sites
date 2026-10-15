@@ -26,6 +26,8 @@ Nesting is how most webpages are built. Things like menus, cards, forms, and lay
 | **Child** | The element inside the parent (`b` in the example above) |
 | **Siblings** | Elements that share the same parent |
 
+![Tree showing p as the parent of b and i, which are siblings](../../assets/diagrams/nesting-tree.svg)
+
 ### Closing in the Right Order
 
 Nested elements must be closed in the **reverse order** they were opened. The last element opened is the first one closed.
@@ -110,4 +112,4 @@ On its own, a `div` does not change how content looks. It becomes useful when co
 
 ### Activity - Nested Elements
 
-[Attempt Activity 3 - Nested Elements](../tasks/task-3-nested-elements.md){.md-button}
+[Attempt Activity 2 - Nested Elements](../tasks/task-2-nested-elements.md){.md-button}
