@@ -1,5 +1,8 @@
 # Task 5 - Page Structure
 
+!!! note "Working in VS Code"
+    Every exercise in this task is done in **VS Code**. For each exercise, create a new folder, open it in VS Code with `File` then `Open Folder...`, and create an `index.html` file (plus any other files named in the starter code). Check your work with **Live Preview**.
+
 ## Document Structure
 
 !!! abstract "Instructions"
@@ -46,7 +49,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, extend your article page from the previous exercise.
 
-    This repeats what you practised in Task 2. You must:
+    This repeats what you practised in Task 1. You must:
 
     - apply **bold** to one important word in the first paragraph
     - apply _italics_ to one word in the second paragraph
@@ -67,28 +70,78 @@
 ## Semantic Layout
 
 !!! abstract "Instructions"
-    **Using the editor below**, organise the page content into the correct **semantic** layout elements.
+    **Using VS Code**, organise the page content into the correct **semantic** layout elements.
 
     - the business name belongs in a `header`
     - the list of links belongs in a `nav`
     - the welcome and services content belongs in `main`, with each part in its own `section`
     - the copyright line belongs in a `footer`
 
-    The CSS tab colours each area so you can see when it is working.
+    The starter `style.css` colours each area so you can see when it is working.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aDE+R3JlZW4gVGh1bWIgR2FyZGVuaW5nPC9oMT5cblxuPHVsPlxuICA8bGk+PGEgaHJlZj1cImluZGV4Lmh0bWxcIj5Ib21lPC9hPjwvbGk+XG4gIDxsaT48YSBocmVmPVwic2VydmljZXMuaHRtbFwiPlNlcnZpY2VzPC9hPjwvbGk+XG4gIDxsaT48YSBocmVmPVwiY29udGFjdC5odG1sXCI+Q29udGFjdDwvYT48L2xpPlxuPC91bD5cblxuPGgyPldlbGNvbWU8L2gyPlxuPHA+TG9jYWwgZ2FyZGVuZXJzIGtlZXBpbmcgeW91ciB5YXJkIGdyZWVuIGFsbCB5ZWFyIHJvdW5kLjwvcD5cblxuPGgyPldoYXQgV2UgRG88L2gyPlxuPHA+TGF3biBtb3dpbmcsIGhlZGdlIHRyaW1taW5nIGFuZCBnYXJkZW4gZGVzaWduLjwvcD5cblxuPHA+JmNvcHk7IDIwMjYgR3JlZW4gVGh1bWIgR2FyZGVuaW5nPC9wPiJ9XSwgImNzcyI6ICJoZWFkZXIgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMmU3ZDMyOyBjb2xvcjogd2hpdGU7IHBhZGRpbmc6IDEwcHg7IH1cbm5hdiB7IGJhY2tncm91bmQtY29sb3I6ICNjOGU2Yzk7IHBhZGRpbmc6IDVweCAxMHB4OyB9XG5tYWluIHsgYm9yZGVyOiAycHggZGFzaGVkICMyZTdkMzI7IHBhZGRpbmc6IDEwcHg7IG1hcmdpbjogMTBweCAwOyB9XG5zZWN0aW9uIHsgYmFja2dyb3VuZC1jb2xvcjogI2YxZjhlOTsgbWFyZ2luOiAxMHB4IDA7IHBhZGRpbmc6IDVweCAxMHB4OyB9XG5mb290ZXIgeyBiYWNrZ3JvdW5kLWNvbG9yOiAjMWI1ZTIwOyBjb2xvcjogd2hpdGU7IHBhZGRpbmc6IDEwcHg7IH0iLCAianMiOiAiIiwgImFjdGl2ZVRhYiI6ICJodG1sIiwgImFjdGl2ZVBhZ2UiOiAiaW5kZXguaHRtbCJ9"></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <link rel="stylesheet" href="style.css">
+
+    <h1>Green Thumb Gardening</h1>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <h2>Welcome</h2>
+    <p>Local gardeners keeping your yard green all year round.</p>
+
+    <h2>What We Do</h2>
+    <p>Lawn mowing, hedge trimming and garden design.</p>
+
+    <p>&copy; 2026 Green Thumb Gardening</p>
+    ```
+
+    `style.css`
+
+    ```css
+    header { background-color: #2e7d32; color: white; padding: 10px; }
+    nav { background-color: #c8e6c9; padding: 5px 10px; }
+    main { border: 2px dashed #2e7d32; padding: 10px; margin: 10px 0; }
+    section { background-color: #f1f8e9; margin: 10px 0; padding: 5px 10px; }
+    footer { background-color: #1b5e20; color: white; padding: 10px; }
+    ```
+
 ??? question "Hint"
     Each semantic element wraps around its content, just like a `div`. There is one `header`, one `nav`, one `main` and one `footer`. The two `section` elements go **inside** `main`.
 
 ## Address and Footer
 
 !!! abstract "Instructions"
-    **Using the editor below**, finish the page:
+    **Using VS Code**, finish the page:
 
     - add a section with the heading `Find Us` and the address below, marked up with the address element and a line break after each line
     - replace `(c)` in the footer with the copyright **symbol**
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8bWFpbj5cbiAgPHNlY3Rpb24+XG4gICAgPGgyPldlbGNvbWU8L2gyPlxuICAgIDxwPkxvY2FsIGdhcmRlbmVycyBrZWVwaW5nIHlvdXIgeWFyZCBncmVlbiBhbGwgeWVhciByb3VuZC48L3A+XG4gIDwvc2VjdGlvbj5cblxuICA8IS0tIEFkZCB0aGUgRmluZCBVcyBzZWN0aW9uIGhlcmU6XG4gICAgICAgR3JlZW4gVGh1bWIgR2FyZGVuaW5nXG4gICAgICAgOCBGZXJuIFN0cmVldFxuICAgICAgIFNoZXBwYXJ0b24gVklDIDM2MzAgLS0+XG48L21haW4+XG5cbjxmb290ZXI+XG4gIDxwPihjKSAyMDI2IEdyZWVuIFRodW1iIEdhcmRlbmluZzwvcD5cbjwvZm9vdGVyPiJ9XSwgImNzcyI6ICIiLCAianMiOiAiIiwgImFjdGl2ZVRhYiI6ICJodG1sIiwgImFjdGl2ZVBhZ2UiOiAiaW5kZXguaHRtbCJ9"></embed>
+??? code "click to expand"
+    ```html
+    <main>
+      <section>
+        <h2>Welcome</h2>
+        <p>Local gardeners keeping your yard green all year round.</p>
+      </section>
+
+      <!-- Add the Find Us section here:
+           Green Thumb Gardening
+           8 Fern Street
+           Shepparton VIC 3630 -->
+    </main>
+
+    <footer>
+      <p>(c) 2026 Green Thumb Gardening</p>
+    </footer>
+    ```
+
 ??? question "Hint"
     The element for contact details is called `address`, and line breaks use `br`. The copyright symbol is a **character entity**: it starts with an ampersand, ends with a semicolon, and the word in the middle is short for copyright. See [Special Characters](../resources/page-structure.md#special-characters).
 

@@ -136,7 +136,7 @@ In this task you will build the **Paws and Claws Pet Grooming** website that you
     - a `Meet the Team` section with a container for each groomer, containing their photo, name, job title and a short description
 
 ??? question "Hint"
-    This repeats the Team Members exercise from Task 3, with a photo added to each container. Choose alt text that describes each photo, such as the person's name and what they are doing.
+    This repeats the Team Members exercise from Task 2, with a photo added to each container. Choose alt text that describes each photo, such as the person's name and what they are doing.
 
 ## Contact Page Content
 

@@ -1,5 +1,8 @@
 # Task 12 - Testing and Validation
 
+!!! note "Working in VS Code"
+    Every exercise in this task is done in **VS Code**. For each exercise, create a new folder, open it in VS Code with `File` then `Open Folder...`, and create an `index.html` file (plus any other files named in the starter code). Check your work with **Live Preview**.
+
 ## Validate a Page
 
 !!! abstract "Instructions"
@@ -43,9 +46,29 @@
 ## Find the Errors
 
 !!! abstract "Instructions"
-    **Using the editor below**, the page has **six** problems that a validator or accessibility check would find. Find and fix all of them.
+    **Using VS Code**, find and fix the **six** problems in the starter page that a validator or accessibility check would find.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8IURPQ1RZUEUgaHRtbD5cbjxodG1sPlxuPGhlYWQ+XG4gIDxtZXRhIGNoYXJzZXQ9XCJVVEYtOFwiPlxuPC9oZWFkPlxuPGJvZHk+XG4gIDxoMT5SaXZlcnNpZGUgQmlrZSBSZXBhaXJzPC9oMT5cbiAgPGgzPk91ciBXb3Jrc2hvcDwvaDM+XG4gIDxpbWcgc3JjPVwiaHR0cHM6Ly9jeWJlcmJpbGJ5LmNvbS9jYXB5YmFyYS5qcGdcIj5cbiAgPHA+Qm9vayBhIHNlcnZpY2UgPGEgaHJlZj1cImNvbnRhY3QuaHRtbFwiPmhlcmU8L2E+LjwvcD5cblxuICA8Zm9ybSBhY3Rpb249XCIjXCI+XG4gICAgPGxhYmVsPkVtYWlsPC9sYWJlbD5cbiAgICA8aW5wdXQgdHlwZT1cImVtYWlsXCIgaWQ9XCJlbWFpbFwiPlxuICA8L2Zvcm0+XG48L2JvZHk+XG48L2h0bWw+In1dLCAiY3NzIjogIiIsICJqcyI6ICIiLCAiYWN0aXZlVGFiIjogImh0bWwiLCAiYWN0aXZlUGFnZSI6ICJpbmRleC5odG1sIn0="></embed>
+??? code "click to expand"
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <h1>Riverside Bike Repairs</h1>
+      <h3>Our Workshop</h3>
+      <img src="https://cyberbilby.com/capybara.jpg">
+      <p>Book a service <a href="contact.html">here</a>.</p>
+
+      <form action="#">
+        <label>Email</label>
+        <input type="email" id="email">
+      </form>
+    </body>
+    </html>
+    ```
+
 ??? question "Hint"
     Check the page against the [Accessible HTML Checklist](../resources/accessibility.md#accessible-html-checklist). Look at the `html` element, the `head`, the heading levels, the image, the link text and the form label.
 
@@ -95,11 +118,31 @@
 ## Security Check
 
 !!! abstract "Instructions"
-    **Using the editor below**, the page contains information that should **never** be published in a website's code. Find and remove it.
+    **Using VS Code**, find and remove the information in the starter page that should **never** be published in a website's code.
 
     Then press `Ctrl + U` on each page of your own websites and check the source code for the same kinds of problems.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8IURPQ1RZUEUgaHRtbD5cbjxodG1sIGxhbmc9XCJlblwiPlxuPGhlYWQ+XG4gIDxtZXRhIGNoYXJzZXQ9XCJVVEYtOFwiPlxuICA8dGl0bGU+SG9tZSB8IEdyZWVuIFRodW1iIEdhcmRlbmluZzwvdGl0bGU+XG48L2hlYWQ+XG48Ym9keT5cbiAgPCEtLSBUT0RPOiBhc2sgRGF2ZSBhYm91dCB0aGUgcHJpY2UgaW5jcmVhc2UgYmVmb3JlIGxhdW5jaCAtLT5cbiAgPGgxPkdyZWVuIFRodW1iIEdhcmRlbmluZzwvaDE+XG4gIDxwPkxvY2FsIGdhcmRlbmVycyBrZWVwaW5nIHlvdXIgeWFyZCBncmVlbiBhbGwgeWVhciByb3VuZC48L3A+XG5cbiAgPCEtLSBGVFAgbG9naW4gZm9yIHRoZSB3ZWIgc2VydmVyOiBncmVlbnRodW1iIC8gR2FyZGVuMjAyNiEgLS0+XG4gIDxwPkNhbGwgdXMgb24gMDMgOTAwMCAxMjM0LjwvcD5cblxuICA8IS0tIFN0YWZmIGhvbWUgYWRkcmVzczogMjIgTWFwbGUgQ291cnQsIFNoZXBwYXJ0b24gLS0+XG48L2JvZHk+XG48L2h0bWw+In1dLCAiY3NzIjogIiIsICJqcyI6ICIiLCAiYWN0aXZlVGFiIjogImh0bWwiLCAiYWN0aXZlUGFnZSI6ICJpbmRleC5odG1sIn0="></embed>
+??? code "click to expand"
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Home | Green Thumb Gardening</title>
+    </head>
+    <body>
+      <!-- TODO: ask Dave about the price increase before launch -->
+      <h1>Green Thumb Gardening</h1>
+      <p>Local gardeners keeping your yard green all year round.</p>
+
+      <!-- FTP login for the web server: greenthumb / Garden2026! -->
+      <p>Call us on 03 9000 1234.</p>
+
+      <!-- Staff home address: 22 Maple Court, Shepparton -->
+    </body>
+    </html>
+    ```
+
 ??? question "Hint"
     Comments are hidden on the page but anyone can read them in the page source. Think about which comments contain passwords, private notes, personal information or unfinished work. The business phone number is meant to be public.
 

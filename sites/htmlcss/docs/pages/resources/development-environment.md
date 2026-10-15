@@ -147,4 +147,4 @@ Web servers are often **case sensitive**, so `Logo.png` and `logo.png` are treat
 
 ### Activity - Development Environment
 
-[Attempt Activity 1 - Development Environment](../tasks/task-1-development-environment.md){.md-button}
+[Attempt Activity 3 - Development Environment](../tasks/task-3-development-environment.md){.md-button}

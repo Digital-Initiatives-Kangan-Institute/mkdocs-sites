@@ -1,4 +1,4 @@
-# Task 3 - Nested Elements
+# Task 2 - Nested Elements
 
 ## Bold Text
 
@@ -57,28 +57,30 @@
 ## Nested Lists
 
 !!! abstract "Instructions"
-    **Using VS Code**, create a page containing a list with sub-lists inside it.
+    **Using the editor below**, create a list with sub-lists inside it.
 
-    This builds on the list you made above. Your page must include:
+    This builds on the list you made above. Your code must include:
 
     - an unordered list with `2` category items
     - a nested list with `2` items inside each category
 
+<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 ??? question "Hint"
     The nested list sits inside its parent list item, after the category text, so the order is category text first, then the inner list, then the parent item's closing tag. All lists use `ul` and all items use `li`.
 
 ## Menu Categories
 
 !!! abstract "Instructions"
-    **Using VS Code**, create a new `menu.html` page for a restaurant menu using nested lists.
+    **Using the editor below**, create a restaurant menu using nested lists.
 
-    Your page must include:
+    Your code must include:
 
     - a main heading `Menu`
     - an unordered list with `3` categories: `Starters`, `Mains` and `Desserts`
     - a nested list of `3` dishes inside each category
     - the name of one dish in each category in **bold** as the chef's recommendation
 
+<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 ??? question "Hint"
     This repeats the Nested Lists exercise with one more category and one more level of nesting: the bold element nests inside a list item, which is inside a nested list. Indent each level so you can see which element is inside which.
 
@@ -96,7 +98,7 @@
 ## Team Members
 
 !!! abstract "Instructions"
-    **Using VS Code**, create a new `team.html` page with a heading `Meet the Team` and a container for each of `3` team members.
+    **Using the editor below**, add a heading `Meet the Team` and a container for each of `3` team members.
 
     Each team member's container must include:
 
@@ -104,5 +106,6 @@
     - their job title in a paragraph
     - a short description of them in a paragraph
 
+<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
 ??? question "Hint"
-    This repeats the Grouping with Containers exercise. Work on one team member first, check it in Live Preview, then copy that container twice and change the text. Think about which heading level suits the names when `Meet the Team` is the main heading.
+    This repeats the Grouping with Containers exercise. Work on one team member first, check it in the preview, then copy that container twice and change the text. Think about which heading level suits the names when `Meet the Team` is the main heading.

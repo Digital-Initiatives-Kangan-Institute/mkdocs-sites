@@ -8,11 +8,12 @@ nav:
   # Add additional navigation below this point:
   - Menu:
     - Resources:
-      - Intro to HTML: pages/resources/intro-to-html.md
       - How the Web Works: pages/resources/how-the-web-works.md
-      - Development Environment: pages/resources/development-environment.md
+      - Intro to HTML: pages/resources/intro-to-html.md
+      - W3C: pages/resources/w3c.md
       - Elements: pages/resources/elements.md
       - Nested Elements: pages/resources/nested-elements.md
+      - Development Environment: pages/resources/development-environment.md
       - Attributes: pages/resources/element-attributes.md
       - Page Structure: pages/resources/page-structure.md
       - Links and Navigation: pages/resources/links-navigation.md
@@ -20,7 +21,6 @@ nav:
       - Styling with CSS: pages/resources/css.md
       - Coding Standards: pages/resources/coding-standards.md
       - Planning a Website: pages/resources/planning-a-website.md
-      - W3C: pages/resources/w3c.md
       - Accessibility: pages/resources/accessibility.md
       - Legislation and Procedures: pages/resources/legislation.md
       - Testing a Website: pages/resources/testing.md
@@ -28,9 +28,9 @@ nav:
       - Deploying to GitHub Pages: pages/resources/deployment-github.md
       - Additional Resources: pages/resources/additional-resources.md
     - Tasks:
-      - Task 1 - Development Environment: pages/tasks/task-1-development-environment.md
-      - Task 2 - Elements: pages/tasks/task-2-elements.md
-      - Task 3 - Nested Elements: pages/tasks/task-3-nested-elements.md
+      - Task 1 - Elements: pages/tasks/task-1-elements.md
+      - Task 2 - Nested Elements: pages/tasks/task-2-nested-elements.md
+      - Task 3 - Development Environment: pages/tasks/task-3-development-environment.md
       - Task 4 - Attributes: pages/tasks/task-4-attributes.md
       - Task 5 - Page Structure: pages/tasks/task-5-page-structure.md
       - Task 6 - Links and Navigation: pages/tasks/task-6-links-navigation.md
@@ -55,4 +55,4 @@ plugins:
       # Uncomment below if you would like to reset the table of contents numbering
       # after a certain page:
       restart_increment_after:
-        - pages/tasks/task-1-development-environment.md
+        - pages/tasks/task-1-elements.md

@@ -131,4 +131,4 @@ A **comment** is a note written inside the code that is **not displayed** on the
 
 ### Activity - Elements
 
-[Attempt Activity 2 - Elements](../tasks/task-2-elements.md){.md-button}
+[Attempt Activity 1 - Elements](../tasks/task-1-elements.md){.md-button}
