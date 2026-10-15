@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="238" viewBox="0 0 420 238" role="img" aria-labelledby="t">
+  <title id="t">Project folder my-website containing index.html, about.html, style.css and an empty images folder</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="420" height="238" fill="#ffffff"/>
+  <path d="M43,44 V72 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V110 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V148 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M43,44 V186 H58" stroke="#90a4ae" stroke-width="1.5" fill="none"/>
+  <path d="M32,27 q0,-3 3,-3 h6 l3,3 h9 q3,0 3,3 v11 q0,3 -3,3 h-18 q-3,0 -3,-3 z" stroke="#f9a825" stroke-width="1.5" fill="#ffe082"/>
+  <text x="66" y="39" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="600" text-anchor="start" textLength="105.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">my-website/</text>
+  <path d="M64,60 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#ef6c00" stroke-width="1.5" fill="#fff3e0"/>
+  <path d="M75,60 v6 h6" stroke="#ef6c00" stroke-width="1.5" fill="none"/>
+  <text x="96" y="77" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="96.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">index.html</text>
+  <path d="M64,98 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#ef6c00" stroke-width="1.5" fill="#fff3e0"/>
+  <path d="M75,98 v6 h6" stroke="#ef6c00" stroke-width="1.5" fill="none"/>
+  <text x="96" y="115" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="96.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">about.html</text>
+  <path d="M64,136 h11 l6,6 v16 q0,2 -2,2 h-15 q-2,0 -2,-2 v-20 q0,-2 2,-2 z" stroke="#1e88e5" stroke-width="1.5" fill="#e3f2fd"/>
+  <path d="M75,136 v6 h6" stroke="#1e88e5" stroke-width="1.5" fill="none"/>
+  <text x="96" y="153" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="normal" text-anchor="start" textLength="86.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">style.css</text>
+  <path d="M62,179 q0,-3 3,-3 h6 l3,3 h9 q3,0 3,3 v11 q0,3 -3,3 h-18 q-3,0 -3,-3 z" stroke="#f9a825" stroke-width="1.5" fill="#ffe082"/>
+  <text x="96" y="191" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="16" fill="#263238" font-weight="600" text-anchor="start" textLength="67.2" lengthAdjust="spacingAndGlyphs" xml:space="preserve">images/</text>
+</svg>

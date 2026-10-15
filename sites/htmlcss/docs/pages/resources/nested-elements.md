@@ -26,6 +26,8 @@ Nesting is how most webpages are built. Things like menus, cards, forms, and lay
 | **Child** | The element inside the parent (`b` in the example above) |
 | **Siblings** | Elements that share the same parent |
 
+![Tree showing p as the parent of b and i, which are siblings](../../assets/diagrams/nesting-tree.svg)
+
 ### Closing in the Right Order
 
 Nested elements must be closed in the **reverse order** they were opened. The last element opened is the first one closed.

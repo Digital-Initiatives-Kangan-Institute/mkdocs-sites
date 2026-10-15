@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img" aria-labelledby="t">
+  <title id="t">Flexbox places children side by side in one row, such as a navigation bar; Grid arranges children into columns and rows, such as a set of cards</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="760" height="330" fill="#ffffff"/>
+  <rect x="30" y="20" width="340" height="290" rx="12" fill="#fafafa" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="50" y="52" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#263238" font-weight="700" text-anchor="start">Flexbox</text>
+  <text x="50" y="76" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="14" fill="#00695c" font-weight="600" text-anchor="start" textLength="117.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">display: flex;</text>
+  <text x="50" y="292" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start">children sit side by side in a row</text>
+  <rect x="50" y="110" width="300" height="64" rx="8" fill="#e0f2f1" stroke="#00897b" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="62" y="124" width="62" height="36" rx="6" fill="#00897b" stroke="none" stroke-width="1.5"/>
+  <text x="93" y="147" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="600" text-anchor="middle">Home</text>
+  <rect x="132" y="124" width="62" height="36" rx="6" fill="#00897b" stroke="none" stroke-width="1.5"/>
+  <text x="163" y="147" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="600" text-anchor="middle">Services</text>
+  <rect x="202" y="124" width="62" height="36" rx="6" fill="#00897b" stroke="none" stroke-width="1.5"/>
+  <text x="233" y="147" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="600" text-anchor="middle">About</text>
+  <rect x="272" y="124" width="62" height="36" rx="6" fill="#00897b" stroke="none" stroke-width="1.5"/>
+  <text x="303" y="147" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="600" text-anchor="middle">Contact</text>
+  <line x1="62" y1="196" x2="338" y2="196" stroke="#00695c" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="200" y="218" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#00695c" font-weight="600" text-anchor="middle">one row</text>
+  <rect x="390" y="20" width="340" height="290" rx="12" fill="#fafafa" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="410" y="52" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" fill="#263238" font-weight="700" text-anchor="start">Grid</text>
+  <text x="410" y="76" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="14" fill="#00695c" font-weight="600" text-anchor="start" textLength="117.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">display: grid;</text>
+  <text x="410" y="292" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="start">children fill columns, then wrap</text>
+  <rect x="410" y="96" width="300" height="172" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="424" y="110" width="86" height="70" rx="6" fill="#ffffff" stroke="#1e88e5" stroke-width="1.5"/>
+  <rect x="432" y="118" width="70" height="30" rx="3" fill="#bbdefb" stroke="none" stroke-width="1.5"/>
+  <rect x="432" y="156" width="56" height="8" rx="2" fill="#90caf9" stroke="none" stroke-width="1.5"/>
+  <rect x="520" y="110" width="86" height="70" rx="6" fill="#ffffff" stroke="#1e88e5" stroke-width="1.5"/>
+  <rect x="528" y="118" width="70" height="30" rx="3" fill="#bbdefb" stroke="none" stroke-width="1.5"/>
+  <rect x="528" y="156" width="56" height="8" rx="2" fill="#90caf9" stroke="none" stroke-width="1.5"/>
+  <rect x="616" y="110" width="86" height="70" rx="6" fill="#ffffff" stroke="#1e88e5" stroke-width="1.5"/>
+  <rect x="624" y="118" width="70" height="30" rx="3" fill="#bbdefb" stroke="none" stroke-width="1.5"/>
+  <rect x="624" y="156" width="56" height="8" rx="2" fill="#90caf9" stroke="none" stroke-width="1.5"/>
+  <rect x="424" y="190" width="86" height="70" rx="6" fill="#ffffff" stroke="#1e88e5" stroke-width="1.5"/>
+  <rect x="432" y="198" width="70" height="30" rx="3" fill="#bbdefb" stroke="none" stroke-width="1.5"/>
+  <rect x="432" y="236" width="56" height="8" rx="2" fill="#90caf9" stroke="none" stroke-width="1.5"/>
+  <rect x="520" y="190" width="86" height="70" rx="6" fill="#ffffff" stroke="#1e88e5" stroke-width="1.5"/>
+  <rect x="528" y="198" width="70" height="30" rx="3" fill="#bbdefb" stroke="none" stroke-width="1.5"/>
+  <rect x="528" y="236" width="56" height="8" rx="2" fill="#90caf9" stroke="none" stroke-width="1.5"/>
+</svg>

@@ -120,13 +120,7 @@ For an image link, the `alt` text is read out as the link text, so it should des
 
 Internal links use the same **relative file paths** as images (see [Attributes](element-attributes.md#file-paths)).
 
-```
-my-website/
-├── index.html
-├── services.html
-└── documents/
-    └── price-list.pdf
-```
+![Folder tree of my-website showing the link path from index.html to services.html and documents/price-list.pdf](../../assets/diagrams/links-file-paths.svg)
 
 | From `index.html` to... | `href` |
 |---|---|

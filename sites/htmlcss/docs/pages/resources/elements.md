@@ -30,6 +30,8 @@ The forward slash (`/`) inside the closing tag tells the browser that the elemen
 
 Together, these form an **element**.
 
+![The h1 element split into its opening tag, content and closing tag](../../assets/diagrams/element-anatomy.svg)
+
 !!! note
     Tag names are written in **lowercase**. Browsers will accept `<H1>`, but lowercase is the standard and is easier to read.
 

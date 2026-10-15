@@ -106,16 +106,7 @@ A website is a folder of files. Keeping those files organised is important becau
 
 A typical simple website **directory structure** looks like this:
 
-```
-my-website/
-├── index.html        ← home page (must be named index.html)
-├── about.html
-├── contact.html
-├── style.css         ← one stylesheet shared by every page
-└── images/           ← all images kept together
-    ├── logo.png
-    └── team-photo.jpg
-```
+![A typical website folder containing index.html, about.html, contact.html, style.css and an images folder](../../assets/diagrams/dev-env-folder-structure.svg)
 
 ### File Naming Rules
 

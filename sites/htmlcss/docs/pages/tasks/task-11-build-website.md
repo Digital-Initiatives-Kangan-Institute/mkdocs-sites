@@ -21,15 +21,7 @@ In this task you will build the **Paws and Claws Pet Grooming** website that you
 !!! abstract "Instructions"
     **Using VS Code**, create a project folder called `paws-and-claws` with this structure:
 
-    ```
-    paws-and-claws/
-    ├── index.html
-    ├── services.html
-    ├── about.html
-    ├── contact.html
-    ├── style.css
-    └── images/
-    ```
+    ![The paws-and-claws folder containing index.html, services.html, about.html, contact.html, style.css and an images folder](../../assets/diagrams/task-paws-and-claws-folder.svg)
 
     Move all your images into the `images` folder, then open the project folder in VS Code.
 

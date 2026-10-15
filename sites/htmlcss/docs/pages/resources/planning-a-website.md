@@ -48,21 +48,7 @@ A sitemap is used to:
 
 A visual sitemap looks like an upside-down tree. The **home page** is at the top, the main pages sit below it, and any sub-pages sit below those.
 
-```
-                        ┌──────────────┐
-                        │     Home     │
-                        │  index.html  │
-                        └──────┬───────┘
-          ┌────────────────────┼────────────────────┐
-  ┌───────┴───────┐    ┌───────┴───────┐    ┌───────┴───────┐
-  │   Services    │    │   About Us    │    │    Contact    │
-  │ services.html │    │  about.html   │    │ contact.html  │
-  └───────┬───────┘    └───────────────┘    └───────────────┘
-      ┌───┴──────────┐
- ┌────┴─────┐  ┌─────┴─────┐
- │ Pricing  │  │ Bookings  │
- └──────────┘  └───────────┘
-```
+![Visual sitemap: Home links to Services, About Us and Contact; Services has sub-pages Pricing and Bookings](../../assets/diagrams/sitemap.svg)
 
 Each box is a page. Adding the **file name** to each box helps when building the site, and a short note of the **content** for each page makes the plan even clearer.
 
@@ -135,6 +121,10 @@ The sitemap guides the navigation:
 ## Wireframes
 
 A **wireframe** is a simple sketch of the layout of a single page: where the header, navigation, headings, images and footer go. Where a sitemap shows *which* pages exist, a wireframe shows *what goes where* on one page. Wireframes are usually drawn with boxes and lines, without colours or real images.
+
+The example below is a wireframe of a home page for a surf school. Images are shown as boxes with a cross through them, and text is shown as wavy lines.
+
+![Wireframe of a surf school home page with labelled logo, site name, navigation, hero image, heading, welcome text, lesson cards and footer](../../assets/diagrams/wireframe.svg)
 
 ***
 

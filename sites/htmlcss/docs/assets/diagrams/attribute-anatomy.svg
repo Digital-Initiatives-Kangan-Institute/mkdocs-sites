@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="200" viewBox="0 0 860 200" role="img" aria-labelledby="t">
+  <title id="t">Anatomy of an attribute: the attribute name href and the value https://example.com sit inside the opening tag of the a element</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="860" height="200" fill="#ffffff"/>
+  <rect x="41.400000000000034" y="72" width="777.1999999999999" height="58" rx="10" fill="#fafafa" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="63.400000000000034" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#00695c" font-weight="600" text-anchor="start" textLength="46.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;a </text>
+  <text x="110.20000000000003" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#ef6c00" font-weight="600" text-anchor="start" textLength="62.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">href</text>
+  <text x="172.60000000000002" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#263238" font-weight="600" text-anchor="start" textLength="15.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">=</text>
+  <text x="188.20000000000002" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#1e88e5" font-weight="600" text-anchor="start" textLength="327.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">"https://example.com"</text>
+  <text x="515.8" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#00695c" font-weight="600" text-anchor="start" textLength="15.6" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&gt;</text>
+  <text x="531.4" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#263238" font-weight="600" text-anchor="start" textLength="202.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">Visit Example</text>
+  <text x="734.1999999999999" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#00695c" font-weight="600" text-anchor="start" textLength="62.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;/a&gt;</text>
+  <path d="M115.20000000000003,140 L115.20000000000003,150 L167.60000000000002,150 L167.60000000000002,140" stroke="#ef6c00" stroke-width="2" fill="none"/>
+  <line x1="141.40000000000003" y1="150" x2="141.40000000000003" y2="162" stroke="#ef6c00" stroke-width="2"/>
+  <text x="141.40000000000003" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#ef6c00" font-weight="600" text-anchor="middle">name</text>
+  <path d="M193.20000000000002,140 L193.20000000000002,150 L510.79999999999995,150 L510.79999999999995,140" stroke="#1e88e5" stroke-width="2" fill="none"/>
+  <line x1="352.0" y1="150" x2="352.0" y2="162" stroke="#1e88e5" stroke-width="2"/>
+  <text x="352.0" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#1e88e5" font-weight="600" text-anchor="middle">value</text>
+  <path d="M536.4,140 L536.4,150 L729.1999999999999,150 L729.1999999999999,140" stroke="#546e7a" stroke-width="2" fill="none"/>
+  <line x1="632.8" y1="150" x2="632.8" y2="162" stroke="#546e7a" stroke-width="2"/>
+  <text x="632.8" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#546e7a" font-weight="600" text-anchor="middle">content</text>
+  <path d="M739.1999999999999,140 L739.1999999999999,150 L791.5999999999999,150 L791.5999999999999,140" stroke="#00695c" stroke-width="2" fill="none"/>
+  <line x1="765.3999999999999" y1="150" x2="765.3999999999999" y2="162" stroke="#00695c" stroke-width="2"/>
+  <text x="765.3999999999999" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="middle">closing tag</text>
+  <path d="M68.40000000000003,62 L68.40000000000003,52 L526.4,52 L526.4,62" stroke="#00695c" stroke-width="2" fill="none"/>
+  <line x1="297.4" y1="52" x2="297.4" y2="40" stroke="#00695c" stroke-width="2"/>
+  <text x="297.4" y="32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="middle">opening tag (attributes always go in here)</text>
+</svg>
