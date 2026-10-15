@@ -1,5 +1,8 @@
 # Task 6 - Links and Navigation
 
+!!! note "Working in VS Code"
+    Every exercise in this task is done in **VS Code**. For each exercise, create a new folder, open it in VS Code with `File` then `Open Folder...`, and create an `index.html` file (plus any other files named in the starter code). Check your work with **Live Preview**.
+
 ## External Links
 
 !!! abstract "Instructions"
@@ -29,29 +32,54 @@
 ## Links Inside Text
 
 !!! abstract "Instructions"
-    **Using the editor below**, turn the words `browse our services` into a link to `services.html`, so the link sits inside the sentence.
+    **Using VS Code**, turn the words `browse our services` into a link to `services.html`, so the link sits inside the sentence.
 
-    Then click it in the preview to check it works.
+    Then click it in Live Preview to check it works.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aDE+V2VsY29tZTwvaDE+XG48cD5OZXcgdG8gUGF3cyBhbmQgQ2xhd3M/IFRha2UgYSBtb21lbnQgdG8gYnJvd3NlIG91ciBzZXJ2aWNlcyBiZWZvcmUgeW91IGJvb2suPC9wPiJ9LCB7Im5hbWUiOiAic2VydmljZXMuaHRtbCIsICJodG1sIjogIjxoMT5PdXIgU2VydmljZXM8L2gxPlxuPHA+V2FzaGluZywgY2xpcHBpbmcgYW5kIG5haWwgdHJpbW1pbmcuPC9wPiJ9XSwgImNzcyI6ICIiLCAianMiOiAiIiwgImFjdGl2ZVRhYiI6ICJodG1sIiwgImFjdGl2ZVBhZ2UiOiAiaW5kZXguaHRtbCJ9"></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <h1>Welcome</h1>
+    <p>New to Paws and Claws? Take a moment to browse our services before you book.</p>
+    ```
+
+    `services.html`
+
+    ```html
+    <h1>Our Services</h1>
+    <p>Washing, clipping and nail trimming.</p>
+    ```
+
 ??? question "Hint"
     The `a` element can be nested inside a `p`, just like `b` or `strong`. Only the words that should be clickable go between the opening and closing link tags.
 
 ## Descriptive Link Text
 
 !!! abstract "Instructions"
-    **Using the editor below**, rewrite each `click here` link so that the link text describes where the link goes.
+    **Using VS Code**, rewrite each `click here` link so that the link text describes where the link goes.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8cD5UbyBzZWUgb3VyIHByaWNlcywgPGEgaHJlZj1cInByaWNlcy5odG1sXCI+Y2xpY2sgaGVyZTwvYT4uPC9wPlxuPHA+Rm9yIG91ciBvcGVuaW5nIGhvdXJzLCA8YSBocmVmPVwiaG91cnMuaHRtbFwiPmNsaWNrIGhlcmU8L2E+LjwvcD5cbjxwPlRvIHNlbmQgdXMgYSBtZXNzYWdlLCA8YSBocmVmPVwiY29udGFjdC5odG1sXCI+Y2xpY2sgaGVyZTwvYT4uPC9wPiJ9XSwgImNzcyI6ICIiLCAianMiOiAiIiwgImFjdGl2ZVRhYiI6ICJodG1sIiwgImFjdGl2ZVBhZ2UiOiAiaW5kZXguaHRtbCJ9"></embed>
+??? code "click to expand"
+    ```html
+    <p>To see our prices, <a href="prices.html">click here</a>.</p>
+    <p>For our opening hours, <a href="hours.html">click here</a>.</p>
+    <p>To send us a message, <a href="contact.html">click here</a>.</p>
+    ```
+
 ??? question "Hint"
     Imagine the links are read out on their own, without the rest of the sentence. Would someone know where each one goes? Move the link so it wraps the words that describe the destination.
 
 ## Email Links
 
 !!! abstract "Instructions"
-    **Using the editor below**, add a link that opens the visitor's email program to send an email to `hello@pawsandclaws.example`.
+    **Using VS Code**, add a link that opens the visitor's email program to send an email to `hello@pawsandclaws.example`.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aDI+Q29udGFjdCBVczwvaDI+XG48cD5TZW5kIHVzIGFuIGVtYWlsOjwvcD4ifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+??? code "click to expand"
+    ```html
+    <h2>Contact Us</h2>
+    <p>Send us an email:</p>
+    ```
+
 ??? question "Hint"
     Email links use the `a` element like any other link. The `href` value starts with `mailto:` followed by the email address, with no space in between.
 
@@ -60,7 +88,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, create `index.html`, `about.html`, and `contact.html` pages. Add the same navigation menu to all three pages so the user can reach every page from every page.
 
-    This combines the lists from Task 3 with the links from Task 4. Each page must include:
+    This combines the lists from Task 2 with the links from Task 4. Each page must include:
 
     - a `nav` element containing a list with `3` items, one for each page
     - a link inside each list item pointing to that page
@@ -72,20 +100,97 @@
 ## Four-Page Navigation
 
 !!! abstract "Instructions"
-    **Using the editor below**, add a navigation menu to **all four** pages so that every page links to every other page. The editor has four pages; use the page tabs to switch between them.
+    **Using VS Code**, add a navigation menu to **all four** pages so that every page links to every other page. Create all four pages from the starter code in the same folder.
 
-    Test every link on every page by clicking it in the preview.
+    Test every link on every page by clicking it in Live Preview.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aDE+SG9tZTwvaDE+In0sIHsibmFtZSI6ICJzZXJ2aWNlcy5odG1sIiwgImh0bWwiOiAiPGgxPlNlcnZpY2VzPC9oMT4ifSwgeyJuYW1lIjogImFib3V0Lmh0bWwiLCAiaHRtbCI6ICI8aDE+QWJvdXQgVXM8L2gxPiJ9LCB7Im5hbWUiOiAiY29udGFjdC5odG1sIiwgImh0bWwiOiAiPGgxPkNvbnRhY3Q8L2gxPiJ9XSwgImNzcyI6ICIiLCAianMiOiAiIiwgImFjdGl2ZVRhYiI6ICJodG1sIiwgImFjdGl2ZVBhZ2UiOiAiaW5kZXguaHRtbCJ9"></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <h1>Home</h1>
+    ```
+
+    `services.html`
+
+    ```html
+    <h1>Services</h1>
+    ```
+
+    `about.html`
+
+    ```html
+    <h1>About Us</h1>
+    ```
+
+    `contact.html`
+
+    ```html
+    <h1>Contact</h1>
+    ```
+
 ??? question "Hint"
     This repeats the Navigation Menu exercise with one more page. Write the navigation once on the Home page, check every link works, then copy the whole `nav` onto the other three pages. A four-page site has sixteen links to test in total.
 
 ## Highlight the Current Page
 
 !!! abstract "Instructions"
-    **Using the editor below**, add the class `active` to the correct link on **each** page so the current page is highlighted in the navigation. The CSS is already written.
+    **Using VS Code**, add the class `active` to the correct link on **each** page so the current page is highlighted in the navigation. The CSS is already written in `style.css`.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8bmF2PlxuICA8dWw+XG4gICAgPGxpPjxhIGhyZWY9XCJpbmRleC5odG1sXCI+SG9tZTwvYT48L2xpPlxuICAgIDxsaT48YSBocmVmPVwic2VydmljZXMuaHRtbFwiPlNlcnZpY2VzPC9hPjwvbGk+XG4gICAgPGxpPjxhIGhyZWY9XCJjb250YWN0Lmh0bWxcIj5Db250YWN0PC9hPjwvbGk+XG4gIDwvdWw+XG48L25hdj5cbjxoMT5Ib21lPC9oMT4ifSwgeyJuYW1lIjogInNlcnZpY2VzLmh0bWwiLCAiaHRtbCI6ICI8bmF2PlxuICA8dWw+XG4gICAgPGxpPjxhIGhyZWY9XCJpbmRleC5odG1sXCI+SG9tZTwvYT48L2xpPlxuICAgIDxsaT48YSBocmVmPVwic2VydmljZXMuaHRtbFwiPlNlcnZpY2VzPC9hPjwvbGk+XG4gICAgPGxpPjxhIGhyZWY9XCJjb250YWN0Lmh0bWxcIj5Db250YWN0PC9hPjwvbGk+XG4gIDwvdWw+XG48L25hdj5cbjxoMT5TZXJ2aWNlczwvaDE+In0sIHsibmFtZSI6ICJjb250YWN0Lmh0bWwiLCAiaHRtbCI6ICI8bmF2PlxuICA8dWw+XG4gICAgPGxpPjxhIGhyZWY9XCJpbmRleC5odG1sXCI+SG9tZTwvYT48L2xpPlxuICAgIDxsaT48YSBocmVmPVwic2VydmljZXMuaHRtbFwiPlNlcnZpY2VzPC9hPjwvbGk+XG4gICAgPGxpPjxhIGhyZWY9XCJjb250YWN0Lmh0bWxcIj5Db250YWN0PC9hPjwvbGk+XG4gIDwvdWw+XG48L25hdj5cbjxoMT5Db250YWN0PC9oMT4ifV0sICJjc3MiOiAibmF2IHVsIHsgbGlzdC1zdHlsZTogbm9uZTsgZGlzcGxheTogZmxleDsgZ2FwOiA4cHg7IHBhZGRpbmc6IDA7IH1cbm5hdiBhIHsgcGFkZGluZzogOHB4IDE0cHg7IHRleHQtZGVjb3JhdGlvbjogbm9uZTsgYm9yZGVyOiAxcHggc29saWQgdGVhbDsgfVxubmF2IGEuYWN0aXZlIHsgYmFja2dyb3VuZC1jb2xvcjogdGVhbDsgY29sb3I6IHdoaXRlOyB9IiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <link rel="stylesheet" href="style.css">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Home</h1>
+    ```
+
+    `services.html`
+
+    ```html
+    <link rel="stylesheet" href="style.css">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Services</h1>
+    ```
+
+    `contact.html`
+
+    ```html
+    <link rel="stylesheet" href="style.css">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Contact</h1>
+    ```
+
+    `style.css`
+
+    ```css
+    nav ul { list-style: none; display: flex; gap: 8px; padding: 0; }
+    nav a { padding: 8px 14px; text-decoration: none; border: 1px solid teal; }
+    nav a.active { background-color: teal; color: white; }
+    ```
+
 ??? question "Hint"
     Each page gets the class on a **different** link: the one that points to the page you are on. The class attribute goes in the opening tag of the `a` element.
 
@@ -105,11 +210,31 @@
 ## Logo Link
 
 !!! abstract "Instructions"
-    **Using the editor below**, add a logo to the `header` of **both** pages, using `https://cyberbilby.com/capybara.jpg` at `80` pixels wide. Clicking the logo on either page must take the visitor to the **Home** page.
+    **Using VS Code**, add a logo to the `header` of **both** pages, using `https://cyberbilby.com/capybara.jpg` at `80` pixels wide. Clicking the logo on either page must take the visitor to the **Home** page.
 
     Give the logo alt text that suits a business called **Capybara Tours**.
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8aGVhZGVyPlxuICA8IS0tIGxvZ28gZ29lcyBoZXJlIC0tPlxuPC9oZWFkZXI+XG48aDE+SG9tZTwvaDE+XG48cD48YSBocmVmPVwidG91cnMuaHRtbFwiPlNlZSBvdXIgdG91cnM8L2E+PC9wPiJ9LCB7Im5hbWUiOiAidG91cnMuaHRtbCIsICJodG1sIjogIjxoZWFkZXI+XG4gIDwhLS0gbG9nbyBnb2VzIGhlcmUgLS0+XG48L2hlYWRlcj5cbjxoMT5PdXIgVG91cnM8L2gxPlxuPHA+Q2xpY2sgdGhlIGxvZ28gdG8gZ28gYmFjayB0byB0aGUgSG9tZSBwYWdlLjwvcD4ifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <header>
+      <!-- logo goes here -->
+    </header>
+    <h1>Home</h1>
+    <p><a href="tours.html">See our tours</a></p>
+    ```
+
+    `tours.html`
+
+    ```html
+    <header>
+      <!-- logo goes here -->
+    </header>
+    <h1>Our Tours</h1>
+    <p>Click the logo to go back to the Home page.</p>
+    ```
+
 ??? question "Hint"
     This repeats the Image Links exercise, but the link goes to a page on the same site instead of an external website. Think about which file name is always the home page.
 

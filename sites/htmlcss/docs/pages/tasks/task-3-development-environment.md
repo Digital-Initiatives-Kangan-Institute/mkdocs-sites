@@ -1,4 +1,4 @@
-# Task 1 - Development Environment
+# Task 3 - Development Environment
 
 ## Install VS Code
 
@@ -30,13 +30,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, create a website project with the following directory structure:
 
-    ```
-    my-website/
-    ├── index.html
-    ├── about.html
-    ├── style.css
-    └── images/
-    ```
+    ![The my-website folder containing index.html, about.html, style.css and an images folder](../../assets/diagrams/task-my-website-folder.svg)
 
     Create the `my-website` folder first, open it in VS Code with `File` then `Open Folder...`, then create everything else using the buttons at the top of the **Explorer** panel.
 

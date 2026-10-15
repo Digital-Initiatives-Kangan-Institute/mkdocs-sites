@@ -30,6 +30,8 @@ The forward slash (`/`) inside the closing tag tells the browser that the elemen
 
 Together, these form an **element**.
 
+![The h1 element split into its opening tag, content and closing tag](../../assets/diagrams/element-anatomy.svg)
+
 !!! note
     Tag names are written in **lowercase**. Browsers will accept `<H1>`, but lowercase is the standard and is easier to read.
 
@@ -131,4 +133,4 @@ A **comment** is a note written inside the code that is **not displayed** on the
 
 ### Activity - Elements
 
-[Attempt Activity 2 - Elements](../tasks/task-2-elements.md){.md-button}
+[Attempt Activity 1 - Elements](../tasks/task-1-elements.md){.md-button}

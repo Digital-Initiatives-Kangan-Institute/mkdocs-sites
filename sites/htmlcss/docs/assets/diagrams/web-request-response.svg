@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="400" viewBox="0 0 860 400" role="img" aria-labelledby="t">
+  <title id="t">How a webpage loads: the browser sends a request across the internet to the web server, the server finds the file and sends it back as a response, then the browser displays the page</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="860" height="400" fill="#ffffff"/>
+  <rect x="30" y="70" width="250" height="220" rx="10" fill="#ffffff" stroke="#b0bec5" stroke-width="2"/>
+  <path d="M30,104 H280" stroke="#b0bec5" stroke-width="2" fill="none"/>
+  <path d="M40,70 H270 a10,10 0 0 1 10,10 V104 H30 V80 a10,10 0 0 1 10,-10 z" stroke="none" stroke-width="0" fill="#eceff1"/>
+  <circle cx="48" cy="87" r="5" fill="#ef5350"/>
+  <circle cx="64" cy="87" r="5" fill="#ffca28"/>
+  <circle cx="80" cy="87" r="5" fill="#66bb6a"/>
+  <rect x="100" y="78" width="168" height="18" rx="9" fill="#ffffff" stroke="#cfd8dc" stroke-width="1"/>
+  <text x="110" y="91" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="11" fill="#546e7a" font-weight="normal" text-anchor="start" textLength="143.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">example.com/about.html</text>
+  <rect x="48" y="120" width="214" height="22" rx="4" fill="#00897b" stroke="none" stroke-width="1.5"/>
+  <rect x="48" y="154" width="140" height="12" rx="3" fill="#cfd8dc" stroke="none" stroke-width="1.5"/>
+  <rect x="48" y="174" width="214" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="48" y="188" width="190" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="48" y="202" width="204" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="48" y="220" width="80" height="50" rx="4" fill="#ede7f6" stroke="#7e57c2" stroke-width="1"/>
+  <path d="M54,264 l20,-22 l14,14 l10,-8 l24,16" stroke="#7e57c2" stroke-width="1.5" fill="none"/>
+  <rect x="142" y="222" width="120" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <rect x="142" y="236" width="100" height="8" rx="3" fill="#eceff1" stroke="none" stroke-width="1.5"/>
+  <text x="155.0" y="320" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#263238" font-weight="700" text-anchor="middle">Web browser</text>
+  <text x="155.0" y="340" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle">your computer or phone</text>
+  <rect x="640" y="80" width="160" height="52" rx="8" fill="#37474f" stroke="#263238" stroke-width="2"/>
+  <circle cx="660" cy="106" r="5" fill="#66bb6a"/>
+  <rect x="680" y="98" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="706" y="98" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="732" y="98" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="758" y="98" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="640" y="142" width="160" height="52" rx="8" fill="#37474f" stroke="#263238" stroke-width="2"/>
+  <circle cx="660" cy="168" r="5" fill="#66bb6a"/>
+  <rect x="680" y="160" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="706" y="160" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="732" y="160" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="758" y="160" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="640" y="204" width="160" height="52" rx="8" fill="#37474f" stroke="#263238" stroke-width="2"/>
+  <circle cx="660" cy="230" r="5" fill="#66bb6a"/>
+  <rect x="680" y="222" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="706" y="222" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="732" y="222" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <rect x="758" y="222" width="18" height="16" rx="2" fill="#546e7a" stroke="none" stroke-width="1.5"/>
+  <text x="720.0" y="320" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#263238" font-weight="700" text-anchor="middle">Web server</text>
+  <text x="720.0" y="340" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="normal" text-anchor="middle">stores the website files</text>
+  <path d="M380,210 a30,30 0 0 1 4,-58 a40,40 0 0 1 72,-14 a32,32 0 0 1 56,22 a28,28 0 0 1 -6,50 z" stroke="#b0bec5" stroke-width="2" fill="#f5f7f8"/>
+  <text x="450" y="192" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" fill="#546e7a" font-weight="600" text-anchor="middle">Internet</text>
+  <line x1="294" y1="110" x2="626" y2="110" stroke="#00897b" stroke-width="3" marker-end="url(#arrow-teal)"/>
+  <rect x="346.4" y="74.6" width="91.2" height="22.799999999999997" rx="11.399999999999999" fill="#00897b" stroke="none" stroke-width="1.5"/>
+  <text x="392" y="90.32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="600" text-anchor="middle">2  REQUEST</text>
+  <text x="456" y="92" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="14" fill="#00695c" font-weight="600" text-anchor="start" textLength="126.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">GET /about.html</text>
+  <line x1="626" y1="250" x2="294" y2="250" stroke="#ef6c00" stroke-width="3" marker-end="url(#arrow-amber)"/>
+  <rect x="349.04" y="262.6" width="97.92" height="22.799999999999997" rx="11.399999999999999" fill="#ef6c00" stroke="none" stroke-width="1.5"/>
+  <text x="398" y="278.32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="600" text-anchor="middle">4  RESPONSE</text>
+  <text x="468" y="279" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#ef6c00" font-weight="600" text-anchor="start">about.html, CSS, images</text>
+  <circle cx="44" cy="36" r="13" fill="#263238"/>
+  <text x="44" y="41" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="700" text-anchor="middle">1</text>
+  <text x="64" y="41" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#263238" font-weight="normal" text-anchor="start">Type an address or click a link</text>
+  <circle cx="614" cy="36" r="13" fill="#263238"/>
+  <text x="614" y="41" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="700" text-anchor="middle">3</text>
+  <text x="634" y="41" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#263238" font-weight="normal" text-anchor="start">Server finds the file</text>
+  <circle cx="44" cy="370" r="13" fill="#263238"/>
+  <text x="44" y="375" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#ffffff" font-weight="700" text-anchor="middle">5</text>
+  <text x="64" y="375" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#263238" font-weight="normal" text-anchor="start">Browser displays the finished page</text>
+</svg>

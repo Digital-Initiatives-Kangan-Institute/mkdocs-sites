@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="330" viewBox="0 0 720 330" role="img" aria-labelledby="t">
+  <title id="t">Nesting tree: the p element is the parent; the b and i elements inside it are its children and are siblings of each other</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="720" height="330" fill="#ffffff"/>
+  <rect x="72.0" y="22" width="576" height="46" rx="10" fill="#fafafa" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="90.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#00695c" font-weight="600" text-anchor="start" textLength="36.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;p&gt;</text>
+  <text x="126.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#263238" font-weight="600" text-anchor="start" textLength="96.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">This is </text>
+  <text x="222.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#ef6c00" font-weight="600" text-anchor="start" textLength="36.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;b&gt;</text>
+  <text x="258.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#263238" font-weight="600" text-anchor="start" textLength="48.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">bold</text>
+  <text x="306.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#ef6c00" font-weight="600" text-anchor="start" textLength="48.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;/b&gt;</text>
+  <text x="354.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#263238" font-weight="600" text-anchor="start" textLength="60.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"> and </text>
+  <text x="414.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#1e88e5" font-weight="600" text-anchor="start" textLength="36.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;i&gt;</text>
+  <text x="450.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#263238" font-weight="600" text-anchor="start" textLength="72.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">italic</text>
+  <text x="522.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#1e88e5" font-weight="600" text-anchor="start" textLength="48.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;/i&gt;</text>
+  <text x="570.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#263238" font-weight="600" text-anchor="start" textLength="12.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">.</text>
+  <text x="582.0" y="52" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="20" fill="#00695c" font-weight="600" text-anchor="start" textLength="48.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;/p&gt;</text>
+  <path d="M360.0,150 V188 H210.0 V226" stroke="#90a4ae" stroke-width="2" fill="none"/>
+  <path d="M360.0,188 H510.0 V226" stroke="#90a4ae" stroke-width="2" fill="none"/>
+  <rect x="312.0" y="106" width="96" height="44" rx="10" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="360.0" y="134" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="18" fill="#00695c" font-weight="700" text-anchor="middle" textLength="32.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;p&gt;</text>
+  <text x="360.0" y="172" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="600" text-anchor="middle"></text>
+  <rect x="437.84" y="116.6" width="64.32000000000001" height="22.799999999999997" rx="11.399999999999999" fill="#00695c" stroke="none" stroke-width="1.5"/>
+  <text x="470.0" y="132.32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#ffffff" font-weight="600" text-anchor="middle">PARENT</text>
+  <rect x="162.0" y="226" width="96" height="44" rx="10" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="210.0" y="254" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="18" fill="#ef6c00" font-weight="700" text-anchor="middle" textLength="32.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;b&gt;</text>
+  <text x="210.0" y="292" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="600" text-anchor="middle">child of p</text>
+  <rect x="462.0" y="226" width="96" height="44" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
+  <text x="510.0" y="254" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="18" fill="#1e88e5" font-weight="700" text-anchor="middle" textLength="32.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;i&gt;</text>
+  <text x="510.0" y="292" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#546e7a" font-weight="600" text-anchor="middle">child of p</text>
+  <line x1="270.0" y1="248" x2="450.0" y2="248" stroke="#7e57c2" stroke-width="2" stroke-dasharray="6 5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="360.0" y="238" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#7e57c2" font-weight="700" text-anchor="middle">siblings</text>
+  <text x="360.0" y="270" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#7e57c2" font-weight="normal" text-anchor="middle">(same parent)</text>
+</svg>

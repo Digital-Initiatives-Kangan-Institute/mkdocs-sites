@@ -54,6 +54,8 @@ When you visit a website:
 4. The browser reads the HTML, then requests any other files the page needs, such as CSS files and images
 5. The browser displays the finished page
 
+![The browser sends a request across the internet to the web server, which finds the file and sends it back as a response](../../assets/diagrams/web-request-response.svg)
+
 Putting your website files onto a web server so other people can view them is called **publishing** or **deploying** a website. Companies that rent out space on web servers are called **web hosts**.
 
 ***
@@ -62,9 +64,7 @@ Putting your website files onto a web server so other people can view them is ca
 
 Every webpage has an address called a **URL** (Uniform Resource Locator).
 
-```
-https://www.example.com/about.html
-```
+![The URL https://www.example.com/about.html split into protocol, domain name and path](../../assets/diagrams/url-parts.svg)
 
 | Part | Example | Meaning |
 |---|---|---|

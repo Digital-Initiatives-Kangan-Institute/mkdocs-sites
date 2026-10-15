@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="200" viewBox="0 0 680 200" role="img" aria-labelledby="t">
+  <title id="t">Anatomy of an element: the opening tag &lt;h1&gt;, the content Hello, world!, and the closing tag &lt;/h1&gt; together form an element</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00897b"/></marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#90a4ae"/></marker>
+  </defs>
+  <rect width="680" height="200" fill="#ffffff"/>
+  <rect x="146.4" y="72" width="387.2" height="58" rx="10" fill="#fafafa" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="168.4" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#00695c" font-weight="600" text-anchor="start" textLength="62.4" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;h1&gt;</text>
+  <text x="230.8" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#263238" font-weight="600" text-anchor="start" textLength="202.8" lengthAdjust="spacingAndGlyphs" xml:space="preserve">Hello, world!</text>
+  <text x="433.6" y="110" font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="26" fill="#00695c" font-weight="600" text-anchor="start" textLength="78.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">&lt;/h1&gt;</text>
+  <path d="M173.4,140 L173.4,150 L225.8,150 L225.8,140" stroke="#00695c" stroke-width="2" fill="none"/>
+  <line x1="199.60000000000002" y1="150" x2="199.60000000000002" y2="162" stroke="#00695c" stroke-width="2"/>
+  <text x="199.60000000000002" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="middle">opening tag</text>
+  <path d="M235.8,140 L235.8,150 L428.6,150 L428.6,140" stroke="#546e7a" stroke-width="2" fill="none"/>
+  <line x1="332.20000000000005" y1="150" x2="332.20000000000005" y2="162" stroke="#546e7a" stroke-width="2"/>
+  <text x="332.20000000000005" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#546e7a" font-weight="600" text-anchor="middle">content</text>
+  <path d="M438.6,140 L438.6,150 L506.6,150 L506.6,140" stroke="#00695c" stroke-width="2" fill="none"/>
+  <line x1="472.6" y1="150" x2="472.6" y2="162" stroke="#00695c" stroke-width="2"/>
+  <text x="472.6" y="182" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#00695c" font-weight="600" text-anchor="middle">closing tag</text>
+  <path d="M173.4,62 L173.4,52 L506.6,52 L506.6,62" stroke="#ef6c00" stroke-width="2" fill="none"/>
+  <line x1="340.0" y1="52" x2="340.0" y2="40" stroke="#ef6c00" stroke-width="2"/>
+  <text x="340.0" y="32" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#ef6c00" font-weight="600" text-anchor="middle">element</text>
+</svg>
