@@ -106,6 +106,8 @@
     - their job title in a paragraph
     - a short description of them in a paragraph
 
-<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+    The CSS tab already adds a border to every container, so when you have finished there should be **three** separate boxes in the preview.
+
+<embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICIifV0sICJjc3MiOiAiZGl2IHtcbiAgYm9yZGVyOiAycHggc29saWQgdGVhbDtcbiAgcGFkZGluZzogMTBweDtcbiAgbWFyZ2luLWJvdHRvbTogMTBweDtcbn0iLCAianMiOiAiIiwgImFjdGl2ZVRhYiI6ICJodG1sIiwgImFjdGl2ZVBhZ2UiOiAiaW5kZXguaHRtbCJ9"></embed>
 ??? question "Hint"
     This repeats the Grouping with Containers exercise. Work on one team member first, check it in the preview, then copy that container twice and change the text. Think about which heading level suits the names when `Meet the Team` is the main heading.
