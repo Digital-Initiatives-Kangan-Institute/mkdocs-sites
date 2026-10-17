@@ -9,7 +9,7 @@ This is a **guided, line-by-line build** using the Mantine component library. Yo
     - Apply components consistently (same variant and colour for similar actions)
     - Be polished — good spacing and alignment
 
-    Prepare a short explanation of why you chose each component. Push your work to GitHub.
+    Push your work to GitHub.
 
     Revisit the [Mantine UI](../resources/mantine/mantine.md) resource while you work.
 
@@ -137,7 +137,7 @@ Build a mini interface of your own with at least **three** component types. Idea
 - A product grid (`Card`, `Text`, `Title`, `Badge`)
 - A feedback page (`Alert`, `Textarea`, `Button`)
 
-Keep primary actions `variant="filled"` and secondary actions `variant="outline"`. Write one sentence explaining why you chose each component.
+Keep primary actions `variant="filled"` and secondary actions `variant="outline"`.
 
 ??? hint "Hint - Click to expand"
     Start from the `<Stack>` and add components inside it. Use `<Group>` to place buttons side by side. If a component needs a prop you are unsure about, check the [Mantine documentation](https://mantine.dev) — every component page lists its props.
