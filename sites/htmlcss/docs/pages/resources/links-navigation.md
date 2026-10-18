@@ -69,6 +69,7 @@ You can also jump to a section on **another page** by adding the `#` and `id` to
 Links can sit inside a paragraph, just like bold or italic text. The link text should describe **where the link goes**.
 
 <embed src="/tools/code#eyJ0aXRsZSI6ICJFZGl0b3IiLCAicGFnZXMiOiBbeyJuYW1lIjogImluZGV4Lmh0bWwiLCAiaHRtbCI6ICI8cD5XYW50IHRvIGtub3cgbW9yZT8gPGEgaHJlZj1cImFib3V0Lmh0bWxcIj5SZWFkIGFib3V0IG91ciBoaXN0b3J5PC9hPi48L3A+In0sIHsibmFtZSI6ICJhYm91dC5odG1sIiwgImh0bWwiOiAiPGgxPk91ciBIaXN0b3J5PC9oMT5cbjxwPjxhIGhyZWY9XCJpbmRleC5odG1sXCI+QmFjayB0byBIb21lPC9hPjwvcD4ifV0sICJjc3MiOiAiIiwgImpzIjogIiIsICJhY3RpdmVUYWIiOiAiaHRtbCIsICJhY3RpdmVQYWdlIjogImluZGV4Lmh0bWwifQ=="></embed>
+
 | Link text | Quality |
 |---|---|
 | `Click here` | Poor: does not say where the link goes |

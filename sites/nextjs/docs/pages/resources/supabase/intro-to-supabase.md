@@ -96,7 +96,7 @@ Row Level Security (RLS) controls which records a user can see or modify. Always
 
 ## Client Library or fetch?
 
-The example above uses the `@supabase/supabase-js` client library. Supabase also exposes every table as a plain **REST API**, so you can read and write data with the built-in `fetch` function and no extra packages. The tasks on this site use `fetch`, because it is the same skill you use for every other API.
+The example above uses the `@supabase/supabase-js` client library. Supabase also exposes every table as a plain **REST API**, so you can read and write data with the built-in `fetch` function and no extra packages. Most tasks on this site use `fetch`, because it is the same skill you use for every other API. The [Mantine Message Board](../../tasks/mantine-message-board.md) project uses the client library.
 
 See [Supabase REST API with fetch](supabase-rest-api.md) for the full guide.
 
