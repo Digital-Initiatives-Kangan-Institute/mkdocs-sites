@@ -809,3 +809,5 @@ import { Button, Card, Text, Title } from "@mantine/core";
 [Attempt Activity - Mantine Charts](../../tasks/mantine-charts.md){.md-button}
 
 [Attempt Activity - Mantine Equipment Loans](../../tasks/mantine-equipment-loans.md){.md-button}
+
+[Attempt Activity - Mantine Message Board](../../tasks/mantine-message-board.md){.md-button}

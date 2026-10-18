@@ -83,6 +83,7 @@ nav:
         - Supabase as a CMS: pages/tasks/supabase-cms.md
         - Pet Adoption Board: pages/tasks/pet-adoption-board.md
         - Mantine Equipment Loans: pages/tasks/mantine-equipment-loans.md
+        - Mantine Message Board: pages/tasks/mantine-message-board.md
         - Deploy Your App: pages/tasks/deploy-your-app.md
         - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
 
