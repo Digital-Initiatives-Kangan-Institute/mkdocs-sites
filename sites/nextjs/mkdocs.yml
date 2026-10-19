@@ -14,15 +14,16 @@ nav:
         - What is React: pages/resources/nextjs/what-is-react.md
         - Project Structure and TypeScript: pages/resources/nextjs/project-structure.md
         - npm Packages: pages/resources/nextjs/npm-packages.md
-      - React Fundamentals:
+      - Components and State:
         - Components and Layouts: pages/resources/nextjs/components-layouts.md
         - Component Props: pages/resources/nextjs/component-props.md
         - Arrow Functions: pages/resources/nextjs/arrow-functions.md
         - Events and State: pages/resources/nextjs/events-and-state.md
+      - Conditionals and Lists:
         - Conditional Rendering: pages/resources/nextjs/conditional-rendering.md
         - Lists with map and filter: pages/resources/nextjs/lists-map-filter.md
         - Choosing Arrows, Ternaries and if: pages/resources/nextjs/choosing-syntax.md
-      - Next.js Features:
+      - Routing and Pages:
         - Client and Server Components: pages/resources/nextjs/client-server-components.md
         - Routing: pages/resources/nextjs/routing.md
         - Dynamic Routes and useParams: pages/resources/nextjs/dynamic-routes.md
@@ -33,51 +34,63 @@ nav:
         - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
         - TypeScript Types for Data: pages/resources/nextjs/typescript-types.md
         - Saving Data in the Browser: pages/resources/nextjs/browser-storage.md
+      - Styling and UI Libraries:
+        - Tailwind CSS: pages/resources/tailwind/tailwind.md
+        - Mantine UI: pages/resources/mantine/mantine.md
       - Supabase:
         - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
         - Supabase REST API with fetch: pages/resources/supabase/supabase-rest-api.md
+        - Supabase Client Library: pages/resources/supabase/supabase-client.md
         - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md
-      - Styling and Libraries:
-        - Tailwind CSS: pages/resources/tailwind/tailwind.md
-        - Mantine UI: pages/resources/mantine/mantine.md
       - Deployment:
         - Deploying Your Project: pages/resources/deployment/deploying.md
 
     - Tasks:
       - Getting Started:
         - Creating a Next.js App: pages/tasks/create-nextjs-app.md
+      - Components and State:
         - Components: pages/tasks/components-props.md
-        - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
-      - Arrow Functions and State:
-        - Arrow Function Basics: pages/tasks/arrow-function-basics.md
         - Interactive Component: pages/tasks/interactive-component.md
+        - Arrow Function Basics: pages/tasks/arrow-function-basics.md
         - Arrow Functions, Events and State: pages/tasks/arrow-functions-events-state.md
         - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
-      - Ternaries and Lists:
+        - Building Reusable Client Components: pages/tasks/reusable-client-components.md
+      - Conditionals and Lists:
         - Ternary Basics: pages/tasks/ternary-basics.md
         - Ternaries for Attributes and Components: pages/tasks/ternary-attributes-components.md
         - Arrays with map and filter: pages/tasks/arrays-map-filter.md
-        - Building Reusable Client Components: pages/tasks/reusable-client-components.md
-      - Fetching Data:
+      - Routing and Pages:
+        - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
+        - Dynamic Routes with useParams: pages/tasks/dynamic-routes-useparams.md
+        - Using Special Files: pages/tasks/special-files.md
+        - User Directory App: pages/tasks/user-directory.md
+      - Working with Data:
         - Fetching Data with State: pages/tasks/fetching-data-with-state.md
         - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
         - useEffect and Loading States: pages/tasks/useeffect-loading-states.md
         - Arrow Functions in useEffect and fetch: pages/tasks/useeffect-fetch-arrows.md
-      - Dynamic Routes:
-        - Dynamic Routes with useParams: pages/tasks/dynamic-routes-useparams.md
-        - User Directory App: pages/tasks/user-directory.md
-      - Going Further:
-        - TypeScript Types for Data: pages/tasks/typescript-types.md
+        - Typing Your Data: pages/tasks/typescript-types.md
         - Saving to localStorage: pages/tasks/local-storage.md
-        - Special Files: pages/tasks/special-files.md
-      - Libraries:
-        - Tailwind CSS: pages/tasks/tailwind.md
-        - Mantine Component Library: pages/tasks/mantine-components.md
+      - Styling and UI Libraries:
+        - Styling with Tailwind: pages/tasks/tailwind.md
+        - Mantine:
+          - Mantine Component Library: pages/tasks/mantine-components.md
+          - Mantine Form Inputs: pages/tasks/mantine-form-inputs.md
+          - Mantine Form Validation: pages/tasks/mantine-form-validation.md
+          - Mantine Modals and Notifications: pages/tasks/mantine-feedback.md
+          - Mantine Tables and Filters: pages/tasks/mantine-tables-filters.md
+          - Mantine Charts: pages/tasks/mantine-charts.md
         - React Confetti: pages/tasks/react-confetti.md
-      - Projects:
+      - Supabase:
         - Supabase as a CMS: pages/tasks/supabase-cms.md
-        - Pet Adoption Board: pages/tasks/pet-adoption-board.md
+        - Supabase Client CRUD: pages/tasks/supabase-client-crud.md
+      - Deployment:
         - Deploy Your App: pages/tasks/deploy-your-app.md
+      - Projects:
+        - Mantine Equipment Loans: pages/tasks/mantine-equipment-loans.md
+        - Pet Adoption Board: pages/tasks/pet-adoption-board.md
+        - Mantine Book Tracker: pages/tasks/mantine-book-tracker.md
+        - Mantine Message Board: pages/tasks/mantine-message-board.md
         - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
 
 # Do not touch anything below this line unless you know what you are doing.

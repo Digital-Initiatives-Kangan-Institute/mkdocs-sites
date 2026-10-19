@@ -189,7 +189,7 @@ Changes like these usually happen when the user clicks a button, so put them in 
 | `Invalid API key` / `No API key found` | `.env.local` is in the wrong place, has a typo, or you didn't restart `npm run dev` |
 | `Error 404`, and the Network tab shows a request to `localhost:3000/rest/v1/...` | The env variable isn't being read, so the Supabase URL is empty. Check `.env.local` and restart `npm run dev` |
 | `permission denied for table ...` | The publishable key hasn't been given access to the table. Run `grant select, insert, update, delete on table <name> to anon;` in the SQL Editor |
-| `relation "public.<name>" does not exist` | The table wasn't created, or it has a different name (check for capitals) |
+| `Could not find the table 'public.<name>' in the schema cache` | The table wasn't created, or it has a different name (check for capitals) |
 | `Error 400` | The request was invalid, e.g. `id=eq.abc` when `id` is a number. The Network tab shows Supabase's full message |
 | A column is missing or always empty | The column name in Supabase doesn't match your code. Names are case-sensitive |
 

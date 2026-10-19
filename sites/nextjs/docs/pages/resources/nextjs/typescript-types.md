@@ -268,4 +268,4 @@ Read the **last** part of a long error first; it usually names the exact propert
 
 ### Activity - TypeScript Types for Data
 
-[Attempt Activity - TypeScript Types for Data](../../tasks/typescript-types.md){.md-button}
+[Attempt Activity - Typing Your Data](../../tasks/typescript-types.md){.md-button}

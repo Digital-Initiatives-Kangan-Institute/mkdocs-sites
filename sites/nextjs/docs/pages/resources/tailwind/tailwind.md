@@ -136,4 +136,4 @@ Line by line:
 
 ### Activity - Tailwind CSS
 
-[Attempt Activity - Tailwind CSS](../../tasks/tailwind.md){.md-button}
+[Attempt Activity - Styling with Tailwind](../../tasks/tailwind.md){.md-button}
