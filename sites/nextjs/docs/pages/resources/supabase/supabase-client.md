@@ -2,7 +2,7 @@
 
 The Supabase client library (`@supabase/supabase-js`) is an npm package that talks to your Supabase database for you. Instead of building URLs and headers for `fetch`, you call methods like `.select()`, `.insert()`, `.update()` and `.delete()`.
 
-This resource covers the four **CRUD** operations: **C**reate, **R**ead, **U**pdate and **D**elete.
+This resource covers the four **CRUD** operations: **C**reate, **R**ead, **U**pdate and **D**elete. All the code here runs **client side**, which means it runs in the user's browser.
 
 ---
 
@@ -39,6 +39,32 @@ export const supabase = createClient(
 
 !!! danger
     Only ever use the **publishable** key (`sb_publishable_…`). The **secret** key (`sb_secret_…`) must never go in front-end code.
+
+***
+
+## Using the Client in the Browser
+
+In these tasks, your page sends every query straight from the browser to Supabase. You don't write any server code. Here is what happens:
+
+1. The page opens in the browser
+2. `useEffect` runs a query to **read** the rows, and puts them in state
+3. React shows the rows on the page
+4. The user clicks a button, and its click handler runs a query to **create**, **update** or **delete** a row
+5. The handler reads the rows again, so the page shows the change
+
+`useState`, `useEffect` and `onClick` only work in client components. So every page or component that uses the Supabase client must start with `"use client";` on line 1:
+
+```tsx
+"use client";
+
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
+```
+
+!!! note "What the browser can see"
+    Client-side code is sent to the user's browser, so anyone can find your Project URL and publishable key in DevTools. That's OK, because the publishable key is made to be public. You decide what the key can do in Supabase, using grants and Row Level Security. This is also why the secret key must never go in your code.
+
+Online you may find examples that use Supabase on the server instead, in Server Components or Server Actions. Those aren't covered here. For these tasks, keep your Supabase code in client components.
 
 ***
 
@@ -168,6 +194,9 @@ const { error } = await supabase
 !!! warning
     Always add a filter like `.eq("id", ...)` to an update. Without it, Supabase refuses the request, because it would change every row in the table.
 
+!!! note "Why did my row move?"
+    Supabase doesn't keep rows in any order unless you ask for one, so a row you just updated can jump to the bottom of the list. To keep the list still, add `.order("id", { ascending: true })` to your load function.
+
 ***
 
 ## Delete (delete + eq)
@@ -182,6 +211,37 @@ const { error } = await supabase
 ```
 
 The same warning applies: always filter a delete, or it is refused.
+
+***
+
+## Running a Query from a Button
+
+Reading usually happens in `useEffect`, when the page opens. Creating, updating and deleting usually happen when the user clicks a button, so that code goes in a click handler.
+
+This example deletes a row from a `notes` table. `loadNotes` is a load function, just like `loadFruits` above:
+
+```tsx
+const deleteNote = async (id: number) => {
+    const { error } = await supabase.from("notes").delete().eq("id", id);
+
+    if (error) {
+        console.log(error.message);
+        return;
+    }
+
+    loadNotes();
+};
+```
+
+```tsx
+<button onClick={() => deleteNote(note.id)}>Delete</button>
+```
+
+- The handler is `async` so it can `await` the query
+- `loadNotes()` reads the rows again after the change, so the page updates
+- The arrow function in `onClick` makes `deleteNote` run only when the button is clicked, not when the page loads
+
+Create and update handlers follow the same steps: run the query, check `error`, then load the rows again.
 
 ***
 
@@ -221,8 +281,9 @@ See [Supabase REST API with fetch](supabase-rest-api.md) for the `fetch` version
 | --- | --- |
 | `Invalid API key` | `.env.local` is in the wrong place, has a typo, or you didn't restart `npm run dev` |
 | `permission denied for table ...` | The publishable key hasn't been given access. Run `grant select, insert, update, delete on table <name> to anon;` in the SQL Editor |
-| `relation "public.<name>" does not exist` | The table name in `.from()` doesn't match Supabase (check for capitals and spelling) |
-| `DELETE requires a WHERE clause` | You forgot `.eq(...)` after `.delete()` or `.update()` |
+| `Could not find the table 'public.<name>' in the schema cache` | The table name in `.from()` doesn't match Supabase (check for capitals and spelling) |
+| `Could not find the '<name>' column of '<table>' in the schema cache` | A column name in your `.insert()` or `.update()` object doesn't match Supabase |
+| `DELETE requires a WHERE clause` or `UPDATE requires a WHERE clause` | You forgot `.eq(...)` after `.delete()` or `.update()` |
 | The list doesn't change after a button click | You didn't load the data again after the change |
 
 ***
@@ -230,6 +291,8 @@ See [Supabase REST API with fetch](supabase-rest-api.md) for the `fetch` version
 ## Summary
 
 - Install `@supabase/supabase-js` and create one client in `app/lib/supabase.ts`
+- Use the Supabase client in client components that start with `"use client";`, so the queries run in the browser
+- Read data in `useEffect`, and create, update or delete data in click handlers
 - Every query starts with `supabase.from("table")` and is `await`ed
 - `.select()` reads, `.insert()` creates, `.update()` changes, `.delete()` removes
 - Always filter updates and deletes with `.eq("id", ...)`

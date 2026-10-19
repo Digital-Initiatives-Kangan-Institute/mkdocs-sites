@@ -9,61 +9,82 @@ Revisit [Supabase Client Library](../resources/supabase/supabase-client.md) whil
 ## Setup
 
 !!! abstract "Instructions"
-    **Create the Supabase project and tables**
+    **Create the Supabase project**
 
     1. Go to `https://supabase.com/dashboard` and create a new project called `crud-practice`.
-    2. When it has finished setting up, open the **SQL Editor**, paste in the SQL below and click **Run**. It creates four small tables and fills them with sample rows.
-    3. Open the **Table Editor** and check you can see `fruits`, `songs`, `todos` and `movies`.
-    4. Click **Connect** at the top of the project (or go to **Project Settings → API Keys**) and copy the **Project URL** and the **Publishable key** (`sb_publishable_…`).
+    2. Wait for the project to finish setting up.
 
-    ```sql
-    create table fruits (
-        id bigint generated always as identity primary key,
-        name text not null,
-        colour text not null
-    );
+    **Build the tables yourself**
 
-    create table songs (
-        id bigint generated always as identity primary key,
-        title text not null,
-        artist text not null,
-        rating int not null default 3
-    );
+    Create the four tables below in the **Table Editor**. Match the column names and types exactly, because your code will rely on them. For each table:
 
-    create table todos (
-        id bigint generated always as identity primary key,
-        task text not null,
-        done boolean not null default false
-    );
+    1. Click **New table** and type the table name.
+    2. **Untick "Enable Row Level Security (RLS)".** Read the RLS warning below, then confirm.
+    3. Leave the `id` and `created_at` columns that Supabase already added.
+    4. Click **Add column** for each of the other columns. Set its name, type and default value. Open the column's settings (the cog icon) and untick **Is Nullable**, so the column must always have a value.
+    5. Click **Save**.
+    6. Add the sample rows with **Insert → Insert row**. Leave `id` and `created_at` empty, because Supabase fills them in.
 
-    create table movies (
-        id bigint generated always as identity primary key,
-        title text not null,
-        year int not null,
-        watched boolean not null default false
-    );
+    **`fruits`**
 
-    -- Keep things simple for learning: no Row Level Security
-    alter table fruits disable row level security;
-    alter table songs disable row level security;
-    alter table todos disable row level security;
-    alter table movies disable row level security;
+    | Column | Type | Default value |
+    | --- | --- | --- |
+    | `name` | `text` | none |
+    | `colour` | `text` | none |
 
-    -- Let the publishable key read, add, change and delete rows
-    grant select, insert, update, delete on table fruits, songs, todos, movies to anon;
+    | name | colour |
+    | --- | --- |
+    | Apple | red |
+    | Banana | yellow |
+    | Grape | purple |
+    | Lime | green |
 
-    insert into fruits (name, colour) values
-        ('Apple', 'red'), ('Banana', 'yellow'), ('Grape', 'purple'), ('Lime', 'green');
+    **`songs`**
 
-    insert into songs (title, artist, rating) values
-        ('Paper Planes', 'The Weekenders', 4), ('Blue Sky', 'Sunny Days', 5), ('Slow Walk', 'The Turtles Club', 2);
+    | Column | Type | Default value |
+    | --- | --- | --- |
+    | `title` | `text` | none |
+    | `artist` | `text` | none |
+    | `rating` | `int4` | `3` |
 
-    insert into todos (task, done) values
-        ('Buy milk', false), ('Finish homework', true), ('Walk the dog', false);
+    | title | artist | rating |
+    | --- | --- | --- |
+    | Paper Planes | The Weekenders | 4 |
+    | Blue Sky | Sunny Days | 5 |
+    | Slow Walk | The Turtles Club | 2 |
 
-    insert into movies (title, year, watched) values
-        ('Toy Story', 1995, true), ('Finding Nemo', 2003, false), ('Inside Out', 2015, false);
-    ```
+    **`todos`**
+
+    | Column | Type | Default value |
+    | --- | --- | --- |
+    | `task` | `text` | none |
+    | `done` | `bool` | `false` |
+
+    | task | done |
+    | --- | --- |
+    | Buy milk | false |
+    | Finish homework | true |
+    | Walk the dog | false |
+
+    **`movies`**
+
+    | Column | Type | Default value |
+    | --- | --- | --- |
+    | `title` | `text` | none |
+    | `year` | `int4` | none |
+    | `watched` | `bool` | `false` |
+
+    | title | year | watched |
+    | --- | --- | --- |
+    | Toy Story | 1995 | true |
+    | Finding Nemo | 2003 | false |
+    | Inside Out | 2015 | false |
+
+    **Check:** the Table Editor shows all four tables, and every column name is lower case and matches the schema exactly.
+
+    **Get your keys**
+
+    Click **Connect** at the top of the project (or go to **Project Settings → API Keys**) and copy the **Project URL** and the **Publishable key** (`sb_publishable_…`).
 
     **Create the Next.js app**
 
@@ -112,6 +133,9 @@ Revisit [Supabase Client Library](../resources/supabase/supabase-client.md) whil
 
 !!! warning "About RLS"
     RLS is **off** on these tables, which means **anyone with your publishable key can read and change them**. That's fine for practice tables full of made-up data. **Never** do this with real or private data.
+
+!!! tip "Seeing `permission denied for table ...`?"
+    Your publishable key hasn't been given access to the table. Open the **SQL Editor** and run `grant select, insert, update, delete on table <table_name> to anon;`, replacing `<table_name>` with your table's name.
 
 ---
 
@@ -272,6 +296,9 @@ Revisit [Supabase Client Library](../resources/supabase/supabase-client.md) whil
 
 ## Update
 
+!!! note "Why did my row move?"
+    After you update a row, it may jump to the bottom of the list. Supabase doesn't keep rows in any order unless you ask for one. To keep the list still, add `.order("id", { ascending: true })` to your load function in each of these exercises.
+
 ### Rename a Fruit
 
 !!! abstract "Instructions"
@@ -401,11 +428,10 @@ Revisit [Supabase Client Library](../resources/supabase/supabase-client.md) whil
 
 !!! abstract "Instructions"
     1. In the Supabase **Table Editor**, create your own table with RLS turned off. Pick any topic: games, recipes, pets, books. Give it at least three columns besides `id`, including one `text`, one `int4` and one `bool`.
-    2. Run `grant select, insert, update, delete on table <your_table> to anon;` in the SQL Editor so the publishable key can use it.
-    3. Add a type for it to `app/lib/supabase.ts`.
-    4. Create `app/task15/page.tsx` with all four operations: list, add, change, delete.
+    2. Add a type for it to `app/lib/supabase.ts`.
+    3. Create `app/task15/page.tsx` with all four operations: list, add, change, delete.
 
     **Check:** every operation still shows its change after you refresh the page.
 
 ??? hint "Hint - Click to expand"
-    Column names in your code must match Supabase exactly, including capitals. If you see `permission denied`, the `grant` step was missed. If you see `relation ... does not exist`, check the table name in `.from()`.
+    Column names in your code must match Supabase exactly, including capitals. If you see `permission denied`, see the tip in the Setup section. If you see `Could not find the table ... in the schema cache`, check the table name in `.from()`.

@@ -16,44 +16,48 @@ Revisit [Supabase Client Library](../resources/supabase/supabase-client.md) and 
 ## Set Up Supabase
 
 !!! abstract "Instructions"
+    **Create the project**
+
     1. Go to `https://supabase.com/dashboard` and create a new project called `book-tracker`.
-    2. When it has finished setting up, open the **SQL Editor**, paste in the SQL below and click **Run**.
-    3. Open the **Table Editor** and check that the `books` table has 3 rows.
-    4. Click **Connect** at the top of the project (or go to **Project Settings → API Keys**) and copy the **Project URL** and the **Publishable key** (`sb_publishable_…`).
+    2. Wait for the project to finish setting up.
 
-```sql
-create table books (
-    id bigint generated always as identity primary key,
-    created_at timestamptz not null default now(),
-    title text not null,
-    author text not null,
-    finished boolean not null default false
-);
+    **Build the `books` table yourself**
 
--- Keep things simple for learning: no Row Level Security
-alter table books disable row level security;
+    Create a table that matches this schema exactly, because your code will rely on these column names and types.
 
--- Let the publishable key read, add, change and delete books
-grant select, insert, update, delete on table books to anon;
+    | Column | Type | Required? | Default value | Notes |
+    | --- | --- | --- | --- | --- |
+    | `id` | `int8` | yes | identity (automatic) | Primary key. Supabase adds this column for you. Used to pick one book to update or delete. |
+    | `created_at` | `timestamptz` | yes | `now()` | Supabase adds this column for you. Used to sort newest first. |
+    | `title` | `text` | yes | none | The book's title |
+    | `author` | `text` | yes | none | Who wrote it |
+    | `finished` | `bool` | yes | `false` | Has the book been read? |
 
-insert into books (title, author, finished) values
-    ('The Hobbit', 'J.R.R. Tolkien', true),
-    ('Wonder', 'R.J. Palacio', false),
-    ('Holes', 'Louis Sachar', false);
-```
+    1. In the dashboard, open the **Table Editor** and click **New table**.
+    2. Name it `books`.
+    3. **Untick "Enable Row Level Security (RLS)".** Read the RLS warning below, then confirm.
+    4. Leave the `id` and `created_at` columns that Supabase already added.
+    5. Click **Add column** for `title`, `author` and `finished`. Set each one's name, type and default value. Open the column's settings (the cog icon) and untick **Is Nullable**.
+    6. Click **Save**.
+    7. Add these sample books with **Insert → Insert row**. Leave `id` and `created_at` empty.
 
-The `books` table has five columns:
+    | title | author | finished |
+    | --- | --- | --- |
+    | The Hobbit | J.R.R. Tolkien | true |
+    | Wonder | R.J. Palacio | false |
+    | Holes | Louis Sachar | false |
 
-| Column | Type | Notes |
-| --- | --- | --- |
-| `id` | `int8` | Filled in by Supabase. Used to pick one book to update or delete. |
-| `created_at` | `timestamptz` | Filled in by Supabase. Used to sort newest first. |
-| `title` | `text` | The book's title |
-| `author` | `text` | Who wrote it |
-| `finished` | `bool` | Starts as `false` |
+    **Check:** the Table Editor shows 3 rows, and every column name matches the schema exactly (all lower case).
+
+    **Get your keys**
+
+    Click **Connect** at the top of the project (or go to **Project Settings → API Keys**) and copy the **Project URL** and the **Publishable key** (`sb_publishable_…`).
 
 !!! warning "About RLS"
     RLS is **off**, so **anyone with your publishable key can read and change this table**. That's fine for a practice project. **Never** do this with real or private data.
+
+!!! tip "Seeing `permission denied for table ...`?"
+    Your publishable key hasn't been given access to the table. Open the **SQL Editor** and run `grant select, insert, update, delete on table <table_name> to anon;`, replacing `<table_name>` with your table's name.
 
 ---
 
