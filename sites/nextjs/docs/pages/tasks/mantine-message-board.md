@@ -13,7 +13,7 @@ In the Pet Adoption Board you talked to Supabase with `fetch()` and its REST API
 
 You won't need every Mantine component you have learned. Part of the job is choosing the ones that suit each part of the page.
 
-Revisit [Mantine UI](../resources/mantine/mantine.md), [Introduction to Supabase](../resources/supabase/intro-to-supabase.md), [Mantine Form Validation](mantine-form-validation.md) and [Mantine Modals and Notifications](mantine-feedback.md) while you work.
+Revisit [Mantine UI](../resources/mantine/mantine.md), [Supabase Client Library](../resources/supabase/supabase-client.md), [Mantine Form Validation](mantine-form-validation.md) and [Mantine Modals and Notifications](mantine-feedback.md) while you work.
 
 ## Set Up Supabase
 
