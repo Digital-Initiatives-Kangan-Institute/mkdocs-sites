@@ -36,6 +36,7 @@ nav:
       - Supabase:
         - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
         - Supabase REST API with fetch: pages/resources/supabase/supabase-rest-api.md
+        - Supabase Client Library: pages/resources/supabase/supabase-client.md
         - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md
       - Styling and Libraries:
         - Tailwind CSS: pages/resources/tailwind/tailwind.md
@@ -79,10 +80,12 @@ nav:
         - Mantine Tables and Filters: pages/tasks/mantine-tables-filters.md
         - Mantine Charts: pages/tasks/mantine-charts.md
         - React Confetti: pages/tasks/react-confetti.md
+        - Supabase Client CRUD: pages/tasks/supabase-client-crud.md
       - Projects:
         - Supabase as a CMS: pages/tasks/supabase-cms.md
         - Pet Adoption Board: pages/tasks/pet-adoption-board.md
         - Mantine Equipment Loans: pages/tasks/mantine-equipment-loans.md
+        - Mantine Book Tracker: pages/tasks/mantine-book-tracker.md
         - Mantine Message Board: pages/tasks/mantine-message-board.md
         - Deploy Your App: pages/tasks/deploy-your-app.md
         - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
