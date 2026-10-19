@@ -1,4 +1,4 @@
-# TypeScript Types for Data
+# Typing Your Data
 
 These exercises practise describing data with TypeScript: object types, optional and nullable properties, union types, nested types for real API data, typing props and state, handling values that might be missing, and fixing code by reading TypeScript's error messages.
 

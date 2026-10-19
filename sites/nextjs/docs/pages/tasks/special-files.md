@@ -1,4 +1,4 @@
-# Special Files
+# Using Special Files
 
 These exercises practise the files Next.js treats specially: a custom 404 page with `not-found.tsx` and `notFound()`, crash pages with `error.tsx`, nested layouts for one section of a site, `loading.tsx`, and page titles with `metadata`.
 

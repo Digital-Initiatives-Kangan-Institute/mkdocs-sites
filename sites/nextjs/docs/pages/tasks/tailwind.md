@@ -1,4 +1,4 @@
-# Tailwind CSS
+# Styling with Tailwind
 
 This is a **guided, line-by-line build** of styles using Tailwind utility classes. You will style a card, then a button, then a navigation bar, then assemble them into a landing page — repeating the same utilities each time.
 
