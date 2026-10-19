@@ -37,7 +37,7 @@ The tool then asks a series of setup questions. Newer versions first ask whether
 | :--- | :--- | :--- |
 | Use TypeScript? | **Yes** | Catches mistakes before they reach the browser |
 | Use ESLint? | **Yes** | Lints your code for common problems |
-| Use Tailwind CSS? | **No** for now | Covered separately in the [Tailwind CSS](tailwind.md) task |
+| Use Tailwind CSS? | **No** for now | Covered separately in the [Styling with Tailwind](tailwind.md) task |
 | Use a `src/` directory? | **No** | Keeps `app/` at the project root |
 | Use App Router? | **Yes** | The modern routing system |
 | Customise import alias? | **Yes** (accept `@/*`) | Shortcut for imports |

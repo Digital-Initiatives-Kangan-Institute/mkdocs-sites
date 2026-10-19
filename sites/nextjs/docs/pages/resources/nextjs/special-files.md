@@ -188,4 +188,4 @@ To give a client page a title, put the `metadata` in a `layout.tsx` for its fold
 
 ### Activity - Special Files
 
-[Attempt Activity - Special Files](../../tasks/special-files.md){.md-button}
+[Attempt Activity - Using Special Files](../../tasks/special-files.md){.md-button}
