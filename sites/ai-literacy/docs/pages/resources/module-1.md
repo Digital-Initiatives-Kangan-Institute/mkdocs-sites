@@ -101,6 +101,43 @@ While Generative AI is a powerful tool, it exhibits clear boundaries that requir
 ## Creative Problem-Solving & Prompt Ideation (The SCAMPER Framework)
 
 ### Overview & Origin
-    
-### The 7 SCAMPER Dimensions Applied to AI Prompting
-    
+SCAMPER is a seven-question idea-generation checklist, built on Alex Osborn's 1953 brainstorming technique and developed into its current form by Bob Eberle in the 1970's.
+
+### Using SCAMPER to Improve AI Prompts
+Most people type one prompt, get an average answer and stop. SCAMPER gives you seven ways to change a prompt so you get a different answer. 
+
+1. **Start with a plain prompt.** This is your baseline.
+2. **Pick one SCAMPER question** and use it to change one part of the prompt: the audience, format, tone, task or rules.
+3. **Run the new prompt** and compare it with the baseline.
+4. **Change only one thing at a time.** You can then see which change improved the answer.
+
+You don't have to use every letter or follow the order of the acronym.
+
+The examples below all start from the same baseline prompt:
+> *"Explain how the water cycle works."*
+
+| Dimension | What it means for prompting | Improved prompt |
+|---|---|---|
+| **S – Substitute** | Swap one element, such as the audience, voice or analogy. | "Explain how the water cycle works to a 10-year-old, using a city bus network as the analogy." |
+| **C – Combine** | Join two tasks or ideas in one prompt. | "Explain the water cycle in 150 words, then turn it into a four-line rhyme and a three-question quiz." |
+| **A – Adapt** | Borrow a format or structure from somewhere else. | "Explain the water cycle in the format of a recipe, with ingredients, method steps and cooking time." |
+| **M – Modify** | Change the size, emphasis or tone. | "Explain the water cycle in two sentences. Then rewrite it as a sports commentator calling a championship match." |
+| **P – Put to another use** | Reuse the output for a different purpose. | "Explain the water cycle, then turn your explanation into a 60-second video script and a set of six flashcards." |
+| **E – Eliminate** | Remove words, jargon or steps to force a fresh approach. | "Explain the water cycle without using the words 'evaporation', 'condensation' or 'precipitation'." |
+| **R – Reverse** | Flip the order, the goal or the roles. | "Write an explanation of the water cycle that contains three deliberate mistakes, then give me an answer key." |
+
+### SCAMPER Prompt Ideation Matrix
+*Quick reference for students.*
+
+| Strategy | Ask yourself | Prompt formula | Business practice scenario |
+|---|---|---|---|
+| **Substitute** | What can I swap? | "Rewrite [prompt], but replace [element] with [alternative]." | Rewrite a product announcement email for retail customers so it speaks to small-business owners instead. |
+| **Combine** | What can I merge? | "Do [task A] and then [task B] in one response." | Summarise a customer survey and then draft three action items for the team. |
+| **Adapt** | What can I borrow? | "Present [topic] in the style or structure of [other format]." | Present a quarterly sales report in the structure of a news broadcast, with headlines and a weather-style outlook. |
+| **Modify** | What can I shrink, stretch or exaggerate? | "Give me [topic] in [word limit] words, then in [different tone]." | Write a 30-word elevator pitch for a new service, then a warm, friendly version for a website homepage. |
+| **Put to another use** | Where else could this output go? | "Turn this answer into [new format] for [new audience]." | Turn a staff training guide into a customer FAQ page and a short social media post. |
+| **Eliminate** | What can I remove? | "Do [task] without using [word, tool or step]." | Draft a persuasive sales email with no buzzwords or industry jargon. |
+| **Reverse** | What if I flip it? | "Start from the end, or make the answer wrong on purpose, then fix it." | Ask for a deliberately bad customer complaint reply, then ask AI to explain what's wrong and rewrite it well. |
+
+### Further reading on this topic
+https://www.bitesizelearning.co.uk/resources/scamper-model-creativity 
