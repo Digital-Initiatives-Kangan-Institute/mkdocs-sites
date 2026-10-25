@@ -163,8 +163,6 @@
 !!! abstract "Instructions"
     **Using VS Code**, give the paragraph `Free bike service with every new bike.` an `id` of `special`, so that the CSS highlights it.
 
-    Then explain in a sentence why an `id` is used here rather than a `class`.
-
 ??? code "click to expand"
     `index.html`
 

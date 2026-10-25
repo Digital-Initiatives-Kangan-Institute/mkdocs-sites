@@ -134,6 +134,10 @@ Once all amendments are complete, the client confirms the site meets their requi
 - Test cases are specific, testable, and linked to the client's requirements
 - Record failures descriptively, record every amendment with the date, and re-test after each fix
 
+### Activity - Fix a Broken Website
+
+[Attempt Activity 10 - Fix a Broken Website](../tasks/task-10-fix-broken-website.md){.md-button}
+
 ### Activity - Testing and Validation
 
-[Attempt Activity 12 - Testing and Validation](../tasks/task-12-testing.md){.md-button}
+[Attempt Activity 13 - Testing and Validation](../tasks/task-13-testing.md){.md-button}

@@ -49,7 +49,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, extend your article page from the previous exercise.
 
-    This repeats what you practised in Task 1. You must:
+    You must:
 
     - apply **bold** to one important word in the first paragraph
     - apply _italics_ to one word in the second paragraph

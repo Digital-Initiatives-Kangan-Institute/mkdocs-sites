@@ -20,8 +20,6 @@
 !!! abstract "Instructions"
     **Using VS Code**, install the **Live Preview** extension published by **Microsoft**.
 
-    As you go, write down each step you take, as a numbered list, in your own words. Someone who has never used VS Code should be able to follow your steps.
-
 ??? question "Hint"
     Extensions are installed from the **Extensions** view in the Activity Bar. Check the publisher name under the extension title. Several extensions have similar names, and you want the one by Microsoft.
 
@@ -65,10 +63,10 @@
 ??? question "Hint"
     Auto Save is in the `File` menu. The other settings are in `File` then `Preferences` then `Settings` (or the cog icon in the bottom left). Use the search box at the top of the Settings page to find each one by name.
 
-## Identify IDE Features
+## Try the IDE Features
 
 !!! abstract "Instructions"
-    **Using VS Code**, find an example of each IDE feature below while working in your `index.html` file. For each one, write a sentence describing what it does and how it helps a web developer.
+    **Using VS Code**, try out each IDE feature below while working in your `index.html` file.
 
     - syntax highlighting
     - code completion (IntelliSense)
@@ -81,14 +79,3 @@
 ??? question "Hint"
     Try typing the start of a tag, such as a less-than sign followed by `h`, and watch what appears. The integrated terminal is opened from the `Terminal` menu. The [Development Environment](../resources/development-environment.md) resource describes each feature.
 
-## Choose an IDE
-
-!!! abstract "Instructions"
-    **Using the Development Environment resource**, read each client scenario below and choose the most suitable IDE or editor. Write a sentence for each explaining **why** it suits that client's requirements.
-
-    - A small charity with no budget for software, using Windows laptops, wants volunteers to update simple HTML pages and see the changes as they work.
-    - A web design agency that already pays for JetBrains software for its developers wants an IDE with as many web tools built in as possible.
-    - A school's computers run Windows and Linux. The teacher wants students to use the same free editor at school and at home, with a live preview.
-
-??? question "Hint"
-    For each scenario, underline the requirements first: cost, operating system, features, and what the organisation already uses. Then compare those requirements against the table of IDEs in the resource.
