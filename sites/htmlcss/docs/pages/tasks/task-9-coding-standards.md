@@ -431,10 +431,7 @@ In this task you will find and fix code that does not follow the [coding standar
 ## Name the Standard
 
 !!! abstract "Instructions"
-    Each snippet below breaks at least one coding standard. **Without using an editor**, write down for each snippet:
-
-    - which coding standard it breaks
-    - how you would fix it
+    **Using VS Code**, paste the snippets below into a new `index.html` file and fix each one so it follows the coding standards.
 
     Some snippets break **more than one** standard.
 
@@ -475,20 +472,12 @@ In this task you will find and fix code that does not follow the [coding standar
     - Is it an obsolete tag or attribute?
     - Do any file names in links break the file naming rules?
 
-    Write each answer like the example below, which is **not** one of the snippets:
-
-    | Snippet | Standard broken | Fix |
-    |---|---|---|
-    | `<b>Sale <i>now</b></i>` | Closing tags | Close the `i` before the `b`: `<b>Sale <i>now</i></b>` |
-
-    If a snippet breaks two standards, give both, and a fix for each.
+    For example, `<b>Sale <i>now</b></i>` breaks the **Closing tags** standard, and is fixed by closing the `i` before the `b`: `<b>Sale <i>now</i></b>`.
 
 ## Spot the Bugs
 
 !!! abstract "Instructions"
     **Using VS Code**, fix the starter page below. It breaks the coding standards in **at least ten** places. Find and fix as many as you can.
-
-    Keep a list of each problem you fix and the standard it broke.
 
 ??? code "click to expand"
     ```html
@@ -517,12 +506,6 @@ In this task you will find and fix code that does not follow the [coding standar
     6. Styling in CSS
     7. Obsolete tags and attributes
     8. File names in links
-
-    Record each problem in a list like this example, which is **not** from this page:
-
-    | Line | Problem | Standard |
-    |---|---|---|
-    | 14 | The `table` has a `style` attribute | Keep styling in CSS |
 
     Check the link addresses too. A file name with spaces or capital letters, such as `href="Price List.html"`, breaks the naming rules and should be `price-list.html`. Remember to rename the file to match as well, or the link will break.
 
@@ -575,49 +558,6 @@ In this task you will find and fix code that does not follow the [coding standar
 
     Areas that appear on every page, such as the header, navigation and footer, should be marked up **the same way** on every page. For example, if one page uses `<footer>` and another uses `<div class="footer">` for the same area, the `div` is the one to fix.
 
-## Review Your Mini Website
-
-!!! abstract "Instructions"
-    **Using VS Code**, open your Mini Website from Task 6 (which you styled in Task 8) and review **every page** against the coding standards.
-
-    Record what you find in a table like this, then fix each problem:
-
-    | Page | Problem | Standard | Fix |
-    |---|---|---|---|
-    | | | | |
-
-??? question "Hint"
-    Use the same checklist as **Spot the Bugs**, on one page at a time.
-
-    VS Code can help you find some problems quickly. Press `Ctrl + Shift + F` to search **every file** in your project, and search for:
-
-    - `style=` to find inline styles
-    - `<div` to check each `div` should really be a `div`
-    - `<font`, `<center` and `bgcolor` to find obsolete code
-
-    A row in your table might look like this:
-
-    | Page | Problem | Standard | Fix |
-    |---|---|---|---|
-    | `about.html` | `<IMG SRC=...>` written in capitals | Lowercase tags | Changed to `<img src=...>` |
-
-## Swap and Review
-
-!!! abstract "Instructions"
-    Swap Mini Websites with a classmate and review **their** code against the coding standards, using the same table as the previous exercise. Give them your table when you are finished.
-
-    Then use the table your classmate gives you to fix any problems they found in **your** website.
-
-??? question "Hint"
-    Reviewing someone else's code is how code is checked in the workplace. Good feedback says **which page**, **what the problem is**, and **which standard** it breaks, so the other developer can find it straight away.
-
-    | Vague feedback | Specific feedback |
-    |---|---|
-    | "Your code is messy." | "`contact.html`: the links inside the `ul` are not indented (Indentation)." |
-    | "Fix your tags." | "`index.html`: the second `p` inside `main` is never closed (Closing tags)." |
-
-    Keep your feedback about the **code**, not the person, and mention something they did well too.
-
 ## Write It Right
 
 !!! abstract "Instructions"
@@ -632,7 +572,6 @@ In this task you will find and fix code that does not follow the [coding standar
     - comments labelling each main area
     - all styling in a linked `style.css` file
 
-    When you are finished, check your own page against every section of the [Coding Standards](../resources/coding-standards.md) page before showing it to your teacher.
 
 ??? question "Hint"
     It is much easier to follow the standards while you write than to fix the code afterwards. A good order to work in is:
@@ -650,3 +589,18 @@ In this task you will find and fix code that does not follow the [coding standar
     4. Fill in each area one at a time, indenting as you go. When you press `Enter` between an opening and closing tag, VS Code indents the new line for you.
     5. Put every style in `style.css`, never in a `style` attribute
     6. Finish with **Format Document**, then check the page against every section of the [Coding Standards](../resources/coding-standards.md) page
+
+## Review Your Library Page
+
+!!! abstract "Instructions"
+    **Using VS Code**, review your Northside Library `index.html` and `style.css` from the **Write It Right** exercise against **every** coding standard, and fix every problem you find.
+
+??? question "Hint"
+    Use the same checklist as **Spot the Bugs**, one file at a time.
+
+    VS Code can help you find some problems quickly. Press `Ctrl + Shift + F` to search **every file** in your project, and search for:
+
+    - `style=` to find inline styles
+    - `<div` to check each `div` should really be a `div`
+    - `<font`, `<center` and `bgcolor` to find obsolete code
+

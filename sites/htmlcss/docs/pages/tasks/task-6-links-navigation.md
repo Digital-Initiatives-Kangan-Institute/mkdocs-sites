@@ -8,7 +8,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, create a new `index.html` page that links out to an external website.
 
-    This repeats what you practised in Task 4. Your page must include:
+    Your page must include:
 
     - a paragraph introducing your favourite website
     - a link to that website using its full address (starting with `https://`)
@@ -21,7 +21,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, create `index.html` and `about.html` pages that link to each other.
 
-    This repeats what you practised in Task 4. Each page must include:
+    Each page must include:
 
     - a paragraph saying which page you are on
     - a link that takes the user to the other page
@@ -88,7 +88,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, create `index.html`, `about.html`, and `contact.html` pages. Add the same navigation menu to all three pages so the user can reach every page from every page.
 
-    This combines the lists from Task 2 with the links from Task 4. Each page must include:
+    This combines lists with links. Each page must include:
 
     - a `nav` element containing a list with `3` items, one for each page
     - a link inside each list item pointing to that page
@@ -199,7 +199,7 @@
 !!! abstract "Instructions"
     **Using VS Code**, create a new `index.html` page containing an image that acts as a link.
 
-    This combines the images from Task 4 with links. Your page must include:
+    This combines images with links. Your page must include:
 
     - an image using `https://cyberbilby.com/capybara.jpg` as the image source with `Capybara` as the alt text
     - the image wrapped so that clicking it takes the user to `https://w3.org/`

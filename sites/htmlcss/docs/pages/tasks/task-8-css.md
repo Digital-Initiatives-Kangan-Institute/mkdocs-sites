@@ -87,13 +87,109 @@
 ## Link the Stylesheet
 
 !!! abstract "Instructions"
-    **Using VS Code**, open your Mini Website from Task 6 and add an external stylesheet.
+    **Using VS Code**, create the three pages of the Capybara Tours Mini Website from the starter code, all in the same folder. Then add an external stylesheet.
 
     - create a `style.css` file in the same folder as your pages
     - link it in the `head` of **every** page
     - add rules to `style.css` to change the background colour of the page and the colour of the headings
 
-    Open each page in Live Preview to check the styles apply everywhere.
+    Open each page in Live Preview to check the styles apply everywhere. Keep this folder, because you will style the whole site at the end of this task.
+
+??? code "click to expand"
+    `index.html`
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Home | Capybara Tours</title>
+    </head>
+    <body>
+      <header>
+        <a href="index.html"><img src="https://cyberbilby.com/capybara.jpg" alt="Capybara Tours logo" width="80"></a>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>Welcome to Capybara Tours</h1>
+        <p>Meet the <b>friendliest</b> animals in the wetlands.</p>
+        <img src="https://cyberbilby.com/capybara.jpg" alt="A capybara relaxing by the water">
+        <p>New here? <a href="about.html">Find out about our tours</a>.</p>
+      </main>
+      <footer>
+        <p>&copy; 2026 Capybara Tours</p>
+      </footer>
+    </body>
+    </html>
+    ```
+
+    `about.html`
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>About Us | Capybara Tours</title>
+    </head>
+    <body>
+      <header>
+        <a href="index.html"><img src="https://cyberbilby.com/capybara.jpg" alt="Capybara Tours logo" width="80"></a>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>About Us</h1>
+        <p>Our guides have been running <b>small</b> group tours since 2015.</p>
+      </main>
+      <footer>
+        <p>&copy; 2026 Capybara Tours</p>
+      </footer>
+    </body>
+    </html>
+    ```
+
+    `contact.html`
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Contact | Capybara Tours</title>
+    </head>
+    <body>
+      <header>
+        <a href="index.html"><img src="https://cyberbilby.com/capybara.jpg" alt="Capybara Tours logo" width="80"></a>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>Contact</h1>
+        <p>Call us to <b>book</b> your tour today.</p>
+      </main>
+      <footer>
+        <p>&copy; 2026 Capybara Tours</p>
+      </footer>
+    </body>
+    </html>
+    ```
 
 ??? question "Hint"
     The `link` element goes inside the `head`, and needs a `rel` attribute saying it is a stylesheet and an `href` with the file name. If one page is not styled, compare its `head` with a page that works.
@@ -410,10 +506,10 @@
 ??? question "Hint"
     Use `display: grid` with `grid-template-columns` and the `repeat`, `auto-fit` and `minmax` functions shown in the [Grid](../resources/css.md#grid) section of the resource, plus `gap`. For the images, use `max-width` inside the card.
 
-## Style Your Mini Website
+## Style the Mini Website
 
 !!! abstract "Instructions"
-    **Using VS Code**, open the `style.css` file of your Mini Website from Task 6 and style the whole site:
+    **Using VS Code**, open the `style.css` file of the Capybara Tours Mini Website from the **Link the Stylesheet** exercise and style the whole site:
 
     - store your colours in CSS variables at the top of the file
     - style the `header` and `footer` with a background colour and padding
