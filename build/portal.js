@@ -3,7 +3,9 @@ window.SITES_DATA = {
     "courses": [
         { "id": "cert3-in-it", "label": "Cert 3 in IT", "fullname": "Certificate III in Information Technology" },
         { "id": "diploma-of-it", "label": "Diploma of IT", "fullname": "Diploma of Information Technology" },
-        { "id": "short-courses", "label": "Short Courses", "fullname": "Kangan Short Courses" }
+        { "id": "short-courses", "label": "Short Courses", "fullname": "Kangan Short Courses" },
+        { "id": "workplace", "label": "workplace", "fullname": "Workplace Courses" }
+ 
     ],
     "sites": [
         {
@@ -90,7 +92,15 @@ window.SITES_DATA = {
             "title": "Program IoT Devices",
             "description": "Introduction to IoT concepts and Arduino programming through structured activities and hands-on exercises.",
             "courses": ["diploma-of-it"]
+        },
+        {
+            "href": "/msteams",
+            "img": "./_assets/sites/program-iot-devices.png",
+            "title": "MS Teams Basics",
+            "description": "Introduction to MS Teams",
+            "courses": ["workplace"]
         }
+
     ]
 };
 
