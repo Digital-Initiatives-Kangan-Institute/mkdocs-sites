@@ -1,0 +1,30 @@
+# Settings shared by every site (theme name/custom_dir/features, extra_css,
+# watch, markdown_extensions, copyright) live in shared/.mkdocs-base.yml and
+# are merged in automatically. Do not touch the line below.
+INHERIT: ../../shared/.mkdocs-base.yml
+
+site_name: MS-Teams
+
+nav:
+  # The Return to Portal item should always be the first item in the navigation.
+  - Return to Portal: /
+  
+  # Add additional navigation below this point:    
+  - Menu:
+    - Resources:
+      - Microsoft Team Basics: pages/resources/ms-teams-basics.md
+ 
+
+# Do not touch anything below this line unless you know what you are doing.
+theme:
+  palette:
+    primary: purple
+
+plugins:
+  - search
+  - enumerate-headings:
+      increment_across_pages: true
+      # Uncomment below if you would like to reset the table of contents numbering
+      # after a certain page:
+      # restart_increment_after:
+      #  - path/to/page.md
