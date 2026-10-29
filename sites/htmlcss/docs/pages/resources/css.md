@@ -47,12 +47,16 @@ h1 {
 }
 ```
 
+![CSS Syntax Diagram](../../assets/anatomy-of-a-css-rule.svg)
+
 | Part | Example | Meaning |
 |---|---|---|
 | **Selector** | `h1` | Which elements the rule applies to |
-| **Property** | `color` | What to change |
+| **Scope** | `{ }` | Holds all the rules that will be applied to the element |
+| **Key / Property** | `color` | What to change |
 | **Value** | `navy` | What to change it to |
-| **Declaration** | `color: navy;` | A property and value together |
+| **Semicolon** | `;` | The end of the rule / declaration (you **must** have one of these after each rule) |
+| **Declaration** | `color: navy;` | A key / property and value together |
 
 Rules for writing CSS:
 
