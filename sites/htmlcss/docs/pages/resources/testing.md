@@ -85,6 +85,8 @@ Good test cases are:
 - **testable**: the answer is clearly pass or fail
 - **linked to requirements**: each client requirement has at least one test case
 
+For a guide to running test cases and recording the results, see [Running Test Cases](running-test-cases.md).
+
 ### Test Records
 
 Test results are recorded in a **test record** (or test plan), usually a table like this:
@@ -141,3 +143,7 @@ Once all amendments are complete, the client confirms the site meets their requi
 ### Activity - Testing and Validation
 
 [Attempt Activity 13 - Testing and Validation](../tasks/task-13-testing.md){.md-button}
+
+### Activity - Peer Testing
+
+[Attempt Activity 16 - Peer Testing](../tasks/task-16-peer-testing.md){.md-button}
