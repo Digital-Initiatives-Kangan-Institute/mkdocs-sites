@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="200" viewBox="0 0 760 200" role="img" aria-labelledby="t">
+  <title id="t">User flow symbols: an oval is a start or end point, a rectangle is a screen, a rounded rectangle is a user action, a diamond is a yes or no decision, and a labelled arrow shows the direction of the flow</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#546e7a"/></marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 14px; }
+      .c { text-anchor: middle; }
+      .h { font-weight: 700; }
+      .mut { fill: #57606a; font-size: 12px; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="758" height="198" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <ellipse cx="76" cy="80" rx="58" ry="24" fill="#eceff1" stroke="#546e7a" stroke-width="2"/>
+  <text class="c" x="76" y="85">Start</text>
+  <text class="c h" x="76" y="150">Start or end</text>
+  <text class="c mut" x="76" y="170">Where the flow begins</text>
+
+  <rect x="168" y="56" width="120" height="48" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+  <text class="c" x="228" y="85">Menu page</text>
+  <text class="c h" x="228" y="150">Screen</text>
+  <text class="c mut" x="228" y="170">What the user sees</text>
+
+  <rect x="320" y="56" width="120" height="48" rx="16" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text class="c" x="380" y="85">Taps Order</text>
+  <text class="c h" x="380" y="150">User action</text>
+  <text class="c mut" x="380" y="170">What the user does</text>
+
+  <polygon points="532,40 594,80 532,120 470,80" fill="#ede7f6" stroke="#5e35b1" stroke-width="2"/>
+  <text class="c" x="532" y="85" style="font-size:13px">Logged in?</text>
+  <text class="c h" x="532" y="150">Decision</text>
+  <text class="c mut" x="532" y="170">A yes or no question</text>
+
+  <line x1="630" y1="80" x2="736" y2="80" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="c" x="682" y="70">Yes</text>
+  <text class="c h" x="684" y="150">Arrow</text>
+  <text class="c mut" x="684" y="170">Label each branch</text>
+</svg>
