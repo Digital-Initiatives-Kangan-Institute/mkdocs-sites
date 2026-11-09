@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="410" viewBox="0 0 900 410" role="img" aria-labelledby="t">
+  <title id="t">A user flow along the top: Menu page, adds items, Cart page, taps Checkout, Checkout page, pays, Order confirmed. Below each screen in the flow is its wireframe. Each user action in the flow is linked to the control that performs it: Adds items to the Add button on the Menu screen, Taps Checkout to the Checkout button on the Cart screen, and Pays to the Pay button on the Checkout screen</title>
+  <defs><style>text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }</style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#546e7a"/></marker><marker id="arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker></defs>
+  <rect x="1" y="1" width="898" height="408" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="26" y="30" width="110" height="40" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/><text x="81.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Menu page</text>
+  <line x1="136" y1="50" x2="154" y2="50" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="156" y="30" width="96" height="40" rx="15" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/><text x="204.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Adds items</text>
+  <line x1="252" y1="50" x2="270" y2="50" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="272" y="30" width="110" height="40" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/><text x="327.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Cart page</text>
+  <line x1="382" y1="50" x2="400" y2="50" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="402" y="30" width="96" height="40" rx="15" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/><text x="450.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Taps Checkout</text>
+  <line x1="498" y1="50" x2="516" y2="50" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="518" y="30" width="110" height="40" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/><text x="573.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Checkout page</text>
+  <line x1="628" y1="50" x2="646" y2="50" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="648" y="30" width="96" height="40" rx="15" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/><text x="696.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Pays</text>
+  <line x1="744" y1="50" x2="762" y2="50" stroke="#546e7a" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="764" y="30" width="110" height="40" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/><text x="819.0" y="54.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#1f2328">Order confirmed</text>
+  <line x1="81" y1="72" x2="81" y2="116" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="327" y1="72" x2="327" y2="116" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="573" y1="72" x2="573" y2="116" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="819" y1="72" x2="819" y2="116" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="16" y="120" width="130" height="250" rx="12" fill="#ffffff" stroke="#616161" stroke-width="2"/>
+  <text x="30" y="148" text-anchor="start" style="font-size:14px;font-weight:700;fill:#1f2328">Menu</text>
+  <line x1="16" y1="160" x2="146" y2="160" stroke="#9e9e9e" stroke-width="1.2"/>
+  <rect x="26" y="172" width="34" height="34" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.2"/><line x1="26" y1="172" x2="60" y2="206" stroke="#9e9e9e"/><line x1="60" y1="172" x2="26" y2="206" stroke="#9e9e9e"/>
+  <rect x="68" y="176" width="48" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="68" y="190" width="26" height="7" rx="2" fill="#cfd8dc"/>
+  <rect x="102" y="188" width="34" height="20" rx="4" fill="#ffffff" stroke="#616161" stroke-width="1.5"/><text x="119.0" y="201.6" text-anchor="middle" style="font-size:10px;font-weight:400;fill:#37474f">Add</text>
+  <rect x="26" y="224" width="34" height="34" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.2"/><line x1="26" y1="224" x2="60" y2="258" stroke="#9e9e9e"/><line x1="60" y1="224" x2="26" y2="258" stroke="#9e9e9e"/>
+  <rect x="68" y="228" width="48" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="68" y="242" width="26" height="7" rx="2" fill="#cfd8dc"/>
+  <rect x="102" y="240" width="34" height="20" rx="4" fill="#ffffff" stroke="#616161" stroke-width="1.5"/><text x="119.0" y="253.6" text-anchor="middle" style="font-size:10px;font-weight:400;fill:#37474f">Add</text>
+  <rect x="26" y="276" width="34" height="34" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.2"/><line x1="26" y1="276" x2="60" y2="310" stroke="#9e9e9e"/><line x1="60" y1="276" x2="26" y2="310" stroke="#9e9e9e"/>
+  <rect x="68" y="280" width="48" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="68" y="294" width="26" height="7" rx="2" fill="#cfd8dc"/>
+  <rect x="102" y="292" width="34" height="20" rx="4" fill="#ffffff" stroke="#616161" stroke-width="1.5"/><text x="119.0" y="305.6" text-anchor="middle" style="font-size:10px;font-weight:400;fill:#37474f">Add</text>
+  <rect x="98" y="184" width="42" height="28" rx="7" fill="none" stroke="#ef6c00" stroke-width="2.5"/>
+  <rect x="262" y="120" width="130" height="250" rx="12" fill="#ffffff" stroke="#616161" stroke-width="2"/>
+  <text x="276" y="148" text-anchor="start" style="font-size:14px;font-weight:700;fill:#1f2328">Cart</text>
+  <line x1="262" y1="160" x2="392" y2="160" stroke="#9e9e9e" stroke-width="1.2"/>
+  <rect x="272" y="172" width="30" height="30" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.2"/><line x1="272" y1="172" x2="302" y2="202" stroke="#9e9e9e"/><line x1="302" y1="172" x2="272" y2="202" stroke="#9e9e9e"/>
+  <rect x="310" y="176" width="50" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="366" y="176" width="16" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="272" y="220" width="30" height="30" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.2"/><line x1="272" y1="220" x2="302" y2="250" stroke="#9e9e9e"/><line x1="302" y1="220" x2="272" y2="250" stroke="#9e9e9e"/>
+  <rect x="310" y="224" width="50" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="366" y="224" width="16" height="8" rx="2" fill="#9e9e9e"/>
+  <line x1="272" y1="272" x2="382" y2="272" stroke="#cfd8dc"/>
+  <text x="272" y="292" text-anchor="start" style="font-size:11px;font-weight:700;fill:#1f2328">Total</text>
+  <rect x="354" y="284" width="28" height="8" rx="2" fill="#9e9e9e"/>
+  <rect x="272" y="320" width="110" height="30" rx="4" fill="#616161" stroke="#616161" stroke-width="1.5"/><text x="327.0" y="339.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#ffffff">Checkout</text>
+  <rect x="268" y="316" width="118" height="38" rx="7" fill="none" stroke="#ef6c00" stroke-width="2.5"/>
+  <rect x="508" y="120" width="130" height="250" rx="12" fill="#ffffff" stroke="#616161" stroke-width="2"/>
+  <text x="522" y="148" text-anchor="start" style="font-size:14px;font-weight:700;fill:#1f2328">Checkout</text>
+  <line x1="508" y1="160" x2="638" y2="160" stroke="#9e9e9e" stroke-width="1.2"/>
+  <text x="518" y="176" text-anchor="start" style="font-size:10px;font-weight:400;fill:#37474f">Name</text>
+  <rect x="518" y="182" width="110" height="22" rx="3" fill="#ffffff" stroke="#9e9e9e" stroke-width="1.2"/>
+  <text x="518" y="220" text-anchor="start" style="font-size:10px;font-weight:400;fill:#37474f">Card number</text>
+  <rect x="518" y="226" width="110" height="22" rx="3" fill="#ffffff" stroke="#9e9e9e" stroke-width="1.2"/>
+  <text x="518" y="264" text-anchor="start" style="font-size:10px;font-weight:400;fill:#37474f">Pickup time</text>
+  <rect x="518" y="270" width="110" height="22" rx="3" fill="#ffffff" stroke="#9e9e9e" stroke-width="1.2"/>
+  <rect x="518" y="320" width="110" height="30" rx="4" fill="#616161" stroke="#616161" stroke-width="1.5"/><text x="573.0" y="339.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#ffffff">Pay $5.50</text>
+  <rect x="514" y="316" width="118" height="38" rx="7" fill="none" stroke="#ef6c00" stroke-width="2.5"/>
+  <rect x="754" y="120" width="130" height="250" rx="12" fill="#ffffff" stroke="#616161" stroke-width="2"/>
+  <text x="768" y="148" text-anchor="start" style="font-size:14px;font-weight:700;fill:#1f2328">Confirmed</text>
+  <line x1="754" y1="160" x2="884" y2="160" stroke="#9e9e9e" stroke-width="1.2"/>
+  <circle cx="819" cy="212" r="22" fill="none" stroke="#9e9e9e" stroke-width="3"/><path d="M809,212 l7,7 l13,-14" fill="none" stroke="#9e9e9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="819" y="260" text-anchor="middle" style="font-size:12px;font-weight:700;fill:#1f2328">Order confirmed</text>
+  <rect x="774" y="272" width="90" height="7" rx="2" fill="#cfd8dc"/>
+  <rect x="787" y="286" width="64" height="7" rx="2" fill="#cfd8dc"/>
+  <rect x="764" y="320" width="110" height="30" rx="4" fill="#ffffff" stroke="#616161" stroke-width="1.5"/><text x="819.0" y="339.3" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#37474f">Back to menu</text>
+  <path d="M204,72 V198.0 H142" fill="none" stroke="#ef6c00" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-acc)"/>
+  <path d="M450,72 V335.0 H388" fill="none" stroke="#ef6c00" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-acc)"/>
+  <path d="M696,72 V335.0 H634" fill="none" stroke="#ef6c00" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrow-acc)"/>
+  <text x="450" y="398" text-anchor="middle" style="font-size:12px;font-weight:400;fill:#57606a">Each screen in the flow gets a wireframe. Each action needs a button, link or input on that screen.</text>
+</svg>

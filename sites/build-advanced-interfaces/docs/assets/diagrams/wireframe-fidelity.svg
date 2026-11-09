@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="340" viewBox="0 0 800 340" role="img" aria-labelledby="t">
+  <title id="t">The same menu card at three levels of fidelity: a rough hand-drawn sketch, a neat greyscale mid-fidelity wireframe with real labels, and a high-fidelity design with colours, a coffee image and a styled Add button</title>
+  <defs><style>text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }</style><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#546e7a"/></marker><marker id="arrow-acc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ef6c00"/></marker><linearGradient id="cafe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7b899"/><stop offset="1" stop-color="#a1887f"/></linearGradient></defs>
+  <rect x="1" y="1" width="798" height="338" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="140" y="36" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#1f2328">Low-fidelity</text>
+  <text x="140" y="316" text-anchor="middle" style="font-size:13px;font-weight:400;fill:#57606a">Rough sketch</text>
+  <text x="400" y="36" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#1f2328">Mid-fidelity</text>
+  <text x="400" y="316" text-anchor="middle" style="font-size:13px;font-weight:400;fill:#57606a">Neat and greyscale</text>
+  <text x="660" y="36" text-anchor="middle" style="font-size:15px;font-weight:700;fill:#1f2328">High-fidelity</text>
+  <text x="660" y="316" text-anchor="middle" style="font-size:13px;font-weight:400;fill:#57606a">Final look</text>
+  <path d="M42,59 Q140,54 239,58 Q243,176 238,294 Q140,298 43,293 Q38,176 42,59 z" fill="none" stroke="#757575" stroke-width="2" stroke-linecap="round"/>
+  <path d="M56,74 L224,72 L225,160 L55,162 z M56,74 L225,160 M224,72 L55,162" fill="none" stroke="#757575" stroke-width="1.6" stroke-linejoin="round"/>
+  <polyline points="56,183 66,189 76,183 86,189 96,183 106,189 116,183 126,189 136,183 146,189 156,183 166,189" fill="none" stroke="#757575" stroke-width="1.6" stroke-linejoin="round"/>
+  <polyline points="56,205 66,211 76,205 86,211 96,205 106,211 116,205 126,211 136,205 146,211 156,205 166,211 176,205 186,211 196,205 206,211" fill="none" stroke="#757575" stroke-width="1.6" stroke-linejoin="round"/>
+  <polyline points="56,221 66,227 76,221 86,227 96,221 106,227 116,221 126,227 136,221 146,227 156,221 166,227 176,221" fill="none" stroke="#757575" stroke-width="1.6" stroke-linejoin="round"/>
+  <path d="M56,261 q2,-4 30,-3" fill="none" stroke="#757575" stroke-width="2"/>
+  <path d="M162,248 Q190,245 224,249 Q227,263 223,278 Q190,281 161,277 Q158,262 162,248 z" fill="none" stroke="#757575" stroke-width="1.8"/>
+  <text x="192" y="268" text-anchor="middle" style="font-style:italic;font-size:13px;font-weight:400;fill:#757575">add</text>
+  <rect x="300" y="56" width="200" height="240" rx="6" fill="#ffffff" stroke="#9e9e9e" stroke-width="1.5"/>
+  <rect x="316" y="72" width="168" height="90" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.2"/><line x1="316" y1="72" x2="484" y2="162" stroke="#9e9e9e"/><line x1="484" y1="72" x2="316" y2="162" stroke="#9e9e9e"/>
+  <text x="316" y="190" text-anchor="start" style="font-size:15px;font-weight:700;fill:#1f2328">Flat White</text>
+  <rect x="316" y="202" width="150" height="7" rx="2" fill="#cfd8dc"/>
+  <rect x="316" y="216" width="110" height="7" rx="2" fill="#cfd8dc"/>
+  <text x="316" y="268" text-anchor="start" style="font-size:14px;font-weight:700;fill:#1f2328">$5.50</text>
+  <rect x="422" y="250" width="62" height="28" rx="4" fill="#ffffff" stroke="#616161" stroke-width="1.5"/><text x="453.0" y="268.7" text-anchor="middle" style="font-size:13px;font-weight:400;fill:#37474f">Add</text>
+  <rect x="560" y="56" width="200" height="240" rx="10" fill="#fffaf3" stroke="#d7ccc8" stroke-width="1.5"/>
+  <clipPath id="img"><rect x="560" y="56" width="200" height="106" rx="10"/></clipPath>
+  <g clip-path="url(#img)"><rect x="560" y="56" width="200" height="106" fill="url(#cafe)"/></g>
+  <ellipse cx="660" cy="142" rx="56" ry="10" fill="#efebe9" opacity="0.9"/>
+  <path d="M626,100 h68 l-6,40 q-28,8 -56,0 z" fill="#ffffff" stroke="#d7ccc8"/>
+  <path d="M693,108 q16,0 12,14 q-3,8 -14,8" fill="none" stroke="#ffffff" stroke-width="5"/>
+  <ellipse cx="660" cy="100" rx="34" ry="8" fill="#8d6e63"/><path d="M648,99 q12,-8 24,0 q-12,6 -24,0z" fill="#f3e5d0"/>
+  <text x="576" y="190" text-anchor="start" style="font-size:16px;font-weight:700;fill:#3e2723">Flat White</text>
+  <text x="576" y="212" text-anchor="start" style="font-size:12px;font-weight:400;fill:#6d4c41">Double shot with silky milk</text>
+  <text x="576" y="268" text-anchor="start" style="font-size:16px;font-weight:700;fill:#bf360c">$5.50</text>
+  <rect x="682" y="250" width="62" height="28" rx="14" fill="#6d4c41"/><text x="713" y="269" text-anchor="middle" style="font-size:13px;font-weight:600;fill:#ffffff">Add</text>
+</svg>

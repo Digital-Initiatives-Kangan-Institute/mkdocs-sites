@@ -39,32 +39,16 @@ nav:
         - Working with APIs and Fetch: pages/resources/architecture/apis-and-fetch.md
         - Mock APIs: pages/resources/architecture/mock-apis.md
         - Building Forms and Validation: pages/resources/architecture/forms-and-validation.md
-      - Next.js:
-        - What is React: pages/resources/nextjs/what-is-react.md
-        - Project Structure and TypeScript: pages/resources/nextjs/project-structure.md
-        - npm Packages: pages/resources/nextjs/npm-packages.md
-        - Routing: pages/resources/nextjs/routing.md
-        - Components and Layouts: pages/resources/nextjs/components-layouts.md
-        - Client and Server Components: pages/resources/nextjs/client-server-components.md
-        - Events and State: pages/resources/nextjs/events-and-state.md
-        - Arrow Functions: pages/resources/nextjs/arrow-functions.md
-        - Fetching Data: pages/resources/nextjs/fetching-data.md
-        - useState and useEffect: pages/resources/nextjs/usestate-useeffect.md
-        - Handling Loading and Error States: pages/resources/nextjs/loading-error-states.md
-      - Component Libraries:
-        - Tailwind CSS: pages/resources/tailwind/tailwind.md
-        - Mantine UI: pages/resources/mantine/mantine.md
       - MQTT:
         - MQTT Overview: pages/resources/mqtt/mqtt-overview.md
         - Connecting to HiveMQ: pages/resources/mqtt/connecting-to-hivemq.md
         - Publishing and Subscribing: pages/resources/mqtt/publishing-and-subscribing.md
         - Working with JSON: pages/resources/mqtt/working-with-json.md
         - Real-Time Chat with MQTT: pages/resources/mqtt/mqtt-chat-example.md
-      - Supabase:
-        - Introduction to Supabase: pages/resources/supabase/intro-to-supabase.md
-        - Content Management with Supabase: pages/resources/supabase/cms-with-supabase.md
-      - Deployment:
-        - Deploying Your Project: pages/resources/deployment/deploying.md
+      - Plan & Design:
+        - Introduction: pages/resources/design/introduction.md
+        - User Flow Diagrams: pages/resources/design/user-flow-diagrams.md
+        - Wireframing: pages/resources/design/wireframing.md
 
     - Tasks:
       - HTML/CSS:
@@ -73,21 +57,9 @@ nav:
         - Cafe Site Login: pages/tasks/login-page.md
       - JavaScript and APIs:
         - Cafe Recipes Page: pages/tasks/fetch-api-data.md
-      - Next.js:
-        - Creating a Next.js App: pages/tasks/create-nextjs-app.md
-        - Components: pages/tasks/components-props.md
-        - Next.js App with Routing: pages/tasks/nextjs-routing-app.md
-        - Interactive Component: pages/tasks/interactive-component.md
-        - Refactor with Arrow Functions: pages/tasks/refactor-arrow-functions.md
-        - Fetching Data with State: pages/tasks/fetching-data-with-state.md
-        - useEffect and Automatic Fetch: pages/tasks/useeffect-fetch.md
-        - User Directory App: pages/tasks/user-directory.md
-        - Build Your Own Webapp: pages/tasks/build-your-own-webapp.md
-      - Libraries and Integrations:
-        - Tailwind CSS: pages/tasks/tailwind.md
-        - Mantine Component Library: pages/tasks/mantine-components.md
-        - React Confetti: pages/tasks/react-confetti.md
-        - Supabase as a CMS: pages/tasks/supabase-cms.md
+      - Plan & Design:
+        - Planning User Flows: pages/tasks/planning-user-flows.md
+        - Building Wireframes: pages/tasks/building-wireframes.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="340" viewBox="0 0 940 340" role="img" aria-labelledby="t">
+  <title id="t">User flow for ordering a coffee for pickup. The customer starts wanting a coffee, opens the Menu page, adds items, opens the Cart page and taps Checkout. If they are not logged in they go to the Log in page first. On the Checkout page they pay. If payment fails they return to Checkout with an error. If payment succeeds they see the Order confirmed page and the flow ends</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#546e7a"/></marker>
+    <style>
+      text { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; font-size: 13px; }
+      .c { text-anchor: middle; }
+      .lbl { font-weight: 700; fill: #37474f; }
+      .err { fill: #c62828; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="938" height="338" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+
+  <g stroke="#546e7a" stroke-width="2" fill="none">
+    <line x1="110" y1="80" x2="134" y2="80" marker-end="url(#arrow)"/>
+    <line x1="236" y1="80" x2="260" y2="80" marker-end="url(#arrow)"/>
+    <line x1="362" y1="80" x2="386" y2="80" marker-end="url(#arrow)"/>
+    <line x1="488" y1="80" x2="512" y2="80" marker-end="url(#arrow)"/>
+    <line x1="624" y1="80" x2="648" y2="80" marker-end="url(#arrow)"/>
+    <line x1="770" y1="80" x2="798" y2="80" marker-end="url(#arrow)"/>
+    <line x1="710" y1="120" x2="710" y2="194" marker-end="url(#arrow)"/>
+    <path d="M855,104 V220 H767" marker-end="url(#arrow)"/>
+    <line x1="655" y1="220" x2="627" y2="220" marker-end="url(#arrow)"/>
+    <line x1="510" y1="220" x2="478" y2="220" marker-end="url(#arrow)"/>
+    <line x1="344" y1="220" x2="316" y2="220" marker-end="url(#arrow)"/>
+    <line x1="200" y1="220" x2="162" y2="220" marker-end="url(#arrow)"/>
+    <path d="M410,260 V306 H710 V246" marker-end="url(#arrow)"/>
+  </g>
+
+  <ellipse cx="60" cy="80" rx="50" ry="24" fill="#eceff1" stroke="#546e7a" stroke-width="2"/>
+  <text class="c" x="60" y="85">Wants coffee</text>
+
+  <rect x="136" y="56" width="100" height="48" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+  <text class="c" x="186" y="85">Menu page</text>
+
+  <rect x="262" y="56" width="100" height="48" rx="16" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text class="c" x="312" y="85">Adds items</text>
+
+  <rect x="388" y="56" width="100" height="48" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+  <text class="c" x="438" y="85">Cart page</text>
+
+  <rect x="514" y="56" width="110" height="48" rx="16" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text class="c" x="569" y="85">Taps Checkout</text>
+
+  <polygon points="710,40 770,80 710,120 650,80" fill="#ede7f6" stroke="#5e35b1" stroke-width="2"/>
+  <text class="c" x="710" y="85">Logged in?</text>
+  <text class="lbl" x="776" y="72">No</text>
+  <text class="lbl" x="718" y="162">Yes</text>
+
+  <rect x="800" y="56" width="110" height="48" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+  <text class="c" x="855" y="85">Log in page</text>
+
+  <rect x="655" y="196" width="110" height="48" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+  <text class="c" x="710" y="225">Checkout page</text>
+
+  <rect x="510" y="196" width="115" height="48" rx="16" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text class="c" x="567" y="225">Pays for order</text>
+
+  <polygon points="410,180 476,220 410,260 344,220" fill="#ede7f6" stroke="#5e35b1" stroke-width="2"/>
+  <text class="c" x="410" y="225">Payment OK?</text>
+  <text class="lbl" x="322" y="210">Yes</text>
+  <text class="lbl" x="418" y="282">No</text>
+  <text class="c err" x="560" y="298">Show error message</text>
+
+  <rect x="200" y="196" width="114" height="48" fill="#e0f2f1" stroke="#00897b" stroke-width="2"/>
+  <text class="c" x="257" y="225">Order confirmed</text>
+
+  <ellipse cx="110" cy="220" rx="50" ry="24" fill="#eceff1" stroke="#546e7a" stroke-width="2"/>
+  <text class="c" x="110" y="225">End</text>
+</svg>
