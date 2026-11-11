@@ -5,7 +5,7 @@ window.SITES_DATA = {
         { "id": "diploma-of-it", "label": "Diploma of IT", "fullname": "Diploma of Information Technology" },
         { "id": "short-courses", "label": "Short Courses", "fullname": "Kangan Short Courses" },
         { "id": "workplace", "label": "workplace", "fullname": "Workplace Courses" }
- 
+
     ],
     "sites": [
         {
@@ -84,6 +84,13 @@ window.SITES_DATA = {
             "img": "./_assets/sites/database-api.png",
             "title": "Database and API",
             "description": "Databases and API.  PostGres, Supabase, FastAPI and SQL",
+            "courses": ["diploma-of-it"]
+        },
+        {
+            "href": "/fastapi",
+            "img": "./_assets/sites/database-api.png",
+            "title": "FastAPI",
+            "description": "FastAPI",
             "courses": ["diploma-of-it"]
         },
         {
