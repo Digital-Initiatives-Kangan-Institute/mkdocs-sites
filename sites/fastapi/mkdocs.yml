@@ -14,6 +14,7 @@ nav:
     - Resources:
       - Introduction: pages/resources/intro.md
     - Tasks:
+      - Introduction: pages/tasks/intro.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:

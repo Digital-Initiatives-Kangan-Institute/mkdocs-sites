@@ -1,58 +1,5 @@
 # Introduction to APIs with FastAPI
 
-## Lesson overview
-
-In this lesson, you will learn what an API is and how software applications use APIs to communicate. You will then build and test a simple API using Python and FastAPI.
-
-By the end of the lesson, you will have created an API that can:
-
-- return a welcome message
-- return a list of products
-- return one product using its ID
-- accept a new product as JSON
-- return an error when a product cannot be found
-
-## Learning outcomes
-
-By the end of this lesson, you should be able to:
-
-1. Explain what an API is.
-2. Describe the API request and response process.
-3. Identify common HTTP methods.
-4. Explain endpoints, paths, parameters, JSON and status codes.
-5. Create a simple API using FastAPI.
-6. Test an API using FastAPI's interactive documentation.
-7. Use path parameters, query parameters and request bodies.
-8. Return JSON responses from an API.
-
-## Required knowledge
-
-Before starting this lesson, you should understand:
-
-- basic Python syntax
-- variables
-- lists and dictionaries
-- functions
-- basic terminal or command-line use
-
-You do not need previous experience with APIs, HTTP, databases or FastAPI.
-
-## Required software
-
-You will need:
-
-- Python
-- FastAPI
-- Uvicorn
-- Visual Studio Code or another Python editor
-- a web browser
-
-Install FastAPI and Uvicorn by running:
-
-```bash
-pip install fastapi uvicorn
-```
-
 ## 1. What is an API?
 
 API stands for **Application Programming Interface**.
@@ -146,6 +93,14 @@ These methods are often connected to CRUD operations.
 
 ## 3. Create your first FastAPI application
 
+FastAPI is a Python framework for building APIs. Uvicorn is a web server that runs FastAPI applications.
+
+Install FastAPI and Uvicorn by running:
+
+```bash
+pip install fastapi uvicorn
+```
+
 Create a new file named `main.py`.
 
 Add the following code:
@@ -227,7 +182,7 @@ Response:    JSON
 
 ## 5. Test the API using interactive documentation
 
-FastAPI automatically generates interactive API documentation.
+FastAPI automatically generates interactive API documentation.  It automatically creates interactive documentation based on the SwaggerUI framework.  This not only conveniently documents your API, but also allows you to test it directly from the browser.  Of course, you can still test the API using other tools like Postman or curl, but the built-in documentation is a great starting point.
 
 Open:
 
@@ -243,8 +198,6 @@ To test an endpoint:
 4. Examine the request URL.
 5. Examine the response body.
 6. Examine the response status code.
-
-The `/docs` page is mainly for developers to explore and test the API.
 
 ## 6. Use a path parameter
 
