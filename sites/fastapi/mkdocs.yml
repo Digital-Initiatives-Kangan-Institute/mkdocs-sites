@@ -13,8 +13,10 @@ nav:
   - Menu:
     - Resources:
       - Introduction: pages/resources/intro.md
+      - POST and PUT: pages/resources/posting.md
     - Tasks:
       - Introduction: pages/tasks/intro.md
+      - POST and PUT: pages/tasks/posting.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
