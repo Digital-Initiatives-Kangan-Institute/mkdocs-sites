@@ -3,7 +3,7 @@
 # are merged in automatically. Do not touch the line below.
 INHERIT: ../../shared/.mkdocs-base.yml
 
-site_name: fastapi
+site_name: FastAPI
 
 nav:
   # The Return to Portal item should always be the first item in the navigation.
