@@ -14,9 +14,15 @@ nav:
     - Resources:
       - Introduction: pages/resources/intro.md
       - POST and PUT: pages/resources/posting.md
+      - DELETE: pages/resources/put-delete.md
+      - Database Connection: pages/resources/database-connection.md
+      - Object Relational Mapper: pages/resources/orm.md
     - Tasks:
       - Introduction: pages/tasks/intro.md
       - POST and PUT: pages/tasks/posting.md
+      - PUT and DELETE: pages/tasks/put-delete.md
+      - Database Connection: pages/tasks/database-connection.md
+      - ORM: pages/tasks/orm.md
 
 # Do not touch anything below this line unless you know what you are doing.
 theme:
@@ -29,5 +35,5 @@ plugins:
       increment_across_pages: true
       # Uncomment below if you would like to reset the table of contents numbering
       # after a certain page:
-      # restart_increment_after:
-      #  - path/to/page.md
+      restart_increment_after:
+        - pages/tasks/intro.md
