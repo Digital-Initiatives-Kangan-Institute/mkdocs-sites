@@ -88,9 +88,9 @@ window.SITES_DATA = {
         },
         {
             "href": "/fastapi",
-            "img": "./_assets/sites/database-api.png",
+            "img": "./_assets/sites/fastapi.png",
             "title": "FastAPI",
-            "description": "FastAPI",
+            "description": "FastAPI is a web framework for building HTTP-based service APIs in Python 3.8+",
             "courses": ["diploma-of-it"]
         },
         {
